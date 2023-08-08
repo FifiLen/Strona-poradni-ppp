@@ -5,10 +5,11 @@ const Place = () => {
   const images = [
     { src: '/assets/room.jpg', alt: 'Image 1' },
     { src: '/assets/room2.jpg', alt: 'Image 2' },
-    { src: '/assets/room.jpg', alt: 'Image 1' },
-    { src: '/assets/room2.jpg', alt: 'Image 2' },
-    { src: '/assets/room.jpg', alt: 'Image 1' },
-    { src: '/assets/room2.jpg', alt: 'Image 2' },
+    { src: '/assets/room3.jpg', alt: 'Image 3' },
+    { src: '/assets/room4.jpg', alt: 'Image 4' },
+    { src: '/assets/room5.jpg', alt: 'Image 5' },
+    { src: '/assets/room6.jpg', alt: 'Image 6' },
+    
   ];
 
   const openImage = (index) => {
@@ -30,9 +31,9 @@ const Place = () => {
   };
 
   return (
-    <section className="mx-auto max-w-[1260px] px-4 sm:px-8 md:px-12 lg:px-16 mt-36">
-      <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-800 text-center mb-4">Spokój, relaks, twoje miejsce...</h3>
-      <p className="text-gray-500 mb-6 text-center">Zobacz galerię naszej placówki</p>
+    <section className="mx-auto max-w-[1260px] px-4 sm:px-8 md:px-12 lg:px-16 mt-24 mb-32">
+      <h3 className="text-3xl sm:text-4xl md:text-4xl font-semibold text-gray-800 text-center mb-4">Nasze miejsce</h3>
+      <p className="text-gray-500 mb-6 text-center">Każdego tygodnia poznasz inne sale zajęciowe - zaglądaj tu często - każde miejsce zaprezentuje "własną duszę"</p>
       <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-5 mb-6">
         {images.map((image, index) => (
           <div key={index} onClick={() => openImage(index)} className="relative pb-[60%] lg:pb-[70%] cursor-pointer rounded-lg overflow-hidden shadow-md">

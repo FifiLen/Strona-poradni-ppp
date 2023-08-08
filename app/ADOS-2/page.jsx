@@ -435,105 +435,108 @@ const Ados = () => {
   
   const [activeItem, setActiveItem] = useState(null);
   const accordionRef = useRef(null);
-  
-
-    useEffect(() => {
-      const handleScroll = () => {
-        if (!accordionRef.current) return;
-        const { scrollTop, clientHeight } = accordionRef.current;
-        
-        const currentActiveItem = accordionItems.reduce((currentActive, item) => {
-          if (item.ref.current) {
-            const { offsetTop, clientHeight: itemHeight } = item.ref.current;
-            if (offsetTop <= scrollTop + (clientHeight * 0.25) && offsetTop + itemHeight > scrollTop + (clientHeight * 0.25)) {
-              return item.id;
-            }
-          }
-          return currentActive;
-        }, null);
-      
-        setActiveItem(currentActiveItem);
-      };
-  
-      if (accordionRef.current) {
-        accordionRef.current.addEventListener('scroll', handleScroll);
-      }
-  
-      return () => {
-        if (accordionRef.current) {
-          accordionRef.current.removeEventListener('scroll', handleScroll);
-        }
-      };
-    }, [accordionItems]);
-  
-    const handleNavigationClick = (id) => {
-      const element = document.getElementById(id);
-      if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    };
-  
-    const videoRef = useRef(null);
 
   useEffect(() => {
-    if (videoRef.current) {
-        videoRef.current.playbackRate = 0.5;  // Spowolnienie filmiku o połowę
-    }
+      const handleScroll = () => {
+          if (!accordionRef.current) return;
+          const { scrollTop, clientHeight } = accordionRef.current;
+
+          const currentActiveItem = accordionItems.reduce((currentActive, item) => {
+              if (item.ref.current) {
+                  const { offsetTop, clientHeight: itemHeight } = item.ref.current;
+                  if (offsetTop <= scrollTop + (clientHeight * 0.25) && offsetTop + itemHeight > scrollTop + (clientHeight * 0.25)) {
+                      return item.id;
+                  }
+              }
+              return currentActive;
+          }, null);
+
+          setActiveItem(currentActiveItem);
+      };
+
+      if (accordionRef.current) {
+          accordionRef.current.addEventListener('scroll', handleScroll);
+      }
+
+      return () => {
+          if (accordionRef.current) {
+              accordionRef.current.removeEventListener('scroll', handleScroll);
+          }
+      };
+  }, [accordionItems]);
+
+  const handleNavigationClick = (id) => {
+      const element = document.getElementById(id);
+      if (element && accordionRef.current) {
+          const containerTop = accordionRef.current.getBoundingClientRect().top;
+          const elementTop = element.getBoundingClientRect().top;
+
+          const scrollTo = accordionRef.current.scrollTop + (elementTop - containerTop);
+          accordionRef.current.scrollTo({
+              top: scrollTo,
+              behavior: 'smooth'
+          });
+      }
+  };
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+      if (videoRef.current) {
+          videoRef.current.playbackRate = 0.5;
+      }
   }, []);
 
   return (
-    <>
-      <section className=' relative'>
-        <video 
-          ref={videoRef}
-          autoPlay 
-          muted 
-          loop 
-          className="absolute top-0 left-0 w-full h-[620px] object-cover z-0" 
-          src="/assets/movie3.mp4"
-        ></video>
-        <div className="absolute top-0 left-0 w-full h-[620px] bg-black opacity-40 z-5"></div>
-        <div className="relative z-10 flex flex-col justify-center items-center h-[620px]"> 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white text-center mb-4">
-            Diagnoza ADOS-2
-          </h2>
-          <p className="text-center text-white">
-            Diagnoza autyzmu u dzieci od 18 miesiąca życia , młodzieży oraz osób dorosłych
-          </p>
-        </div>
-        
-        <div className='max-w-lg lg:max-w-[70%] mx-auto mt-8 p-4 flex mb-20'>
-          <aside className="w-1/4 pr-4">
-            <h3 className="mb-4 text-lg lg:text-3xl font-bold"></h3>
-            <ul>
-              {accordionItems.map(item => (
-                <li key={item.id} className="mb-2">
-                  <ScrollLink
-                    to={item.id}
-                    onClick={() => handleNavigationClick(item.id)}
-                    smooth={true}
-                    duration={500}
-                    className={`cursor-pointer ${activeItem === item.id ? "text-green-500" : "text-blue-500"} hover:underline`}
-                  >
-                    {item.shortTitle || item.title}
-                  </ScrollLink>
-                </li>
-              ))}
-            </ul>
-          </aside>
-          <div ref={accordionRef} className='w-3/4 space-y-4 overflow-y-auto max-h-[600px] lg:max-h-[500px] pb-[500px]'>
-            {accordionItems.map(item => (
-              <AccordionItem 
-                  ref={item.ref}
-                  key={item.id} 
-                  {...item} 
-                  isActive={activeItem === item.id}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
+      <>
+          <section className='relative'>
+              <video
+                  ref={videoRef}
+                  autoPlay
+                  muted
+                  loop
+                  className="absolute top-0 left-0 w-full h-[620px] object-cover z-0"
+                  src="/assets/movie3.mp4"
+              ></video>
+              <div className="absolute top-0 left-0 w-full h-[620px] bg-black opacity-40 z-5"></div>
+              <div className="relative z-10 flex flex-col justify-center items-center h-[620px]">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white text-center mb-4">
+                      Diagnoza ADOS-2
+                  </h2>
+                  <p className="text-center text-white">
+                      Diagnoza autyzmu u dzieci od 18 miesiąca życia , młodzieży oraz osób dorosłych
+                  </p>
+              </div>
+
+              <div className='max-w-lg lg:max-w-[70%] mx-auto mt-8 p-4 flex mb-32'>
+                  <aside className="w-1/4 pr-4">
+                      <h3 className="mb-4 text-lg lg:text-3xl font-bold"></h3>
+                      <ul>
+                          {accordionItems.map(item => (
+                              <li key={item.id} className="mb-2">
+                                  <a
+                                      onClick={() => handleNavigationClick(item.id)}
+                                      className={`cursor-pointer ${activeItem === item.id ? "text-green-500" : "text-blue-500"} hover:underline`}
+                                  >
+                                      {item.shortTitle || item.title}
+                                  </a>
+                              </li>
+                          ))}
+                      </ul>
+                  </aside>
+                  <div ref={accordionRef} className='w-3/4 space-y-4 overflow-y-auto max-h-[600px] lg:max-h-[500px] pb-[500px]'>
+                      {accordionItems.map(item => (
+                          <AccordionItem
+                              ref={item.ref}
+                              key={item.id}
+                              {...item}
+                              isActive={activeItem === item.id}
+                          />
+                      ))}
+                  </div>
+              </div>
+          </section>
+      </>
   );
 }
 

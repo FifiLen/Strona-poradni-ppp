@@ -2,6 +2,18 @@ import React from 'react';
 
 const CEye = () => {
   return (
+    <div>
+      <div className="relative h-[520px] overflow-hidden">
+        <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay muted loop>
+          <source src="/assets/movie6.mp4" type="video/mp4" />
+          Twoja przeglądarka nie obsługuje tagu video.
+        </video>
+        <div className="absolute top-0 left-0 w-full h-[620px] bg-black opacity-40 z-5"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+          <h1 className="text-4xl text-white font-bold">C-eye® PRO</h1>
+          <p className="text-white">Sprzęt do rehabilitacji i opieki neurologicznej</p>
+        </div>
+      </div>
     <section className="mx-4 sm:mx-8 md:mx-16 lg:mx-[200px] mt-8 sm:mt-[80px] bg-green-500 p-1 rounded-lg shadow-xl mb-20">
       <div className="flex flex-col items-center bg-white p-8 rounded-lg">
         <h2 className="text-5xl font-extrabold text-green-500 mb-4">C-eye® PRO</h2>
@@ -62,6 +74,7 @@ const CEye = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

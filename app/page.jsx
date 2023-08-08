@@ -1,13 +1,12 @@
 'use client'
 import Link from "next/link";
 
-import Ceye from "@components/Ceye";
+
 import Info from "@components/Info";
-import Biofeedback from "@components/Biofeedback";
-import Staff from "@components/Staff";
-import Vr from "@components/Vr";
+
+
 import Place from "@components/Place";
-import ContactPage from "./Contact/page";
+
 import About from "@components/About";
 import About2 from "@components/About2";
 import InfoReservation from "@components/InfoReservation";
@@ -63,11 +62,9 @@ const Home = () => {
       <About2 />    
       <Info />
       <About /> 
+      <Place />
       <InfoReservation />
       
-      <Ceye />
-      
-      <Staff />
       
     </>
   );

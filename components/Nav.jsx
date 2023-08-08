@@ -11,7 +11,6 @@ const MENU_LIST = [
   { text: "Terapia VR", href: "/Vr-terapy" },
   { text: "Biofeedback VR", href: "/Biofeedback-VR" },
   { text: "SI", href: "/"},
-  { text: "WWRD", href: "/WWR" },
   { text: "Oferta", href: "/Offer" },
   { text: "Kadra", href: "/Staff" },
   { text: "Cennik", href: "/PriceList" },
