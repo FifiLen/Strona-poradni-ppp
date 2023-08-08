@@ -1,5 +1,4 @@
-'use client'
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 
 const Registration = () => {
   const [firstName, setFirstName] = useState('');
@@ -162,3 +161,20 @@ const Registration = () => {
 
 export default Registration;
 
+*/
+import React from 'react';
+import Link from 'next/link';
+
+const Registration = () => {
+  return (
+    <section className='flex flex-col justify-center items-center h-[500px] mx-auto'>
+      <h1 className='text-4xl mb-4 font-semibold'>Uprzejmie informujemy</h1>
+      <p className='text-md mb-4 text-center'>Rejestracje poprzez strone internetową będą dostępne od 25 sierpnia,<br/> zapraszamy do kontaktu drogą mailową bądź telefonicznie</p>
+      <Link href="/Contact">
+      <button className='bg-[#921d7f] text-white px-8 py-4 rounded'>Kontakt</button>
+      </Link>
+    </section>
+  )
+}
+
+export default Registration

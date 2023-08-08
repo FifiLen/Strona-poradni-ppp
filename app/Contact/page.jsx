@@ -8,17 +8,17 @@ const ContactPage = () => {
           <h2 className="text-4xl font-black mb-4 text-white">Kontakt</h2>
           <div className="mb-4">
             <h3 className="text-[22px] font-bold text-white">Numer telefonu:</h3>
-            <p className="text-white font-light">+48 123 456 789</p>
-            <p className="text-white font-light">+48 123 456 789</p>
-            <p className="text-white font-light">+48 123 456 789</p>
-            <p className="text-white font-light">+48 123 456 789</p>
+            <p className="text-white font-light">+48 797 173 501</p>
+            <p className="text-white font-light">+48 502 162 365</p>
+            <p className="text-white font-light">+48 690 515 224</p>
+            <p className="text-white font-light">+48 503 192 950</p>
           </div>
           <div className="mb-4">
             <h3 className="text-[22px] font-bold text-white">Email:</h3>
             <p className="text-white font-light">poradniamagnolia@gmail.com</p>
           </div>
           <div className="mb-4">
-            <h3 className="text-[22px] font-bold text-white">Godziny otwarcia poradni:</h3>
+            <h3 className="text-[22px] font-bold text-white">Godziny otwarcia Poradni:</h3>
             <p className="text-white font-normal">przy ul. Magnolii 25</p>
             <br />
             <p className="text-white font-light">Poniedziałek: 7:00 - 21:00</p>
@@ -28,7 +28,7 @@ const ContactPage = () => {
             <p className="text-white font-light">Piątek: 7:00 - 21:00</p>
           </div>
           <div className="mb-4">
-            <h3 className="text-[22px] font-bold text-white">Godziny otwarcia poradni:</h3>
+            <h3 className="text-[22px] font-bold text-white">Godziny otwarcia Poradni:</h3>
             <p className="text-white font-normal">przy ul. Rudzkiej 13, budynek B, III piętro, pokój 3.3</p>
             <br />
             <p className="text-white font-light">Poniedziałek: 7:00 - 21:00</p>

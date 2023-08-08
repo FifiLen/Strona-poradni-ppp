@@ -50,7 +50,7 @@ const Info = () => {
       description: "Lorem ipsum...",
       special: false,
       video: '/assets/movie6.mp4',
-      path: '/C-eye'
+      path: '/C-Eye'
     },
     {
       title: "Tomatis Pro®",

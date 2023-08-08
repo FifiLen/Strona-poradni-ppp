@@ -1,46 +1,16 @@
-'use client'
 import React from 'react';
-import { signIn, signOut, useSession } from 'next-auth/react';
-import { SessionProvider } from 'next-auth/react';
-import Login_btn from '@components/Login_btn';
+import Link from 'next/link';
 
-
-const UserPanelContent = () => {
-  const { data, status } = useSession();
-
-  const handleShowEnvValues = () => {
-    console.log("GOOGLE_ID:", process.env.GOOGLE_ID);
-    console.log("GOOGLE_SECRET:", process.env.GOOGLE_SECRET);
-
-  };
-
-  if (status === 'loading') return <h1> loading... please wait</h1>;
-
-  if (status === 'authenticated' && data) {
-    return (
-      <div>
-        <h1> hi {data.user.name}</h1>
-        <img src={data.user.image} alt={data.user.name + ' photo'} />
-        <button onClick={signOut}>sign out</button>
-      </div>
-    );
-  }
-
+const UserPanel = () => {
   return (
-    <div>
-      <button onClick={() => signIn('google')}>sign in with google</button>
-      <button onClick={handleShowEnvValues}>Pokaż wartości z .env w konsoli</button>
-    </div>
-    
-  );
-}
-
-const UserPanel = (props) => {
-  return (
-    <SessionProvider session={props.session}>
-      <UserPanelContent />
-    </SessionProvider>
-  );
+    <section className='flex flex-col justify-center items-center h-[500px] mx-auto'>
+      <h1 className='text-4xl mb-4 font-semibold'>Uprzejmie informujemy</h1>
+      <p className='text-md mb-4 text-center'>Funkcja "Panelu Pacjenta" zostanie dodana już niebawem</p>
+      <Link href="/">
+      <button className='bg-[#921d7f] text-white px-8 py-4 rounded'>Powrót na stronę główną</button>
+      </Link>
+    </section>
+  )
 }
 
 export default UserPanel;
