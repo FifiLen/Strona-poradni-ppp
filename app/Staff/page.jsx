@@ -8,7 +8,8 @@ const staffData = [
     id: 1,
     name: 'Wioletta Ginter',
     specialty: 'Pedagog',
-    description: 'Magister pedagogiki specjalizujący się w poradnictwie i pomocy psychopedagogicznej. Jako aktywny pedagog specjalny, terapeuta ręki, specjalista w edukacji włączającej i wykładowca, posiada bogate doświadczenie, przekazując swoją wiedzę zarówno uczniom, jak i nauczycielom w różnych instytucjach edukacyjnych. Specjalista ORE w zakresie edukacji włączającej.',
+    description: (
+     <p>Magister pedagogiki specjalizujący się<br /> w poradnictwie i pomocy psychopedagogicznej. Jako aktywny pedagog specjalny, terapeuta ręki, specjalista w edukacji włączającej <br />i wykładowca, posiada bogate doświadczenie, przekazując swoją wiedzę zarówno uczniom, jak i nauczycielom <br />w różnych instytucjach edukacyjnych. Specjalista ORE w zakresie edukacji włączającej.</p> ),
     imageUrl: '/assets/Test.png',
   },
   
@@ -23,7 +24,9 @@ const staffData = [
     id: 3,
     name: 'Sylwia Cuber',
     specialty: 'Pedagog',
-    description: 'Magister pedagogiki specjalność: edukacja przedszkolna i wczesnoszkolna, oligofrenopedagogika, edukacja elementarna z dodatkowym językiem angielskim, czynny pedagog specjalny w szkole podstawowej, specjalista ORE w zakresie edukacji włączającej, trener treningu umiejętności społecznych (TUS) dzieci ze spektrum autyzmu, edukacja i terapia osób ze spektrum autyzmu. Wykładowca studiów podyplomowych z zakresu pedagogiki specjalnej.',
+    description: (<p>
+      Magister pedagogiki specjalność: edukacja przedszkolna i wczesnoszkolna, oligofrenopedagogika, edukacja elementarna z dodatkowym językiem angielskim, czynny pedagog specjalny <br /> w szkole podstawowej, specjalista ORE <br />w zakresie edukacji włączającej, trener treningu umiejętności społecznych (TUS) dzieci ze spektrum autyzmu, edukacja <br />i terapia osób ze spektrum autyzmu. Wykładowca studiów podyplomowych <br />z zakresu pedagogiki specjalnej.
+    </p>),
     imageUrl: '/assets/T2.png',
   },
   
@@ -31,21 +34,27 @@ const staffData = [
     id: 4,
     name: 'Aleksandra Wowra',
     specialty: 'Pedagog',
-    description: 'Magister pedagogiki – specjalność: opiekuńczo – wychowawczej, oligofrenopedagog, specjalista ORE w zakresie edukacji włączającej, czynny pedagog specjalny. Wykładowca na kierunkach pedagogiki specjalnej na studiach podyplomowych.',
+    description:(<p>
+      Magister pedagogiki – specjalność: opiekuńczo – wychowawczej, oligofrenopedagog, specjalista ORE <br />w zakresie edukacji włączającej, czynny pedagog specjalny. Wykładowca <br />na kierunkach pedagogiki specjalnej <br />na studiach podyplomowych.
+    </p>),
     imageUrl: '/assets/T9.png',
   },
   {
     id: 5,
     name: 'Anna Ławniczak',
     specialty: 'Psycholog',
-    description: 'Magister psychologii, specjalizujący się w seksuologii klinicznej i psychologii kryminologicznej. Wykładowca studiów podyplomowych z obszaru pedagogiki specjalnej, seksuologii, seksuologii klinicznej. Terapeuta dzieci, par, rodzin. Aktywnie angażuje się w pracę na rzecz dzieci w szkołach i przedszkolach. Specjalista ORE w zakresie edukacji włączającej.',
+    description: (<p>
+      Magister psychologii, specjalizujący się <br /> w seksuologii klinicznej i psychologii kryminologicznej. Wykładowca studiów podyplomowych z obszaru pedagogiki specjalnej, seksuologii, seksuologii klinicznej. Terapeuta dzieci, par, rodzin. Aktywnie angażuje się w pracę na rzecz dzieci w szkołach i przedszkolach. Specjalista ORE w zakresie edukacji włączającej.
+    </p>),
     imageUrl: '/assets/T5.png',
   },
   {
     id: 6,
     name: 'Joanna Zawadzka',
     specialty: 'Psycholog',
-    description: 'Magister języka polskiego, specjalista z zakresu terapii pedagogicznej, diagnozy i profilaktyki społecznej. Terapeuta z obszaru diagnozy dysleksji rozwojowej, egzaminator OKE, nauczyciel języka polskiego jako obcego,  prezes Oddziału Towarzystwo Dysleksji w Rybniku.Doradca i autor publikacji dla IBE- Instytut Badań Edukacyjnych. Pracuje z uczniami uzdolnionymi (przygotowanie do egzaminów/olimpiad).',
+    description: (<p>
+      Magister języka polskiego, specjalista <br /> z zakresu terapii pedagogicznej, diagnozy <br />i profilaktyki społecznej. Terapeuta <br />z obszaru diagnozy dysleksji rozwojowej, egzaminator OKE, nauczyciel języka polskiego jako obcego,  prezes Oddziału Towarzystwo Dysleksji w Rybniku.Doradca i autor publikacji dla IBE- Instytut Badań Edukacyjnych. Pracuje z uczniami uzdolnionymi (przygotowanie do egzaminów/olimpiad).
+      </p>),
     imageUrl: '/assets/T3.png'    
   },
   {
@@ -59,14 +68,16 @@ const staffData = [
     id: 8,
     name: 'Małgorzata Solowska',
     specialty: 'Trener',
-    description: 'Magister języka angielskiego, magister historii, trener i moderator TIK, MIEE Educator, trener dla zagranicznych narodowych agencji Erasmus, prelegent konferencji i szkoleń międzynarodowych oraz ogólnopolskich. Specjalista ORE w zakresie edukacji włączającej. Trener TIK w tym wykorzystania nowych technologii w pracy z uczniami ze SPE. Wykładowca studiów podyplomowych z zakresu zarządzania oświatą, historii oraz języka angielskiego.',
+    description: (<p>
+      Magister języka angielskiego, magister historii, trener i moderator TIK, MIEE Educator, trener dla zagranicznych narodowych agencji Erasmus, prelegent konferencji i szkoleń międzynarodowych oraz ogólnopolskich. Specjalista ORE <br />w zakresie edukacji włączającej. Trener TIK w tym wykorzystania nowych technologii w pracy z uczniami ze SPE. Wykładowca studiów podyplomowych <br />z zakresu zarządzania oświatą, historii oraz języka angielskiego.
+    </p>),
     imageUrl: '/assets/T6.png',
   },
   {
     id: 9,
     name: 'Anna Falkowska',
     specialty: 'Pedagog, Socjolog',
-    description: 'Doktor nauk społecznych z dziedziny pedagogiki i socjologii.  Doradca zawodowy oraz specjalista z zakresu prawa ochrony środowiska i edukacji ekologicznej. Specjalista ORE z zakresu edukacji włączającej. Trener TIK. Specjalista programów do interaktywnej edukacji. Wykładowca akademicki na uczelniach o profilu przyrodniczym, autorka wielu publikacji naukowych i po-konferencyjnych. Ekspert edukacji ekologicznej.',
+    description: (<p>Doktor nauk społecznych z dziedziny pedagogiki i socjologii.  Doradca zawodowy oraz specjalista z zakresu prawa ochrony środowiska i edukacji ekologicznej. Specjalista ORE z zakresu edukacji włączającej. Trener TIK. Specjalista programów do interaktywnej edukacji. Wykładowca akademicki na uczelniach <br />o profilu przyrodniczym, autorka wielu publikacji naukowych i po-konferencyjnych. Ekspert edukacji ekologicznej.</p>),
     imageUrl: '/assets/T8.png',
   },
   
@@ -74,14 +85,18 @@ const staffData = [
     id: 10,
     name: 'Monika Kromolan',
     specialty: 'Psycholog',
-    description: 'Magister psychologii z zakresu neuropsychologii i psychologii klinicznej. Specjalista w zintegrowanej edukacji wczesnoszkolnej, edukacji informatycznej oraz edukacji i rehabilitacji osób z niepełnosprawnością intelektualną. Terapeuta WWRD i hipoterapii. Specjalista w zakresie komunikacji alternatywnej i wspomagającej oraz diagnozy alternatywnych i wspomagających metod porozumiewania się.',
+    description: (<p>
+      Magister psychologii z zakresu neuropsychologii i psychologii klinicznej. Specjalista w zintegrowanej edukacji wczesnoszkolnej, edukacji informatycznej oraz edukacji i rehabilitacji osób <br />z niepełnosprawnością intelektualną. Terapeuta WWRD i hipoterapii. Specjalista w zakresie komunikacji alternatywnej <br />i wspomagającej oraz diagnozy alternatywnych i wspomagających metod porozumiewania się.
+    </p>),
     imageUrl: '/assets/doc2.jpg',
   },
   {
     id: 11,
     name: 'Gabriela Marcisz',
     specialty: 'Psychoterapeuta',
-    description: 'Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i rodzin. Specjalista psychoterapii w Ośrodku Interwencji Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic i na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony na pracy z całymi rodzinami i osobami pełnoletnimi.',
+    description: (<p>
+      Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i rodzin. Specjalista psychoterapii w Ośrodku Interwencji Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic <br /> i na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony na pracy z całymi rodzinami i osobami pełnoletnimi.
+    </p>),
     imageUrl: '/assets/doc2.jpg',
   },
   
@@ -90,14 +105,18 @@ const staffData = [
     id: 12,
     name: 'Katarzyna Duźniak',
     specialty: 'Pedagog',
-    description: 'Magister pedagogiki, specjalizuje się w pracy socjalnej oraz opiekuńczo-wychowawczej. Wieloletni terapeuta uzależnień,  biegła sądowa w sprawach alkoholizmu, pracowała w czołowych placówkach zdrowia psychicznego. Specjalizuje się we wszystkich formach uzależnień. Wykładowca studiów podyplomowych oraz licencjackich od 2008r. Specjalista ORE w zakresie edukacji włączającej.',
+    description: (<p>
+      Magister pedagogiki, specjalizuje się <br />w pracy socjalnej oraz opiekuńczo-wychowawczej. Wieloletni terapeuta uzależnień,  biegła sądowa w sprawach alkoholizmu, pracowała w czołowych placówkach zdrowia psychicznego. Specjalizuje się we wszystkich formach uzależnień. Wykładowca studiów podyplomowych oraz licencjackich od 2008r. Specjalista ORE w zakresie edukacji włączającej.
+    </p>) ,
     imageUrl: '/assets/doc2.jpg',
   },
   {
     id: 13,
     name: 'Paulina Rosa',
     specialty: 'Logopeda',
-    description: 'Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, trener języka polskiego jako obcego, czynny nauczyciel w szkole podstawowej i ponadpodstawowej, terapeuta sesji logopedycznych. Trener z obszaru edukacji  włączającej. Wykładowca na studiach podyplomowych.',
+    description: (<p>
+      Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, trener języka polskiego jako obcego, czynny nauczyciel w szkole podstawowej i ponadpodstawowej, terapeuta sesji logopedycznych. Trener <br /> z obszaru edukacji  włączającej. Wykładowca na studiach podyplomowych.
+    </p>) ,
     imageUrl: '/assets/doc2.jpg',
   },
   
@@ -105,7 +124,9 @@ const staffData = [
     id: 14,
     name: 'Anna Kowalska',
     specialty: 'Psycholog',
-    description: 'Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej i Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener nowoczesnego doradztwa zawodowego i edukacyjnego. Teraputa z zakresu psychoterapii par, EFT - terapii skoncentrowanej na emocjach, pracy z dziećmi i młodzieżą. Specjalista edukacji włączającej. Wykładowca studiów podyplomowych z zakresu swoich specjalizacji.',
+    description: (<p>
+      Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej i Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener nowoczesnego doradztwa zawodowego <br /> i edukacyjnego. Teraputa z zakresu psychoterapii par, EFT - terapii skoncentrowanej na emocjach, pracy <br />z dziećmi i młodzieżą. Specjalista edukacji włączającej. Wykładowca studiów podyplomowych z zakresu swoich specjalizacji.
+    </p>),
     imageUrl: '/assets/doc2.jpg',
   },
   
@@ -115,7 +136,7 @@ const DoctorCards = () => {
 
   return (
     <section className="mx-6 sm:mx-16 lg:mx-[200px] mb-[100px] mt-20">
-      <h3 className="text-4xl font-semibold text-gray-800 pb-8 text-center sm:text-5xl">Poznaj naszych specjalistów</h3> 
+      <h3 className="text-4xl font-semibold text-gray-800 pb-8 text-center sm:text-5xl">Poznaj naszych Specjalistów</h3> 
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {staffData.map((person, index) => (

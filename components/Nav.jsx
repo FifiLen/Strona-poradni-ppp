@@ -10,7 +10,8 @@ const MENU_LIST = [
   { text: "ADOS-2", href: "/ADOS-2" },
   { text: "Terapia VR", href: "/Vr-terapy" },
   { text: "Biofeedback VR", href: "/Biofeedback-VR" },
-  { text: "SI", href: "/"},
+  { text: "IS", href: "https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=800"},
+  { text: "WWRD", href: "https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=952"},
   { text: "Oferta", href: "/Offer" },
   { text: "Kadra", href: "/Staff" },
   { text: "Cennik", href: "/PriceList" },
@@ -50,23 +51,62 @@ const Navbar = () => {
             <Image src="/assets/magnolia.png" alt="Magnolia Logo" width={50} height={50} className="object-contain" />
             <h1 className="ml-2 text-white">MAGNOLIA</h1>
           </div>
-          {MENU_LIST.map((menu) => (
-            <Link href={menu.href} key={menu.text} passHref>
-              <div className="nav-item flex justify-end items-center cursor-pointer whitespace-nowrap py-2 pr-4 hover:bg-gray-700 transition-colors duration-200 text-white" onClick={() => setIsMenuOpen(false)}>
-                <MdNavigateNext className="text-xl mr-1" />
+          {MENU_LIST.map((menu) => {
+    if (menu.href.startsWith('http')) {
+        // Linki zewnętrzne
+        return (
+            <a
+                key={menu.text}
+                href={menu.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-item cursor-pointer whitespace-nowrap"
+                onClick={() => setIsMenuOpen(false)}
+            >
                 {menu.text}
-              </div>
+            </a>
+        );
+    } else {
+        // Linki wewnętrzne
+        return (
+            <Link href={menu.href} key={menu.text} passHref>
+                <div className="nav-item cursor-pointer whitespace-nowrap" onClick={() => setIsMenuOpen(false)}>
+                    {menu.text}
+                </div>
             </Link>
-          ))}
+        );
+    }
+})}
+
+
         </div>
         <div className={`nav__menu-list overflow-x-auto ${isMenuOpen ? '' : ''} md:block`}>
-          {MENU_LIST.map((menu) => (
-            <Link href={menu.href} key={menu.text} passHref>
-              <div className="nav-item cursor-pointer whitespace-nowrap" onClick={() => setIsMenuOpen(false)}>
+        {MENU_LIST.map((menu) => {
+    if (menu.href.startsWith('http')) {
+        // Linki zewnętrzne
+        return (
+            <a
+                key={menu.text}
+                href={menu.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-item cursor-pointer whitespace-nowrap"
+                onClick={() => setIsMenuOpen(false)}
+            >
                 {menu.text}
-              </div>
+            </a>
+        );
+    } else {
+        // Linki wewnętrzne
+        return (
+            <Link href={menu.href} key={menu.text} passHref>
+                <div className="nav-item cursor-pointer whitespace-nowrap" onClick={() => setIsMenuOpen(false)}>
+                    {menu.text}
+                </div>
             </Link>
-          ))}
+        );
+    }
+})}
         </div>
         <div className="nav__buttons hidden md:flex">
           <Link href="/Registration" passHref>
