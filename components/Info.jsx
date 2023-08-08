@@ -5,63 +5,64 @@ const Info = () => {
   const infoData = [
     {
       title: "Terapia wspomagana VR",
-      description: "Lorem ipsum...",
+      description: "",
       special: false,
       video: '/assets/movie.mp4',
       path: '/Vr-terapy'
     },
     {
       title: "Easy Biofeedback VR",
-      description: "Lorem ipsum...",
+      description: "",
       special: false,
       video: '/assets/movie.mp4',
       path: '/Biofeedback-VR'
     },
     {
       title: "Integracja sensoryczna",
-      description: "Lorem ipsum...",
+      description: "",
       special: false,
       video: '/assets/movie5.mp4',
       path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=800',
     },
     {
+      title: "WWRD",
+      description: "",
+      special: false,
+      video: '/assets/movie7.mp4',
+      path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=952'
+    },
+    {
       title: "Terapia Sensoryczna",
-      description: "Lorem ipsum...",
+      description: "",
       special: false,
       video: '/assets/movie.mp4',
       path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=800',
     },
     {
       title: "Terapia Ręki",
-      description: "Lorem ipsum...",
+      description: "",
       special: false,
       video: '/assets/movie.mp4',
       path: '/Vr-terapy'
     },
-    {
-      title: "WWRD",
-      description: "Lorem ipsum...",
-      special: false,
-      video: '/assets/movie7.mp4',
-      path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=952'
-    },
+    
     {
       title: "C-eye Pro®",
-      description: "Lorem ipsum...",
+      description: "",
       special: false,
       video: '/assets/movie6.mp4',
       path: '/C-Eye'
     },
     {
       title: "Tomatis Pro®",
-      description: "Lorem ipsum...",
+      description: "",
       special: false,
       video: '/assets/movie.mp4',
       path: '/Vr-terapy'
     },
     {
       title: "ADOS-2",
-      description: "Lorem ipsum...",
+      description: "Diagnoza od 18 miesiąca życia",
       special: false,
       video: '/assets/movie3.mp4',
       path: '/ADOS-2'

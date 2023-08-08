@@ -11,7 +11,7 @@ const CEye = () => {
         <div className="absolute top-0 left-0 w-full h-[620px] bg-black opacity-40 z-5"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
           <h1 className="text-4xl text-white font-bold">C-eye® PRO</h1>
-          <p className="text-white">Sprzęt do rehabilitacji i opieki neurologicznej</p>
+          <p className="text-white">Sprzęt medyczny do rehabilitacji i opieki neurologicznej</p>
         </div>
       </div>
     <section className="mx-4 sm:mx-8 md:mx-16 lg:mx-[200px] mt-8 sm:mt-[80px] bg-green-500 p-1 rounded-lg shadow-xl mb-20">
