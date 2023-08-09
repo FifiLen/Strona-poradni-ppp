@@ -47,39 +47,40 @@ const Navbar = () => {
           }
         </div>
         <div className={`absolute top-full right-0 w-64 bg-gray-700 rounded-md shadow-lg z-10 overflow-hidden text-right ${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-          <div className="flex justify-center items-center bg-gray-200 p-2">
-            <Image src="/assets/magnolia.png" alt="Magnolia Logo" width={50} height={50} className="object-contain" />
-            <h1 className="ml-2 text-white">MAGNOLIA</h1>
-          </div>
-          {MENU_LIST.map((menu) => {
-    if (menu.href.startsWith('http')) {
-        // Linki zewnętrzne
-        return (
-            <a
-                key={menu.text}
-                href={menu.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-item cursor-pointer whitespace-nowrap"
-                onClick={() => setIsMenuOpen(false)}
-            >
-                {menu.text}
-            </a>
-        );
-    } else {
-        // Linki wewnętrzne
-        return (
-            <Link href={menu.href} key={menu.text} passHref>
-                <div className="nav-item cursor-pointer whitespace-nowrap" onClick={() => setIsMenuOpen(false)}>
-                    {menu.text}
-                </div>
-            </Link>
-        );
-    }
-})}
+    <div className="flex justify-center items-center bg-gray-200 p-2">
+        <Image src="/assets/magnolia.png" alt="Magnolia Logo" width={50} height={50} className="object-contain" />
+        <h1 className="ml-2 text-white">MAGNOLIA</h1>
+    </div>
+    {MENU_LIST.map((menu) => {
+        const commonClass = "flex items-center justify-between nav-item cursor-pointer whitespace-nowrap text-white py-2 px-4";
 
+        if (menu.href.startsWith('http')) {
+            // Linki zewnętrzne
+            return (
+                <a
+                    key={menu.text}
+                    href={menu.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={commonClass}
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                    {menu.text} <MdNavigateNext />
+                </a>
+            );
+        } else {
+            // Linki wewnętrzne
+            return (
+                <Link href={menu.href} key={menu.text} passHref>
+                    <div className={commonClass} onClick={() => setIsMenuOpen(false)}>
+                        {menu.text} <MdNavigateNext />
+                    </div>
+                </Link>
+            );
+        }
+    })}
+</div>
 
-        </div>
         <div className={`nav__menu-list overflow-x-auto ${isMenuOpen ? '' : ''} md:block`}>
         {MENU_LIST.map((menu) => {
     if (menu.href.startsWith('http')) {

@@ -187,47 +187,46 @@ const Biofeedback = () => {
     });
   }, [expandedId]);
 
-  return (
-    <div className="max-w-3xl mx-[200px] mt-10 mb-16 h-screen flex flex-col">
-      <h2 className=" text-[55px] font-semibold text-gray-800 mt-[60px]">Biofeedback VR</h2>
-      <p className='  text-[20px] font-light text-gray-500 mb-[30px]'>Technologia Łącząca Biofeedback i Wirtualną Rzeczywistość</p>
-      <div className="flex-1 overflow-y-auto pb-6">
-        <div className="max-w-3xl mx-auto">
-          <ul className="divide-y divide-gray-300">
-            {faqList.map((faq) => (
-              <li key={faq.id} className="py-4">
-                <button
-                  className="faq-button w-full flex justify-between items-center focus:outline-none"
-                  onClick={() => toggleAnswer(faq.id)}
-                >
-                  <span className="text-lg font-semibold text-gray-800">{faq.question}</span>
-                  <svg
-                    className={`w-5 h-5 text-gray-500 ${expandedId === faq.id ? 'transform rotate-180' : ''}`}
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path d="M9 5l7 7-7 7"></path>
-                  </svg>
-                </button>
-                {expandedId === faq.id && (
-                  <div
-                    id={`faq-${faq.id}`}
-                    className="faq-content mt-2 pr-4 text-gray-600"
-                  >
-                    {faq.answer}
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
+    return (
+      <div className="max-w-3xl mx-auto mt-10 mb-16 min-h-screen flex flex-col justify-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mt-10 sm:mt-16 lg:mt-20 text-center">Biofeedback VR</h2>
+          <p className='text-xl sm:text-xl lg:text-2xl font-light text-gray-500 my-4 sm:my-6 text-center'>Technologia Łącząca Biofeedback i Wirtualną Rzeczywistość</p>
+          <div className="flex-1 overflow-y-auto pb-6">
+              <div className="mx-auto">
+                  <ul className="divide-y divide-gray-300">
+                      {faqList.map((faq) => (
+                          <li key={faq.id} className="py-4">
+                              <button
+                                  className="faq-button w-full flex justify-between items-center focus:outline-none"
+                                  onClick={() => toggleAnswer(faq.id)}
+                              >
+                                  <span className="text-lg font-semibold text-gray-800">{faq.question}</span>
+                                  <svg
+                                      className={`w-5 h-5 text-gray-500 ${expandedId === faq.id ? 'transform rotate-180' : ''}`}
+                                      fill="none"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth="2"
+                                      viewBox="0 0 24 24"
+                                      stroke="currentColor"
+                                  >
+                                      <path d="M9 5l7 7-7 7"></path>
+                                  </svg>
+                              </button>
+                              {expandedId === faq.id && (
+                                  <div
+                                      id={`faq-${faq.id}`}
+                                      className="faq-content mt-2 pr-4 text-gray-600"
+                                  >
+                                      {faq.answer}
+                                  </div>
+                              )}
+                          </li>
+                      ))}
+                  </ul>
+              </div>
+          </div>
       </div>
-    </div>
-  );
-};
+    )};
 
 export default Biofeedback; 
