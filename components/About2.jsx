@@ -10,7 +10,7 @@ const About2 = () => {
             <div className="mx-auto">              
               <div className="mb-6 bg-white p-4 sm:p-6 rounded-lg shadow-lg">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-gray-600">O Nas</h2>
-                <p className="text-base text-gray-600">Poradnia MAGNOLIA powstała w odpowiedzi na dwuletnie działania prowadzone w zakresie wspierania uczniów ze specjalnymi potrzebami edukacyjnymi – i co ważne – w odpowiedzi na odczarowanie terminu: „uczeń ze specjalnymi potrzebami edukacyjnymi”. W dwa lata przeszkolonych zostało 3.350 nauczycieli z obszaru edukacji włączenia, którzy uczestniczyli łącznie w 5.270 godzinach zajęć. Następstwem dwuletnich działań było powołanie do życia Poradni Psychologiczno – Pedagogicznej MAGNOLIA, która działa na podstawie wpisu Prezydenta Miasta Rybnika do ewidencji szkół i placówek niepublicznych: <b>Nr wpisu: E-I.4430.51.2023.</b> </p>
+                <p className="text-base text-gray-600">Poradnia MAGNOLIA powstała w odpowiedzi na dwuletnie działania prowadzone w zakresie wspierania uczniów ze specjalnymi potrzebami edukacyjnymi – i co ważne – w odpowiedzi na odczarowanie terminu: „uczeń ze specjalnymi potrzebami edukacyjnymi”. <br />W dwa lata przeszkolonych zostało 3.350 nauczycieli z obszaru edukacji włączenia, którzy uczestniczyli łącznie w 5.270 godzinach zajęć. Następstwem dwuletnich działań było powołanie do życia Poradni Psychologiczno – Pedagogicznej MAGNOLIA, która działa <br />na podstawie wpisu Prezydenta Miasta Rybnika do ewidencji szkół i placówek niepublicznych: <br /> <b className=' text-xl'>Nr wpisu: E-I.4430.51.2023.</b> </p>
               </div>
 
               <div className="mb-6 bg-white p-4 sm:p-6 rounded-lg shadow-lg">

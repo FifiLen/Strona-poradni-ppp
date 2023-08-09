@@ -56,7 +56,7 @@ const CEye = () => {
             opiece nad pacjentami neurologicznymi pozbawionymi możliwości kontaktu z otoczeniem za
             pomocą mowy czy gestów. W systemie C-eye® wykorzystywana jest technologia śledzenia
             wzroku (eye tracking), dzięki której można w obiektywny i wiarygodny sposób prowadzić
-            sesje diagnostyczne i terapeutyczne z pacjentami, dla których ostatnią możliwością
+            sesje diagnostyczne <br /> i terapeutyczne z pacjentami, dla których ostatnią możliwością
             kontaktu z otoczeniem pozostały ruchy gałek ocznych. Sesje diagnostyczne i terapeutyczne
             polegają na wybieraniu przez pacjenta wyświetlanych na ekranie treści. System umożliwia
             dostosowanie terapii do możliwości i potrzeb pacjenta.

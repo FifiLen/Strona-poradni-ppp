@@ -10,7 +10,7 @@ const MENU_LIST = [
   { text: "ADOS-2", href: "/ADOS-2" },
   { text: "Terapia VR", href: "/Vr-terapy" },
   { text: "Biofeedback VR", href: "/Biofeedback-VR" },
-  { text: "IS", href: "https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=800"},
+  { text: "SI", href: "https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=800"},
   { text: "WWRD", href: "https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=952"},
   { text: "Oferta", href: "/Offer" },
   { text: "Kadra", href: "/Staff" },
