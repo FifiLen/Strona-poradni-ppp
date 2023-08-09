@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Info = () => {
   const infoData = [
     {
-      title: "Terapia wspomagana VR",
+      title: (<p>Terapia wspomagana <br /> Virtual Reality</p>),
       description: "",
       special: false,
       video: '/assets/movie.mp4',

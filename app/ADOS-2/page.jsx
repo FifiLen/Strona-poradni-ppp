@@ -429,6 +429,14 @@ const Ados = () => {
        ),
        ref: useRef(null),
     },
+    {
+      id: 'cennik',
+      title: 'Cennik',
+      content: (
+        <div className='mx-4 my-2'></div>
+      ),
+      ref: useRef(null)
+    }
     
   ];
 

@@ -23,7 +23,7 @@ const InfoReservation = () => {
               <FaWhatsapp className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl mr-4 lg:mr-6" />
               <div>
                 <h3 className="font-semibold text-xl lg:text-xl">Obsługa WhatsApp</h3>
-                <p className="text-lg">tel. 502 162 365 <br className='hidden lg:block'/>(poniedziałek – sobota: 9.00 – 22.00)</p>
+                <p className="text-lg">tel. 502 162 365 <br className='hidden lg:block'/>(poniedziałek – sobota: 9.00 – 21.00)</p>
               </div>
             </div>
           </div>
