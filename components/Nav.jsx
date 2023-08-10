@@ -8,7 +8,7 @@ const MENU_LIST = [
   { text: "Strona główna", href: "/" },
   { text: "C-Eye Pro", href: "/C-Eye" },
   { text: "ADOS-2", href: "/ADOS-2" },
-  { text: "Terapia VR", href: "/Vr-terapy" },
+  { text: "Terapia VR", href: "https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=1066" },
   { text: "Biofeedback VR", href: "/Biofeedback-VR" },
   { text: "SI", href: "https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=800"},
   { text: "WWRD", href: "https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=952"},
