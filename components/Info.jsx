@@ -8,7 +8,7 @@ const Info = () => {
       description: "",
       special: false,
       video: '/assets/movie.mp4',
-      path: '/Vr-terapy'
+      path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=1066'
     },
     {
       title: "Easy Biofeedback VR",
