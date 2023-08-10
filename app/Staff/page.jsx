@@ -88,7 +88,7 @@ const staffData = [
     description: (<p>
       Magister psychologii z zakresu neuropsychologii i psychologii klinicznej. Specjalista w zintegrowanej edukacji wczesnoszkolnej, edukacji informatycznej oraz edukacji i rehabilitacji osób <br />z niepełnosprawnością intelektualną. Terapeuta WWRD i hipoterapii. Specjalista w zakresie komunikacji alternatywnej <br />i wspomagającej oraz diagnozy alternatywnych i wspomagających metod porozumiewania się.
     </p>),
-    imageUrl: '/assets/doc2.jpg',
+    imageUrl: '/assets/woman.png',
   },
   {
     id: 11,
@@ -97,7 +97,7 @@ const staffData = [
     description: (<p>
       Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i rodzin. Specjalista psychoterapii w Ośrodku Interwencji Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic <br /> i na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony na pracy z całymi rodzinami i osobami pełnoletnimi.
     </p>),
-    imageUrl: '/assets/doc2.jpg',
+    imageUrl: '/assets/woman.png',
   },
   
   
@@ -108,7 +108,7 @@ const staffData = [
     description: (<p>
       Magister pedagogiki, specjalizuje się <br />w pracy socjalnej oraz opiekuńczo-wychowawczej. Wieloletni terapeuta uzależnień,  biegła sądowa w sprawach alkoholizmu, pracowała w czołowych placówkach zdrowia psychicznego. Specjalizuje się we wszystkich formach uzależnień. Wykładowca studiów podyplomowych oraz licencjackich od 2008r. Specjalista ORE w zakresie edukacji włączającej.
     </p>) ,
-    imageUrl: '/assets/doc2.jpg',
+    imageUrl: '/assets/woman.png',
   },
   {
     id: 13,
@@ -117,7 +117,7 @@ const staffData = [
     description: (<p>
       Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, trener języka polskiego jako obcego, czynny nauczyciel w szkole podstawowej i ponadpodstawowej, terapeuta sesji logopedycznych. Trener <br /> z obszaru edukacji  włączającej. Wykładowca na studiach podyplomowych.
     </p>) ,
-    imageUrl: '/assets/doc2.jpg',
+    imageUrl: '/assets/woman.png',
   },
   
   {
@@ -127,7 +127,7 @@ const staffData = [
     description: (<p>
       Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej i Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener nowoczesnego doradztwa zawodowego <br /> i edukacyjnego. Teraputa z zakresu psychoterapii par, EFT - terapii skoncentrowanej na emocjach, pracy <br />z dziećmi i młodzieżą. Specjalista edukacji włączającej. Wykładowca studiów podyplomowych z zakresu swoich specjalizacji.
     </p>),
-    imageUrl: '/assets/doc2.jpg',
+    imageUrl: '/assets/woman.png',
   },
   
 ];
