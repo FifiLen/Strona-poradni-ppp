@@ -7,7 +7,7 @@ const Info = () => {
       title: (<p>Terapia wspomagana <br /> Virtual Reality</p>),
       description: "",
       special: false,
-      video: '/assets/movie.mp4',
+      video: '/assets/movie8.mp4',
       path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=1066'
     },
     {
