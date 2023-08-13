@@ -29,7 +29,7 @@ const Info = () => {
       description: "",
       special: false,
       video: '/assets/movie7.mp4',
-      path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=952'
+      path: '/WWRD'
     },
    /* {
       title: "Terapia Sensoryczna",
