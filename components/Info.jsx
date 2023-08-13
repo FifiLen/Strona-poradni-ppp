@@ -10,13 +10,13 @@ const Info = () => {
       video: '/assets/movie8.mp4',
       path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=1066'
     },
-    {
+   /* {
       title: "Easy Biofeedback VR",
       description: "",
       special: false,
       video: '/assets/movie.mp4',
       path: '/Biofeedback-VR'
-    },
+    }, */
     {
       title: "Integracja sensoryczna",
       description: "",
@@ -31,20 +31,20 @@ const Info = () => {
       video: '/assets/movie7.mp4',
       path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=952'
     },
-    {
+   /* {
       title: "Terapia Sensoryczna",
       description: "",
       special: false,
       video: '/assets/movie.mp4',
       path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=800',
     },
-    {
+   /* {
       title: "Terapia Ręki",
       description: "",
       special: false,
       video: '/assets/movie.mp4',
       path: '/Vr-terapy'
-    },
+    }, */
     
     {
       title: "C-eye Pro®",
@@ -53,13 +53,13 @@ const Info = () => {
       video: '/assets/movie6.mp4',
       path: '/C-Eye'
     },
-    {
+  /*  {
       title: "Tomatis Pro®",
       description: "",
       special: false,
       video: '/assets/movie.mp4',
       path: '/Vr-terapy'
-    },
+    }, */
     {
       title: "ADOS-2",
       description: "Diagnoza od 18 miesiąca życia",
@@ -112,7 +112,7 @@ const Info = () => {
           );
         })}
       </div>
-      <div className="flex justify-end mt-5">
+   {/*   <div className="flex justify-end mt-5">
         <Link href="/Offer" passHref>
           <div className="flex items-center font-semibold text-gray-700 cursor-pointer relative group hover:text-pink-400">
             <span className="mr-1">Dowiedz się więcej</span>
@@ -121,7 +121,7 @@ const Info = () => {
             </svg>
           </div>
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 };
