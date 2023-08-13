@@ -8,7 +8,7 @@ const Info = () => {
       description: "",
       special: false,
       video: '/assets/movie8.mp4',
-      path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=1066'
+      path: '/Vr-terapy'
     },
    /* {
       title: "Easy Biofeedback VR",
@@ -22,7 +22,7 @@ const Info = () => {
       description: "",
       special: false,
       video: '/assets/movie5.mp4',
-      path: 'https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=800',
+      path: '/Integration',
     },
     {
       title: "WWRD",
