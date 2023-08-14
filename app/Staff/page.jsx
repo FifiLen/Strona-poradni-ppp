@@ -9,7 +9,7 @@ const staffData = [
     name: 'Wioletta Ginter',
     specialty: 'Pedagog',
     description: (
-     <p>Magister pedagogiki specjalizujący się<br /> w poradnictwie i pomocy psychopedagogicznej. Jako aktywny pedagog specjalny, terapeuta ręki, specjalista w edukacji włączającej <br />i wykładowca, posiada bogate doświadczenie, przekazując swoją wiedzę zarówno uczniom, jak i nauczycielom <br />w różnych instytucjach edukacyjnych. Specjalista ORE w zakresie edukacji włączającej.</p> ),
+     <p>Magister pedagogiki specjalizujący się w&nbsp; poradnictwie i&nbsp;pomocy psychopedagogicznej. Jako aktywny pedagog specjalny, terapeuta ręki, specjalista w&nbsp; edukacji włączającej i&nbsp;wykładowca, posiada bogate doświadczenie, przekazując swoją wiedzę zarówno uczniom, jak i&nbsp;nauczycielom w&nbsp; różnych instytucjach edukacyjnych. Specjalista ORE w&nbsp; zakresie edukacji włączającej.</p> ),
     imageUrl: '/assets/Test.png',
   },
   
@@ -17,7 +17,9 @@ const staffData = [
     id: 2,
     name: 'Klaudia Rogalska',
     specialty: 'Trener',
-    description: 'Magister filologii angielskiej. Wykładowca na kierunku język angielski oraz PR. Metodykiem i trener nauczycieli języków obcych. Trener TIK w tym wykorzystania nowych technologii w pracy z uczniami ze SPE. Terapeuta w obszarze wykorzystania Wirtualnej Rzeczywistości w Terapii Przyszłości. Specjalista ORE w zakresie edukacji włączającej. Specjalista i trener regionalny woj. śląskiego TIK. Autor kursów online i autorskich materiałów dydaktycznych.',
+    description: (
+      <p>Magister filologii angielskiej. Wykładowca na&nbsp;kierunku język angielski oraz&nbsp;PR. Metodykiem i&nbsp;trener nauczycieli języków obcych. Trener TIK w&nbsp;tym wykorzystania nowych technologii w&nbsp;pracy z&nbsp;uczniami ze&nbsp;SPE. Terapeuta w&nbsp;obszarze wykorzystania Wirtualnej Rzeczywistości w&nbsp;Terapii Przyszłości. Specjalista ORE w&nbsp;zakresie edukacji włączającej. Specjalista i&nbsp;trener regionalny woj. śląskiego TIK. Autor kursów online i&nbsp;autorskich materiałów dydaktycznych. </p>
+    ),
     imageUrl: '/assets/T10.png',
   },
   {
