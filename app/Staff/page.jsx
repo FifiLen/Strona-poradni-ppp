@@ -131,7 +131,7 @@ Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, 
     name: 'Anna Kowalska',
     specialty: 'Psycholog',
     description: (<p>
-      Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej i Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener nowoczesnego doradztwa zawodowego <br /> i edukacyjnego. Teraputa z zakresu psychoterapii par, EFT - terapii skoncentrowanej na emocjach, pracy <br />z dziećmi i młodzieżą. Specjalista edukacji włączającej. Wykładowca studiów podyplomowych z zakresu swoich specjalizacji.
+Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej i&nbsp;Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener nowoczesnego doradztwa zawodowego i&nbsp;edukacyjnego. Teraputa z&nbsp;zakresu psychoterapii par, EFT - terapii skoncentrowanej na&nbsp;emocjach, pracy z&nbsp;dziećmi i&nbsp;młodzieżą. Specjalista edukacji włączającej. Wykładowca studiów podyplomowych z&nbsp;zakresu swoich specjalizacji.
     </p>),
     imageUrl: '/assets/woman.png',
   },

@@ -13,17 +13,17 @@ const About = () => {
                 <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-gray-600">Nasze Metody</h2>
                 <ul className="list-disc list-inside text-base text-gray-600">
                   <li>Fizjoterapia z wykorzystaniem wirtualnej rzeczywistości dla dzieci od 12 miesiąca życia, młodzieży oraz osób dorosłych</li>
-                  <li>Integracja sensoryczna z terapią ręki wykorzystująca możliwości sztucznej inteligencji</li>
-                  <li>Biofeedback Virtual Reality - zaawansowana technologia monitorująca i kontrolująca funkcje fizjologiczne, takich jak tętno, poziom stresu, skurcze mięśni czy aktywność mózgu, w czasie rzeczywistym.</li>
-                  <li>Wirtualna rzeczywistość w terapii: stanów lękowych, agresji, niedostosowania społecznego, nadwrażliwości, stresu, fobi, terapii reki, zaburzeń neurologicznych, choroby Parkinsona, zeza i wiele, wiele innych</li>
-                  <li>Cyber Oko: badanie zmysłu wzroku i słuchu, wyrażanie emocji, test świadomości</li>
+                  <li>Integracja sensoryczna z&nbsp; terapią ręki wykorzystująca możliwości sztucznej inteligencji</li>
+                  <li>Biofeedback Virtual Reality - zaawansowana technologia monitorująca i&nbsp; kontrolująca funkcje fizjologiczne, takich jak tętno, poziom stresu, skurcze mięśni czy aktywność mózgu, w&nbsp; czasie rzeczywistym.</li>
+                  <li>Wirtualna rzeczywistość w terapii: stanów lękowych, agresji, niedostosowania społecznego, nadwrażliwości, stresu, fobi, terapii reki, zaburzeń neurologicznych, choroby Parkinsona, zeza i&nbsp; wiele, wiele innych</li>
+                  <li>Cyber Oko: badanie zmysłu wzroku i&nbsp; słuchu, wyrażanie emocji, test świadomości</li>
                   <li>Diagnoza ADOS -2, czyli Autism Diagnostic Observation Schedule, Second Edition, jest narzędziem wykorzystywanym do diagnozy autyzmu oraz innych zaburzeń ze spektrum autyzmu (ASD) dla dzieci od 12 miesiąca życia do osób dorosłych, które nie zostały dotąd zdiagnozowane.</li>
                 </ul>
               </div>
 
               <div className="mb-6 bg-white p-4 sm:p-6 rounded-lg shadow-lg">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-gray-600">Zapraszamy</h2>
-                <p className="text-base text-gray-600">Chcemy, aby każdy czuł się wspierany i rozumiany. Nasza Poradnia jest miejscem, w którym technologia spotyka się z empatią, tworząc unikalną platformę do odkrywania, nauki i rozwoju zarówno uczniów z trudnościami w nauce jak i uczniów ponadprzeciętnie zdolnych! Odkrywaj z nami, jak innowacyjne metody oraz połączenie teraźniejszości z przyszłością mogą Cię rozwijać, żebyś mógł/mogła osiągnąć pełnię swojego potencjału.</p>
+                <p className="text-base text-gray-600">Chcemy, aby każdy czuł się wspierany i&nbsp; rozumiany. Nasza Poradnia jest miejscem, w którym&nbsp; technologia spotyka się z empatią, tworząc unikalną platformę do odkrywania, nauki i&nbsp; rozwoju zarówno uczniów z&nbsp; trudnościami w&nbsp; nauce jak i&nbsp; uczniów ponadprzeciętnie zdolnych! Odkrywaj z nami, jak innowacyjne metody oraz połączenie teraźniejszości z&nbsp; przyszłością mogą Cię rozwijać, żebyś mógł/mogła osiągnąć pełnię swojego potencjału.</p>
               </div>
 
               <div className="text-center">

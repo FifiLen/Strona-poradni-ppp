@@ -52,24 +52,24 @@ const CEye = () => {
             C-eye® Pro - Sprzęt do rehabilitacji i opieki neurologicznej
           </h4>
           <p className="text-gray-800 mb-6">
-            C-eye® to sprzęt będący obecnie standardem w rehabilitacji funkcji poznawczych i w
-            opiece nad pacjentami neurologicznymi pozbawionymi możliwości kontaktu z otoczeniem za
-            pomocą mowy czy gestów. W systemie C-eye® wykorzystywana jest technologia śledzenia
-            wzroku (eye tracking), dzięki której można w obiektywny i wiarygodny sposób prowadzić
-            sesje diagnostyczne <br /> i terapeutyczne z pacjentami, dla których ostatnią możliwością
-            kontaktu z otoczeniem pozostały ruchy gałek ocznych. Sesje diagnostyczne i terapeutyczne
+            C-eye® to sprzęt będący obecnie standardem w rehabilitacji funkcji poznawczych i&nbsp; w&nbsp;
+            opiece nad pacjentami neurologicznymi pozbawionymi możliwości kontaktu z&nbsp; otoczeniem za
+            pomocą mowy czy gestów. W&nbsp; systemie C-eye® wykorzystywana jest technologia śledzenia
+            wzroku (eye tracking), dzięki której można w obiektywny i&nbsp; wiarygodny sposób prowadzić
+            sesje diagnostyczne i&nbsp; terapeutyczne z pacjentami, dla których ostatnią możliwością
+            kontaktu z otoczeniem pozostały ruchy gałek ocznych. Sesje diagnostyczne i&nbsp; terapeutyczne
             polegają na wybieraniu przez pacjenta wyświetlanych na ekranie treści. System umożliwia
-            dostosowanie terapii do możliwości i potrzeb pacjenta.
+            dostosowanie terapii do możliwości i&nbsp; potrzeb pacjenta.
           </p>
           <h4 className="text-3xl font-bold text-green-500 mb-4">
             C-eye® Pro jest produktem medycznym
           </h4>
           <p className="text-gray-800">
             C-eye® Pro jest produktem medycznym, wykorzystującym eye tracking. Jest to narzędzie,
-            które pomaga terapeutom w ocenie stanu świadomości oraz rehabilitacji pacjentów z
+            które pomaga terapeutom w&nbsp; ocenie stanu świadomości oraz rehabilitacji pacjentów z&nbsp;
             różnorodnymi zaburzeniami neurologicznymi. System C-eye® Pro to również narzędzie pracy
             wielu specjalistów, takich jak logopedzi, neurologopedzi, psycholodzy, neuropsycholodzy,
-            terapeuci AAC, terapeuci widzenia, terapeuci zajęciowi i fizjoterapeuci.
+            terapeuci AAC, terapeuci widzenia, terapeuci zajęciowi i&nbsp; fizjoterapeuci.
           </p>
         </div>
       </div>
