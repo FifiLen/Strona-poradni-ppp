@@ -27,7 +27,7 @@ const staffData = [
     name: 'Sylwia Cuber',
     specialty: 'Pedagog',
     description: (<p>
-      Magister pedagogiki specjalność: edukacja przedszkolna i wczesnoszkolna, oligofrenopedagogika, edukacja elementarna z dodatkowym językiem angielskim, czynny pedagog specjalny <br /> w szkole podstawowej, specjalista ORE <br />w zakresie edukacji włączającej, trener treningu umiejętności społecznych (TUS) dzieci ze spektrum autyzmu, edukacja <br />i terapia osób ze spektrum autyzmu. Wykładowca studiów podyplomowych <br />z zakresu pedagogiki specjalnej.
+      Magister pedagogiki specjalność: edukacja przedszkolna i&nbsp;wczesnoszkolna, oligofrenopedagogika, edukacja elementarna z&nbsp;dodatkowym językiem angielskim, czynny pedagog specjalny w&nbsp;szkole podstawowej, specjalista ORE w&nbsp;zakresie edukacji włączającej, trener treningu umiejętności społecznych (TUS) dzieci ze&nbsp;spektrum autyzmu, edukacja i&nbsp;terapia osób ze&nbsp;spektrum autyzmu. Wykładowca studiów podyplomowych z&nbsp;zakresu pedagogiki specjalnej.
     </p>),
     imageUrl: '/assets/T2.png',
   },
@@ -37,7 +37,7 @@ const staffData = [
     name: 'Aleksandra Wowra',
     specialty: 'Pedagog',
     description:(<p>
-      Magister pedagogiki – specjalność: opiekuńczo – wychowawczej, oligofrenopedagog, specjalista ORE <br />w zakresie edukacji włączającej, czynny pedagog specjalny. Wykładowca <br />na kierunkach pedagogiki specjalnej <br />na studiach podyplomowych.
+      Magister pedagogiki – specjalność: opiekuńczo – wychowawczej, oligofrenopedagog, specjalista ORE w&nbsp;zakresie edukacji włączającej, czynny pedagog specjalny. Wykładowca na&nbsp;kierunkach pedagogiki specjalnej na&nbsp;studiach podyplomowych.
     </p>),
     imageUrl: '/assets/T9.png',
   },
@@ -46,7 +46,7 @@ const staffData = [
     name: 'Anna Ławniczak',
     specialty: 'Psycholog',
     description: (<p>
-      Magister psychologii, specjalizujący się <br /> w seksuologii klinicznej i psychologii kryminologicznej. Wykładowca studiów podyplomowych z obszaru pedagogiki specjalnej, seksuologii, seksuologii klinicznej. Terapeuta dzieci, par, rodzin. Aktywnie angażuje się w pracę na rzecz dzieci w szkołach i przedszkolach. Specjalista ORE w zakresie edukacji włączającej.
+    Magister psychologii, specjalizujący się w&nbsp;seksuologii klinicznej i&nbsp;psychologii kryminologicznej. Wykładowca studiów podyplomowych z&nbsp;obszaru pedagogiki specjalnej, seksuologii, seksuologii klinicznej. Terapeuta dzieci, par, rodzin. Aktywnie angażuje się w&nbsp;pracę na&nbsp;rzecz dzieci w&nbsp;szkołach i&nbsp;przedszkolach. Specjalista ORE w&nbsp;zakresie edukacji włączającej.
     </p>),
     imageUrl: '/assets/T5.png',
   },
@@ -55,15 +55,17 @@ const staffData = [
     name: 'Joanna Zawadzka',
     specialty: 'Psycholog',
     description: (<p>
-      Magister języka polskiego, specjalista <br /> z zakresu terapii pedagogicznej, diagnozy <br />i profilaktyki społecznej. Terapeuta <br />z obszaru diagnozy dysleksji rozwojowej, egzaminator OKE, nauczyciel języka polskiego jako obcego,  prezes Oddziału Towarzystwo Dysleksji w Rybniku.Doradca i autor publikacji dla IBE- Instytut Badań Edukacyjnych. Pracuje z uczniami uzdolnionymi (przygotowanie do egzaminów/olimpiad).
-      </p>),
+      Magister języka polskiego, specjalista z&nbsp;zakresu terapii pedagogicznej, diagnozy i&nbsp;profilaktyki społecznej. Terapeuta z&nbsp;obszaru diagnozy dysleksji rozwojowej, egzaminator OKE, nauczyciel języka polskiego jako obcego,  prezes Oddziału Towarzystwo Dysleksji w&nbsp;Rybniku. Doradca i&nbsp;autor publikacji dla IBE- Instytut Badań Edukacyjnych. Pracuje z&nbsp;uczniami uzdolnionymi (przygotowanie do&nbsp;egzaminów/olimpiad).
+        </p>),
     imageUrl: '/assets/T3.png'    
   },
   {
     id: 7,
     name: 'Jakub Ruks',
     specialty: 'Etyk',
-    description: 'Doktor filozofii. Wykładowca na kierunkach: etyka oraz filozofia. Czynny nauczyciel etyki i filozofii w szkole podstawowej i ponadpodstawowej. Trener pracujący z uczniem uzdolnionym - przygotowanie do certyfikatów z języka niemieckiego. Specjalista z zakresu  wiedzy o młodym człowieku. Autor scenariuszy zajęć do etyki na wszystkich poziomach kształcenia. Specjalista ORE w zakresie edukacji włączającej.',
+    description: (<p>
+      Doktor filozofii. Wykładowca na&nbsp;kierunkach: etyka oraz filozofia. Czynny nauczyciel etyki i&nbsp;filozofii w&nbsp;szkole podstawowej i&nbsp;ponadpodstawowej. Trener pracujący z&nbsp;ucznem uzdolnionym - przygotowanie do&nbsp;certyfikatów z&nbsp;języka niemieckiego. Specjalista z&nbsp;zakresu  wiedzy o&nbsp;młodym człowieku. Autor scenariuszy zajęć do&nbsp;etyki na&nbsp;wszystkich poziomach kształcenia. Specjalista ORE w&nbsp;zakresie edukacji włączającej.
+    </p>),
     imageUrl: '/assets/T4.png',
   },
   {
@@ -71,7 +73,7 @@ const staffData = [
     name: 'Małgorzata Solowska',
     specialty: 'Trener',
     description: (<p>
-      Magister języka angielskiego, magister historii, trener i moderator TIK, MIEE Educator, trener dla zagranicznych narodowych agencji Erasmus, prelegent konferencji i szkoleń międzynarodowych oraz ogólnopolskich. Specjalista ORE <br />w zakresie edukacji włączającej. Trener TIK w tym wykorzystania nowych technologii w pracy z uczniami ze SPE. Wykładowca studiów podyplomowych <br />z zakresu zarządzania oświatą, historii oraz języka angielskiego.
+Magister języka angielskiego, magister historii, trener i&nbsp;moderator TIK, MIEE Educator, trener dla zagranicznych narodowych agencji Erasmus, prelegent konferencji i&nbsp;szkoleń międzynarodowych oraz ogólnopolskich. Specjalista ORE w&nbsp;zakresie edukacji włączającej. Trener TIK w&nbsp;tym wykorzystania nowych technologii w&nbsp;pracy z&nbsp;uczniami ze&nbsp;SPE. Wykładowca studiów podyplomowych z&nbsp;zakresu zarządzania oświatą, historii oraz języka angielskiego.
     </p>),
     imageUrl: '/assets/T6.png',
   },
@@ -79,7 +81,9 @@ const staffData = [
     id: 9,
     name: 'Anna Falkowska',
     specialty: 'Pedagog, Socjolog',
-    description: (<p>Doktor nauk społecznych z dziedziny pedagogiki i socjologii.  Doradca zawodowy oraz specjalista z zakresu prawa ochrony środowiska i edukacji ekologicznej. Specjalista ORE z zakresu edukacji włączającej. Trener TIK. Specjalista programów do interaktywnej edukacji. Wykładowca akademicki na uczelniach <br />o profilu przyrodniczym, autorka wielu publikacji naukowych i po-konferencyjnych. Ekspert edukacji ekologicznej.</p>),
+    description: (<p>
+Doktor nauk społecznych z&nbsp;dziedziny pedagogiki i&nbsp;socjologii.  Doradca zawodowy oraz specjalista z&nbsp;zakresu prawa ochrony środowiska i&nbsp;edukacji ekologicznej. Specjalista ORE z&nbsp;zakresu edukacji włączającej. Trener TIK. Specjalista programów do&nbsp;interaktywnej&nbsp;edukacji. Wykładowca akademicki na&nbsp;uczelniach o&nbsp;profilu przyrodniczym, autorka wielu publikacji naukowych i&nbsp;po-konferencyjnych. Ekspert edukacji ekologicznej.
+      </p>),
     imageUrl: '/assets/T8.png',
   },
   
@@ -88,7 +92,7 @@ const staffData = [
     name: 'Monika Kromolan',
     specialty: 'Psycholog',
     description: (<p>
-      Magister psychologii z zakresu neuropsychologii i psychologii klinicznej. Specjalista w zintegrowanej edukacji wczesnoszkolnej, edukacji informatycznej oraz edukacji i rehabilitacji osób <br />z niepełnosprawnością intelektualną. Terapeuta WWRD i hipoterapii. Specjalista w zakresie komunikacji alternatywnej <br />i wspomagającej oraz diagnozy alternatywnych i wspomagających metod porozumiewania się.
+Magister psychologii z&nbsp;zakresu neuropsychologii i&nbsp;psychologii klinicznej. Specjalista w&nbsp;zintegrowanej edukacji wczesnoszkolnej, edukacji informatycznej oraz edukacji i&nbsp;rehabilitacji osób z&nbsp;niepełnosprawnością intelektualną. Terapeuta WWRD i&nbsp;hipoterapii. Specjalista w&nbsp;zakresie komunikacji alternatywnej i&nbsp;wspomagającej oraz diagnozy alternatywnych i&nbsp;wspomagających metod porozumiewania się.
     </p>),
     imageUrl: '/assets/woman.png',
   },
@@ -97,7 +101,7 @@ const staffData = [
     name: 'Gabriela Marcisz',
     specialty: 'Psychoterapeuta',
     description: (<p>
-      Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i rodzin. Specjalista psychoterapii w Ośrodku Interwencji Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic <br /> i na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony na pracy z całymi rodzinami i osobami pełnoletnimi.
+Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i&nbsp;rodzin. Specjalista psychoterapii w&nbsp;Ośrodku Interwencji Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic i&nbsp;na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony na&nbsp;pracy z&nbsp;całymi rodzinami i&nbsp;osobami pełnoletnimi.
     </p>),
     imageUrl: '/assets/woman.png',
   },
@@ -108,7 +112,7 @@ const staffData = [
     name: 'Katarzyna Duźniak',
     specialty: 'Pedagog',
     description: (<p>
-      Magister pedagogiki, specjalizuje się <br />w pracy socjalnej oraz opiekuńczo-wychowawczej. Wieloletni terapeuta uzależnień,  biegła sądowa w sprawach alkoholizmu, pracowała w czołowych placówkach zdrowia psychicznego. Specjalizuje się we wszystkich formach uzależnień. Wykładowca studiów podyplomowych oraz licencjackich od 2008r. Specjalista ORE w zakresie edukacji włączającej.
+Magister pedagogiki, specjalizuje się w&nbsp;pracy socjalnej oraz opiekuńczo-wychowawczej. Wieloletni terapeuta uzależnień, biegła sądowa w&nbsp;sprawach alkoholizmu, pracowała w&nbsp;czołowych placówkach zdrowia psychicznego. Specjalizuje się we&nbsp;wszystkich formach uzależnień. Wykładowca studiów podyplomowych oraz licencjackich od&nbsp;2008r. Specjalista ORE w&nbsp;zakresie edukacji włączającej.
     </p>) ,
     imageUrl: '/assets/woman.png',
   },
@@ -117,7 +121,7 @@ const staffData = [
     name: 'Paulina Rosa',
     specialty: 'Logopeda',
     description: (<p>
-      Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, trener języka polskiego jako obcego, czynny nauczyciel w szkole podstawowej i ponadpodstawowej, terapeuta sesji logopedycznych. Trener <br /> z obszaru edukacji  włączającej. Wykładowca na studiach podyplomowych.
+Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, trener języka polskiego jako obcego, czynny nauczyciel w&nbsp;szkole podstawowej i&nbsp;ponadpodstawowej, terapeuta sesji logopedycznych. Trener z&nbsp;obszaru edukacji włączającej. Wykładowca na&nbsp;studiach podyplomowych.
     </p>) ,
     imageUrl: '/assets/woman.png',
   },
