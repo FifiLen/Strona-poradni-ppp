@@ -10,13 +10,13 @@ const Info = () => {
       video: '/assets/movie8.mp4',
       path: '/Vr-terapy'
     },
-   /* {
+   {
       title: "Easy Biofeedback VR",
       description: "",
       special: false,
-      video: '/assets/movie.mp4',
+      video: '/assets/movie9.mp4',
       path: '/Biofeedback-VR'
-    }, */
+    }, 
     {
       title: "Integracja sensoryczna",
       description: "",

@@ -1,98 +1,3 @@
-/* import React from 'react';
-
-const Biofeedback = () => {
-  return (
-    <section className=' mx-[200px] mt-[80px] mb-[80px]'>
-      <h1 className='text-[50px]  text-left font-semibold'>Easy Biofeedback VR</h1>
-      <p className='  text-left text-[20px] text-gray-600'>Technologia Łącząca Biofeedback i Wirtualną Rzeczywistość</p>
-      <br /><br />
-      <div className=' flex justify-start'>
-      <div className='mx-[0px]'>
-        <details className='pb-3'>
-          <summary className=' text-pink-600  text-[18px]'><strong>Zaawansowana technologia monitorowania i kontroli funkcji fizjologicznych</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Easy Biofeedback VR to innowacyjna technologia, która łączy w sobie zalety biofeedbacku i wirtualnej rzeczywistości, otwierając nowe perspektywy w dziedzinie terapii i treningu. Dzięki tej zaawansowanej technologii, możliwe jest monitorowanie i kontrolowanie funkcji fizjologicznych, takich jak tętno, poziom stresu, skurcze mięśni czy aktywność mózgu, w czasie rzeczywistym.</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600  text-[18px]'><strong>Interaktywne wirtualne środowisko dostosowane do danych biologicznych</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Wykorzystując specjalne sensory i urządzenia, Easy Biofeedback VR umożliwia precyzyjny pomiar i analizę danych biologicznych użytkownika. Zgromadzone informacje są następnie wykorzystywane do interakcji z wirtualnym środowiskiem, które może być dostosowane na podstawie bieżących parametrów fizjologicznych.</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600  text-[18px]'><strong>Redukcja stresu poprzez wizualne bodźce wirtualnego środowiska</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Pacjenci mogą monitorować swoje poziomy stresu i otrzymywać wizualne bodźce wirtualnego środowiska, które pomagają w redukcji stresu. Jeśli poziom stresu wzrasta, wirtualne środowisko reaguje, prezentując sceny zaprojektowane do wywoływania relaksu i obniżania napięcia. Dzięki interaktywnemu charakterowi tej technologii, osoby korzystające z niej mają możliwość nauki skutecznych technik relaksacyjnych i samoregulacji w sposób kontrolowany i angażujący.</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600  text-[18px]'><strong>Efektywny trening, rehabilitacja i terapia</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Easy Biofeedback VR znajduje również zastosowanie w treningu sportowym, rehabilitacji fizycznej oraz terapii nerwic i lęków. W trakcie treningu, technologia umożliwia śledzenie postępów użytkownika i dostosowywanie programu treningowego na podstawie bieżących danych biologicznych. Dzięki temu, proces doskonalenia umiejętności lub powrotu do zdrowia może być bardziej efektywny i spersonalizowany.</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600  text-[18px]'><strong>Dostęp do skutecznych technik samoregulacji</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Niezależnie od tego, czy korzystasz z Easy Biofeedback VR w profesjonalnym gabinecie terapeutycznym, czy w zaciszu własnego domu, ta technologia zapewnia większą autonomię i dostęp do skutecznych technik samoregulacji. Otwiera nowe możliwości w terapii i treningu, umożliwiając osiąganie lepszych wyników i poprawę jakości życia.</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600 text-[18px]'><strong>Innowacyjność, nauka i skuteczność</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Easy Biofeedback VR to zaawansowana technologia, która łączy w sobie naukę, innowację i skuteczność. Pozwól, aby Twoje doświadczenie terapeutyczne lub treningowe stało się jeszcze bardziej interaktywne i efektywne dzięki Easy Biofeedback VR.</p>
-        </details>
-      </div>
-      </div>
-
-
-
-      <h1 className='text-[50px]  text-left font-semibold mt-10'>Aparat do terapii</h1>
-      <p className='  text-left text-[20px] text-gray-600'>wg A. TOMATIS Uwaga Słuchowa PRO</p>
-      <br /><br />
-      <div className=' flex  justify-start'>
-      <div className='mx-[0px]'>
-      <details className='pb-3  '>
-          <summary className=' text-pink-600  text-[18px]'><strong>Wyrób Medyczny</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Deklaracja zgodności dla wyrobu medycznego (93/42/EEC)</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600  text-[18px]'><strong>Terapia prof. A. Tomatisa</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Terapia uwagi słuchowej oparta na metodzie prof. A. Tomatisa z wykorzystaniem gotowych programów terapeutycznych, opracowanych przez Josefa Vervoorta – spadkobiercę dorobku naukowego prof. Alfreda Tomatisa</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600  text-[18px]'><strong>300 gotowych programów terapeutycznych</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>ponad 300 gotowych programów terapeutycznych opracowanych na każdy dzień terapii pod konkretne zaburzenia (dysfunkcje) takie jak: autyzm, zespół Aspergera, zespół Downa, mózgowe porażenie dziecięce, ADHD, ADD, zaburzenia mowy i języka, specyficzne trudności w uczeniu się (dysleksja, dyskalkulia, dysgrafia)</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600  text-[18px]'><strong>90 programów wspierających naukę języków obcych</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>ponad 90 programów wspierających naukę 7 języków obcych (rosyjskiego, angielskiego, niemieckiego, hiszpańskiego, francuskiego, chińskiego i arabskiego)</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600  text-[18px]'><strong>Aparat pozwala na jednoczesną pracę z 4 dzieci</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Możliwość prowadzenia terapii 1-4 dzieci na różnych programach terapeutycznych w tym samym czasie.</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600  text-[18px]'><strong>Indywidualne programy terapeutyczne</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Aplikacja terapeuty umożliwiająca zarządzanie danymi pacjentów oraz ułożenie indywidualnego programu terapeutycznego pod konkretnego pacjenta (po II stopniu szkolenia).</p>
-        </details>
-
-        <details className='pb-3  '>
-          <summary className=' text-pink-600 text-[18px]'><strong>Terapeutyczny głos matki</strong></summary> <br />
-          <p className = ' pr-[70px] text-[18px]'>Możliwość nagrania i wykorzystania podczas terapii głosu matki.</p>
-        </details>
-      </div>
-      </div>
-
-
-      
-    </section>
-  );
-}
-
-export default Biofeedback; */
-
-
 'use client'
 import React, { useState, useEffect } from 'react';
 
@@ -111,15 +16,67 @@ const Biofeedback = () => {
     },
     {
       id: 2,
-      question: 'Interaktywne wirtualne środowisko dostosowane do danych biologicznych',
+      question: 'EEG Biofeedback – ile trwa?',
       answer: (
         <div>
-          <p>Wykorzystując specjalne sensory i urządzenia, Easy Biofeedback VR umożliwia precyzyjny pomiar i analizę danych biologicznych użytkownika. Zgromadzone informacje są następnie wykorzystywane do interakcji z wirtualnym środowiskiem, które może być dostosowane na podstawie bieżących parametrów fizjologicznych.</p>
+          <p>Sterowanie przedmiotami na monitorze za pomocą fal mózgowych posiada efekt terapeutyczny. <br /><br />
+
+W przypadku lekkich zaburzeń koncentracji, trening powinien trwać minimum 12 spotkań. <br /><br />
+W sytuacji średnich zaburzeń koncentracji wskazane jest przeprowadzenie od 20 do 60 sesji EEG biofeedbacku. <br /><br />
+
+Osobie, która cierpi na ciężkie zaburzenia koncentracji zaleca się od 60 do 100 sesji EEG biofeedbacku. <br /><br />
+
+Czas pojedynczej sesji treningowej jest zróżnicowany i zależy od wieku osoby badanej, jego stanu emocjonalnego i psychoruchowego. Zazwyczaj sesja komputerowa trwa kilka minut, natomiast całe spotkanie zajmuje od 30 do 45 minut.</p>
         </div>
       ),
     },
     {
       id: 3,
+      question: 'Biofeedback – przebieg',
+      answer: (
+        <div>
+          <p>Podczas każdego treningu ustalany jest wzorzec aktywności mózgu, który jest najbardziej optymalny dla danej osoby.</p>
+          <p>Poprzez ustalenie progów dla trenowanych fal, które są wzmacniane albo osłabiane, wyznaczany jest indywidualny cel treningu.</p>
+          <p>Osoba podczas treningu nieustannie monitoruje stan fal swojego mózgu, dzięki czemu może w pełni świadomie dążyć do założonego celu.</p>
+          <h3>Jak badanie wygląda w praktyce?</h3>
+          <p>Pacjent steruje animacją pokazującą się na monitorze komputera (np. steruje ruchem samochodów).</p>
+          <p>W zależności od rodzaju fal mózgowych – ich częstotliwości i amplitudy, zależy, jak ta animacja przebiega (np. samochód dojeżdża do celu lub błądzi, lub samochód jest wyraźny bądź staje się nieostry).</p>
+          <p>Osoba na bieżąco obserwuje, w jaki sposób przebiega aktywność jej mózgu ma możliwość, aby metodą prób i błędów uczyć się utrzymywać pożądane stany pracy mózgu, które z czasem mają dla mózgu stać się nawykiem.</p>
+        </div>
+      ),
+    },
+    
+    
+    {
+      id: 4,
+      question: 'Biofeedback - korzyści',
+      answer: (
+        <div>
+          <p>Przeważnie podczas treningu mózgu za pomocą biofeedbacku wypracowuje się strategie opanowywania stresu i uzyskiwania swobodnego dostępu samodzielnej relaksacji. Biofeedback niesie jednak jeszcze więcej korzyści dla osoby, która go stosuje.</p>
+          <p>Biofeedback pozwala na wypracowanie optymalnych wzorców aktywności mózgu, dzięki czemu osoby uzyskują poprawę w obszarze:</p>
+          <ul>
+            <li>działania pamięci i koncentracji</li>
+            <li>regulacji emocji</li>
+            <li>funkcjonowanie w warunkach stresu (obniża stres)</li>
+            <li>opanowywania stresu i lęku</li>
+            <li>regulowania stanów snu i czuwania</li>
+          </ul>
+          <p>Biofeedback często stosuje się równolegle z innymi terapiami lub treningami mózgu. Dzięki temu przyspiesza ich działanie i skuteczniej zbliża osobę do wyznaczonego celu.</p>
+        </div>
+      ),
+    }
+,    
+{
+  id: 5,
+  question: 'Interaktywne wirtualne środowisko dostosowane do danych biologicznych',
+  answer: (
+    <div>
+      <p>Wykorzystując specjalne sensory i urządzenia, Easy Biofeedback VR umożliwia precyzyjny pomiar i analizę danych biologicznych użytkownika. Zgromadzone informacje są następnie wykorzystywane do interakcji z wirtualnym środowiskiem, które może być dostosowane na podstawie bieżących parametrów fizjologicznych.</p>
+    </div>
+  ),
+},
+    {
+      id: 6,
       question: 'Redukcja stresu poprzez wizualne bodźce wirtualnego środowiska',
       answer: (
         <div>
@@ -128,7 +85,7 @@ const Biofeedback = () => {
       )
     },
     {
-      id: 4,
+      id: 7,
       question: 'Efektywny trening, rehabilitacja i terapia',
       answer: (
         <div>
@@ -137,7 +94,7 @@ const Biofeedback = () => {
       )
     },
     {
-      id: 5,
+      id: 8,
       question: 'Dostęp do skutecznych technik samoregulacji',
       answer: (
         <div>
@@ -146,7 +103,7 @@ const Biofeedback = () => {
       )
     },
     {
-      id: 6,
+      id: 9,
       question: 'Innowacyjność, nauka i skuteczność',
       answer: (
         <div>
@@ -155,7 +112,7 @@ const Biofeedback = () => {
       )
     },
     {
-      id: 7,
+      id: 10,
       question: 'Aparat do terapii, wg A. TOMATIS Uwaga Słuchowa PRO',
       answer: (
         <div>

@@ -63,9 +63,14 @@ const Footer = () => {
     <FaPhone className="text-white w-4 h-4 mr-2" />
     <span className="text-white font-semibold">+48 503 192 950</span>
   </li>
-              <li className="flex items-center space-x-4 mt-4 ">
-                <Link href="https://www.facebook.com/"><FaFacebookF className=" w-12 h-12 text-pink-100 hover:text-pink-400" /></Link>
-                <Link href="https://www.instagram.com/"><FaInstagram className="w-12 h-12 text-pink-100 hover:text-pink-400" /></Link>
+              <li className="flex items-center space-x-4 mt-4" >
+              <a 
+  href="https://www.facebook.com/Poradnia-Psychologiczno-Pedagogiczna-MAGNOLIA-113773451778529/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <FaFacebookF className=" w-12 h-12 text-pink-100 hover:text-pink-400" />
+</a>                <Link href="https://www.instagram.com/"><FaInstagram className="w-12 h-12 text-pink-100 hover:text-pink-400" /></Link>
                 <Link href="https://www.linkedin.com/"><FaLinkedinIn className="w-12 h-12 text-pink-100 hover:text-pink-400" /></Link>
               </li>
             </ul>

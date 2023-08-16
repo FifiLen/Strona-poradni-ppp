@@ -20,6 +20,18 @@ const About = () => {
                   <li>Diagnoza ADOS -2, czyli Autism Diagnostic Observation Schedule, Second Edition, jest narzędziem wykorzystywanym do diagnozy autyzmu oraz innych zaburzeń ze spektrum autyzmu (ASD) dla dzieci od 12 miesiąca życia do osób dorosłych, które nie zostały dotąd zdiagnozowane.</li>
                 </ul>
               </div>
+              <div className="mb-6 bg-white p-4 sm:p-6 rounded-lg shadow-lg">
+                <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-gray-600">W jakich językach prowadzona jest terapia/diagnoza?</h2>
+                <ul className="list-disc list-inside text-base text-gray-600">
+                  <li>polskim</li>
+                  <li>angielskim</li>
+                  <li>niemieckim</li>
+                  <li>hiszpańkim</li>
+                  <li>włoskim</li>
+                  <li>ukraińskim</li>
+                </ul>    <br />
+                <p className="text-base text-gray-600">Jeżeli jesteś zainteresowany terapią lub diagnozą w innym języku niż polski - skontaktuj się z nami i omów warunki współpracy.</p>
+                          </div>
 
               <div className="mb-6 bg-white p-4 sm:p-6 rounded-lg shadow-lg">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-gray-600">Zapraszamy</h2>

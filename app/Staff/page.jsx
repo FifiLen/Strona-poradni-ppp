@@ -94,21 +94,30 @@ Doktor nauk społecznych z&nbsp;dziedziny pedagogiki i&nbsp;socjologii.  Doradca
     description: (<p>
 Magister psychologii z&nbsp;zakresu neuropsychologii i&nbsp;psychologii klinicznej. Specjalista w&nbsp;zintegrowanej edukacji wczesnoszkolnej, edukacji informatycznej oraz edukacji i&nbsp;rehabilitacji osób z&nbsp;niepełnosprawnością intelektualną. Terapeuta WWRD i&nbsp;hipoterapii. Specjalista w&nbsp;zakresie komunikacji alternatywnej i&nbsp;wspomagającej oraz diagnozy alternatywnych i&nbsp;wspomagających metod porozumiewania się.
     </p>),
-    imageUrl: '/assets/woman.png',
+    imageUrl: '/assets/T11.png',
   },
   {
     id: 11,
+    name: 'Paulina Rosa',
+    specialty: 'Logopeda',
+    description: (<p>
+Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, trener języka polskiego jako obcego, czynny nauczyciel w&nbsp;szkole podstawowej i&nbsp;ponadpodstawowej, terapeuta sesji logopedycznych. Trener z&nbsp;obszaru edukacji włączającej. Wykładowca na&nbsp;studiach podyplomowych.
+    </p>) ,
+    imageUrl: '/assets/T12.png',
+  },
+  {
+    id: 12,
     name: 'Gabriela Marcisz',
     specialty: 'Psychoterapeuta',
     description: (<p>
 Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i&nbsp;rodzin. Specjalista psychoterapii w&nbsp;Ośrodku Interwencji Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic i&nbsp;na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony na&nbsp;pracy z&nbsp;całymi rodzinami i&nbsp;osobami pełnoletnimi.
     </p>),
-    imageUrl: '/assets/woman.png',
+    imageUrl: '/assets/T13.png',
   },
   
   
   {
-    id: 12,
+    id: 13,
     name: 'Katarzyna Duźniak',
     specialty: 'Pedagog',
     description: (<p>
@@ -116,15 +125,7 @@ Magister pedagogiki, specjalizuje się w&nbsp;pracy socjalnej oraz opiekuńczo-w
     </p>) ,
     imageUrl: '/assets/woman.png',
   },
-  {
-    id: 13,
-    name: 'Paulina Rosa',
-    specialty: 'Logopeda',
-    description: (<p>
-Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, trener języka polskiego jako obcego, czynny nauczyciel w&nbsp;szkole podstawowej i&nbsp;ponadpodstawowej, terapeuta sesji logopedycznych. Trener z&nbsp;obszaru edukacji włączającej. Wykładowca na&nbsp;studiach podyplomowych.
-    </p>) ,
-    imageUrl: '/assets/woman.png',
-  },
+  
   
   {
     id: 14,

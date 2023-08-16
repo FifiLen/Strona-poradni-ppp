@@ -4,7 +4,7 @@ import Nav from '@components/Nav';
 import Footer from '@components/Footer';
 export const metadata = {
     title: 'Poradnia Pscyhologiczno Pedagogiczna Magnolia',
-    description: 'Twoje miejsce relaksu i spokoju…'
+    description: 'Miejsce, w którym osiągniesz sukces i staniesz na szczycie swoich możliwości'
 }
 
 const Rootlayout = ({children}) => {

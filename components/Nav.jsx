@@ -12,8 +12,10 @@ const MENU_LIST = [
   { text: "Biofeedback VR", href: "/Biofeedback-VR" },
   { text: "SI", href: "/SI"},
   { text: "WWRD", href: "/WWRD"},
+  { text: "Cennik", href: "/PriceList"},
   { text: "Kadra", href: "/Staff" },
   { text: "FAQ", href: "/Faq" },
+  
 ];
 
 const Navbar = () => {

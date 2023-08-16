@@ -9,10 +9,11 @@ const Faq = () => {
       answer: (
         <div>
           <p>
-            Opinie psychologiczno-pedagogiczne, w tym wydawane przez niepubliczne poradnie, stanowią dla szkoły podstawę
-            objęcia ucznia pomocą – zgodnie ze wskazaniami w tych opiniach. WAŻNE, żeby Niepubliczna Poradnia posiadała
-            wpis do rejestru i została założona zgodnie art. 168 ustawy Prawo oświatowe, tym samym posiada uprawnienia do
-            wydania opinii.
+          Opinie&nbsp;psychologiczno-pedagogiczne, w&nbsp;tym wydawane przez&nbsp;niepubliczne poradnie, stanowią dla&nbsp;szkoły podstawę
+objęcia ucznia pomocą – zgodnie ze&nbsp;wskazaniami w&nbsp;tych opiniach. WAŻNE, żeby&nbsp;Niepubliczna Poradnia posiadała
+wpis do&nbsp;rejestru i&nbsp;została założona zgodnie art.&nbsp;168 ustawy Prawo&nbsp;oświatowe, tym&nbsp;samym posiada uprawnienia do
+wydania opinii.
+
           </p>
           <ul className="list-disc list-inside">
             <li>
@@ -21,8 +22,8 @@ const Faq = () => {
               </a>
             </li>
             <li>
-              PP-P MAGNOLIA działa na podstawie wpisu Prezydenta Miasta Rybnika do ewidencji szkół i placówek niepublicznych:
-              Nr wpisu: E-I.4430.51.2023 i została założona zgodnie art. 168 ustawy Prawo oświatowe.
+              PP-P MAGNOLIA działa na podstawie wpisu Prezydenta Miasta Rybnika do ewidencji szkół i&nbsp; placówek niepublicznych:
+              Nr wpisu: E-I.4430.51.2023 i&nbsp; została założona zgodnie art. 168 ustawy Prawo oświatowe.
             </li>
           </ul>
         </div>
@@ -35,7 +36,7 @@ const Faq = () => {
         <div>
           <ul className="list-disc list-inside">
             <li>realizacji obowiązku szkolnego poza szkołą</li>
-            <li>pierwszeństwa w przyjęciu ucznia z problemami zdrowotnymi do szkoły ponadpodstawowej</li>
+            <li>pierwszeństwa w przyjęciu ucznia z&nbsp; problemami zdrowotnymi do szkoły ponadpodstawowej</li>
             <li>objęcia ucznia zindywidualizowaną ścieżką kształcenia</li>
             <li>indywidualnego programu lub toku nauki.</li>
           </ul>
@@ -47,10 +48,14 @@ const Faq = () => {
       question: 'Kim jest uczeń zdolny i jak go rozpoznać?',
       answer: (
         <div>
-          <p>Uczeń szczególnie zdolny to ten, który ma możliwości dojścia do wybitnych osiągnięć w danej dziedzinie. Zdarzają się również uczniowie uzdolnieni wszechstronnie.</p><br />
-          <p>Aby rozpoznać i zidentyfikować ucznia szczególnie uzdolnionego, trzeba sięgnąć po kilka metod diagnozujących. Metody te służą diagnozie pedagogicznej. Najprostszą i najłatwiej dostępną, jest obserwacja. Natomiast specjalistyczną, pogłębioną diagnozę prowadzą specjaliści zatrudnieni w poradniach psychologiczno – pedagogicznych.</p><br />
-          <p>Uczeń zdolny na zajęciach lekcyjnych nie zawsze musi być aktywny (trzeba pamiętać, że może zdarzyć się, że dziecko uzdolnione ma trudności w nawiązywaniu kontaktów społecznych), ale prezentowana przez niego wiedza wykracza poza program nauczania, a zadawane pytania świadczą o dociekliwości i poszukiwaniu.</p><br />
-          <p>Warto zwrócić uwagę na prace ucznia, ich treść, wytwory i osiągnięcia, sukcesy w konkursach, turniejach i olimpiadach (tu pomocą będą służyli rodzice, przeprowadźmy więc z nimi wywiad) – być może uczeń pracuje także z osobami spoza szkoły. Dobrze, gdy za zgodą rodziców i ucznia, nawiążemy z nimi kontakt i wymienimy spostrzeżenia.
+          <p>Uczeń&nbsp;szczególnie zdolny to&nbsp;ten, który ma&nbsp;możliwości dojścia do&nbsp;wybitnych osiągnięć w&nbsp;danej dziedzinie. Zdarzają się również uczniowie uzdolnieni wszechstronnie.</p><br />
+<p>Aby&nbsp;rozpoznać i&nbsp;zidentyfikować ucznia szczególnie uzdolnionego, trzeba sięgnąć po&nbsp;kilka metod diagnozujących. Metody&nbsp;te służą diagnozie pedagogicznej. Najprostszą i&nbsp;najłatwiej dostępną, jest obserwacja. Natomiast specjalistyczną, pogłębioną diagnozę prowadzą specjaliści zatrudnieni w&nbsp;poradniach psychologiczno&nbsp;–&nbsp;pedagogicznych.
+</p><br />
+          <p>Aby&nbsp;rozpoznać i&nbsp;zidentyfikować ucznia szczególnie uzdolnionego, trzeba sięgnąć po&nbsp;kilka metod diagnozujących. Metody&nbsp;te służą diagnozie pedagogicznej. Najprostszą i&nbsp;najłatwiej dostępną, jest obserwacja. Natomiast specjalistyczną, pogłębioną diagnozę prowadzą specjaliści zatrudnieni w&nbsp;poradniach psychologiczno&nbsp;–&nbsp;pedagogicznych.
+</p><br />
+          <p>Uczeń&nbsp;zdolny na&nbsp;zajęciach lekcyjnych nie&nbsp;zawsze musi być aktywny (trzeba pamiętać, że&nbsp;może zdarzyć się, że&nbsp;dziecko uzdolnione ma&nbsp;trudności w&nbsp;nawiązywaniu kontaktów społecznych), ale&nbsp;prezentowana przez&nbsp;niego wiedza wykracza poza program nauczania, a&nbsp;zadawane pytania świadczą o&nbsp;dociekliwości i&nbsp;poszukiwaniu.
+</p><br />
+          <p>Warto zwrócić uwagę na&nbsp;prace ucznia, ich treść, wytwory i&nbsp;osiągnięcia, sukcesy w&nbsp;konkursach, turniejach i&nbsp;olimpiadach (tu&nbsp;pomocą będą służyli rodzice, przeprowadźmy więc z&nbsp;nimi wywiad) – być może uczeń pracuje także z&nbsp;osobami spoza szkoły. Dobrze, gdy za&nbsp;zgodą rodziców i&nbsp;ucznia, nawiążemy z&nbsp;nimi kontakt i&nbsp;wymienimy spostrzeżenia.
         </p>
         </div>
       )
@@ -60,13 +65,13 @@ const Faq = () => {
       question: 'Kiedy szukać pomocy u terapeuty ręki?',
       answer: (
         <div>
-          <p>Terapeuta ręki diagnozuje sprawność ręki. Proponuje zestaw indywidualnie dobranych ćwiczeń oraz działań, które umożliwiają usprawnienie mechanizmów odpowiadających za kontrolę ruchów kończyny górnej.</p><br />
-          <p>W ramach terapii ręki prowadzone są działania, mające na celu udoskonalenie funkcjonowania całej kończyny górnej. Najczęściej kurs terapeuty ręki kończą specjaliści fizjoterapii, nauczyciele, logopedzi, rehabilitanci, pedagodzy specjalni, terapeuci zajmujących się wczesnym wspomaganiem rozwoju oraz osoby pracujące z dziećmi ze specjalnymi potrzebami edukacyjnym.</p><br />
+          <p>Terapeuta ręki diagnozuje sprawność ręki. Proponuje zestaw indywidualnie dobranych ćwiczeń oraz działań, które&nbsp; umożliwiają usprawnienie mechanizmów odpowiadających za&nbsp; kontrolę ruchów kończyny górnej.</p><br />
+          <p>W ramach terapii ręki prowadzone są działania, mające na&nbsp; celu udoskonalenie funkcjonowania całej kończyny górnej. Najczęściej kurs terapeuty ręki kończą specjaliści fizjoterapii, nauczyciele, logopedzi, rehabilitanci, pedagodzy specjalni, terapeuci zajmujących się wczesnym wspomaganiem rozwoju oraz osoby pracujące z&nbsp; dziećmi ze&nbsp; specjalnymi potrzebami edukacyjnym.</p><br />
           <p>Terapeuta ręki posiada wiedzę m.in. o:</p>
           <ul className=' list-disc list-inside'>
             <li>anatomii kończyny górnej</li>
             <li>funkcjonowaniu ręki</li>
-            <li>sprawności ręki w ontogenezie</li>
+            <li>sprawności ręki w&nbsp; ontogenezie</li>
             <li>warunkach prawidłowego rozwoju sprawności, profilaktyce</li>
             <li>możliwych przyczynach obniżonej lub zniesionej sprawności ręki</li>
             <li>formach terapii kończyny górnej</li>
@@ -75,15 +80,15 @@ const Faq = () => {
           <p className=' font-semibold'>Komu dedykowane są tego typu zajęcia terapeutyczne?</p><br />
           <p>Największą grupę odbiorców terapii ręki stanowią dzieci. Wśród nich są m.in.:</p>
           <ul className=' list-disc list-inside'>
-            <li>niemowlęta i starsze dzieci, u których obserwuje się zaburzony lub opóźniony rozwój motoryczny</li>
-            <li>dzieci z orzeczeniem o niepełnosprawności ruchowej</li>
-            <li>dzieci, które wykazują deficyty w rozwoju grafomotorycznej sprawności ręki (opinia o dysgrafii lub ryzyko dysgrafii), z nieustaloną lateralizacją, z wadą wzroku lub zaburzeniem percepcji wzrokowej (a co za tym idzie nieprawidłową kontrolą oko – ręka)</li>
-            <li>dzieci, które utraciły sprawność kończyny górnej np. w wyniku długiego unieruchomienia po złamaniu ręki</li>
+            <li>niemowlęta i&nbsp; starsze dzieci, u&nbsp; których obserwuje się zaburzony lub opóźniony rozwój motoryczny</li>
+            <li>dzieci z&nbsp; orzeczeniem o niepełnosprawności ruchowej</li>
+            <li>dzieci, które wykazują deficyty w&nbsp; rozwoju grafomotorycznej sprawności ręki (opinia o dysgrafii lub ryzyko dysgrafii), z&nbsp; nieustaloną lateralizacją, z&nbsp; wadą wzroku lub zaburzeniem percepcji wzrokowej (a&nbsp; co za tym idzie nieprawidłową kontrolą oko – ręka)</li>
+            <li>dzieci, które utraciły sprawność kończyny górnej np. w&nbsp; wyniku długiego unieruchomienia po&nbsp; złamaniu ręki</li>
           </ul><br />
           <p>Terapia ręki bywa potrzebna także osobom dorosłym, m.in.:</p><br />
           <ul className=' list-disc list-inside'>
-            <li>po amputacji kończyny górnej, które potrzebują nauczyć się posługiwać drugą ręką</li>
-            <li>z niepełnosprawnością ruchową – z wrodzoną niepełnosprawnością i nabytą w różnym wieku, po wypadkach, z utratą sprawności w wyniku choroby</li>
+            <li>po&nbsp; amputacji kończyny górnej, które&nbsp; potrzebują nauczyć się posługiwać drugą ręką</li>
+            <li>z&nbsp; niepełnosprawnością ruchową – z&nbsp; wrodzoną niepełnosprawnością i&nbsp; nabytą w różnym wieku, po wypadkach, z&nbsp; utratą sprawności w&nbsp; wyniku choroby</li>
             <li>po unieruchomieniu ręki np. po zakończeniu leczenia złamania kości</li>
           </ul>
 
@@ -95,7 +100,7 @@ const Faq = () => {
       question: 'Czy można przeprowadzić badanie w poradni na wniosek jednego rodzica?',
       answer: (
         <div>
-          <p>Co do zasady, poradnia może przeprowadzić badanie na wniosek złożony tylko przez jednego z rodziców. Pozwala na to § 5 ust. 1 rozporządzenia MEN z 7 września 2017 r. w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające działające w publicznych poradniach psychologiczno-pedagogicznych w sprawie orzeczeń i opinii wydawanych przez zespoły orzekające. Stanowi on, że orzeczenia i opinie wydaje się na pisemny wniosek rodzica ucznia lub pełnoletniego ucznia. Z formalnego punktu widzenia, każde z rodziców może samodzielnie złożyć wniosek o przeprowadzenie badania w poradni.</p><br />
+          <p>Co do zasady, poradnia może przeprowadzić badanie na&nbsp; wniosek złożony tylko przez jednego z&nbsp; rodziców. Pozwala na to § 5 ust. 1 rozporządzenia MEN z&nbsp; 7 września 2017 r. w&nbsp; sprawie orzeczeń i&nbsp; opinii wydawanych przez zespoły orzekające działające w&nbsp; publicznych poradniach psychologiczno-pedagogicznych w&nbsp; sprawie orzeczeń i&nbsp; opinii wydawanych przez zespoły orzekające. Stanowi on, że orzeczenia i&nbsp; opinie wydaje się na&nbsp; pisemny wniosek rodzica ucznia lub pełnoletniego ucznia. Z&nbsp; formalnego punktu widzenia, każde z&nbsp; rodziców może samodzielnie złożyć wniosek o&nbsp; przeprowadzenie badania w&nbsp; poradni.</p><br />
           <p>Jeżeli jednak poradnia ma informację, że drugi rodzic ucznia nie zgadza się na badanie, to powinna należy je wstrzymać.</p><br />
           <p className=' font-semibold'>Konflikt między rodzicami – jak powinien postępować zespół</p><br />
           <p>Jeżeli pomiędzy rodzicami jest konflikt, poradnia powinna uzyskać zgodę obojga rodziców na badanie. W takim przypadku należy również informować oboje rodziców odrębnie o prowadzonych działaniach. Jeśli okaże się, że rodzice zajmują w sprawie dziecka odmienne stanowiska, zadecydować powinien sąd.</p><br />
@@ -116,6 +121,7 @@ const Faq = () => {
       )
     },
     {
+      id: 6,
       question: '(Nie)zgoda na badanie diagnostyczne w poradni. Jakie kroki może podjąć psycholog?',
       answer: (
         <div>
@@ -147,6 +153,25 @@ const Faq = () => {
           <p>W istotnych sprawach dziecka rodzice rozstrzygają wspólnie.  W przypadku braku porozumienia między nimi rozstrzyga sąd opiekuńczy.</p><br />
           <p className="font-semibold">Zgoda na badanie diagnostyczne jako poszanowanie autonomii ucznia</p><br />
           <p>Nie ulega wątpliwości, że diagnoza psychologiczna stanowi nieodłączny element procesu edukacyjnego. Jest więc adresowana do wszystkich uczniów i wszyscy powinni mieć możliwość skorzystania z niej. Badanie diagnostyczne nie powinno być jednak przymusowe i przeprowadzane pod presją lub z obawy, że odmowa doprowadzi do ingerencji organów państwowych. Celem, do którego powinien w pierwszej kolejności dążyć psycholog pracujący w poradni psychologiczno-pedagogicznej powinno być uświadomienie rodziców/opiekunów prawnych ucznia oraz jego samego o korzyściach płynących z poddania się badaniu. Dopiero kiedy nie przyniesie to efektu, a bezpieczeństwo ucznia jest zagrożone, należy rozważyć sięgnięcie po narzędzia prawne przewidujące ingerencję instytucjonalną. </p>
+        </div>
+      )
+    },
+    {
+      id: 7,
+      question: 'W jakich językach prowadzona jest terapia/diagnoza',
+      answer: (
+        <div>
+          Terapie oraz prowadzimy w języku:
+          <ul>
+            <li>- polskim</li>
+            <li>- angielskim</li>
+            <li>- niemieckim</li>
+            <li>- hiszpańskim</li>
+            <li>- włoskim</li>
+            <li>- ukraińskim</li>
+          </ul>
+
+          <p>Jeżeli jesteś zainteresowany terapią lub diagnozą w innym języku niż polski - skontaktuj się z nami i omów warunki współpracy.</p>
         </div>
       )
     }
