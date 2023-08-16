@@ -77,7 +77,7 @@ const Home = () => {
         </button>
         {/* Button with responsive classes */}
         <button className="bg-[#921d7f] text-white text-sm sm:text-base md:text-lg h-[36px] px-4 sm:px-7 md:px-10 md:py-7 ml-2 sm:ml-3 md:ml-4 rounded-lg flex items-center justify-center">
-          <Link href="/UserPanel" className="text-white">
+          <Link href="/Registration" className="text-white">
             Rejestracja wizyty
           </Link>
         </button>
