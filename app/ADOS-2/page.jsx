@@ -231,7 +231,7 @@ const Ados = () => {
       title: 'Ważna informacja',
       content: ( 
         <div className=' mx-4 my-2'>
-        <p className='text-[16px] text-gray-700'>Wykonanie samego badania ADOS-2 może być przydatne m.in. dla dorosłych osób, które podejrzewają u siebie autyzm/zespół Aspergera i chciałyby zweryfikować te przypuszczenia “na własny użytek”, oraz dla rodziców dzieci, które chciałyby rozpocząć wstępną diagnostykę pociechy w kierunku zaburzeń ze spektrum. Samo badanie ADOS-2 trwa około dwie godziny, a w  jego koszt jest wliczona końcowa, psychologiczna opinia sporządzana przez Specjalistę prowadzącego diagnozę.</p>
+        <p className='text-[16px] text-gray-700'>Wykonanie samego badania ADOS-2 może być przydatne m.in. dla dorosłych osób, które podejrzewają u&nbsp; siebie autyzm/zespół Aspergera i chciałyby zweryfikować te przypuszczenia “na własny użytek”, oraz dla rodziców dzieci, które chciałyby rozpocząć wstępną diagnostykę pociechy w kierunku zaburzeń ze spektrum. Samo badanie ADOS-2 trwa około dwie godziny, a w  jego koszt jest wliczona końcowa, psychologiczna opinia sporządzana przez Specjalistę prowadzącego diagnozę.</p>
         </div>
        ),
        ref: useRef(null),
@@ -254,6 +254,7 @@ const Ados = () => {
   useEffect(() => {
       const handleScroll = () => {
           if (!accordionRef.current) return;
+          /* test */
           const { scrollTop, clientHeight } = accordionRef.current;
 
           const currentActiveItem = accordionItems.reduce((currentActive, item) => {
