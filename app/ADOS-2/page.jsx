@@ -1,225 +1,4 @@
 'use client'
-/*
-import React from 'react'
-import Link from 'next/link'
-
- const Ados = () => {
-  return (
-    <><section className='mx-[200px] mt-[100px]'>
-      <h2 className=' text-[55px] text-center font-bold gradient-text3'>Diagnoza Ados-2</h2>
-      <p className=' text-center text-gray-400'>Diagnoza autyzmu u dzieci, młodzieży i dorosłych</p>
-      
-
-
-      
-          <ul className='pt-[80px] spis'>
-            <label htmlFor="" className='text-[24px] font-semibold'>Spis treści</label> <br />
-            <Link href="#1" className='hover:text-pink-600'>1. ADOS-2 – czym jest? Jakie są jego możliwości?</Link> <br />
-            <Link href="#2" className='hover:text-pink-600'>2. ADOS-2 jako najbardziej wiarygodne narzędzie do diagnozowania zarówno zespołu Aspergera jak i spectrum autyzmu</Link> <br />
-             <Link href="#3" className='hover:text-pink-600'>3. Koncepcja ADOS-2</Link> <br />
-             <Link href="#4" className='hover:text-pink-600'>4. Niepokojące objawy</Link> <br />
-             <Link href="#5" className='hover:text-pink-600' >5. Przygotowanie do oceny</Link> <br />
-             <Link href="#6" className='hover:text-pink-600' >6. Proces oceny</Link> <br />
-             <Link href="#7" className='hover:text-pink-600'>7. Analiza Wyników</Link> <br />
-             <Link href="#8" className='hover:text-pink-600'>8. Interpretacja wyników</Link> <br />
-             <Link href="#9" className='hover:text-pink-600'>9. Potwierdzenie Diagnozy</Link> <br />
-             <Link href="#10" className='hover:text-pink-600'>10. Korzyści wynikające z wczesnego diagnozowania spektrum autyzmu i zespołu Aspergera</Link> <br />
-             <Link href="#11" className='hover:text-pink-600'>11. Ważna informacja</Link> <br />
-          </ul>
-        
-
-          <section className='w-full bg-[#fff] shadow p-8 mt-11 rounded-[15px] drop-shadow-2xl' id="1">
-  <h4 className='text-[19px] font-semibold text-gray-800 mb-6'>ADOS-2 – czym jest? Jakie są jego możliwości? </h4>
-  <p className='text-[16px] text-gray-700'>ADOS-2, czyli Autism Diagnostic Observation Schedule, Second Edition, jest narzędziem wykorzystywanym do diagnozy autyzmu oraz innych zaburzeń ze spektrum autyzmu (ASD) dla dzieci od 12 miesiąca życia do osób dorosłych, które nie zostały dotąd zdiagnozowane<br /> a podejrzewają u siebie lub swoich bliskich spektrum autyzmy lub zespół Aspergera. Wiek Pacjenta ma jedynie wpływ na to, na jakich interakcjach z diagnostą opiera się u konkretnej osoby diagnostyka ADOS-2. Test jest również dostosowany do możliwości osób, które mają trudności ze słownym komunikowaniem się.</p>
-</section> <br />
-
-
-      <section className='w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px]' id='2'>
-        <h4 className='text-[19px] font-semibold text-gray-800 mb-6'>ADOS-2 to obecnie najbardziej wiarygodne narzędzie do diagnozowania <br />zarówno zespołu Aspergera jak i spectrum autyzmu</h4>
-        <p className='text-[16px] text-gray-700'>Test uznawany jest za jedno z najdokładniejszych narzędzi do diagnozowania zaburzeń ze spektrum autyzmu oraz kluczowy element  diagnozy ASD na całym świecie. Badanie ADOS-2 umożliwia określenie, czy u osoby badanej występują objawy ze spektrum autyzmu, oraz porównanie poziomu jej funkcjonowania intelektualnego i społecznego z normą dla jej grupy wiekowej.</p>
-      </section>
-
-
-      <section className='w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px]' id='3'>
-        <h4 className='text-[19px] font-semibold text-gray-800 mb-6'>Koncepcja ADOS-2</h4>
-        <p className='text-[16px] text-gray-700'>ADOS-2 to standardowy, semi-strukturalny test obserwacyjny. Został zaprojektowany w celu oceny komunikacji, interakcji społecznej, zabawy oraz twórczego użytkowania pomysłów i materiałów. ADOS-2 składa się z pięciu modułów, z których każdy jest przeznaczony dla osób w różnym wieku <br /> i na różnym poziomie rozwoju języka. <b> Diagnozą można objąć dziecko od 12 miesiąca życia.</b></p>
-        <p className='text-[16px] text-gray-700 pt-6'>
-          <span className='text-[16px] text-gray-800 font-[600]'>Moduł 1:</span> dla dzieci, które nie mówią lub używają jedynie pojedynczych słów. <br />
-          <span className='text-[16px] text-gray-800 font-[600]'>Moduł 2:</span> dla dzieci, które posługują się prostymi frazami lub zdaniami, ale niekoniecznie mówią płynnie. <br />
-          <span className='text-[16px] text-gray-800 font-[600]'>Moduł 3:</span> dla dzieci i młodzieży, które mówią płynnie. <br />
-          <span className='text-[16px] text-gray-800 font-[600]'>Moduł 4:</span> dla dorosłych, którzy mówią płynnie. <br />
-          <span className='text-[16px] text-gray-800 font-[600]'>Moduł dla małych dzieci (Toddler Module):</span> dla dzieci w wieku od 12 do 30 miesięcy, które nie mówią regularnie<br />
-          <p className='text-[16px] text-gray-700 pt-6 font-thin'>Coraz częściej obserwujemy u dzieci zaburzenia charakterystyczne dla autyzmu i zespołu Aspergera. Autyzm to zaburzenia rozwoju dziecka <br /> z zakresu zarówno interakcji społecznych czy komunikacji, jak i stereotypowych zachowań. Zespół Aspergera to zaburzenia ze spektrum autyzmu. Jego objawy są zazwyczaj dyskretniejsze niż syndromy autyzmu. Dotyczą głównie relacji społecznych, komunikacji niewerbalnej oraz zachowań. Jeśli u dziecka, nawet po 12 miesiącu życia, pojawią się niepokojące objawy, warto skonsultować się ze specjalistą.</p>
-
-
-        </p>
-
-      </section>
-
-
-      <section className='w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px]' id='4'>
-        <h4 className='text-[19px] font-semibold text-gray-800 mb-8'>Niepokojące objawy</h4>
-
-        <p className='text-[16px] text-gray-700'><b>Problemy ze skupieniem uwagi</b><br />
-          Dziecko częściej koncentruje się na przedmiotach niż na relacjach z ludźmi.<br />Niechętnie lub z opóźnieniem reaguje na swoje imię. Trudno dotrzeć do niego z komunikatem.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Zbyt silne lub nietypowe reakcje emocjonalne</b><br />
-          Dziecko intensywnie przeżywa emocje: krzyczy, jest agresywne – również w stosunku do siebie. <br />Trudno mu się wyciszyć. Jest nieustępliwe w zgłaszaniu potrzeb.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Nadmierne przywiązanie do rutyny i schematów</b><br />
-          Maluch lubi wykonywać czynności według ściśle określonego porządku. <br />Trudno mu zaakceptować zmiany w planie dnia lub w organizacji najbliższej przestrzeni.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Nietypowe zainteresowania i zabawy</b><br />
-          Ulubione zajęcia malucha często są rozbudowane i oparte na powtarzalnych wzorcach. Posiada on rzadko występujące wśród dzieci zainteresowania – jego uwagę zwracają np. cyfry nieskończone czy rozkłady jazdy. Trudno przekierować uwagę malucha na inny temat.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Problemy sensoryczne</b><br />
-          Występuje np. obniżona reakcja na ból, nadwrażliwość na dotyk, unikanie przytulania,<br /> tolerowanie tylko wybranych ubrań lub potraw, nietypowa reakcja na dźwięki (dot. zarówno hałasu, jak i szeptu).
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Problem z komunikacją i relacjami z rówieśnikami</b><br />
-          Maluch nie chce bawić się z innymi dziećmi lub jest w stosunku do nich bardzo apodyktyczny. <br />Trudno mu nawiązywać i utrzymywać znajomości. Nie potrafi podtrzymać dialogu – podczas rozmowy narzuca wątki i przerywa.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Problem z empatią</b><br />
-          Dziecko rozpoznaje podstawowe emocje, ale nie uwzględnia ich w swoim zachowaniu.
-        </p>
-      </section>
-
-      <section className='w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px]' id='5'>
-        <h4 className='text-[19px] font-semibold text-gray-800 mb-6'>Przygotowanie do oceny</h4>
-        <p className='text-[16px] text-gray-700'>Ocena ADOS-2 przeprowadzana jest w specjalistycznym centrum diagnostycznym w obecności przeszkolonego terapeuty/diagnosty ADOS-2.  Przed przeprowadzeniem oceny przeprowadzana jest ankiet/wywiad  z rodzicami lub opiekunami dziecka, aby dowiedzieć się więcej o jego rozwoju i zachowaniu.</p>
-      </section>
-
-      <section className='w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px]' id='6'>
-        <h4 className='text-[19px] font-semibold text-gray-800 mb-6'>Proces oceny</h4>
-        <p className='text-[16px] text-gray-700'>Podczas sesji ADOS-2, specjalista prowadzi szereg standardowych zadań oraz rozwiązań mających na celu wywołanie interakcji z badanym pacjentem. Wszystkie one mają na za zadanie wywołać określone zachowania związane z autyzmem. Przykładowo, specjalista może prosić starsze już dziecko o opowiedzenie historii, zasymulowanie posiłku, udział w grze "naśladowczej" czy pokazanie, jak reaguje na bodźce społeczne, choćby na przykład na uśmiech drugiej osoby.
-          <br />
-          <br />
-          Wszystkie zachowania  obserwowane są, a także oceniane przez specjalistę w czterech kategoriach: <br />
-           komunikacji 
-           interakcji społecznej 
-           zabawy 
-           twórczego wykorzystania pomysłów oraz materiałów 
-          <br />
-          Każde zachowanie jest oceniane na podstawie specyficznych kryteriów i przypisywane jest mu określona liczba punktów.
-        </p>
-      </section>
-
-      <section className='w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px]' id='7'>
-        <h4 className='text-[19px] font-semibold text-gray-800 mb-6'>Analiza Wyników</h4>
-        <p className='text-[16px] text-gray-700'>Po zakończeniu sesji oceniającej, specjalista analizuje zgromadzone dane, przypisując punkty do poszczególnych kategorii obserwowanych zachowań.  Punkty są zsumowane z każdej badanej kategorii aby uzyskać wynik całkowity/całościowy. Im wyższy jest wynik, tym większe jest prawdopodobieństwo, że osoba diagnozowana ma spektrum autyzmu.</p>
-      </section>
-
-      <section className='w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px]' id='8'>
-        <h4 className='text-[19px] font-semibold text-gray-800 mb-6'>Interpretacja wyników</h4>
-        <p className='text-[16px] text-gray-700'>Wyniki ADOS-2 są interpretowane przez specjalistę, który uwzględni również informacje z innych źródeł, takich jak:  wywiady z rodzicami/prawni opiekunowie,  nauczyciele lub inne osoby znające dziecko, a także obserwacje z ustawień środowisk, takich jak: dom,  plac zabaw, przedszkole/szkoła, a w przypadku osób dorosłych: miejsce pracy.
-          <br />
-          <br />
-          Wyniki ADOS-2 są tylko jednym elementem procesu diagnozowania. Specjalista będzie również brał pod uwagę historię rozwoju dziecka, a także wyniki innych testów, takich jak testy inteligencji, testy funkcji wykonawczych, testy percepcji społecznej, a w niektórych przypadkach również testy genetyczne.
-        </p>
-      </section>
-
-      <section className='w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px]' id='9'>
-        <h4 className='text-[19px] font-semibold text-gray-800 mb-6'>Potwierdzenie Diagnozy</h4>
-        <p className='text-[16px] text-gray-700'>Diagnoza autyzmu ma duże znaczenie dla planowania leczenia i wsparcia, które pomogą osobie radzić sobie z trudnościami związanymi z zaburzeniem. Podsumowując, ADOS-2 to niezwykle istotne narzędzie służące do diagnozowania, które pomaga specjalistom zrozumieć unikalne zdolności i wyzwania stojące przed osobami z tym zaburzeniem. Jednak to narzędzie nie powinno być stosowane izolacyjnie, ale jako część kompleksowej oceny obejmującej różne aspekty życia i rozwoju danej osoby.</p>
-      </section>
-
-      <section className='w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px]' id='10'>
-        <h4 className='text-[19px] font-semibold text-gray-800 mb-6'>Korzyści wynikające z wczesnego diagnozowania spektrum autyzmu i zespołu Aspergera:</h4>
-
-        <p className='text-[16px] text-gray-700'><b>Interwencja w młodym wieku:</b><br />
-          Im wcześniej zacznie się interwencję, tym większa szansa na osiągnięcie lepszych rezultatów. Dzieci ze spektrum autyzmu często zyskują najwięcej na interwencji rozpoczętej przed 3 rokiem życia, kiedy mózg jest najbardziej plastyczny i zdolny do nauki nowych umiejętności.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Dostosowanie systemu edukacji:</b><br />
-          Wczesna diagnoza pozwala na odpowiednie dostosowanie systemu edukacji do potrzeb dziecka,<br /> co przekłada się na lepsze efekty w nauce i rozwijaniu umiejętności społecznych.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Łagodzenie objawów:</b><br />
-          Wczesne leczenie i terapia mogą pomóc w łagodzeniu niektórych objawów autyzmu,<br /> takich jak trudności w komunikacji czy wyzwania związane z zachowaniami.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Wsparcie dla rodziców:</b><br />
-          Wczesna diagnoza autyzmu może pomóc rodzicom zrozumieć, co się dzieje z ich dzieckiem,<br /> i dostarczyć im niezbędnych narzędzi i strategii, które pomogą im lepiej wspierać rozwój swojego dziecka.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Planowanie przyszłości:</b><br />
-          Wiedza o tym, że dziecko ma autyzm, może pomóc rodzicom i specjalistom planować przyszłość,<br /> na przykład wybierając odpowiednie programy edukacyjne, strategie interwencyjne, a później również wsparcie dla dorosłych.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Redukcja stresu:</b><br />
-          Choć otrzymanie diagnozy autyzmu może być trudne, dla wielu rodzin może to również przynieść pewne poczucie ulgi. <br />Rozpoznanie, co stoi za trudnościami dziecka, może pomóc zmniejszyć stres i niepewność związane z nieznanym.
-        </p>
-
-        <p className='text-[16px] text-gray-700 pt-6'><b>Budowanie sieci wsparcia:</b><br />
-          Diagnoza autyzmu może pomóc rodzinom znaleźć i połączyć się z odpowiednimi grupami wsparcia i zasobami, <br />które mogą pomóc zarówno im, jak i ich dziecku.<br /> <br />
-          Pamiętać należy, że wczesna diagnoza i interwencja nie oznacza "wyleczenia" autyzmu, ale może znacznie poprawić jakość życia <br />osoby z autyzmem i jej rodziny. Wczesne i odpowiednie wsparcie może pomóc osobom z autyzmem osiągnąć swój pełen potencjał.
-        </p>
-
-      </section>
-
-      <div className='w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px] mb-[100px]' id='11'>
-        <h4 className='text-[19px] font-semibold text-gray-800 mb-6'>Ważna informacja</h4>
-        <p className='text-[16px] text-gray-700'>Wykonanie samego badania ADOS-2 może być przydatne m.in. dla dorosłych osób, które podejrzewają u siebie autyzm/zespół Aspergera<br /> i chciałyby zweryfikować te przypuszczenia “na własny użytek”, oraz dla rodziców dzieci, które chciałyby rozpocząć wstępną diagnostykę pociechy w kierunku zaburzeń ze spektrum. Samo badanie ADOS-2 trwa około dwie godziny, a w  jego koszt jest wliczona końcowa, psychologiczna opinia sporządzana przez Specjalistę prowadzącego diagnozę.</p>
-      </div>
-
-    </section>
-    <section className='max-w-screen-lg mx-auto py-8 px-4 sm:px-6 lg:px-8'>
-        */
-
-        {/* Spis treści */}
-        /*
-        <div className="mb-10">
-          <h3 className='font-bold text-green-500 mb-4'>Spis treści</h3>
-          <ul className='space-y-2'>
-            <li><a href="#6" className='text-green-500 hover:underline'>Proces oceny</a></li>
-            <li><a href="#7" className='text-green-500 hover:underline'>Analiza Wyników</a></li>
-            <li><a href="#8" className='text-green-500 hover:underline'>Interpretacja wyników</a></li>
-            <li><a href="#9" className='text-green-500 hover:underline'>Potwierdzenie Diagnozy</a></li>
-            <li><a href="#10" className='text-green-500 hover:underline'>Korzyści wynikające z wczesnego diagnozowania</a></li>
-            <li><a href="#11" className='text-green-500 hover:underline'>Ważna informacja</a></li>
-          </ul>
-        </div>
-
-        <div className="bg-[#fff] shadow p-4 sm:p-8 mt-8 rounded-[15px]" id='6'>
-          <h4 className='text-[19px] font-semibold text-gray-800 mb-6 border-b border-green-500 pb-2'>Proces oceny</h4>
-          <p>Tutaj umieść treść dotyczącą procesu oceny.</p>
-        </div>
-
-        <div className="bg-[#fff] shadow p-4 sm:p-8 mt-8 rounded-[15px]" id='7'>
-          <h4 className='text-[19px] font-semibold text-gray-800 mb-6 border-b border-green-500 pb-2'>Analiza Wyników</h4>
-          <p>Tutaj umieść treść dotyczącą analizy wyników.</p>
-        </div>
-
-        <div className="bg-[#fff] shadow p-4 sm:p-8 mt-8 rounded-[15px]" id='8'>
-          <h4 className='text-[19px] font-semibold text-gray-800 mb-6 border-b border-green-500 pb-2'>Interpretacja wyników</h4>
-          <p>Tutaj umieść treść dotyczącą interpretacji wyników.</p>
-        </div>
-
-        <div className="bg-[#fff] shadow p-4 sm:p-8 mt-8 rounded-[15px]" id='9'>
-          <h4 className='text-[19px] font-semibold text-gray-800 mb-6 border-b border-green-500 pb-2'>Potwierdzenie Diagnozy</h4>
-          <p>Tutaj umieść treść dotyczącą potwierdzenia diagnozy.</p>
-        </div>
-
-        <div className="bg-[#fff] shadow p-4 sm:p-8 mt-8 rounded-[15px]" id='10'>
-          <h4 className='text-[19px] font-semibold text-gray-800 mb-6 border-b border-green-500 pb-2'>Korzyści wynikające z wczesnego diagnozowania</h4>
-          <p>Tutaj umieść treść dotyczącą korzyści z wczesnego diagnozowania.</p>
-        </div>
-
-        <div className="w-full bg-[#fff] shadow p-8 mt-8 rounded-[15px] mb-[100px]" id='11'>
-          <h4 className='text-[19px] font-semibold text-gray-800 mb-6 border-b border-green-500 pb-2'>Ważna informacja</h4>
-          <p>Tutaj umieść ważne informacje, które chcesz przekazać.</p>
-        </div>
-      </section>
-    </>
-  )
-}
-
-export default Ados ; */
 
 import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
@@ -242,6 +21,34 @@ const AccordionItem = forwardRef(({ id, title, content, isActive }, ref) => {
 });
 
 const Ados = () => {
+  useEffect(() => {
+    // Utwórz skrypt dla gtag.js
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0QW3ZG23F5";
+    
+    // Dodaj skrypt do głowy dokumentu
+    document.head.appendChild(gtagScript);
+
+    // Utwórz dodatkowy skrypt dla konfiguracji Google Tag Managera
+    const gtmInlineScript = document.createElement('script');
+    gtmInlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0QW3ZG23F5');
+    `;
+
+    // Dodaj dodatkowy skrypt do głowy dokumentu
+    document.head.appendChild(gtmInlineScript);
+
+    // Opcjonalnie: Możesz usunąć skrypty, gdy komponent zostanie odmontowany
+    return () => {
+        document.head.removeChild(gtagScript);
+        document.head.removeChild(gtmInlineScript);
+    }
+}, []);
+
   const accordionItems = [
     {
       id: 'ados-czym-jest',

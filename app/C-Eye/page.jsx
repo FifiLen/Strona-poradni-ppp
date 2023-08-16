@@ -1,6 +1,36 @@
-import React from 'react';
+'use client'
+import React, { useEffect } from 'react';
+useEffect
 
 const CEye = () => {
+  useEffect(() => {
+    // Utwórz skrypt dla gtag.js
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0QW3ZG23F5";
+    
+    // Dodaj skrypt do głowy dokumentu
+    document.head.appendChild(gtagScript);
+
+    // Utwórz dodatkowy skrypt dla konfiguracji Google Tag Managera
+    const gtmInlineScript = document.createElement('script');
+    gtmInlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0QW3ZG23F5');
+    `;
+
+    // Dodaj dodatkowy skrypt do głowy dokumentu
+    document.head.appendChild(gtmInlineScript);
+
+    // Opcjonalnie: Możesz usunąć skrypty, gdy komponent zostanie odmontowany
+    return () => {
+        document.head.removeChild(gtagScript);
+        document.head.removeChild(gtmInlineScript);
+    }
+}, []);
+
   return (
     <div>
       <div className="relative h-[520px] overflow-hidden">
@@ -14,14 +44,14 @@ const CEye = () => {
           <p className="text-white">Sprzęt medyczny do rehabilitacji i opieki neurologicznej</p>
         </div>
       </div>
-    <section className="mx-4 sm:mx-8 md:mx-16 lg:mx-[200px] mt-8 sm:mt-[80px] bg-green-500 p-1 rounded-lg shadow-xl mb-20">
+    <section className="mx-4 sm:mx-8 md:mx-16 lg:mx-[200px] mt-8 sm:mt-[80px] bg-[#921d7f] p-1 rounded-lg shadow-xl mb-20">
       <div className="flex flex-col items-center bg-white p-8 rounded-lg">
-        <h2 className="text-5xl font-extrabold text-green-500 mb-4">C-eye® PRO</h2>
+        <h2 className="text-5xl font-extrabold text-[#921d7f] mb-4">C-eye® PRO</h2>
         <p className="text-xl text-gray-800 text-center mb-8">
         System bazujący na eye trackingu
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div className="border border-green-500 p-6 rounded-lg hover:bg-green-500 hover:text-white transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
+          <div className="border border-[#921d7f] p-6 rounded-lg hover:bg-[#921d7f] hover:text-white transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
             <h3 className="text-2xl font-semibold mb-4">Rehabilitacja</h3>
             <ul className="text-gray-700 space-y-2 list-disc pl-6">
               <li>Nowoczesna forma terapii</li>
@@ -30,7 +60,7 @@ const CEye = () => {
               <li>Monitorowanie wyników</li>
             </ul>
           </div>
-          <div className="border border-green-500 p-6 rounded-lg hover:bg-green-500 hover:text-white transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
+          <div className="border border-[#921d7f] p-6 rounded-lg hover:bg-[#921d7f] hover:text-white transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
             <h3 className="text-2xl font-semibold mb-4">Diagnoza</h3>
             <ul className="text-gray-700 space-y-2 list-disc pl-6">
               <li>Badanie zmysłów wzroku i słuchu</li>
@@ -38,7 +68,7 @@ const CEye = () => {
               <li>Test świadomości</li>
             </ul>
           </div>
-          <div className="border border-green-500 p-6 rounded-lg hover:bg-green-500 hover:text-white transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
+          <div className="border border-[#921d7f] p-6 rounded-lg hover:bg-[#921d7f] hover:text-white transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
             <h3 className="text-2xl font-semibold mb-4">Komunikacja</h3>
             <ul className="text-gray-700 space-y-2 list-disc pl-6">
               <li>Kontakt ze światem</li>
@@ -48,7 +78,7 @@ const CEye = () => {
           </div>
         </div>
         <div className="bg-gray-100 p-6 sm:p-12 mt-8 rounded-lg shadow-md">
-          <h4 className="text-3xl font-bold text-green-500 mb-4">
+          <h4 className="text-3xl font-bold text-[#921d7f] mb-4">
             C-eye® Pro - Sprzęt do rehabilitacji i opieki neurologicznej
           </h4>
           <p className="text-gray-800 mb-6">
@@ -61,7 +91,7 @@ const CEye = () => {
             polegają na wybieraniu przez pacjenta wyświetlanych na ekranie treści. System umożliwia
             dostosowanie terapii do możliwości i&nbsp; potrzeb pacjenta.
           </p>
-          <h4 className="text-3xl font-bold text-green-500 mb-4">
+          <h4 className="text-3xl font-bold text-[#921d7f] mb-4">
             C-eye® Pro jest produktem medycznym
           </h4>
           <p className="text-gray-800">

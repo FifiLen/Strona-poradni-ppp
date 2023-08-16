@@ -1,7 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
+useEffect
 
 const Page = () => {
+    useEffect(() => {
+        // Utwórz skrypt dla gtag.js
+        const gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0QW3ZG23F5";
+        
+        // Dodaj skrypt do głowy dokumentu
+        document.head.appendChild(gtagScript);
+    
+        // Utwórz dodatkowy skrypt dla konfiguracji Google Tag Managera
+        const gtmInlineScript = document.createElement('script');
+        gtmInlineScript.innerHTML = `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0QW3ZG23F5');
+        `;
+    
+        // Dodaj dodatkowy skrypt do głowy dokumentu
+        document.head.appendChild(gtmInlineScript);
+    
+        // Opcjonalnie: Możesz usunąć skrypty, gdy komponent zostanie odmontowany
+        return () => {
+            document.head.removeChild(gtagScript);
+            document.head.removeChild(gtmInlineScript);
+        }
+    }, []);
     return (
         <section className="mx-4 md:mx-[200px]">
             <h2 className="text-center text-3xl md:text-[55px] font-semibold text-gray-800 mt-[60px] mb-3">Dołącz do zespołu MAGNOLII</h2>

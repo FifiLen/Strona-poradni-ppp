@@ -2,6 +2,34 @@
 import React, { useState, useEffect } from 'react';
 
 const Faq = () => {
+  useEffect(() => {
+    // Utwórz skrypt dla gtag.js
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0QW3ZG23F5";
+    
+    // Dodaj skrypt do głowy dokumentu
+    document.head.appendChild(gtagScript);
+
+    // Utwórz dodatkowy skrypt dla konfiguracji Google Tag Managera
+    const gtmInlineScript = document.createElement('script');
+    gtmInlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0QW3ZG23F5');
+    `;
+
+    // Dodaj dodatkowy skrypt do głowy dokumentu
+    document.head.appendChild(gtmInlineScript);
+
+    // Opcjonalnie: Możesz usunąć skrypty, gdy komponent zostanie odmontowany
+    return () => {
+        document.head.removeChild(gtagScript);
+        document.head.removeChild(gtmInlineScript);
+    }
+}, []);
+
   const faqList = [
     {
       id: 1,

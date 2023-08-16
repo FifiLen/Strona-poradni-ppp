@@ -1,6 +1,36 @@
-import React from "react";
+'use client'
+import React, { useEffect } from "react";
+useEffect
 
 const ContactPage = () => {
+  useEffect(() => {
+    // Utwórz skrypt dla gtag.js
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0QW3ZG23F5";
+    
+    // Dodaj skrypt do głowy dokumentu
+    document.head.appendChild(gtagScript);
+
+    // Utwórz dodatkowy skrypt dla konfiguracji Google Tag Managera
+    const gtmInlineScript = document.createElement('script');
+    gtmInlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0QW3ZG23F5');
+    `;
+
+    // Dodaj dodatkowy skrypt do głowy dokumentu
+    document.head.appendChild(gtmInlineScript);
+
+    // Opcjonalnie: Możesz usunąć skrypty, gdy komponent zostanie odmontowany
+    return () => {
+        document.head.removeChild(gtagScript);
+        document.head.removeChild(gtmInlineScript);
+    }
+}, []);
+
   return (
     <section className="px-2 sm:px-6 md:px-[80px] lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mt-4 mb-[100px]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-8">
