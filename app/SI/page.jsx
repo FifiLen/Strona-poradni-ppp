@@ -31,12 +31,13 @@ const Integration = () => {
     }
 }, []);
   return (
-    <div className="relative overflow-y-auto h-[calc(100vh-64px)] w-full">
+    <div className="relative overflow-y-auto h-[calc(1520vh-64px)] md:h-[calc(720vh-64px)] lg:h-[calc(720vh-64px)] w-full">
     <iframe
-      className="w-full min-h-[6000px] border-none"
+      scrolling="no"
+      className="w-full h-full border-none"
       src='https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=800'
     ></iframe>
-  </div>
+    </div>
   )
 }
 

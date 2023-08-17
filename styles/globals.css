@@ -639,3 +639,7 @@ footer h4 {
 }
 
 */
+
+iframe {
+  overflow: hidden;
+}

@@ -173,9 +173,20 @@ Czas pojedynczej sesji treningowej jest zróżnicowany i zależy od wieku osoby 
   }, [expandedId]);
 
     return (
+      <>
+      <div className="relative h-[520px] overflow-hidden">
+        <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay muted loop>
+          <source src="/assets/movie9.mp4" type="video/mp4" />
+          Twoja przeglądarka nie obsługuje tagu video.
+        </video>
+        <div className="absolute top-0 left-0 w-full h-[620px] bg-black opacity-40 z-5"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+          <h1 className="text-4xl text-white font-bold">Biofeedback VR</h1>
+          <p className="text-white">Technologia Łącząca Biofeedback i Wirtualną Rzeczywistość</p>
+        </div>
+      </div>
       <div className="max-w-3xl mx-auto mt-10 mb-16 min-h-screen flex flex-col justify-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800 mt-10 sm:mt-16 lg:mt-20 text-center">Biofeedback VR</h2>
-          <p className='text-xl sm:text-xl lg:text-2xl font-light text-gray-500 my-4 sm:my-6 text-center'>Technologia Łącząca Biofeedback i Wirtualną Rzeczywistość</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800  mb-10 mt-10 sm:mt-16 lg:mt-20 text-center">Biofeedback VR</h2>
           <div className="flex-1 overflow-y-auto pb-6">
               <div className="mx-auto">
                   <ul className="divide-y divide-gray-300">
@@ -212,6 +223,7 @@ Czas pojedynczej sesji treningowej jest zróżnicowany i zależy od wieku osoby 
               </div>
           </div>
       </div>
+      </>
     )};
 
 export default Biofeedback; 

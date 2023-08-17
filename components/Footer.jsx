@@ -70,8 +70,7 @@ const Footer = () => {
   rel="noopener noreferrer"
 >
   <FaFacebookF className=" w-12 h-12 text-pink-100 hover:text-pink-400" />
-</a>                <Link href="https://www.instagram.com/"><FaInstagram className="w-12 h-12 text-pink-100 hover:text-pink-400" /></Link>
-                <Link href="https://www.linkedin.com/"><FaLinkedinIn className="w-12 h-12 text-pink-100 hover:text-pink-400" /></Link>
+</a>                <Link href="https://www.instagram.com/poradnia_magnolia/"><FaInstagram className="w-12 h-12 text-pink-100 hover:text-pink-400" /></Link>
               </li>
             </ul>
           </div>

@@ -1,8 +1,8 @@
 'use client'
-import React, { useEffect } from 'react';
-import { iframeResizer } from 'iframe-resizer';
+import React, { useEffect } from 'react'
+useEffect
 
-const Vr = () => {
+const Student = () => {
   useEffect(() => {
     // Utwórz skrypt dla gtag.js
     const gtagScript = document.createElement('script');
@@ -30,27 +30,18 @@ const Vr = () => {
         document.head.removeChild(gtmInlineScript);
     }
 }, []);
-
-  useEffect(() => {
-    iframeResizer({
-      log: true,
-      checkOrigin: false,
-      autoResize: true,
-      heightCalculationMethod: 'bodyScroll'
-    }, '#myIframe');
-  }, []);
-  
   return (
-    <div className="relative overflow-y-auto h-[calc(1680vh-64px)] md:h-[calc(880vh-64px)] lg:h-[calc(880vh-64px)] w-full">
-<iframe
-  scrolling="no"
-  className="w-full h-full border-none"
-  src='https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=1066'
-></iframe>
+    <div className="relative overflow-y-auto h-[calc(980vh-64px)] md:h-[calc(880vh-64px)] lg:h-[calc(880vh-64px)] w-full">
+  <iframe
+    scrolling="no"
+    className="w-full h-full border-none"
+    src='https://edukacjazdalna.rybnikonline.eu/?page_id=907'
+  ></iframe>
 </div>
-  );
+
+  )
 }
 
-export default Vr;
+export default Student
 
 
