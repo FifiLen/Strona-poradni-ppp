@@ -41,7 +41,7 @@ const Vr = () => {
   }, []);
   
   return (
-    <div className="relative overflow-y-auto h-[calc(1680vh-64px)] md:h-[calc(880vh-64px)] lg:h-[calc(880vh-64px)] xl:[calc(780vh-64px)] 2xl:[calc(680vh-64px)] w-full">
+    <div className="relative overflow-y-auto h-[calc(1680vh-64px)] md:h-[calc(880vh-64px)] lg:h-[calc(860vh-64px)] xl:[calc(780vh-64px)] 2xl:[calc(680vh-64px)] w-full">
 <iframe
   scrolling="no"
   className="w-full h-full border-none"

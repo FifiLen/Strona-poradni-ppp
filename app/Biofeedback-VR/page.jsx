@@ -172,58 +172,62 @@ Czas pojedynczej sesji treningowej jest zróżnicowany i zależy od wieku osoby 
     });
   }, [expandedId]);
 
-    return (
-      <>
+  return (
+    <>
       <div className="relative h-[520px] overflow-hidden">
-        <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay muted loop>
-          <source src="/assets/movie9.mp4" type="video/mp4" />
-          Twoja przeglądarka nie obsługuje tagu video.
-        </video>
+      <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay muted loop>
+  <source src="/assets/movie9.mp4" type="video/mp4" />
+  Twoja przeglądarka nie obsługuje tagu video.
+</video>
+
         <div className="absolute top-0 left-0 w-full h-[620px] bg-black opacity-40 z-5"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-          <h1 className="text-4xl text-white font-bold">Biofeedback VR</h1>
-          <p className="text-white">Technologia Łącząca Biofeedback i Wirtualną Rzeczywistość</p>
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-bold">Biofeedback VR</h1>
+          <p className="text-sm sm:text-base md:text-lg text-white">Technologia Łącząca Biofeedback i Wirtualną Rzeczywistość</p>
         </div>
       </div>
-      <div className="max-w-3xl mx-auto mt-10 mb-16 min-h-screen flex flex-col justify-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800  mb-10 mt-10 sm:mt-16 lg:mt-20 text-center">Biofeedback VR</h2>
-          <div className="flex-1 overflow-y-auto pb-6">
-              <div className="mx-auto">
-                  <ul className="divide-y divide-gray-300">
-                      {faqList.map((faq) => (
-                          <li key={faq.id} className="py-4">
-                              <button
-                                  className="faq-button w-full flex justify-between items-center focus:outline-none"
-                                  onClick={() => toggleAnswer(faq.id)}
-                              >
-                                  <span className="text-lg font-semibold text-gray-800">{faq.question}</span>
-                                  <svg
-                                      className={`w-5 h-5 text-gray-500 ${expandedId === faq.id ? 'transform rotate-180' : ''}`}
-                                      fill="none"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      strokeWidth="2"
-                                      viewBox="0 0 24 24"
-                                      stroke="currentColor"
-                                  >
-                                      <path d="M9 5l7 7-7 7"></path>
-                                  </svg>
-                              </button>
-                              {expandedId === faq.id && (
-                                  <div
-                                      id={`faq-${faq.id}`}
-                                      className="faq-content mt-2 pr-4 text-gray-600"
-                                  >
-                                      {faq.answer}
-                                  </div>
-                              )}
-                          </li>
-                      ))}
-                  </ul>
-              </div>
+  
+      <div className="max-w-3xl mx-auto mt-10 mb-6 min-h-screen flex flex-col justify-center">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 mb-5 sm:mb-8 md:mb-10 lg:mb-12 text-center mt-10">Biofeedback VR</h2>
+        
+        <div className="flex-1 overflow-y-auto pb-6">
+          <div className="mx-auto">
+            <ul className="divide-y divide-gray-300">
+              {faqList.map((faq) => (
+                <li key={faq.id} className="py-4">
+                  <button
+                    className="faq-button w-full flex justify-between items-center focus:outline-none"
+                    onClick={() => toggleAnswer(faq.id)}
+                  >
+                    <span className="text-sm sm:text-base md:text-lg font-semibold text-gray-800">{faq.question}</span>
+                    <svg
+                      className={`w-5 h-5 text-gray-500 ${expandedId === faq.id ? 'transform rotate-180' : ''}`}
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </button>
+                  {expandedId === faq.id && (
+                    <div
+                      id={`faq-${faq.id}`}
+                      className="faq-content mt-2 pr-4 text-gray-600"
+                    >
+                      {faq.answer}
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
           </div>
+        </div>
       </div>
-      </>
-    )};
+    </>
+  );
+                  }  
 
 export default Biofeedback; 
