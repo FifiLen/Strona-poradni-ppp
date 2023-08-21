@@ -35,7 +35,7 @@ const About = () => {
 
               <div className="mb-6 bg-white p-4 sm:p-6 rounded-lg shadow-lg">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-gray-600">Zapraszamy</h2>
-                <p className="text-base text-gray-600">Chcemy, aby każdy czuł się wspierany i&nbsp; rozumiany. Nasza Poradnia jest miejscem, w którym&nbsp; technologia spotyka się z empatią, tworząc unikalną platformę do odkrywania, nauki i&nbsp; rozwoju zarówno uczniów z&nbsp; trudnościami w&nbsp; nauce jak i&nbsp; uczniów ponadprzeciętnie zdolnych! Odkrywaj z nami, jak innowacyjne metody oraz połączenie teraźniejszości z&nbsp; przyszłością mogą Cię rozwijać, żebyś mógł/mogła osiągnąć pełnię swojego potencjału.</p>
+                <p className="text-base text-gray-600">Chcemy, aby każdy czuł się wspierany i&nbsp; rozumiany. Nasza Poradnia jest miejscem, w którym&nbsp; technologia spotyka się z&nbsp; empatią, tworząc unikalną platformę do odkrywania, nauki i&nbsp; rozwoju zarówno uczniów z&nbsp; trudnościami w&nbsp; nauce jak i&nbsp; uczniów ponadprzeciętnie zdolnych! Odkrywaj z&nbsp; nami, jak innowacyjne metody oraz połączenie teraźniejszości z&nbsp; przyszłością mogą Cię rozwijać, żebyś mógł/mogła osiągnąć pełnię swojego potencjału.</p>
               </div>
 
               <div className="text-center">
