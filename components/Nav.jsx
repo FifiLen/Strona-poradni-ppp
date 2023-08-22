@@ -32,7 +32,7 @@ const Navbar = () => {
       <Link href="/">
         <div className="flex items-center space-x-2 cursor-pointer">
           <Image src="/assets/magnolia.png" alt="Magnolia Logo" width={50} height={50} className="object-contain" />
-          <h1 className="logo font-semibold hidden md:block whitespace-nowrap pr-16">MAGNOLIA</h1>
+          <h1 className="logo font-semibold hidden md:block whitespace-nowrap pr-20 sm:pr-4 md:pr-16 lg:pr-0">MAGNOLIA</h1>
         </div>
       </Link>
       <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
