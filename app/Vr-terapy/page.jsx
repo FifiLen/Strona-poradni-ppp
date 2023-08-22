@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect } from 'react';
-import { iframeResizer } from 'iframe-resizer';
+import iframeResizer from 'iframe-resizer/js/iframeResizer';
+
 
 const Vr = () => {
   useEffect(() => {
@@ -31,25 +32,35 @@ const Vr = () => {
     }
 }, []);
 
-  useEffect(() => {
-    iframeResizer({
-      log: true,
-      checkOrigin: false,
-      autoResize: true,
-      heightCalculationMethod: 'bodyScroll'
-    }, '#myIframe');
-  }, []);
-  
-  return (
-    <div className="relative overflow-y-auto h-[calc(1680vh-64px)] md:h-[calc(880vh-64px)] lg:h-[calc(860vh-64px)] xl:[calc(780vh-64px)] 2xl:[calc(680vh-64px)] w-full">
-<iframe
-  scrolling="no"
-  className="w-full h-full border-none"
-  src='https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=1066'
-></iframe>
-</div>
-  );
-}
+useEffect(() => {
+  const iframes = iframeResizer({
+    log: true,
+    checkOrigin: false,
+    autoResize: true,
+    heightCalculationMethod: 'bodyScroll',
+  }, 'iframe');
+
+  // Opcjonalnie: Posprzątaj po sobie przy odmontowywaniu komponentu
+  return () => {
+    if (iframes && iframes.length > 0) {
+      iframes.forEach(iFrame => {
+        iFrame.iFrameResizer.close();
+      });
+    }
+  };
+}, []);
+
+return (
+  <div className="relative w-full overflow-hidden">
+    <iframe
+      id="myIframe"
+      scrolling="no"
+      className="w-full border-none"
+      src='https://server376071.nazwa.pl/wordpress/wpn_magnolia/?page_id=1066'
+    ></iframe>
+  </div>
+);
+};
 
 export default Vr;
 

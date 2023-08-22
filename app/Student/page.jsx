@@ -1,6 +1,7 @@
 'use client'
-import React, { useEffect } from 'react'
-useEffect
+import { useEffect } from 'react';
+import iframeResizer from 'iframe-resizer/js/iframeResizer';
+
 
 const Student = () => {
   useEffect(() => {
