@@ -56,7 +56,17 @@ const Ados = () => {
       shortTitle: 'Czym jest ADOS-2?',
       content: (
       <div className=' mx-4 my-2'>
-      <p className=' text-gray-700'>ADOS-2, czyli Autism Diagnostic Observation Schedule, Second Edition, jest narzędziem wykorzystywanym do diagnozy autyzmu oraz innych zaburzeń ze spektrum autyzmu (ASD) <b>dla dzieci od 12 miesiąca życia do osób dorosłych</b>, które nie zostały dotąd zdiagnozowane<br /> a podejrzewają u siebie lub swoich bliskich spektrum autyzmy lub zespół Aspergera. Wiek Pacjenta ma jedynie wpływ na to, na jakich interakcjach z diagnostą opiera się u konkretnej osoby diagnostyka ADOS-2. Test jest również dostosowany do możliwości osób, które mają trudności ze słownym komunikowaniem się.</p>
+      <p className=' text-gray-700'>ADOS-2, czyli Autism Diagnostic Observation Schedule, Second Edition, jest narzędziem wykorzystywanym do diagnozy autyzmu oraz innych zaburzeń ze spektrum autyzmu (ASD) <b>dla dzieci od 12 miesiąca życia do osób dorosłych</b>, które nie zostały dotąd zdiagnozowane<br /> a podejrzewają u siebie lub swoich bliskich spektrum autyzmy lub zespół Aspergera. Wiek Pacjenta ma jedynie wpływ na to, na jakich interakcjach z diagnostą opiera się u konkretnej osoby diagnostyka ADOS-2. Test jest również dostosowany do możliwości osób, które mają trudności ze słownym komunikowaniem się.</p><br />
+      <p>ADOS-2 stanowi częściowo ustrukturyzowany, wystandaryzowany protokół obserwacji, wykorzystywany w diagnozowaniu osób z zaburzeniami ze spektrum autyzmu (ASD).<br /><br />
+
+Narzędzie obejmuje zestaw prób prowokujących osobę badaną do określonych zachowań społecznych, co umożliwia obserwowanie jej w trakcie naturalnie przebiegającej interakcji z badającym. Wymaga posługiwania się wystandaryzowanym zestawem pomocy i kierowania się ściśle zdefiniowanymi kryteriami oceny, ale procedurę badania charakteryzuje znaczny stopień elastyczności.<br /><br />
+
+Składa się z pięciu modułów (wersji) przeznaczonych dla badanych różniących się wiekiem i poziomem rozwoju ekspresji językowej. Na podstawie obserwacji diagnosta ocenia różne aspekty zachowania, reprezentujące pięć kategorii: Język i komunikacja, Wzajemność w interakcjach społecznych, Zabawa/Wyobraźnia, Zachowania stereotypowe i sztywne zainteresowania, Inne zachowania odbiegające od normy.<br /><br />
+
+Oprócz danych jakościowych w efekcie badania uzyskuje się wyniki ilościowe w dwu skalach: Afekt społeczny oraz Ograniczone i powtarzane zachowanie, a także wynik całkowity. Porównanie tego wyniku z odpowiednim dla danego modułu progiem odsiewowym pozwala na określenie, czy zachowanie badanego wskazuje, czy nie wskazuje na zaburzenia ze spektrum autyzmu, a w przypadku najmłodszych badanych (w wieku poniżej 31 miesięcy) – na określenie stopnia, w jakim zachowanie dziecka budzi niepokój.<br /><br />
+
+W odniesieniu do badanych w wieku powyżej 30 miesięcy oblicza się też na podstawie wyniku całkowitego wynik porównawczy, wyrażony w skali 1-10, wskazujący na nasilenie zaburzeń i pozwalający na porównania interindywidualne.
+</p>
       </div>
       ),
       ref: useRef(null),

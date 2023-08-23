@@ -316,10 +316,24 @@ const PriceList = () => {
 
 
     /* Opinie */
+    {
+      category: "Opinie",
+      name: "Wydanie opinii specjalisty",
+      variant: null,
+      price: "50 zł",
+      info: null
+    },
+    {
+      category: "Opinie",
+      name: "Zaświadczenie",
+      variant: null,
+      price: "30 zł",
+      info: null
+    },
 
     {
       category: "Opinie",
-      name: "Opinia o brako prziwskazań do podjęcia pracy zarobkowej",
+      name: "Opinia o braku prziwskazań do podjęcia pracy zarobkowej",
       price: "320zł - stacjonarnie",
       variant: "260zł - online",
       info: (
@@ -565,7 +579,7 @@ const PriceList = () => {
       ageRange: "od 6 miesiąca życia",
       info: (
         <p>
-        Badanie logopedyczne przeznaczone dla dzieci od&nbsp;6.&nbsp;miesiąca życia. Za&nbsp;pomocą KOLD-PT dokonuje się wszechstronnej diagnozy funkcji mowy i&nbsp;języka, co&nbsp;umożliwia wczesne wykrywanie ewentualnych nieprawidłowości oraz planowanie indywidualnej terapii. Badanie prowadzone jest w&nbsp;formie kart oceny, które są&nbsp;dostosowane do&nbsp;wieku i&nbsp;poziomu rozwoju dziecka.
+        Badanie logopedyczne przeznaczone dla dzieci od&nbsp;12.&nbsp;miesiąca życia. Za&nbsp;pomocą KOLD-PT dokonuje się wszechstronnej diagnozy funkcji mowy i&nbsp;języka, co&nbsp;umożliwia wczesne wykrywanie ewentualnych nieprawidłowości oraz planowanie indywidualnej terapii. Badanie prowadzone jest w&nbsp;formie kart oceny, które są&nbsp;dostosowane do&nbsp;wieku i&nbsp;poziomu rozwoju dziecka.
     </p>
     
       )
@@ -630,6 +644,17 @@ const PriceList = () => {
 
 
   /* Fizjoterapia */
+  {
+    category: "Fizjoterapie",
+    name: "Fizjoterapia / Terapia Ruchowa",
+    variant: "Sesje fizjoterapii grupowe ze wspomaganiem VR",
+    price: "80 zł / 50 minut",
+    info: (
+      <p>
+                Fizjoterapia z&nbsp;wykorzystaniem technologii wirtualnej rzeczywistości (VR). Sesje terapeutyczne skupiają się na&nbsp;poprawie funkcji ruchowych, siły i&nbsp;koordynacji pacjenta. Wykorzystanie VR sprawia, że&nbsp;terapia jest bardziej angażująca, umożliwiając pacjentowi bardziej efektywne i&nbsp;przyjemne ćwiczenia.
+      </p>
+    )
+  },
 
   {
     category: "Fizjoterapie",
