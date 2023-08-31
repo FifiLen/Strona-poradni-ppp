@@ -7,8 +7,8 @@ const Place = () => {
     { src: '/assets/room2.jpg', alt: 'Image 2' },
     { src: '/assets/room3.jpg', alt: 'Image 3' },
     { src: '/assets/room4.jpg', alt: 'Image 4' },
-    { src: '/assets/room5.jpg', alt: 'Image 5' },
-    { src: '/assets/room6.jpg', alt: 'Image 6' },
+    { src: '/assets/room7.jpeg', alt: 'Image 5' },
+    { src: '/assets/room6.jpeg', alt: 'Image 6' },
     
   ];
 
