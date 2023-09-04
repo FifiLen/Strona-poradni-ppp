@@ -48,7 +48,7 @@ const Navbar = () => {
         }
       
         </div>
-        <div className={`absolute top-full right-0 w-64 bg-gray-700 rounded-md shadow-lg z-10 overflow-hidden text-right ${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
+        <div className={`absolute top-full right-0 w-64 bg-gray-400 rounded-md shadow-lg z-10 overflow-hidden text-right ${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
     <div className="flex justify-center items-center bg-gray-200 p-2">
         <Image src="/assets/magnolia.png" alt="Magnolia Logo" width={50} height={50} className="object-contain" />
         <h1 className="ml-2 text-white">MAGNOLIA</h1>
