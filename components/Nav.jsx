@@ -12,6 +12,7 @@ const MENU_LIST = [
   { text: "Biofeedback VR", href: "/Biofeedback-VR" },
   { text: "SI", href: "/SI"},
   { text: "WWRD", href: "/WWRD"},
+  { text: "Logopeda" , href: "/Logopeda"},
   { text: "Uczeń zdolny", href:"/Student"},
   { text: "Cennik", href: "/PriceList"},
   { text: "Kadra", href: "/Staff" },
