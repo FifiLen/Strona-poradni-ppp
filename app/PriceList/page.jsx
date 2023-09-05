@@ -494,7 +494,7 @@ const PriceList = () => {
     {
       category: "Konsultacje",
       name: "Konsultacja psychiatryczna",
-      price: "150zł / 20 min",
+      price: "150zł / 60 min",
       info: (
         <p>
         Specjalistyczna konsultacja psychiatryczna,&nbsp;dostosowana do&nbsp;potrzeb pacjenta, w&nbsp;celu diagnozy i&nbsp;ewentualnych zaleceń leczenia.

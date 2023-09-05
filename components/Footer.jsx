@@ -16,7 +16,7 @@ const Footer = () => {
               {['/', '/Offer', '/PriceList', '/Staff', '/Contact'].map((href, idx) => (
                 <li key={idx} className='mb-2'>
                   <Link href={href}>
-                    <span className="flex items-center space-x-2 text-white font-semibold hover:text-pink-400">
+                    <span className="flex items-center space-x-2 text-white font-medium hover:text-pink-400">
                       <FaAngleRight />
                       <span>{['Strona główna', 'Oferta', 'Cennik', 'Kadra', 'Kontakt'][idx]}</span>
                     </span>
@@ -31,7 +31,7 @@ const Footer = () => {
               {['/C-Eye', '/ADOS-2', '/Vr-terapy', '/Biofeedback-VR', '/Join'].map((href, idx) => (
                 <li key={idx} className='mb-2'>
                   <Link href={href}>
-                    <span className="flex items-center space-x-2 text-white font-semibold hover:text-pink-400">
+                    <span className="flex items-center space-x-2 text-white font-medium hover:text-pink-400">
                       <FaAngleRight />
                       <span>{['C-Eye Pro', 'ADOS-2', 'Terapia VR', 'Biofeedback VR', 'Dołącz do zespołu Magnolii'][idx]}</span>
                     </span>
@@ -45,23 +45,23 @@ const Footer = () => {
             <ul className="list-none p-0">
             <li className="mb-2 flex items-center">
     <FaMailBulk className="text-white w-4 h-4 mr-2" />
-    <span className="text-white font-semibold">poradniamagnolia@gmail.com</span>
+    <span className="text-white font-medium">poradniamagnolia@gmail.com</span>
   </li>
   <li className="mb-2 flex items-center">
     <FaPhone className="text-white w-4 h-4 mr-2" />
-    <span className="text-white font-semibold">+48 797 173 501</span>
+    <span className="text-white font-medium">+48 797 173 501</span>
   </li>
   <li className="mb-2 flex items-center">
     <FaPhone className="text-white w-4 h-4 mr-2" />
-    <span className="text-white font-semibold">+48 502 162 365</span>
+    <span className="text-white font-medium">+48 502 162 365</span>
   </li>
   <li className="mb-2 flex items-center">
     <FaPhone className="text-white w-4 h-4 mr-2" />
-    <span className="text-white font-semibold">+48 690 515 224</span>
+    <span className="text-white font-medium">+48 690 515 224</span>
   </li>
   <li className="mb-2 flex items-center">
     <FaPhone className="text-white w-4 h-4 mr-2" />
-    <span className="text-white font-semibold">+48 503 192 950</span>
+    <span className="text-white font-medium">+48 503 192 950</span>
   </li>
               <li className="flex items-center space-x-4 mt-4" >
               <a 
@@ -69,7 +69,7 @@ const Footer = () => {
   target="_blank" 
   rel="noopener noreferrer"
 >
-  <FaFacebookF className=" w-12 h-12 text-pink-100 hover:text-pink-400" />
+  <FaFacebookF className=" w-11 h-11 text-pink-100 hover:text-pink-400" />
 </a>                <Link href="https://www.instagram.com/poradnia_magnolia/"><FaInstagram className="w-12 h-12 text-pink-100 hover:text-pink-400" /></Link>
               </li>
             </ul>
