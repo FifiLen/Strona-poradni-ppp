@@ -32,7 +32,149 @@ const PriceList = () => {
 }, []);
 
   const services = [
+       /* Badania */
+
+       {
+        category: "Badania",
+        name: "Badanie psychologiczno–pedagogiczne pod kątem dysleksji, dysortografii, dysgrafii",
+        price: "350 zł / 120 minut - stacjonarnie",
+        variant: "300 zł / 120 minut - online",
+        info: (
+          <p>
+          Kompleksowe badanie mające na&nbsp;celu zidentyfikowanie potencjalnych trudności w&nbsp; nauce, związanych z&nbsp;dysleksją, dysortografią oraz dysgrafią. Obejmuje zarówno analizę psychologiczną, jak&nbsp;i&nbsp;pedagogiczną, pozwalając na&nbsp;precyzyjne określenie potrzeb edukacyjnych osoby badanej.
+      </p>
+      
+        )
+      },
   
+      {
+        category: "Badania",
+        name: "Badanie psychologiczne w kierunku określania słabych i mocnych stron funkcjonowania dziecka",
+        price: "600zł - stacjonarnie",
+        variant: "500zł - online",
+        info: (
+          <p>
+          Dla dzieci i&nbsp;młodzieży w&nbsp;wieku od&nbsp;5 do&nbsp;20 lat. <br />
+          Czas trwania: 3 do&nbsp;5 godzin, przeprowadzane w&nbsp;ciągu 2 dni. <br /><br />
+          <ul>
+              <li>Konsultacja z&nbsp;rodzicami,</li>
+              <li>Badanie psychologiczne,</li>
+              <li>Wydanie opinii wraz z&nbsp;omówieniem.</li>
+          </ul>
+      </p>
+      
+        )
+      },
+  
+      
+  
+  
+      /* Terapie */
+  
+  
+      {
+        category: "Terapie",
+        name: "Terapia rodzin",
+        price: "300zł stacjonarnie / 90 minut",
+        variant: "250zł online / 90 minut",
+        variant2: "70 EUR / 90 min - w j. angielskim",
+        info: (
+          <p>
+          Specjalistyczna terapia rodzin, mająca na&nbsp;celu wsparcie rodziny w&nbsp;trudnych sytuacjach, rozwiązanie konfliktów wewnętrznych i&nbsp;poprawę komunikacji między członkami rodziny.
+      </p>
+      
+        )
+      },
+  
+      {
+        category: "Terapie",
+        name: "Terapia par",
+        price: "220zł / 60 min - stacjonarnie",
+        variant: "180zł / 60 min - online",
+        variant2: "40 EUR / 60 min - online w j. angielskim",
+        info: (
+          <p>
+          Terapia dla&nbsp;par mająca na&nbsp;celu wsparcie i&nbsp;pomoc w&nbsp;rozwiązywaniu problemów w&nbsp;związku.
+      </p>
+      
+        )
+      },
+  
+      {
+        category: "Terapie",
+        name: "Terapia uzależnień",
+        price: "150zł / 45 min - stacjonarnie",
+        variant: "130zł / 45 min - online",
+        variant2: "40 EUR / 45 min - online w j. angielskim",
+        info: (
+          <p>
+      Terapia uzależnień skupiająca się&nbsp;na różnych formach uzależnień, takich&nbsp;jak:
+      <ul>
+          <li>alkohol,</li>
+          <li>używki,</li>
+          <li>hazard,</li>
+          <li>sex,</li>
+          <li>portale randkowe,</li>
+          <li>social media,</li>
+          <li>gry komputerowe,</li>
+          <li>Internet.</li>
+      </ul>
+  </p>
+  
+        )
+      },
+  
+      {
+        category: "Terapie",
+        name: "Zajęcia z pedagogiem specjalnym z elementami terapii behawioralnej",
+        price: "150 zł / 45/60min - stacjonarnie",
+        variant: "130 zł - online",
+        variant2: "40 EUR / 60 min - online w j. angielskim",
+        info: (
+          <p>
+          Indywidualne zajęcia&nbsp;z pedagogiem specjalnym skupiające się&nbsp;na wsparciu rozwoju oraz&nbsp;terapii behawioralnej.
+      </p>
+      
+        )
+      },
+  
+      {
+        category: "Terapie",
+        name: "Sesja Terapii Wirtualnej",
+        price: "150 zł / 45 minut",
+        info: (
+          <p>
+          Zastosowanie nowoczesnych technologii&nbsp;w praktyce terapeutycznej. Terapia wirtualna pozwala&nbsp;na prowadzenie sesji&nbsp;w wygodnych warunkach, bez&nbsp;konieczności wychodzenia&nbsp;z domu, z&nbsp;zachowaniem pełnej prywatności i&nbsp;bezpieczeństwa.
+      </p>
+      
+        )
+      },
+  
+      {
+        category: "Terapie",
+        name: "Sesje terapii ręki grupowe ze wspomaganiem VR",
+        price: "80 zł / 50 minut",
+        info: (
+          <p>
+          Terapia ręki&nbsp;z wykorzystaniem technologii wirtualnej rzeczywistości (VR). Grupowe zajęcia mają&nbsp;na celu poprawę umiejętności manualnych, koordynacji oraz&nbsp;precyzji ruchów ręki. Wspomaganie technologią VR sprawia, że&nbsp;terapia staje&nbsp;się bardziej angażująca i&nbsp;efektywna.
+      </p>
+      
+        )
+      },
+  
+      {
+        category: "Terapie",
+        name: "Sesje terapii integracji sensorycznej grupowe ze wspomaganiem VR",
+        price: "80 zł / 50 minut",
+        info: (
+          <p>
+          Terapia integracji sensorycznej&nbsp;z wykorzystaniem technologii wirtualnej rzeczywistości (VR). Zajęcia grupowe pozwalają&nbsp;na wszechstronną stymulację sensoryczną w&nbsp;innowacyjny sposób, jednocześnie promując interakcje społeczne i&nbsp;naukę w&nbsp;grupie.
+      </p>
+      
+        )
+      },
+   
+
     { 
       category: "Badanie ADOS-2",
       name: "Badanie ADOS-2", price: "600zł / 120min - w siedzibie PP-P", variant: "2000zł / 120min - w domu pacjenta do 25km", variant2:"3.000 zł /120 min – w domu pacjenta do 60km",info: (<p>Dalsze miejscowości - cena ustalana indywidualnie. <br />Diagnoza 2 osób lub więcej w jednym miejscu - cena ustalana indywidualnie. <br />Diagnoza w języku angielskim: dopłata 20% ceny</p>)
@@ -346,148 +488,6 @@ const PriceList = () => {
       )
   },
   
-
-    /* Badania */
-
-
-
-    {
-      category: "Badania",
-      name: "Badanie psychologiczne w kierunku określania słabych i mocnych stron funkcjonowania dziecka",
-      price: "600zł - stacjonarnie",
-      variant: "500zł - online",
-      info: (
-        <p>
-        Dla dzieci i&nbsp;młodzieży w&nbsp;wieku od&nbsp;5 do&nbsp;20 lat. <br />
-        Czas trwania: 3 do&nbsp;5 godzin, przeprowadzane w&nbsp;ciągu 2 dni. <br /><br />
-        <ul>
-            <li>Konsultacja z&nbsp;rodzicami,</li>
-            <li>Badanie psychologiczne,</li>
-            <li>Wydanie opinii wraz z&nbsp;omówieniem.</li>
-        </ul>
-    </p>
-    
-      )
-    },
-
-    {
-      category: "Badania",
-      name: "Badanie psychologiczno–pedagogiczne pod kątem dysleksji, dysortografii, dysgrafii",
-      price: "350 zł / 120 minut - stacjonarnie",
-      variant: "300 zł / 120 minut - online",
-      info: (
-        <p>
-        Kompleksowe badanie mające na&nbsp;celu zidentyfikowanie potencjalnych trudności w&nbsp; nauce, związanych z&nbsp;dysleksją, dysortografią oraz dysgrafią. Obejmuje zarówno analizę psychologiczną, jak&nbsp;i&nbsp;pedagogiczną, pozwalając na&nbsp;precyzyjne określenie potrzeb edukacyjnych osoby badanej.
-    </p>
-    
-      )
-    },
-
-
-    /* Terapie */
-
-
-    {
-      category: "Terapie",
-      name: "Terapia rodzin",
-      price: "300zł stacjonarnie / 90 minut",
-      variant: "250zł online / 90 minut",
-      variant2: "70 EUR / 90 min - w j. angielskim",
-      info: (
-        <p>
-        Specjalistyczna terapia rodzin, mająca na&nbsp;celu wsparcie rodziny w&nbsp;trudnych sytuacjach, rozwiązanie konfliktów wewnętrznych i&nbsp;poprawę komunikacji między członkami rodziny.
-    </p>
-    
-      )
-    },
-
-    {
-      category: "Terapie",
-      name: "Terapia par",
-      price: "220zł / 60 min - stacjonarnie",
-      variant: "180zł / 60 min - online",
-      variant2: "40 EUR / 60 min - online w j. angielskim",
-      info: (
-        <p>
-        Terapia dla&nbsp;par mająca na&nbsp;celu wsparcie i&nbsp;pomoc w&nbsp;rozwiązywaniu problemów w&nbsp;związku.
-    </p>
-    
-      )
-    },
-
-    {
-      category: "Terapie",
-      name: "Terapia uzależnień",
-      price: "150zł / 45 min - stacjonarnie",
-      variant: "130zł / 45 min - online",
-      variant2: "40 EUR / 45 min - online w j. angielskim",
-      info: (
-        <p>
-    Terapia uzależnień skupiająca się&nbsp;na różnych formach uzależnień, takich&nbsp;jak:
-    <ul>
-        <li>alkohol,</li>
-        <li>używki,</li>
-        <li>hazard,</li>
-        <li>sex,</li>
-        <li>portale randkowe,</li>
-        <li>social media,</li>
-        <li>gry komputerowe,</li>
-        <li>Internet.</li>
-    </ul>
-</p>
-
-      )
-    },
-
-    {
-      category: "Terapie",
-      name: "Zajęcia z pedagogiem specjalnym z elementami terapii behawioralnej",
-      price: "150 zł / 45/60min - stacjonarnie",
-      variant: "130 zł - online",
-      variant2: "40 EUR / 60 min - online w j. angielskim",
-      info: (
-        <p>
-        Indywidualne zajęcia&nbsp;z pedagogiem specjalnym skupiające się&nbsp;na wsparciu rozwoju oraz&nbsp;terapii behawioralnej.
-    </p>
-    
-      )
-    },
-
-    {
-      category: "Terapie",
-      name: "Sesja Terapii Wirtualnej",
-      price: "150 zł / 45 minut",
-      info: (
-        <p>
-        Zastosowanie nowoczesnych technologii&nbsp;w praktyce terapeutycznej. Terapia wirtualna pozwala&nbsp;na prowadzenie sesji&nbsp;w wygodnych warunkach, bez&nbsp;konieczności wychodzenia&nbsp;z domu, z&nbsp;zachowaniem pełnej prywatności i&nbsp;bezpieczeństwa.
-    </p>
-    
-      )
-    },
-
-    {
-      category: "Terapie",
-      name: "Sesje terapii ręki grupowe ze wspomaganiem VR",
-      price: "80 zł / 50 minut",
-      info: (
-        <p>
-        Terapia ręki&nbsp;z wykorzystaniem technologii wirtualnej rzeczywistości (VR). Grupowe zajęcia mają&nbsp;na celu poprawę umiejętności manualnych, koordynacji oraz&nbsp;precyzji ruchów ręki. Wspomaganie technologią VR sprawia, że&nbsp;terapia staje&nbsp;się bardziej angażująca i&nbsp;efektywna.
-    </p>
-    
-      )
-    },
-
-    {
-      category: "Terapie",
-      name: "Sesje terapii integracji sensorycznej grupowe ze wspomaganiem VR",
-      price: "80 zł / 50 minut",
-      info: (
-        <p>
-        Terapia integracji sensorycznej&nbsp;z wykorzystaniem technologii wirtualnej rzeczywistości (VR). Zajęcia grupowe pozwalają&nbsp;na wszechstronną stymulację sensoryczną w&nbsp;innowacyjny sposób, jednocześnie promując interakcje społeczne i&nbsp;naukę w&nbsp;grupie.
-    </p>
-    
-      )
-    },
 
     /* Konsultacje */
 

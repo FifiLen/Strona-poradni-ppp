@@ -13,6 +13,7 @@ const MENU_LIST = [
   { text: "SI", href: "/SI"},
   { text: "WWRD", href: "/WWRD"},
   { text: "Logopeda" , href: "/Logopeda"},
+  { text: "Rehabilitacja chodu", href: "/Pragma" },
   { text: "Uczeń zdolny", href:"/Student"},
   { text: "Cennik", href: "/PriceList"},
   { text: "Kadra", href: "/Staff" },
