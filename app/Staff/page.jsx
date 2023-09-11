@@ -115,10 +115,34 @@ Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i&nbsp;rodzin. 
     </p>),
     imageUrl: '/assets/T13.png',
   },
-  
-  
   {
     id: 13,
+    name: 'Anna Kowalska',
+    specialty: 'Psycholog',
+    description: (<p>
+Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej i&nbsp;Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener nowoczesnego doradztwa zawodowego i&nbsp;edukacyjnego. Teraputa z&nbsp;zakresu psychoterapii par, EFT - terapii skoncentrowanej na&nbsp;emocjach, pracy z&nbsp;dziećmi i&nbsp;młodzieżą. Specjalista edukacji włączającej. Wykładowca studiów podyplomowych z&nbsp;zakresu swoich specjalizacji.
+    </p>),
+    imageUrl: '/assets/T15.png',
+  },
+  {
+    id: 14,
+    name: 'Martyna Papała',
+    specialty: 'Dyrektor szkoły dla młodzieży, Nauczyciel matematyki, Trener TIK',
+    description: (
+      <p>
+        Dyrektor szkoły dla młodzieży oraz nauczyciel matematyki w szkole ponadpodstawowej.
+        Trener z zakresu TIK. Ukończyła formy doskonalenia zawodowego realizowane w ramach projektu:
+        "Uczeń ze specjalnymi potrzebami edukacyjnymi - opracowanie modelu szkolenia i doradztwa".
+        Wykładowca na studiach podyplomowych z obszaru zarządzania oświatą.
+        Prowadzi zajęcia z matematyki dla uczniów przygotowujących się do egzaminów, ale też
+        potrzebujących pomocy w rozumieniu zawiłości świata matematycznego.
+      </p>
+    ),
+    imageUrl: '/assets/T16.png',
+  },
+  
+  {
+    id: 15,
     name: 'Katarzyna Duźniak',
     specialty: 'Pedagog',
     description: (<p>
@@ -128,15 +152,7 @@ Magister pedagogiki, specjalizuje się w&nbsp;pracy socjalnej oraz opiekuńczo-w
   },
   
   
-  {
-    id: 14,
-    name: 'Anna Kowalska',
-    specialty: 'Psycholog',
-    description: (<p>
-Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej i&nbsp;Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener nowoczesnego doradztwa zawodowego i&nbsp;edukacyjnego. Teraputa z&nbsp;zakresu psychoterapii par, EFT - terapii skoncentrowanej na&nbsp;emocjach, pracy z&nbsp;dziećmi i&nbsp;młodzieżą. Specjalista edukacji włączającej. Wykładowca studiów podyplomowych z&nbsp;zakresu swoich specjalizacji.
-    </p>),
-    imageUrl: '/assets/woman.png',
-  },
+  
   
 ];
 

@@ -14,7 +14,7 @@ const Info = () => {
       title: "Easy Biofeedback VR",
       description: "",
       special: false,
-      video: '/assets/movie9.mp4',
+      video: '/assets/movie10.mp4',
       path: '/Biofeedback-VR'
     }, 
     {
