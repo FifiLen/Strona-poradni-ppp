@@ -67,6 +67,21 @@ const Info = () => {
       video: '/assets/movie3.mp4',
       path: '/ADOS-2'
     },
+     // trzeci rząd
+    {
+      title: "Logopeda",
+      description: "",
+      special: false,
+      video: '/assets/movie13.mp4',
+      path: '/Logopeda'
+    },
+    {
+      title: "Rehabilitacja chodu",
+      description: "",
+      special: false,
+      video: '/assets/movie9.mp4',
+      path: '/RehabilitacjaChodu'
+    },
     
     // ... dodaj resztę danych w tym samym formacie
   ];

@@ -13,10 +13,10 @@ const MENU_LIST = [
   { text: "SI", href: "/SI"},
   { text: "WWRD", href: "/WWRD"},
   { text: "Logopeda" , href: "/Logopeda"},
-  { text: "Rehabilitacja chodu", href: "/Pragma" },
-  { text: "Uczeń zdolny", href:"/Student"},
-  { text: "Cennik", href: "/PriceList"},
-  { text: "Kadra", href: "/Staff" },
+  { text: "Rehabilitacja chodu", href: "/RehabilitacjaChodu" },
+  { text: "Uczeń zdolny", href:"/UczenZdolny"},
+  { text: "Cennik", href: "/Cennik"},
+  { text: "Kadra", href: "/Kadra" },
   { text: "FAQ", href: "/Faq" },
   
 ];
@@ -118,7 +118,7 @@ const Navbar = () => {
               Rezerwacja
 </div> 
 </Link> */}
-          <Link href="/Contact" passHref>
+          <Link href="/Kontakt" passHref>
             <div className="button2 text-[12px] font-light cursor-pointer px-8 py-2 whitespace-nowrap rounded-lg">
               Kontakt
             </div>
