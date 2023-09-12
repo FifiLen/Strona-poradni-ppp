@@ -180,9 +180,9 @@ Czas pojedynczej sesji treningowej jest zróżnicowany i&nbsp;zależy od&nbsp;wi
 
   return (
     <>
-      <div className="relative h-[520px] overflow-hidden">
+      <div className="relative h-[620px] overflow-hidden">
       <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay muted loop>
-  <source src="/assets/movie9.mp4" type="video/mp4" />
+  <source src="/assets/movie11.mp4" type="video/mp4" />
   Twoja przeglądarka nie obsługuje tagu video.
 </video>
 
