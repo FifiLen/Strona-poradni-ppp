@@ -18,7 +18,7 @@ const MENU_LIST = [
   { text: "Cennik", href: "/Cennik"},
   { text: "Kadra", href: "/Kadra" },
   { text: "FAQ", href: "/Faq" },
-  { text: "Wynajem Gabinetu", href: "/Wynajem" },
+  { text: "Wynajem", href: "/Wynajem" },
 
   
 ];
