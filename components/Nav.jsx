@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { MdNavigateNext } from 'react-icons/md'; // Ikona ">" z react-icons
 
 const MENU_LIST = [
-  { text: "Strona główna", href: "/" },
+  { text: "Home", href: "/" },
   { text: "C-Eye Pro", href: "/C-Eye" },
   { text: "ADOS-2", href: "/ADOS-2" },
   { text: "Terapia VR", href: "Vr-terapy" },
