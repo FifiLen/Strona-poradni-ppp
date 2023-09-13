@@ -12,7 +12,7 @@ export const metadata = {
 const Rootlayout = ({children}) => {
   return (
     <html lang='en'>
-        <body className=' bg-gradient-to-r from-[#c3c3c32c] to-white'>
+        <body className='bg-white'>
             <div className='main'>
 
             </div>
