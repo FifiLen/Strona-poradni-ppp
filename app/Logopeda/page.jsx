@@ -136,19 +136,33 @@ const ClassicLayout = () => {
                         className="w-full h-auto rounded-lg" />
                     </div>
                     <div className="md:w-1/2">
-                      <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-gray-600">
-                        Potrzeba wizyty u logopedy
-                      </h2>
-                      <p className=' text-slate-700'>    Jeśli rozważasz wizytę u logopedy dla siebie lub bliskiej osoby, serdecznie zachęcamy do skontaktowania się z nami, aby umówić się na konsultację. Nasz zespół logopedów&nbsp;jest gotowy, by zapewnić Ci profesjonalne wsparcie i poprawić jakość komunikacji oraz mowy.</p>
-                      {/* Przycisk "Kontakt" */}
-                      <a href="/Contact" className="mt-4 mr-2 inline-block bg-[#921d7f] hover:bg-gray-100 hover:text-slate-700 text-white font-semibold py-2.5 px-6 rounded">
-                        Kontakt
-                      </a>
-                      {/* Przycisk "Cennik" */}
-                      <a href="PriceList" className="mt-2 inline-block bg-white border-2 border-slate-400 hover:bg-gray-100 text-slate-700 font-semibold py-2 px-6 rounded">
-                        Cennik
-                      </a>
-                    </div>
+  <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-gray-600">
+    Potrzeba wizyty u logopedy
+  </h2>
+  <p className=' text-slate-700'>
+    Jeśli rozważasz wizytę u logopedy dla siebie lub bliskiej osoby, serdecznie zachęcamy do skontaktowania się z nami, aby umówić się na konsultację. Nasz zespół logopedów jest gotowy, by zapewnić Ci profesjonalne wsparcie i poprawić jakość komunikacji oraz mowy.
+  </p>
+  <h3 className='my-6 text-[#921d7f] text-xl font-semibold'>Cennik</h3>
+  {/* Logopeda Information */}
+  <h3 className="text-lg font-semibold mt-4 text-gray-600 mb-4">
+    Logopeda – neurologopeda – logopeda kliniczny
+  </h3>
+  <p className=' text-slate-700'>
+    <strong>Diagnoza z planem terapii:</strong> 250 zł
+    <br />
+    <strong>Sesja terapeutyczna:</strong> 100 zł / 45 min
+    <br />
+    <strong>Sesja terapeutyczna wspomagana VR:</strong> 150 zł / 45 min
+  </p>
+  <p className=' text-slate-700 mt-4'>
+    Profesjonalna diagnoza i terapia logopedyczna, skierowana do osób potrzebujących wsparcia w zakresie komunikacji i mowy. Dostępne są również nowoczesne metody terapii z wykorzystaniem technologii VR.
+  </p>
+  {/* Przycisk "Kontakt" */}
+  <a href="/Contact" className="mt-4 mr-2 inline-block bg-[#921d7f] hover:bg-gray-100 hover:text-slate-700 text-white font-semibold py-2.5 px-14 rounded">
+    Kontakt
+  </a>
+</div>
+
                   </div>
                 </div>
 

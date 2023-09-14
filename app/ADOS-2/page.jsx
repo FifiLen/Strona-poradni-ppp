@@ -250,10 +250,27 @@ W odniesieniu do badanych w wieku powyżej 30 miesięcy oblicza się też na pod
       id: 'cennik',
       title: 'Cennik',
       content: (
-        <div className='mx-4 my-2'></div>
+        <div className=' mx-4 my-2'>
+          <p className='text-[16px] text-gray-700'>
+            <strong>Badanie ADOS-2</strong>
+            <br />
+            Cena: 600 zł / 120 min - w siedzibie PP-P
+            <br />
+            Cena: 2000 zł / 120 min - w domu pacjenta do 25 km
+            <br />
+            Cena: 3.000 zł / 120 min – w domu pacjenta do 60 km
+            <br />
+            Dalsze miejscowości - cena ustalana indywidualnie.
+            <br />
+            Diagnoza 2 osób lub więcej w jednym miejscu - cena ustalana indywidualnie.
+            <br />
+            Diagnoza w języku angielskim: dopłata 20% ceny
+          </p>
+        </div>
       ),
       ref: useRef(null)
     }
+    
     
   ];
 

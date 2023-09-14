@@ -255,7 +255,7 @@ const PriceList = () => {
 
        /* Logopeda */
 
-    {
+    /*{
       category: "Logopeda",
       name: "Logopeda – neurologopeda – logopeda kliniczny",
       price: "250zł - Diagnoza z planem terapii",
@@ -267,7 +267,7 @@ const PriceList = () => {
     </p>
     
       )
-    },
+    }, */
 
       /* Fizjoterapia */
   {
@@ -676,7 +676,7 @@ const PriceList = () => {
 
    
 
-    { 
+    /*{ 
       category: "Neurorehabilitacja z C-eye® Pro",
       name: "Neurorehabilitacja z C-eye® Pro", price: "300zł / 60min - diagnoza w siedzibie PP-P", variant: "900 zł / 60 min – w domu Pacjenta do 25km", variant2: "1.500 zł / 60 min – w domu Pacjenta do 60km", 
       info: (
@@ -703,12 +703,12 @@ const PriceList = () => {
           Wydanie opinii wraz&nbsp;z&nbsp;omówieniem - 120 zł.<br />
           Neurorehabilitacja z&nbsp;C-Eye w&nbsp;j. angielskim: dopłata 20% ceny.
           </p>
-  )},
+  )}, */
 
-  { 
+  /*{ 
     category: "Badanie ADOS-2",
     name: "Badanie ADOS-2", price: "600zł / 120min - w siedzibie PP-P", variant: "2000zł / 120min - w domu pacjenta do 25km", variant2:"3.000 zł /120 min – w domu pacjenta do 60km",info: (<p>Dalsze miejscowości - cena ustalana indywidualnie. <br />Diagnoza 2 osób lub więcej w jednym miejscu - cena ustalana indywidualnie. <br />Diagnoza w języku angielskim: dopłata 20% ceny</p>)
-  },
+  }, */
 
 
 
