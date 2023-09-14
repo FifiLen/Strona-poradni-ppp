@@ -14,7 +14,7 @@ const Pragma = () => {
           <p className="text-base sm:text-lg md:text-xl text-white mt-4">Rehabilitacja - Pionizacja - Reedukacja chodu</p>
         </div>
       </div>
-      <div className="container mx-auto px-4 py-8 sm:py-16 sm:px-6 lg:px-8 relative z-10">
+      <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 cursor-pointer">
         <div className="md:flex md:justify-center text-center">
           <div className="md:w-3/4">
             <div className="bg-white shadow-lg rounded-lg p-6">
