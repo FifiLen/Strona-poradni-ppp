@@ -32,7 +32,6 @@ const PriceList = () => {
 }, []);
 
   const services = [
-
       
       /* Terapie */
       {
