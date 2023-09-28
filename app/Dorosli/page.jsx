@@ -131,7 +131,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
 
       <div className="flex justify-left items-center w-full mt-10 md:mt-14 ml-4 md:ml-24 pb-10">
         <button className="w-1/2 px-4 py-6 rounded-md bg-[#ffffff00] border-2 border-slate-800 mt-4">
-          <a href="/Cennik_centrum" className="text-slate-800 flex items-center justify-between gap-1">
+          <a href="/Cennik__dorosli" className="text-slate-800 flex items-center justify-between gap-1">
             Cennik wraz z wszystkimi usługami<FaArrowRight className="ml-2" />
           </a>
         </button>

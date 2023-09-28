@@ -69,31 +69,7 @@ const PriceList = () => {
           </div>
         )
       },
-      
 
-
-      {
-        category: "Diagnoza uzależnień",
-        name: "Terapia uzależnień",
-        price: "150zł / 45 min - stacjonarnie",
-        variant: "130zł / 45 min - online",
-        variant2: "40 EUR / 45 min - online w j. angielskim",
-        info: (
-          <p>
-            Terapia uzależnień skupiająca się&nbsp;na różnych formach uzależnień, takich&nbsp;jak:
-            <ul>
-              <li>alkohol,</li>
-              <li>używki,</li>
-              <li>hazard,</li>
-              <li>sex,</li>
-              <li>portale randkowe,</li>
-              <li>social media,</li>
-              <li>gry komputerowe,</li>
-              <li>Internet.</li>
-            </ul>
-          </p>
-        )
-      },
     ];
   
     const groupedServices = services.reduce((acc, service) => {

@@ -124,166 +124,27 @@ const PriceList = () => {
     )
   },
   
-
   {
     category: "Badania",
-    name: "Badanie psychologiczno–pedagogiczne pod kątem dysleksji, dysortografii, dysgrafii",
-    price: "350 zł / 120 minut - stacjonarnie",
-    variant: "300 zł / 120 minut - online",
+    name: "Badanie pod kątem dysleksji, dysortografii i dysgrafii",
+    price: "250 zł / 120 minut - stacjonarnie",
     info: (
-      <p>
-      Kompleksowe badanie mające na&nbsp;celu zidentyfikowanie potencjalnych trudności w&nbsp; nauce, związanych z&nbsp;dysleksją, dysortografią oraz dysgrafią. Obejmuje zarówno analizę psychologiczną, jak&nbsp;i&nbsp;pedagogiczną, pozwalając na&nbsp;precyzyjne określenie potrzeb edukacyjnych osoby badanej.
-  </p>
-  
+      <div>
+        <p>
+          Kompleksowe badanie psychologiczno-pedagogiczne ma na celu zidentyfikowanie potencjalnych trudności w nauce związanych z dysleksją, dysortografią oraz dysgrafią. Badanie obejmuje zarówno analizę psychologiczną, jak i pedagogiczną, co pozwala na precyzyjne określenie potrzeb edukacyjnych osoby badanej.
+        </p>
+        <p>
+          Cena badania wynosi 250 zł, a czas trwania badania to 120 minut. Badanie odbywa się w trybie stacjonarnym.
+        </p>
+      </div>
     )
   },
 
-  {
-    category: "Badania",
-    name: "Badanie psychologiczne w kierunku określania słabych i mocnych stron funkcjonowania dziecka",
-    price: "600zł - stacjonarnie",
-    variant: "500zł - online",
-    info: (
-      <p>
-      Dla dzieci i&nbsp;młodzieży w&nbsp;wieku od&nbsp;5 do&nbsp;20 lat. <br />
-      Czas trwania: 3 do&nbsp;5 godzin, przeprowadzane w&nbsp;ciągu 2 dni. <br /><br />
-      <ul>
-          <li>Konsultacja z&nbsp;rodzicami,</li>
-          <li>Badanie psychologiczne,</li>
-          <li>Wydanie opinii wraz z&nbsp;omówieniem.</li>
-      </ul>
-  </p>
   
-    )
-  },
-  {
-    category: "Diagnozy dzieci i młodzieży",
-    name: "Diagnoza KOGS",
-    price: "600zł - stacjonarnie",
-    variant: "500zł - online",
-    info: (
-      <p>
-      Diagnoza dojrzałości i&nbsp;gotowości szkolnej dla dzieci w&nbsp;wieku od&nbsp;5 do&nbsp;7 lat. <br />
-      Czas trwania: 3 – 5 godzin, rozłożonych na&nbsp;2 dni. <br /><br />
-      Proces diagnozy obejmuje:&nbsp;
-      <ul>
-          <li>- Konsultacja z&nbsp;rodzicami,</li>
-          <li>- Badanie psychologiczne,</li>
-          <li>- Badanie pedagogiczne,</li>
-          <li>- Wydanie opinii wraz&nbsp;z&nbsp;omówieniem.</li>
-      </ul> <br />
-      *Diagnoza wsparta jest C-eye® Pro, Biofeedback oraz&nbsp;wirtualną rzeczywistością.
-  </p>
   
-    )
-},
-
-{
-  category: "Diagnozy dzieci i młodzieży",
-  name: "Diagnoza Dysleksji",
-  price: "600zł - stacjonarnie",
-  variant: "500zł - online",
-  info: (
-    <p>
-    Dla dzieci w&nbsp;wieku od&nbsp;8 do&nbsp;15 lat. <br />
-    Czas trwania: 3 – 5 godzin rozłożonych na&nbsp;2 dni. <br /><br />
-    <ul>
-        <li>Konsultacja z&nbsp;rodzicami,</li>
-        <li>Badanie psychologiczne,</li>
-        <li>Badanie pedagogiczne,</li>
-        <li>Wydanie opinii wraz&nbsp;z&nbsp;omówieniem.</li>
-    </ul><br />
-    *Diagnoza wsparta jest C-eye® Pro, Biofeedback oraz&nbsp;wirtualną rzeczywistością.
-</p>
-
-  )
-},
-
-{
-category: "Diagnozy dzieci i młodzieży",
-name: "Diagnoza Dysortografii",
-price: "600zł - stacjonarnie",
-variant: "500zł - online",
-info: (
-  <p>
-  Dla dzieci w&nbsp;wieku od&nbsp;8 do&nbsp;15 lat. <br />
-  Czas trwania: 3 – 5 godzin rozłożonych na&nbsp;2 dni. <br /><br />
-  <ul>
-      <li>Konsultacja z&nbsp;rodzicami,</li>
-      <li>Badanie psychologiczne,</li>
-      <li>Badanie pedagogiczne,</li>
-      <li>Wydanie opinii wraz&nbsp;z&nbsp;omówieniem.</li>
-  </ul><br />
-  *Diagnoza wsparta jest C-eye® Pro, Biofeedback oraz&nbsp;wirtualną rzeczywistością.
-</p>
-
-)
-},
-
-{
-category: "Diagnozy dzieci i młodzieży",
-name: "Diagnoza Dysgrafii",
-price: "600zł - stacjonarnie",
-variant: "500zł - online",
-info: (
-  <p>
-  Dla dzieci w&nbsp;wieku od&nbsp;8 do&nbsp;13 lat. <br />
-  Czas trwania: 3 – 5 godzin rozłożonych na&nbsp;2 dni. <br /><br />
-  <ul>
-      <li>Konsultacja z&nbsp;rodzicami,</li>
-      <li>Badanie psychologiczne,</li>
-      <li>Badanie pedagogiczne,</li>
-      <li>Wydanie opinii wraz&nbsp;z&nbsp;omówieniem.</li>
-  </ul><br />
-  *Diagnoza wsparta jest C-eye® Pro, Biofeedback oraz&nbsp;wirtualną rzeczywistością.
-</p>
-
-)
-},
-
-{
-category: "Diagnozy dzieci i młodzieży",
-name: "Diagnoza Dyskalkulii",
-price: "600zł - stacjonarnie",
-variant: "500zł - online",
-info: (
-  <p>
-  Dla dzieci w&nbsp;wieku od&nbsp;13 do&nbsp;16 lat. <br />
-  Czas trwania: 3 – 5 godzin rozłożonych na&nbsp;2 dni. <br /><br />
-  <ul>
-      <li>Konsultacja z&nbsp;rodzicami,</li>
-      <li>Badanie psychologiczne,</li>
-      <li>Badanie pedagogiczne,</li>
-      <li>Wydanie opinii wraz&nbsp;z&nbsp;omówieniem.</li>
-  </ul><br />
-  *Diagnoza wsparta jest C-eye® Pro, Biofeedback oraz&nbsp;wirtualną rzeczywistością.
-</p>
-
-)
-},
 
 
 
-{
-category: "Diagnozy dzieci i młodzieży",
-name: "Diagnoza ucznia szczególnie zdolnego",
-price: "600zł - stacjonarnie",
-variant: "500zł - online",
-info: (
-  <p>
-  Dla dzieci w&nbsp;wieku od&nbsp;5 do&nbsp;7 lat. <br />
-  Czas trwania: 3 do&nbsp;5 godzin, przeprowadzane w&nbsp;ciągu 2 dni. <br /><br />
-  <ul>
-      <li>Konsultacja z&nbsp;rodzicami,</li>
-      <li>Badanie psychologiczne,</li>
-      <li>Badanie pedagogiczne,</li>
-      <li>Wydanie opinii wraz&nbsp;z&nbsp;omówieniem.</li>
-  </ul><br />
-  *Diagnoza wsparta jest C-eye® Pro, Biofeedback oraz&nbsp;wirtualną rzeczywistością.
-</p>
-
-)
-},
 {
   category: "Diagnozy dzieci i młodzieży",
   name: "KOLD-PT - Karty Oceny Logopedycznej Dziecka",
@@ -345,20 +206,48 @@ info: (
   )
 },
 {
-  category: "Badania",
-  name: "Badanie pod kątem dysleksji, dysortografii i dysgrafii",
-  price: "250 zł / 120 minut - stacjonarnie",
+  category: "Diagnozy dzieci i młodzieży",
+  name: "Diagnoza KOGS",
+  price: "600zł - stacjonarnie",
+  variant: "500zł - online",
   info: (
-    <div>
-      <p>
-        Kompleksowe badanie psychologiczno-pedagogiczne ma na celu zidentyfikowanie potencjalnych trudności w nauce związanych z dysleksją, dysortografią oraz dysgrafią. Badanie obejmuje zarówno analizę psychologiczną, jak i pedagogiczną, co pozwala na precyzyjne określenie potrzeb edukacyjnych osoby badanej.
-      </p>
-      <p>
-        Cena badania wynosi 250 zł, a czas trwania badania to 120 minut. Badanie odbywa się w trybie stacjonarnym.
-      </p>
-    </div>
+    <p>
+    Diagnoza dojrzałości i&nbsp;gotowości szkolnej dla dzieci w&nbsp;wieku od&nbsp;5 do&nbsp;7 lat. <br />
+    Czas trwania: 3 – 5 godzin, rozłożonych na&nbsp;2 dni. <br /><br />
+    Proces diagnozy obejmuje:&nbsp;
+    <ul>
+        <li>- Konsultacja z&nbsp;rodzicami,</li>
+        <li>- Badanie psychologiczne,</li>
+        <li>- Badanie pedagogiczne,</li>
+        <li>- Wydanie opinii wraz&nbsp;z&nbsp;omówieniem.</li>
+    </ul> <br />
+    *Diagnoza wsparta jest C-eye® Pro, Biofeedback oraz&nbsp;wirtualną rzeczywistością.
+</p>
+
   )
-}
+},
+
+{
+  category: "Diagnozy dzieci i młodzieży",
+  name: "Diagnoza ucznia szczególnie zdolnego",
+  price: "600zł - stacjonarnie",
+  variant: "500zł - online",
+  info: (
+    <p>
+    Dla dzieci w&nbsp;wieku od&nbsp;5 do&nbsp;7 lat. <br />
+    Czas trwania: 3 do&nbsp;5 godzin, przeprowadzane w&nbsp;ciągu 2 dni. <br /><br />
+    <ul>
+        <li>Konsultacja z&nbsp;rodzicami,</li>
+        <li>Badanie psychologiczne,</li>
+        <li>Badanie pedagogiczne,</li>
+        <li>Wydanie opinii wraz&nbsp;z&nbsp;omówieniem.</li>
+    </ul><br />
+    *Diagnoza wsparta jest C-eye® Pro, Biofeedback oraz&nbsp;wirtualną rzeczywistością.
+  </p>
+  
+  )
+  },
+
 
 
 
