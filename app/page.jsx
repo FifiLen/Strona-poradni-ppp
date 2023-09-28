@@ -35,19 +35,6 @@ const Home = () => {
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const [showWebinarModal, setShowWebinarModal] = useState(false); // Stan do pokazywania modala
-
-  // ... Reszta Twojego kodu
-
-  // Funkcja do otwierania modala z informacjami o webinarze
-  const openWebinarModal = () => {
-    setShowWebinarModal(true);
-  };
-
-  // Funkcja do zamykania modala
-  const closeWebinarModal = () => {
-    setShowWebinarModal(false);
-  };
   
 
   useEffect(() => {
