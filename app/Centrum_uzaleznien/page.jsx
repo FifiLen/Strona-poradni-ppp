@@ -78,7 +78,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
             {/* Obrazek (zmieniony układ na telefonach) */}
             <div className="text-center lg:flex-col-reverse lg:flex">
               <img
-                src="/assets/uzaleznienie1.jpg"
+                src="/assets/uzaleznienie2.jpg"
                 className="rounded-md"
                 alt="terapia uzależnień"
               />
@@ -93,7 +93,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
             {/* Obrazek (zmieniony układ na telefonach) */}
             <div className="text-center lg:flex-col-reverse lg:flex">
               <img
-                src="/assets/uzaleznienie4.jpg"
+                src="/assets/uzaleznienie3.jpg"
                 className="rounded-md"
                 alt="diagnoza uzależnień"
               />
@@ -151,7 +151,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
             {/* Obrazek (zmieniony układ na telefonach) */}
             <div className="text-center lg:flex-col-reverse lg:flex">
               <img
-                src="/assets/uzaleznienia3.jpg"
+                src="/assets/uzaleznienie4.jpg"
                 alt="resocjalizacja uzależnionych"
                 className="rounded-md"
               />
