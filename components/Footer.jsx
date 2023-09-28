@@ -30,12 +30,12 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="font-semibold mb-4 text-lg">Sprawdź</h4>
             <ul className="list-none p-0">
-              {['/Join', '/Faq','/O_nas'].map((href, idx) => (
+              {['/Join', '/Faq','/O_nas','/Wynajem'].map((href, idx) => (
                 <li key={idx} className='mb-2'>
                   <Link href={href}>
                     <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-pink-400">
                       <FaAngleRight />
-                      <span>{['Dołącz do Magnolii', 'FAQ','O nas'][idx]}</span>
+                      <span>{['Dołącz do Magnolii', 'FAQ','O nas','Wynajem'][idx]}</span>
                     </span>
                   </Link>
                 </li>
