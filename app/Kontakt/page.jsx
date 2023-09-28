@@ -1,79 +1,154 @@
 'use client'
-import React, { useEffect } from "react";
-useEffect
+import React, { useState } from 'react';
+import { FaMapMarkerAlt, FaAngleRight, FaEnvelope, FaClock } from 'react-icons/fa';
+import InfoReservation from '@components/InfoReservation';
 
-const ContactPage = () => {
-  useEffect(() => {
-    // Utwórz skrypt dla gtag.js
-    const gtagScript = document.createElement('script');
-    gtagScript.async = true;
-    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0QW3ZG23F5";
-    
-    // Dodaj skrypt do głowy dokumentu
-    document.head.appendChild(gtagScript);
+const Kontakt = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
-    // Utwórz dodatkowy skrypt dla konfiguracji Google Tag Managera
-    const gtmInlineScript = document.createElement('script');
-    gtmInlineScript.innerHTML = `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-0QW3ZG23F5');
-    `;
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-    // Dodaj dodatkowy skrypt do głowy dokumentu
-    document.head.appendChild(gtmInlineScript);
-
-    // Opcjonalnie: Możesz usunąć skrypty, gdy komponent zostanie odmontowany
-    return () => {
-        document.head.removeChild(gtagScript);
-        document.head.removeChild(gtmInlineScript);
-    }
-}, []);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Obsługa przesłania formularza
+  };
 
   return (
-    <section className="px-2 sm:px-6 md:px-[80px] lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mt-4 mb-[100px]">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-8">
-        <div className="bg-[#7e0276] p-8 rounded-[20px] shadow-2xl">
-          <h2 className="text-4xl font-black mb-4 text-white">Kontakt</h2>
-          <div className="mb-4">
-            <h3 className="text-[22px] font-bold text-white">Numer telefonu:</h3>
-            <p className="text-white font-light">+48 797 173 501</p>
-            <p className="text-white font-light">+48 502 162 365</p>
-            <p className="text-white font-light">+48 690 515 224</p>
-            <p className="text-white font-light">+48 503 192 950</p>
+    <section className="py-16 bg-[#F5F5F5] border-t-4">
+      <div className="container mx-auto px-4 md:px-0 text-gray-800">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Kolumna 1: Tekst kontaktowy */}
+          <div className="footer-section">
+            <h2 className="font-semibold text-4xl mb-4">Kontakt</h2>
+            <div className="mb-4 space-y-2">
+              <div className="flex items-center">
+                <FaAngleRight className="mr-2" />
+                <p className="font-semibold text-gray-600">+48 797 173 501</p>
+              </div>
+              <div className="flex items-center">
+                <FaAngleRight className="mr-2" />
+                <p className="font-semibold text-gray-600">+48 502 162 365</p>
+              </div>
+              <div className="flex items-center">
+                <FaAngleRight className="mr-2" />
+                <p className="font-semibold text-gray-600">+48 690 515 224</p>
+              </div>
+              <div className="flex items-center">
+                <FaAngleRight className="mr-2" />
+                <p className="font-semibold text-gray-600">+48 503 192 950</p>
+              </div>
+            </div>
+            <div className="mb-4">
+              <p className="font-semibold text-gray-600">poradniamagnolia@gmail.com</p>
+            </div>
+            <div className="mb-4">
+              <p className="font-semibold text-gray-800">Magnolii 25, 44-207 Rybnik</p>
+            </div>
+            <div className="mb-4">
+              <h4 className="font-semibold text-gray-800">Godziny otwarcia</h4>
+              <p className="font-semibold text-gray-600">Poniedziałek - Piątek: 7:00 - 21:00</p>
+            </div>
           </div>
-          <div className="mb-4">
-            <h3 className="text-[22px] font-bold text-white">Email:</h3>
-            <p className="text-white font-light">poradniamagnolia@gmail.com</p>
+
+
+          {/* Kolumna 3: Formularz kontaktowy 
+          <div className="footer-section">
+            <div className="w-full p-4">
+              <form onSubmit={handleSubmit}>
+                <div className="mb-4">
+                  <label htmlFor="name" className="block font-semibold text-sm">
+                    Imię/Pseudonim
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2 border rounded"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="phone" className="block font-semibold text-sm">
+                    Numer telefonu
+                  </label>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2 border rounded"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="email" className="block font-semibold text-sm">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2 border rounded"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="subject" className="block font-semibold text-sm">
+                    Temat
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2 border rounded"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="message" className="block font-semibold text-sm">
+                    Wiadomość
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2 border rounded"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="bg-[#921d7f] text-white px-4 py-2 rounded hover:bg-blue-600 text-sm"
+                >
+                  Wyślij
+                </button>
+              </form>
+            </div>
           </div>
-          <div className="mb-4">
-            <h3 className="text-[22px] font-bold text-white">Godziny otwarcia Poradni:</h3>
-            <p className="text-white font-normal">przy ul. Magnolii 25</p>
-            <br />
-            <p className="text-white font-light">Poniedziałek: 7:00 - 21:00</p>
-            <p className="text-white font-light">Wtorek: 7:00 - 21:00</p>
-            <p className="text-white font-light">Środa: 7:00 - 21:00</p>
-            <p className="text-white font-light">Czwartek: 7:00 - 21:00</p>
-            <p className="text-white font-light">Piątek: 7:00 - 21:00</p>
-          </div>
-          <div className="mb-4">
-            <h3 className="text-[22px] font-bold text-white">Godziny otwarcia Poradni:</h3>
-            <p className="text-white font-normal">przy ul. Rudzkiej 13, budynek B, III piętro, pokój 3.3</p>
-            <br />
-            <p className="text-white font-light">Poniedziałek: 7:00 - 21:00</p>
-            <p className="text-white font-light">Wtorek: 7:00 - 21:00</p>
-            <p className="text-white font-light">Środa: 7:00 - 21:00</p>
-            <p className="text-white font-light">Czwartek: 7:00 - 21:00</p>
-            <p className="text-white font-light">Piątek: 7:00 - 21:00</p>
-          </div>
-        </div>
-        <div className="flex items-center justify-center">
-          <div className="w-full h-[410px] lg:h-[810px] rounded-[25px] shadow-2xl">
+          */}
+
+          {/* Kolumna 2: Zdjęcie mapki */}
+          <div className="footer-section">
             <img
               src="/assets/map.png"
               alt="Mapa"
-              className="w-full h-full object-cover rounded-[25px]"
+              className="h-[450px] rounded-lg shadow-lg"
             />
           </div>
         </div>
@@ -82,4 +157,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default Kontakt;

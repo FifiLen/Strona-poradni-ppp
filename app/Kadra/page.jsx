@@ -13,6 +13,42 @@ const staffData = [
      <p>Magister pedagogiki specjalizujący się w&nbsp; poradnictwie i&nbsp;pomocy psychopedagogicznej. Jako aktywny pedagog specjalny, terapeuta ręki, specjalista w&nbsp; edukacji włączającej i&nbsp;wykładowca, posiada bogate doświadczenie, przekazując swoją wiedzę zarówno uczniom, jak i&nbsp;nauczycielom w&nbsp; różnych instytucjach edukacyjnych. Specjalista ORE w&nbsp; zakresie edukacji włączającej.</p> ),
     imageUrl: '/assets/Test.png',
   },
+  {
+    id: 5,
+    name: 'Anna Ławniczak',
+    specialty: 'Psycholog',
+    description: (<p>
+    Magister psychologii, specjalizujący się w&nbsp;seksuologii klinicznej i&nbsp;psychologii kryminologicznej. Wykładowca studiów podyplomowych z&nbsp;obszaru pedagogiki specjalnej, seksuologii, seksuologii klinicznej. Terapeuta dzieci, par, rodzin. Aktywnie angażuje się w&nbsp;pracę na&nbsp;rzecz dzieci w&nbsp;szkołach i&nbsp;przedszkolach. Specjalista ORE w&nbsp;zakresie edukacji włączającej.
+    </p>),
+    imageUrl: '/assets/T5.png',
+  },
+  {
+    id: 10,
+    name: 'Monika Kromolan',
+    specialty: 'Psycholog',
+    description: (<p>
+Magister psychologii z&nbsp;zakresu neuropsychologii i&nbsp;psychologii klinicznej. Specjalista w&nbsp;zintegrowanej edukacji wczesnoszkolnej, edukacji informatycznej oraz edukacji i&nbsp;rehabilitacji osób z&nbsp;niepełnosprawnością intelektualną. Terapeuta WWRD i&nbsp;hipoterapii. Specjalista w&nbsp;zakresie komunikacji alternatywnej i&nbsp;wspomagającej oraz diagnozy alternatywnych i&nbsp;wspomagających metod porozumiewania się.
+    </p>),
+    imageUrl: '/assets/T11.png',
+  },
+  {
+    id: 12,
+    name: 'Gabriela Marcisz',
+    specialty: 'Psychoterapeuta',
+    description: (<p>
+Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i&nbsp;rodzin. Specjalista psychoterapii w&nbsp;Ośrodku Interwencji Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic i&nbsp;na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony na&nbsp;pracy z&nbsp;całymi rodzinami i&nbsp;osobami pełnoletnimi.
+    </p>),
+    imageUrl: '/assets/T13.png',
+  },
+  {
+    id: 13,
+    name: 'Anna Kowalska',
+    specialty: 'Psycholog',
+    description: (<p>
+Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej i&nbsp;Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener nowoczesnego doradztwa zawodowego i&nbsp;edukacyjnego. Teraputa z&nbsp;zakresu psychoterapii par, EFT - terapii skoncentrowanej na&nbsp;emocjach, pracy z&nbsp;dziećmi i&nbsp;młodzieżą. Specjalista edukacji włączającej. Wykładowca studiów podyplomowych z&nbsp;zakresu swoich specjalizacji.
+    </p>),
+    imageUrl: '/assets/T15.png',
+  },
   
   {
     id: 2,
@@ -42,15 +78,7 @@ const staffData = [
     </p>),
     imageUrl: '/assets/T9.png',
   },
-  {
-    id: 5,
-    name: 'Anna Ławniczak',
-    specialty: 'Psycholog',
-    description: (<p>
-    Magister psychologii, specjalizujący się w&nbsp;seksuologii klinicznej i&nbsp;psychologii kryminologicznej. Wykładowca studiów podyplomowych z&nbsp;obszaru pedagogiki specjalnej, seksuologii, seksuologii klinicznej. Terapeuta dzieci, par, rodzin. Aktywnie angażuje się w&nbsp;pracę na&nbsp;rzecz dzieci w&nbsp;szkołach i&nbsp;przedszkolach. Specjalista ORE w&nbsp;zakresie edukacji włączającej.
-    </p>),
-    imageUrl: '/assets/T5.png',
-  },
+  
   {
     id: 6,
     name: 'Joanna Zawadzka',
@@ -88,15 +116,7 @@ Doktor nauk społecznych z&nbsp;dziedziny pedagogiki i&nbsp;socjologii.  Doradca
     imageUrl: '/assets/T8.png',
   },
   
-  {
-    id: 10,
-    name: 'Monika Kromolan',
-    specialty: 'Psycholog',
-    description: (<p>
-Magister psychologii z&nbsp;zakresu neuropsychologii i&nbsp;psychologii klinicznej. Specjalista w&nbsp;zintegrowanej edukacji wczesnoszkolnej, edukacji informatycznej oraz edukacji i&nbsp;rehabilitacji osób z&nbsp;niepełnosprawnością intelektualną. Terapeuta WWRD i&nbsp;hipoterapii. Specjalista w&nbsp;zakresie komunikacji alternatywnej i&nbsp;wspomagającej oraz diagnozy alternatywnych i&nbsp;wspomagających metod porozumiewania się.
-    </p>),
-    imageUrl: '/assets/T11.png',
-  },
+  
   {
     id: 11,
     name: 'Paulina Rosa',
@@ -106,24 +126,8 @@ Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, 
     </p>) ,
     imageUrl: '/assets/T12.png',
   },
-  {
-    id: 12,
-    name: 'Gabriela Marcisz',
-    specialty: 'Psychoterapeuta',
-    description: (<p>
-Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i&nbsp;rodzin. Specjalista psychoterapii w&nbsp;Ośrodku Interwencji Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic i&nbsp;na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony na&nbsp;pracy z&nbsp;całymi rodzinami i&nbsp;osobami pełnoletnimi.
-    </p>),
-    imageUrl: '/assets/T13.png',
-  },
-  {
-    id: 13,
-    name: 'Anna Kowalska',
-    specialty: 'Psycholog',
-    description: (<p>
-Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej i&nbsp;Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener nowoczesnego doradztwa zawodowego i&nbsp;edukacyjnego. Teraputa z&nbsp;zakresu psychoterapii par, EFT - terapii skoncentrowanej na&nbsp;emocjach, pracy z&nbsp;dziećmi i&nbsp;młodzieżą. Specjalista edukacji włączającej. Wykładowca studiów podyplomowych z&nbsp;zakresu swoich specjalizacji.
-    </p>),
-    imageUrl: '/assets/T15.png',
-  },
+  
+  
   {
     id: 14,
     name: 'Martyna Papała',

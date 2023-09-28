@@ -1,16 +1,7 @@
 'use client'
-import { useEffect } from "react";
-import Link from "next/link";
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 
-
-import Info from "@components/Info";
-
-
-import Place from "@components/Place";
-
-import About from "@components/About";
-import About2 from "@components/About2";
-import InfoReservation from "@components/InfoReservation";
 
 const Home = () => {
   useEffect(() => {
@@ -40,62 +31,140 @@ const Home = () => {
         document.head.removeChild(gtmInlineScript);
     }
 }, []);
+
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const [showWebinarModal, setShowWebinarModal] = useState(false); // Stan do pokazywania modala
+
+  // ... Reszta Twojego kodu
+
+  // Funkcja do otwierania modala z informacjami o webinarze
+  const openWebinarModal = () => {
+    setShowWebinarModal(true);
+  };
+
+  // Funkcja do zamykania modala
+  const closeWebinarModal = () => {
+    setShowWebinarModal(false);
+  };
+  
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
+
+  const [activeTile, setActiveTile] = useState(null);
+
+  useEffect(() => {
+    // Function to generate a random number between 0 and 2 (for three tiles)
+    const getRandomTileIndex = () => Math.floor(Math.random() * 3);
+
+    // Function to update the active tile
+    const updateActiveTile = () => {
+      const randomTileIndex = getRandomTileIndex();
+      setActiveTile(randomTileIndex);
+    };
+
+    // Set an interval to update the active tile every 5 seconds (5000 milliseconds)
+    const interval = setInterval(updateActiveTile, 5000);
+
+    // Clear the interval when the component unmounts to prevent memory leaks
+    return () => clearInterval(interval);
+  }, []);
+
  
   return (
     <>
-<section className="flex justify-center mt-44 mb-48 sm:mt-32 sm:mb-8 md:mt-36 lg:mt-0 md:mb-10 lg:mb-12">
-  <div className="flex flex-col items-center lg:items-start relative w-full">
 
-    <div className="relative video-container w-full lg:block hidden">
-      <video
-        id="background-video"
-        className="w-full h-[calc(100% - 200px)] object-cover shadow-bottom"
-        autoPlay
-        loop
-        muted
-      >
-        <source src="/assets/movie.mp4" type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-    </div>
 
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:-translate-y-1/2 lg:translate-x-0 lg:left-48 xl:left-64">
-      {/* Use responsive classes for the header */}
-      <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight md:text-white text-center lg:text-left text-gray-800 dark:text-gray-800">
-        Poradnia Psychologiczno<br />Pedagogiczna MAGNOLIA
-      </h1>
-      {/* Use responsive classes for the paragraph */}
-      <p className="mt-2 text-base sm:text-lg md:text-xl leading-relaxed md:text-white text-center lg:text-left text-gray-500 dark:text-gray-500">
-      Miejsce, w którym osiągniesz sukces i staniesz na szczycie swoich możliwości
-      </p>
-      <div className="flex mt-6 md:mt-8 justify-center lg:justify-start">
-        {/* Button with responsive classes */}
-        <button className="border bg-white hover:border-transparent text-sm sm:text-base md:text-lg h-[36px] px-4 sm:px-7 md:px-10 md:py-7 rounded-lg flex items-center justify-center">
-          <Link href="/Contact" className="text-[#921d7f]">
-            Kontakt
-          </Link>
-        </button>
-        {/* Button with responsive classes */}
-        <button className="bg-[#921d7f] text-white text-sm sm:text-base md:text-lg h-[36px] px-4 sm:px-7 md:px-10 md:py-7 ml-2 sm:ml-3 md:ml-4 rounded-lg flex items-center justify-center">
-          <Link href="/Registration" className="text-white">
-            Rejestracja wizyty
-          </Link>
-        </button>
+
+<div className={`flex justify-center items-center gap-10 mt-20 mb-20 ${windowWidth < 768 ? 'flex-col' : 'flex-row'}`}>
+
+
+{/* Kafelek 3 */}
+<Link href='/Centrum_uzaleznien'>
+<div className={`w-96 h-[600px] bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 cursor-pointer relative ${activeTile === 2 ? 'active-tile' : ''}`} style={{ backgroundImage: "url('/assets/kafelek3.jpg')", backgroundSize: 'cover' }}>
+      <div className="flex flex-col justify-end absolute bottom-28 left-0 w-full h-full">
+        <img src="/assets/kafelek_circle4.png" alt="circle" className="w-32 mx-auto -mt-14 z-10 relative" />
+      </div>
+      <div className="h-40 w-full flex flex-col justify-end absolute bottom-0 bg-white rounded-lg">
+        <div className="text-[#921d7f] text-center pb-16">
+          <h2 className="text-xl">Wyciągniemy Cię z tego</h2>
+        </div>
+      </div>
+      <div className="h-2 w-full flex flex-col justify-end absolute bottom-0 bg-[#921d7f] rounded-lg p-[2px]"></div>
+      <div className="overlay">
+        <div className=' p-4 bg-slate-100 rounded-lg border-2'><p>Kliknij w banerek by dowiedzieć się więcej</p></div>
+        
       </div>
     </div>
+    </Link>
+
+
+{/* Kafelek 1 */}
+<Link href='/Dzieci'>
+<div className={`w-96 h-[600px] bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 cursor-pointer relative ${activeTile === 0 ? 'active-tile' : ''}`} style={{ backgroundImage: "url('/assets/kafelek1.jpg')", backgroundSize: 'cover' }}>
+  <div className="flex flex-col justify-end absolute bottom-28 left-0 w-full h-full">
+    <img src="/assets/kafelek_circle.png" alt="circle" className="w-28 mx-auto -mt-14 z-10 relative" />
   </div>
-</section>
+  <div className="h-40 w-full flex flex-col justify-end absolute bottom-0 bg-white rounded-lg">
+    <div className="text-[#921d7f] text-center pb-12">
+      <h2 className="text-xl">Specjalistyczna pomoc <br /> dla Twojego dziecka</h2>
+    </div>
+  </div>
+  <div className="h-2 w-full flex flex-col justify-end absolute bottom-0 bg-[#921d7f] rounded-lg p-[2px]"></div>
+  
+  <div className="overlay">
+        <div className=' p-4 bg-slate-100 rounded-lg border-2'>
+          <p>Kliknij w banerek by dowiedzieć się więcej</p>
+          
+          </div>
+        
+      </div>
+      
+</div>
+</Link>
 
 
-      <About2 />    
-      <Info />
-      <About /> 
-      <Place />
-      <InfoReservation />
-      
-      
+{/* Kafelek 2 */}
+
+<div className={`w-96 h-[600px] bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 cursor-pointer relative ${activeTile === 1 ? 'active-tile' : ''}`} style={{ backgroundImage: "url('/assets/kafelek2.jpg')", backgroundSize: 'cover' }}>
+  <div className="flex flex-col justify-end absolute bottom-28 left-0 w-full h-full">
+    <img src="/assets/kafelek_circle2.png" alt="circle" className="w-44 mx-auto -mt-14 z-10 relative" />
+  </div>
+  <div className="h-40 w-full flex flex-col justify-end absolute bottom-0 bg-white rounded-lg">
+    <div className="text-[#921d7f] text-center pb-16">
+      <h2 className="text-xl">Pozwól sobie pomóc</h2>
+    </div>
+  </div>
+  <div className="h-2 w-full flex flex-col justify-end absolute bottom-0 bg-[#921d7f] rounded-lg p-[2px]"></div>
+  <div className="overlay">
+        <div className=' p-4 bg-slate-100 rounded-lg border-2'><p>Kliknij w banerek by dowiedzieć się więcej</p></div>
+        
+      </div>
+</div>
+
+
+
+
+
+</div>
+
+
     </>
   );
 };
+
 
 export default Home;

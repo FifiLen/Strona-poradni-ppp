@@ -1,79 +1,98 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaAngleRight, FaFacebookF, FaInstagram, FaLinkedinIn, FaPhone, FaMailBulk } from 'react-icons/fa';
+import { FaAngleRight, FaFacebookF, FaInstagram, FaPhone, FaMailBulk } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="py-16 flex justify-center bg-[#67185a] border-t border-pink-300">
+    <footer className="py-16 bg-[#F5F5F5] border-t-4">
       <div className="container mx-auto px-4 md:px-0 text-gray-800">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+          <div className="footer-section text-center">
+            <img src="/assets/magnolia.png" alt="Logo" className="w-32 h-32" />
+          </div>
           <div className="footer-section">
-            <img src="/assets/magnolia.png" alt="Logo" className="w-52 h-52" />
-          </div>
-          <div className="footer-section mt-3">
-            <h4 className="font-semibold mb-2 text-white text-lg">Menu</h4>
+            <h4 className="font-semibold mb-4 text-lg">Menu</h4>
             <ul className="list-none p-0">
-              {['/', '/Offer', '/PriceList', '/Staff', '/Contact'].map((href, idx) => (
+              {['/', '/Dzieci', '/Dorosli', '/Centrum_uzaleznien', '/Kadra','/Cennik', '/Kontakt'].map((href, idx) => (
                 <li key={idx} className='mb-2'>
                   <Link href={href}>
-                    <span className="flex items-center space-x-2 text-white font-medium hover:text-pink-400">
+                    <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-pink-400">
                       <FaAngleRight />
-                      <span>{['Strona główna', 'Oferta', 'Cennik', 'Kadra', 'Kontakt'][idx]}</span>
+                      <span>{['Strona główna', 'Wsparcie dla dzieci','Wsparcie dla dorosłych', 'Centrum uzależnień', 'Nasi specjaliści','Cennik', 'Kontakt'][idx]}</span>
                     </span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="footer-section mt-3">
-            <h4 className="font-semibold mb-2 text-white text-lg">Sprawdź</h4>
+
+
+          <div className="footer-section">
+            <h4 className="font-semibold mb-4 text-lg">Sprawdź</h4>
             <ul className="list-none p-0">
-              {['/C-Eye', '/ADOS-2', '/Vr-terapy', '/Biofeedback-VR', '/Join'].map((href, idx) => (
+              {['/Join', '/Faq','/O_nas'].map((href, idx) => (
                 <li key={idx} className='mb-2'>
                   <Link href={href}>
-                    <span className="flex items-center space-x-2 text-white font-medium hover:text-pink-400">
+                    <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-pink-400">
                       <FaAngleRight />
-                      <span>{['C-Eye Pro', 'ADOS-2', 'Terapia VR', 'Biofeedback VR', 'Dołącz do zespołu Magnolii'][idx]}</span>
+                      <span>{['Dołącz do Magnolii', 'FAQ','O nas'][idx]}</span>
                     </span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="footer-section mt-3">
-            <h4 className="font-semibold mb-2 text-white text-lg">Znajdź nas</h4>
+
+
+
+          <div className="footer-section">
+            <h4 className="font-semibold mb-4 text-lg">Kontakt</h4>
             <ul className="list-none p-0">
-            <li className="mb-2 flex items-center">
-    <FaMailBulk className="text-white w-4 h-4 mr-2" />
-    <span className="text-white font-medium">poradniamagnolia@gmail.com</span>
-  </li>
-  <li className="mb-2 flex items-center">
-    <FaPhone className="text-white w-4 h-4 mr-2" />
-    <span className="text-white font-medium">+48 797 173 501</span>
-  </li>
-  <li className="mb-2 flex items-center">
-    <FaPhone className="text-white w-4 h-4 mr-2" />
-    <span className="text-white font-medium">+48 502 162 365</span>
-  </li>
-  <li className="mb-2 flex items-center">
-    <FaPhone className="text-white w-4 h-4 mr-2" />
-    <span className="text-white font-medium">+48 690 515 224</span>
-  </li>
-  <li className="mb-2 flex items-center">
-    <FaPhone className="text-white w-4 h-4 mr-2" />
-    <span className="text-white font-medium">+48 503 192 950</span>
-  </li>
-              <li className="flex items-center space-x-4 mt-4" >
-              <a 
-  href="https://www.facebook.com/Poradnia-Psychologiczno-Pedagogiczna-MAGNOLIA-113773451778529/" 
-  target="_blank" 
-  rel="noopener noreferrer"
->
-  <FaFacebookF className=" w-11 h-11 text-pink-100 hover:text-pink-400" />
-</a>                <Link href="https://www.instagram.com/poradnia_magnolia/"><FaInstagram className="w-12 h-12 text-pink-100 hover:text-pink-400" /></Link>
-              </li>
+              {['/', '/','/','/','/','/'].map((href, idx) => (
+                <li key={idx} className='mb-2'>
+                  <Link href={href}>
+                    <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-pink-400">
+                      <FaAngleRight />
+                      <span>{['+48 797 173 501', '+48 502 162 365', '+48 690 515 224', '+48 503 192 950','Magnolii 25, Rybnik','poradniamagnolia@gmail.com', ][idx]}</span>
+                      
+                    </span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
+
+
+
+
+          <div className="footer-section">
+  <h4 className="font-semibold mb-4 text-lg">Social Media</h4>
+  <ul className="list-none p-0">
+    <li className='mb-2'>
+      <a href="https://www.facebook.com/poradnia.magnolia" target="_blank" rel="noopener noreferrer">
+        <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-pink-400">
+          <FaFacebookF />
+          <span>Facebook</span>
+        </span>
+      </a>
+    </li>
+    <li className='mb-2'>
+      <a href="https://www.instagram.com/poradnia_magnolia/" target="_blank" rel="noopener noreferrer">
+        <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-pink-400">
+          <FaInstagram /> {/* Dodaj ikonę Instagrama */}
+          <span>Instagram</span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+
+          
+
+
+
         </div>
       </div>
     </footer>

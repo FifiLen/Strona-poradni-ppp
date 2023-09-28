@@ -5,8 +5,16 @@ import Link from 'next/link';
 import { MdNavigateNext } from 'react-icons/md'; // Ikona ">" z react-icons
 
 const MENU_LIST = [
-  { text: "Home", href: "/" },
-  { text: "C-Eye Pro", href: "/C-Eye" },
+  { text: "Strona Główna", href: "/" },
+  { text: "Centrum uzależnień", href: "/Centrum_uzaleznien" },
+  { text: "Wsparcie dla dzieci", href: "/Dzieci" },
+  { text: "Wsparcie dla dorosłych", href: "/Dorosli" },
+  { text: "Nasi specjaliści", href: "/Kadra" },
+  { text: "Cennik", href: "/Cennik" },
+  { text: "Wsparcie", href: "/Webinary" },
+
+
+/*  { text: "C-Eye Pro", href: "/C-Eye" },
   { text: "ADOS-2", href: "/ADOS-2" },
   { text: "Terapia VR", href: "Vr-terapy" },
   { text: "Biofeedback VR", href: "/Biofeedback-VR" },
@@ -17,8 +25,8 @@ const MENU_LIST = [
   { text: "Uczeń zdolny", href:"/UczenZdolny"},
   { text: "Cennik", href: "/Cennik"},
   { text: "Kadra", href: "/Kadra" },
-  { text: "FAQ", href: "/Faq" },
-  { text: "Wynajem", href: "/Wynajem" },
+  { text: "FAQ", href: "/Faq" },  
+  { text: "Wynajem", href: "/Wynajem" },*/
 
   
 ];
