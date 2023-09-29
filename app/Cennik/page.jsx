@@ -45,9 +45,9 @@ const Home = () => {
 };
 
 const tiles = [
-  { href: '/Cennik_centrum', imgSrc: "/assets/kafelek_circle4.png", imgAlt: "circle", title: "Oferta cetrum uzależnień", subtitle: "Cennik dla każdego" },
-  { href: '/Cennik_dorosli', imgSrc: "/assets/kafelek_circle2.png", imgAlt: "circle", title: "Oferta dedykowana dorosłym", subtitle: "Cennik dla dorosłych" },
-  { href: '/Cennik_dzieci', imgSrc: "/assets/kafelek_circle.png", imgAlt: "circle", title: "Oferta dedykowana dzieciom", subtitle: "Cennik dla dzieci" },
+  { href: '/Cennik_centrum', imgSrc: "/assets/circle3.png", imgAlt: "circle", title: "Oferta cetrum uzależnień", subtitle: "Cennik dla każdego" },
+  { href: '/Cennik_dorosli', imgSrc: "/assets/circle2.png", imgAlt: "circle", title: "Oferta dedykowana dorosłym", subtitle: "Cennik dla dorosłych" },
+  { href: '/Cennik_dzieci', imgSrc: "/assets/circle1.png", imgAlt: "circle", title: "Oferta dedykowana dzieciom", subtitle: "Cennik dla dzieci" },
 ];
 
 export default Home;
