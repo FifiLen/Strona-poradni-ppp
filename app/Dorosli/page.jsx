@@ -8,7 +8,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
       <div className="bg-gradient-to-r from-[#322c6b] to-[#003e77] text-white py-4 md:py-6">
         <div className="flex justify-center items-center">
           <h2 className="text-lg md:text-xl font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left">
-            Wsparcie dla jakiego potrzebujesz
+            Wsparcie jakiego potrzebujesz
           </h2>
         </div>
       </div>
