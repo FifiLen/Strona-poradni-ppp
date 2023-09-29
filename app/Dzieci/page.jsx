@@ -25,6 +25,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
         muted
         className="rounded-md max-w-full h-auto"
         alt="diagnoza uzależnień"
+        loading="lazy"
     />
 </div>
 
@@ -68,6 +69,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
         muted
         className="rounded-md max-w-full h-auto"
         alt="diagnoza uzależnień"
+        loading="lazy"
     />
             </div>
           </div>
@@ -86,6 +88,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
         muted
         className="rounded-md max-w-full h-auto"
         alt="diagnoza uzależnień"
+        loading="lazy"
     />
 </div>
             {/* Tekst informacyjny */}

@@ -22,6 +22,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
                 src="/assets/uzaleznienie.jpg"
                 className="rounded-md max-w-full h-auto"
                 alt="diagnoza uzależnień"
+                loading="lazy"
               />
             </div>
             {/* Tekst informacyjny */}
@@ -61,6 +62,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
                 src="/assets/uzaleznienie2.jpg"
                 className="rounded-md max-w-full h-auto"
                 alt="terapia uzależnień"
+                loading="lazy"
               />
             </div>
           </div>
@@ -76,6 +78,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
                 src="/assets/uzaleznienie3.jpg"
                 className="rounded-md max-w-full h-auto"
                 alt="diagnoza uzależnień"
+                loading="lazy"
               />
             </div>
             {/* Tekst informacyjny */}
@@ -117,6 +120,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
                 src="/assets/uzaleznienie4.jpg"
                 className="rounded-md max-w-full h-auto"
                 alt="resocjalizacja uzależnionych"
+                loading="lazy"
               />
             </div>
           </div>

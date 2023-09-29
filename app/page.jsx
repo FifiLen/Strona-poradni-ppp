@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(0);
-  const [activeTile, setActiveTile] = useState(null);
 
   useEffect(() => {
     // Utwórz skrypt dla gtag.js
@@ -55,6 +54,8 @@ const Home = () => {
     }
   }, []);
 
+  const [activeTile, setActiveTile] = useState(null);
+  
   useEffect(() => {
     // Function to generate a random number between 0 and 2 (for three tiles)
     const getRandomTileIndex = () => Math.floor(Math.random() * 3);
@@ -65,11 +66,34 @@ const Home = () => {
       setActiveTile(randomTileIndex);
     };
 
-    // Set an interval to update the active tile every 5 seconds (5000 milliseconds)
-    const interval = setInterval(updateActiveTile, 5000);
+    let interval;
+    
+    const startAnimation = () => {
+      // Clear existing interval
+      if (interval) {
+        clearInterval(interval);
+      }
+      
+      // Set a new interval to update the active tile every 10 seconds (10000 milliseconds)
+      interval = setInterval(updateActiveTile, 10000);
+    };
 
-    // Clear the interval when the component unmounts to prevent memory leaks
-    return () => clearInterval(interval);
+    const handleMouseMove = () => {
+      // Clear the existing interval and start a new one when the mouse is moved
+      startAnimation();
+    };
+    
+    // Start the animation initially
+    startAnimation();
+
+    // Add a mousemove event listener
+    window.addEventListener('mousemove', handleMouseMove);
+
+    // Clear the interval and remove the event listener when the component unmounts
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   return (
@@ -78,8 +102,8 @@ const Home = () => {
         {/* Kafelek 3 */}
         <Link href='/Centrum_uzaleznien'>
           <div className={`w-96 h-[600px] bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 cursor-pointer relative ${activeTile === 2 ? 'active-tile' : ''}`} style={{ backgroundImage: "url('/assets/kafelek3.jpg')", backgroundSize: 'cover' }}>
-            <div className="flex flex-col justify-end absolute bottom-28 left-0 w-full h-full">
-              <img src="/assets/kafelek_circle4.png" alt="circle" className="w-32 mx-auto -mt-14 z-10 relative" />
+          <div className="flex flex-col justify-end absolute bottom-28 left-0 w-full h-full">
+             <img src="/assets/circle1.png" alt="circle" loading="lazy" className="w-32 h-28 mx-auto -mt-14 z-10 relative" />
             </div>
             <div className="h-40 w-full flex flex-col justify-end absolute bottom-0 bg-white rounded-lg">
               <div className="text-[#921d7f] text-center pb-16">
@@ -96,8 +120,8 @@ const Home = () => {
         <Link href='/Dzieci'>
           <div className={`w-96 h-[600px] bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 cursor-pointer relative ${activeTile === 0 ? 'active-tile' : ''}`} style={{ backgroundImage: "url('/assets/kafelek1.jpg')", backgroundSize: 'cover' }}>
             <div className="flex flex-col justify-end absolute bottom-28 left-0 w-full h-full">
-              <img src="/assets/kafelek_circle.png" alt="circle" className="w-28 mx-auto -mt-14 z-10 relative" />
-            </div>
+              <img src="/assets/circle3.png" alt="circle" loading="lazy" className="w-28 h-28 mx-auto -mt-14 z-10 relative rounded-full" />
+            </div> 
             <div className="h-40 w-full flex flex-col justify-end absolute bottom-0 bg-white rounded-lg">
               <div className="text-[#921d7f] text-center pb-12">
                 <h2 className="text-xl">Specjalistyczna pomoc <br /> dla Twojego dziecka</h2>
@@ -113,8 +137,8 @@ const Home = () => {
         </Link>
         {/* Kafelek 2 */}
         <div className={`w-96 h-[600px] bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 cursor-pointer relative ${activeTile === 1 ? 'active-tile' : ''}`} style={{ backgroundImage: "url('/assets/kafelek2.jpg')", backgroundSize: 'cover' }}>
-          <div className="flex flex-col justify-end absolute bottom-28 left-0 w-full h-full">
-            <img src="/assets/kafelek_circle2.png" alt="circle" className="w-44 mx-auto -mt-14 z-10 relative" />
+         <div className="flex flex-col justify-end absolute bottom-28 left-0 w-full h-full">
+            <img src="/assets/circle2.png" alt="circle" className="w-44 h-38 mx-auto -mt-14 z-10 relative" loading="lazy"/>
           </div>
           <div className="h-40 w-full flex flex-col justify-end absolute bottom-0 bg-white rounded-lg">
             <div className="text-[#921d7f] text-center pb-16">
