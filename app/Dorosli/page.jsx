@@ -5,13 +5,13 @@ const PoradniaPsychologicznoPedagogiczna = () => {
   return (
     <div className="bg-gray-100 font-sans overflow-x-hidden">
       {/* Nagłówek */}
-      <header className="bg-gradient-to-r from-[#322c6b] to-[#003e77] text-white py-4 md:py-6">
+      <div className="bg-gradient-to-r from-[#322c6b] to-[#003e77] text-white py-4 md:py-6">
         <div className="flex justify-center items-center">
           <h2 className="text-lg md:text-xl font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left">
             Wsparcie dla jakiego potrzebujesz
           </h2>
         </div>
-      </header>
+      </div>
 
       <section className="py-6 md:py-12">
         <div className="container mx-auto">

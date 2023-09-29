@@ -142,7 +142,7 @@ const WebinarButton = () => {
   <div className="text-center">
   <button
     onClick={closeWebinarModal}
-    className="bg-[#921d7f] hover:bg-[#b23b9e] text-white py-2 px-6 rounded-sm font-semibold transition duration-300 ease-in-out transform hover:scale-105 inline-block flex items-center gap-2"
+    className="bg-[#921d7f] hover:bg-[#b23b9e] text-white py-2 px-6 rounded-sm font-semibold transition duration-300 ease-in-out transform hover:scale-105  flex items-center gap-2"
   >
      Zamknij<FaTimes />
   </button>
