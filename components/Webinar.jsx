@@ -97,11 +97,11 @@ fontWeight: "bold",
       {showWebinarModal && (
         <>
           <div className="fixed inset-0 flex items-center justify-center z-50">
-            <div className="bg-white w-full md:w-[1600px] h-[80%] md:h-[600px] p-6 rounded-lg shadow-lg">
+            <div className="bg-white w-full md:w-[1600px] h-[250px] md:h-[600px] p-6 rounded-lg shadow-lg">
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", minHeight: "100vh", }}>
                 <h1 className=' text-3xl md:text-5xl text-center' style={{ fontFamily: "'Playfair Display', serif", }}>Kalendarz spotkań online</h1>
-                <p className='pt-6 pb-10 text-center'>Zapraszamy na darmowe webinary dla rodziców i nauczycieli dotyczące uzależnień behawioralnych</p>
-                <div className='w-full md:w-[80%] scale-90 md:scale-100' >
+                <p className='pt-6 md:pb-10 text-center'>Zapraszamy na darmowe webinary dla rodziców i nauczycieli dotyczące uzależnień behawioralnych</p>
+                <div className='w-full md:w-[80%] scale-90 md:scale-100 hidden md:block' >
                   <ul style={{ listStyle: "none", padding: 0 }}>
                     {meetings.map((meeting, index) => (
                       <Tile key={index} isEven={index % 2 === 0}>
