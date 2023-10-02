@@ -97,7 +97,7 @@ fontWeight: "bold",
       {showWebinarModal && (
         <>
           <div className="fixed inset-0 flex items-center justify-center z-50">
-            <div className="bg-white w-full md:w-[1600px] h-[250px] md:h-[600px] p-6 rounded-lg shadow-lg">
+            <div className="bg-white w-full md:w-[1600px] h-[280px] md:h-[600px] p-6 rounded-lg shadow-lg">
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", minHeight: "100vh", }}>
                 <h1 className=' text-3xl md:text-5xl text-center' style={{ fontFamily: "'Playfair Display', serif", }}>Kalendarz spotkań online</h1>
                 <p className='pt-6 md:pb-10 text-center'>Zapraszamy na darmowe webinary dla rodziców i nauczycieli dotyczące uzależnień behawioralnych</p>
@@ -123,7 +123,7 @@ fontWeight: "bold",
                 <div className="text-center">
     <a href='/Webinary'
       
-      className="bg-[#921d7f] hover:bg-[#b23b9e] text-white py-2 px-2 md:px-6 rounded-sm font-semibold transition duration-300 ease-in-out transform hover:scale-105 inline-block text-[14px] md:text-xl"
+      className="bg-[#921d7f] hover:bg-[#b23b9e] text-white py-2 px-2 md:px-6 rounded-sm font-semibold transition duration-300 ease-in-out transform hover:scale-105 inline-block text-[10px] md:text-xl"
     >
       Kalendarz spotkań
     </a>
@@ -133,7 +133,7 @@ fontWeight: "bold",
       href="https://app.livewebinar.com/579-366-824"
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-[#921d7f] hover:bg-[#b23b9e] text-white py-2 px-2 md:px-6 rounded-sm  font-semibold transition duration-300 ease-in-out transform hover:scale-105 inline-block text-[14px] md:text-xl"
+      className="bg-[#921d7f] hover:bg-[#b23b9e] text-white py-2 px-2 md:px-6 rounded-sm  font-semibold transition duration-300 ease-in-out transform hover:scale-105 inline-block text-[10px] md:text-xl"
     >
       Zapisz się teraz
     </a>
@@ -142,7 +142,7 @@ fontWeight: "bold",
   <div className="text-center">
   <button
     onClick={closeWebinarModal}
-    className="bg-[#921d7f] hover:bg-[#b23b9e] text-white py-2 px-2 md:px-6 rounded-sm font-semibold transition duration-300 ease-in-out transform hover:scale-105  flex items-center gap-2 text-[14px] md:text-xl"
+    className="bg-[#921d7f] hover:bg-[#b23b9e] text-white py-2 px-2 md:px-6 rounded-sm font-semibold transition duration-300 ease-in-out transform hover:scale-105  flex items-center gap-2 text-[10px] md:text-xl"
   >
      Zamknij<FaTimes />
   </button>
