@@ -94,7 +94,7 @@ const Navbar = () => {
     })}
 </div>
 
-        <div className={`nav__menu-list overflow-x-auto ${isMenuOpen ? '' : ''} md:block`}>
+   {/*}     <div className={`nav__menu-list overflow-x-auto ${isMenuOpen ? '' : ''} md:block`}>
         {MENU_LIST.map((menu) => {
     if (menu.href.startsWith('http')) {
         // Linki zewnętrzne
@@ -122,6 +122,8 @@ const Navbar = () => {
     }
 })}
         </div>
+ */}
+
         <div className="nav__buttons hidden md:flex">
        {/*}   <Link href="/Registration" passHref>
             <div className="button1 text-[12px] font-light cursor-pointer px-4 py-1.5 rounded-lg">
