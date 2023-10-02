@@ -13,21 +13,6 @@ const MENU_LIST = [
   { text: "Cennik", href: "/Cennik" },
   { text: "Wsparcie", href: "/Webinary" },
 
-
-/*  { text: "C-Eye Pro", href: "/C-Eye" },
-  { text: "ADOS-2", href: "/ADOS-2" },
-  { text: "Terapia VR", href: "Vr-terapy" },
-  { text: "Biofeedback VR", href: "/Biofeedback-VR" },
-  { text: "SI", href: "/SI"},
-  { text: "WWRD", href: "/WWRD"},
-  { text: "Logopeda" , href: "/Logopeda"},
-  { text: "Rehabilitacja chodu", href: "/RehabilitacjaChodu" },
-  { text: "Uczeń zdolny", href:"/UczenZdolny"},
-  { text: "Cennik", href: "/Cennik"},
-  { text: "Kadra", href: "/Kadra" },
-  { text: "FAQ", href: "/Faq" },  
-  { text: "Wynajem", href: "/Wynajem" },*/
-
   
 ];
 
@@ -94,7 +79,7 @@ const Navbar = () => {
     })}
 </div>
 
-   {/*}     <div className={`nav__menu-list overflow-x-auto ${isMenuOpen ? '' : ''} md:block`}>
+      <div className={`overflow-x-auto md:flex gap-8 hidden text-[13px] font-light ${isMenuOpen ? '' : ''}`} >
         {MENU_LIST.map((menu) => {
     if (menu.href.startsWith('http')) {
         // Linki zewnętrzne
@@ -112,6 +97,7 @@ const Navbar = () => {
         );
     } else {
         // Linki wewnętrzne
+       
         return (
             <Link href={menu.href} key={menu.text} passHref>
                 <div className="nav-item cursor-pointer whitespace-nowrap" onClick={() => setIsMenuOpen(false)}>
@@ -119,17 +105,13 @@ const Navbar = () => {
                 </div>
             </Link>
         );
-    }
+       }
 })}
         </div>
- */}
+ 
 
         <div className="nav__buttons hidden md:flex">
-       {/*}   <Link href="/Registration" passHref>
-            <div className="button1 text-[12px] font-light cursor-pointer px-4 py-1.5 rounded-lg">
-              Rezerwacja
-</div> 
-</Link> */}
+       
           <Link href="/Kontakt" passHref>
             <div className="button2 text-[12px] font-light cursor-pointer px-8 py-2 whitespace-nowrap rounded-lg">
               Kontakt

@@ -17,7 +17,7 @@
 
 a{
   text-decoration: none;
-  color: #292929;
+  color: #6a6a6a;
 }
 header{
   position: sticky;
@@ -58,6 +58,7 @@ nav a:hover {
   background-color: black;
   border-radius: 2px;
 }
+
 
 .nav__menu-list {
   display: flex;
@@ -677,5 +678,6 @@ iframe {
   /* For example, you can use a transition for a smooth fade-in effect */
   transition: opacity 1s ease-in-out; /* Adjust the duration and easing as needed */
 }
+
 
 
