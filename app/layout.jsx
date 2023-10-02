@@ -13,7 +13,7 @@ export const metadata = {
 const Rootlayout = ({children}) => {
   return (
     <html lang='en'>
-        <body className='bg-white'>
+        <body className='bg-white overflow-x-hidden'>
             <div className='main'>
 
             </div>

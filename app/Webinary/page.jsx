@@ -77,9 +77,9 @@ const Page = () => {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", minHeight: "100vh", marginTop: "50px" }}>
-      <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "50px", marginTop: "20px"}}>Kalendarz spotkań online</h1>
+      <h1 className=' text-3xl md:text-5xl' style={{ fontFamily: "'Playfair Display', serif", marginTop: "20px"}}>Kalendarz spotkań online</h1>
       <p className=' pt-6 pb-10 text-center'>Zapraszamy na darmowe webinary dla rodziców i nauczycieli dotyczące uzależnień behawioralnych</p>
-      <div style={{ width: "80%" }}>
+      <div className=' scale-75 md:scale-100 w-full md:w-[80%]'>
         <ul style={{ listStyle: "none", padding: 0 }}>
           {meetings.map((meeting, index) => (
             <Tile key={index} isEven={index % 2 === 0}>
