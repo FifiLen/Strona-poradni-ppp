@@ -2,6 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+
 const Page = () => {
   const meetings = [
     {
@@ -21,14 +23,14 @@ const Page = () => {
   ];
 
   const Tile = styled.li`
-    display: flex;
-    borderBottom: 1px solid #ccc;
-    padding: 20px 0;
-    align-items: center;
-    background-color: ${(props) => (props.isEven ? '#921d7f' : '#ffffff')};
-    color: ${(props) => (props.isEven ? '#ffffff' : '#000000')};
+  display: flex;
+  borderBottom: 1px solid #ccc;
+  padding: 20px 0;
+  align-items: center;
+  background-color: ${(props) => (props.isEven ? '#921d7f' : '#ffffff')};
+  color: ${(props) => (props.isEven ? '#ffffff' : '#000000')};
   `;
-
+  
   const dataStyle = {
     flex: 1,
     display: "flex",
@@ -41,7 +43,7 @@ const Page = () => {
     padding: "10px",
     fontFamily: "'Playfair Display', serif",
   };
-
+  
   const dateColumnStyle = {
     flex: 2,
     display: "flex",
@@ -54,7 +56,7 @@ const Page = () => {
     textAlign: "center",
     paddingLeft: 0,
   };
-
+  
   const topicColumnStyle = {
     flex: 5,
     display: "flex",
@@ -63,13 +65,15 @@ const Page = () => {
     padding: "10px",
     textAlign: "left",
   };
-
+  
   const dateText = {
     marginBottom: "5px",
     fontSize: "24px",
     fontFamily: "'Playfair Display', serif",
     fontWeight: "bold",
   };
+
+  
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", minHeight: "100vh", marginTop: "50px" }}>
