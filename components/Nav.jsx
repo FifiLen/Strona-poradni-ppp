@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MdNavigateNext } from 'react-icons/md'; // Ikona ">" z react-icons
+import { FaTimes } from 'react-icons/fa';
+
 
 const MENU_LIST = [
   { text: "Strona Główna", href: "/" },
@@ -34,7 +36,7 @@ const Navbar = () => {
       </Link>
       <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
         {isMenuOpen ? 
-          <div className="text-xl">X</div>
+          <div className="text-base"><FaTimes/></div>
           : 
           <>
             <div className="mb-1 w-5 h-0.5 bg-black"></div>
@@ -44,13 +46,10 @@ const Navbar = () => {
         }
       
         </div>
-        <div className={`absolute top-full right-0 w-64 bg-gray-400 rounded-md shadow-lg z-10 overflow-hidden text-right ${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-    <div className="flex justify-center items-center bg-gray-200 p-2">
-        <Image src="/assets/magnolia.png" alt="Magnolia Logo" width={50} height={50} className="object-contain" />
-        <h1 className="ml-2 text-white">MAGNOLIA</h1>
-    </div>
+        <div className={`absolute top-full right-0 w-80 bg-white z-10 overflow-hidden text-right ${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
+    
     {MENU_LIST.map((menu) => {
-        const commonClass = "flex items-center justify-between nav-item cursor-pointer whitespace-nowrap text-white py-2 px-4";
+        const commonClass = "flex items-center justify-between nav-item cursor-pointer whitespace-nowrap text-black py-2 px-4";
 
         if (menu.href.startsWith('http')) {
             // Linki zewnętrzne
