@@ -21,14 +21,14 @@ const WebinarButton = () => {
     {
       date: "04.10.2023",
       duration: "Godzina: 20:00 - 21:00",
-      topic: "Uzależnienia behawioralne - wprowadzenie",
-      host: "Robert Rutkowski",
+      topic: "Webinar E-Uzależnienia",
+      host: "dr Maciej Dębski",
     },
     {
       date: "11.10.2023",
       duration: "Godzina: 20:00 - 21:00",
-      topic: "Uzależnienia cyfrowe dzieci i młodzieży",
-      host: "Robert Rutkowski",
+      topic: "Webinar E-Uzależnienia",
+      
     },
     // Add other meetings here...
   ];

@@ -9,14 +9,35 @@ const Page = () => {
     {
       date: "04.10.2023",
       duration: "Godzina: 20:00 - 21:00",
-      topic: "Uzależnienia behawioralne - wprowadzenie",
-      host: "Robert Rutkowski",
+      topic: "Webinar E-Uzależnienia",
+      host: "dr Maciej Dębski",
     },
     {
       date: "11.10.2023",
       duration: "Godzina: 20:00 - 21:00",
-      topic: "Uzależnienia cyfrowe dzieci i młodzieży",
-      host: "Robert Rutkowski",
+      topic: "Webinar E-Uzależnienia",
+      
+    },
+    {
+      date: "18.10.2023",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      
+    },{
+      date: "25.10.2023",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      
+    },{
+      date: "01.11.2023",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      
+    },{
+      date: "08.11.2023",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      
     },
     
     // Dodaj inne spotkania tutaj...
@@ -79,6 +100,22 @@ const Page = () => {
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", minHeight: "100vh", marginTop: "50px" }}>
       <h1 className=' text-3xl md:text-5xl' style={{ fontFamily: "'Playfair Display', serif", marginTop: "20px"}}>Kalendarz spotkań online</h1>
       <p className=' pt-6 pb-10 text-center'>Zapraszamy na darmowe webinary dla rodziców i nauczycieli dotyczące uzależnień behawioralnych</p>
+      <div className='flex justify-center items-center gap-5 mb-5'>
+
+
+  <div className="text-center">
+    <a
+      href="https://app.livewebinar.com/579-366-824"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-[#1d2392] hover:bg-[#3b84b2] text-white py-2 px-2 md:px-6 rounded-sm  font-semibold transition duration-300 ease-in-out transform hover:scale-105 inline-block text-[10px] md:text-xl"
+    >
+      Zapisz się teraz
+    </a>
+  </div>
+
+  
+</div>
       <div className=' scale-75 md:scale-100 w-full md:w-[80%]'>
         <ul style={{ listStyle: "none", padding: 0 }}>
           {meetings.map((meeting, index) => (
@@ -96,6 +133,7 @@ const Page = () => {
           ))}
         </ul>
       </div>
+      
       <div style={{ height: "60px" }}></div>
     </div>
   );
