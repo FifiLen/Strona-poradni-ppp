@@ -4,15 +4,15 @@ useEffect
 
 const PriceList = () => {
   useEffect(() => {
-    // Utwórz skrypt dla gtag.js
+    
     const gtagScript = document.createElement('script');
     gtagScript.async = true;
     gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0QW3ZG23F5";
     
-    // Dodaj skrypt do głowy dokumentu
+    
     document.head.appendChild(gtagScript);
 
-    // Utwórz dodatkowy skrypt dla konfiguracji Google Tag Managera
+   
     const gtmInlineScript = document.createElement('script');
     gtmInlineScript.innerHTML = `
         window.dataLayer = window.dataLayer || [];
@@ -21,10 +21,9 @@ const PriceList = () => {
         gtag('config', 'G-0QW3ZG23F5');
     `;
 
-    // Dodaj dodatkowy skrypt do głowy dokumentu
+    
     document.head.appendChild(gtmInlineScript);
 
-    // Opcjonalnie: Możesz usunąć skrypty, gdy komponent zostanie odmontowany
     return () => {
         document.head.removeChild(gtagScript);
         document.head.removeChild(gtmInlineScript);
@@ -69,6 +68,50 @@ const PriceList = () => {
           </div>
         )
       },
+      {
+        category: "Sesje grupowe dla dzieci",
+        name: "Sesje grupowe dla dzieci",
+        price: "50zł / 50 min",
+        info: (
+          <div>
+            <p>
+              Sesje grupowe dla dzieci to specjalnie spotkania, które pomagają dzieciom w nawiązywaniu relacji, rozwijaniu umiejętności społecznych i radzeniu sobie z emocjami w grupie rówieśniczej.
+            </p>
+
+            {/* Możesz tutaj dodać dodatkowe informacje lub sekcje, jeśli są potrzebne */}
+          </div>
+        )
+    },
+    {
+      category: "Sesje grupowe dla nastolatków",
+      name: "Sesje grupowe dla nastolatków",
+      price: "60zł / 50 min",
+      info: (
+        <div>
+          <p>
+            Sesje grupowe dla nastolatków to spotkania, które mają pomóc młodzieży w radzeniu sobie z wyzwaniami charakterystycznymi dla wieku dojrzewania, takimi jak naciski rówieśnicze, poszukiwanie tożsamości czy radzenie sobie z emocjami.
+          </p>
+
+          {/* Możesz tutaj dodać dodatkowe informacje lub sekcje, jeśli są potrzebne */}
+        </div>
+      )
+  },
+  {
+    category: "Sesje rodzinne",
+    name: "Sesje rodzinne",
+    price: "150zł / 50 min lub 190zł / 90 min",
+    info: (
+      <div>
+        <p>
+          Sesje rodzinne skupiają się na wzmacnianiu więzi rodzinnych, rozwiązywaniu konfliktów i poprawie komunikacji między członkami rodziny. Pomagają rodzinom radzić sobie z różnymi wyzwaniami, takimi jak problemy wychowawcze, kryzysy czy trudności w relacjach.
+        </p>
+        {/* Możesz tutaj dodać dodatkowe informacje lub sekcje, jeśli są potrzebne */}
+      </div>
+    )
+}
+
+  
+    
 
     ];
   
@@ -90,7 +133,7 @@ const PriceList = () => {
       const section = document.getElementById(id);
       section.scrollIntoView({ behavior: 'smooth' });
   
-      // Zaktualizuj stan, aby otworzyć/zamknąć kategorię
+      
       setCategoryOpen((prevState) => ({
         ...prevState,
         [id]: !prevState[id] || false,
@@ -114,7 +157,7 @@ const PriceList = () => {
           ))}
         </nav>
   
-        {/* Wyświetlanie usług według kategorii */}
+        
         {Object.entries(groupedServices).map(([category, servicesInCategory]) => (
           <div key={category} id={category}>
            <h2
@@ -151,7 +194,7 @@ const PriceList = () => {
           </div>
         ))}
   
-        {/* Przycisk do przewijania na górę */}
+        
         <button 
           onClick={scrollToTop} 
           className="fixed bottom-8 right-8 w-12 h-12 bg-[#921d7f] text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#7a175e] transition duration-300"
