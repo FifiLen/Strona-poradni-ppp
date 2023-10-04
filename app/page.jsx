@@ -36,7 +36,9 @@ const Home = () => {
 
   return (
     <>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 mt-10 md:mt-20 mb-10 md:mb-20 justify-center mx-4 md:mx-10">
+    <div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 mt-10 md:mt-14 mb-10 md:mb-6 justify-center mx-4 md:mx-10">
         {/* Kafelek 3 */}
 
 
@@ -104,6 +106,10 @@ const Home = () => {
         </div>
         </Link>
       </div>
+      
+      <p className=' text-center mb-6'>Zapraszamy do skorzystania z oferty on-line lub stacjonarnie</p>
+      </div>
+    
     </>
   );
 };

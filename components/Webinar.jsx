@@ -125,7 +125,7 @@ fontWeight: "bold",
       
       className="bg-[#921d7f] hover:bg-[#b23b9e] text-white py-2 px-2 md:px-6 rounded-sm font-semibold transition duration-300 ease-in-out transform hover:scale-105 inline-block text-[10px] md:text-xl"
     >
-      Kalendarz spotkań
+      Kalendarz Webinarów
     </a>
   </div>
   <div className="text-center">

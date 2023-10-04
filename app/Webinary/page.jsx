@@ -1,6 +1,7 @@
 'use client'
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+
 
 
 
@@ -93,6 +94,19 @@ const Page = () => {
     fontFamily: "'Playfair Display', serif",
     fontWeight: "bold",
   };
+
+  useEffect(() => {
+    // Sprawdź, czy strona została już odświeżona
+    if (!localStorage.getItem('refreshed')) {
+      // Ustaw flagę, że strona została odświeżona
+      localStorage.setItem('refreshed', 'true');
+      // Odśwież stronę
+      window.location.reload();
+    } else {
+      // Usuń flagę, aby umożliwić odświeżenie przy następnej wizycie
+      localStorage.removeItem('refreshed');
+    }
+  }, []);
 
   
 
