@@ -1,23 +1,17 @@
 'use client'
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
-
+import Link from 'next/link';
+import React, { useState } from 'react';
 
 
 
 const Page = () => {
   const meetings = [
-    {
-      date: "04.10.2023",
-      duration: "Godzina: 20:00 - 21:00",
-      topic: "Webinar E-Uzależnienia",
-      host: "dr Maciej Dębski",
-    },
+    
     {
       date: "11.10.2023",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
-      
+      host: "dr Maciej Dębski",
     },
     {
       date: "18.10.2023",
@@ -40,115 +34,80 @@ const Page = () => {
       topic: "Webinar E-Uzależnienia",
       
     },
+    {
+      date: "04.10.2023 (Te spotkanie już się odbyło)",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      host: "dr Maciej Dębski",
+      expired: true,
+    },
     
-    // Dodaj inne spotkania tutaj...
+    
+  ];
+  
+  const questions = [
+    { question: "Pytanie 1?", answer: "Odpowiedź 1" },
+    { question: "Pytanie 2?", answer: "Odpowiedź 2" },
+    { question: "Pytanie 2?", answer: "Odpowiedź 2" },
+    { question: "Pytanie 2?", answer: "Odpowiedź 2" },
+    { question: "Pytanie 2?", answer: "Odpowiedź 2" },
+    { question: "Pytanie 2?", answer: "Odpowiedź 2" },
+    
   ];
 
-  const Tile = styled.li`
-  display: flex;
-  borderBottom: 1px solid #ccc;
-  padding: 20px 0;
-  align-items: center;
-  background-color: ${(props) => (props.isEven ? '#921d7f' : '#ffffff')};
-  color: ${(props) => (props.isEven ? '#ffffff' : '#000000')};
-  `;
-  
-  const dataStyle = {
-    flex: 1,
-    display: "flex",
-    justifyContent: "center",
-    transform: "rotate(-90deg)",
-    transformOrigin: "center center",
-    whiteSpace: "nowrap",
-    fontSize: "24px",
-    borderBottom: "1px solid #ccc",
-    padding: "10px",
-    fontFamily: "'Playfair Display', serif",
-  };
-  
-  const dateColumnStyle = {
-    flex: 2,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRight: "1px solid #ccc",
-    padding: "10px",
-    borderBottom: "none",
-    textAlign: "center",
-    paddingLeft: 0,
-  };
-  
-  const topicColumnStyle = {
-    flex: 5,
-    display: "flex",
-    flexDirection: "column",
-    paddingLeft: "40px",
-    padding: "10px",
-    textAlign: "left",
-  };
-  
-  const dateText = {
-    marginBottom: "5px",
-    fontSize: "24px",
-    fontFamily: "'Playfair Display', serif",
-    fontWeight: "bold",
-  };
-
-  useEffect(() => {
-    // Sprawdź, czy strona została już odświeżona
-    if (!localStorage.getItem('refreshed')) {
-      // Ustaw flagę, że strona została odświeżona
-      localStorage.setItem('refreshed', 'true');
-      // Odśwież stronę
-      window.location.reload();
-    } else {
-      // Usuń flagę, aby umożliwić odświeżenie przy następnej wizycie
-      localStorage.removeItem('refreshed');
-    }
-  }, []);
-
-  
+  const [activeQuestion, setActiveQuestion] = useState(null);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", minHeight: "100vh", marginTop: "50px" }}>
-      <h1 className=' text-3xl md:text-5xl' style={{ fontFamily: "'Playfair Display', serif", marginTop: "20px"}}>Kalendarz spotkań online</h1>
-      <p className=' pt-6 pb-10 text-center'>Zapraszamy na darmowe webinary dla rodziców i nauczycieli dotyczące uzależnień behawioralnych</p>
-      <div className='flex justify-center items-center gap-5 mb-5'>
-
-
-  <div className="text-center">
-    <a
-      href="https://app.livewebinar.com/579-366-824"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="bg-[#1d2392] hover:bg-[#3b84b2] text-white py-2 px-2 md:px-6 rounded-sm  font-semibold transition duration-300 ease-in-out transform hover:scale-105 inline-block text-[10px] md:text-xl"
-    >
-      Zapisz się teraz
-    </a>
-  </div>
-
-  
-</div>
-      <div className=' scale-75 md:scale-100 w-full md:w-[80%]'>
-        <ul style={{ listStyle: "none", padding: 0 }}>
-          {meetings.map((meeting, index) => (
-            <Tile key={index} isEven={index % 2 === 0}>
-              <div style={dataStyle}>DATA</div>
-              <div style={dateColumnStyle}>
-                <div style={dateText}>{meeting.date}</div>
-                <div>{meeting.duration}</div>
-              </div>
-              <div style={topicColumnStyle}>
-                <div style={dateText}>{meeting.topic}</div>
-                <div>{meeting.host}</div>
-              </div>
-            </Tile>
-          ))}
-        </ul>
+    <div className="flex flex-col md:flex-row items-start min-h-screen mt-16 p-12 space-y-12 md:space-y-0 md:space-x-12">
+      <div className="md:w-1/2 space-y-8">
+        <h1 className="text-3xl text-gray-900 border-b-2 pb-2">Kalendarz spotkań online</h1>
+        <div className="w-full p-6 space-y-6">
+          <ul>
+            {meetings.map((meeting, index) => (
+              <li key={index} className={`py-3 px-3 border-b-2 rounded-sm ${index % 2 === 0 ? 'border-[#921d7f]' : 'border-gray-300'} ${meeting.expired ? 'text-gray-400 line-through' : 'text-gray-800'}`}>
+                <div className={`text-md font-bold mb-1 ${meeting.expired ? 'line-through' : ''}`}>{meeting.date}</div>
+                <div className="text-xs mb-1">{meeting.duration}</div>
+                <div className="text-lg">{meeting.topic}</div>
+                {meeting.host && <div className="text-sm mt-1 italic">{meeting.host}</div>}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      
-      <div style={{ height: "60px" }}></div>
+{/* 
+      <div className="md:w-1/2 space-y-8">
+        <h2 className="text-3xl text-gray-900 mb-5 border-b-2 pb-2">Najciekawsze pytania po spotkaniach</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          {questions.map((item, index) => (
+            <div 
+              key={index} 
+              className="p-4 py-8 border-2 border-gray-600 rounded-md hover:border-[#921d7f] transition duration-300"
+              onMouseEnter={() => setActiveQuestion(index)}
+              onMouseLeave={() => setActiveQuestion(null)}
+            >
+              {activeQuestion === index ? (
+                <div className="text-sm text-gray-600">{item.answer}</div>
+              ) : (
+                <div className="truncate text-gray-900 font-semibold">{item.question}</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+*/}
+       <div className="md:w-1/2 space-y-8">
+        <h2 className="text-3xl text-gray-900 mb-5 border-b-2 pb-2">Zapisz się na webinar</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <Link href="https://app.livewebinar.com/579-366-824"><div className='p-6 py-12 border-2 border-gray-600 rounded md flex justify-start items-center'>
+            Zapisz się na webinar →
+          </div></Link>
+          
+        </div>
+      </div>
+
+
+
+
     </div>
   );
 }

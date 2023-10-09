@@ -7,8 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Poppins', 'sans-serif'],
-      outfit: ['Outfit', 'sans-serif'],
+      'display': ['Playfair Display', 'serif'],
     },
     extend: {
       fontWeight: {

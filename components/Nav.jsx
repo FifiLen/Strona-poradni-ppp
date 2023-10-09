@@ -13,7 +13,7 @@ const MENU_LIST = [
   { text: "Wsparcie dla dorosłych", href: "/Dorosli" },
   { text: "Nasi specjaliści", href: "/Kadra" },
   { text: "Cennik", href: "/Cennik" },
-  { text: "Wsparcie", href: "/Webinary" },
+  { text: "Webinary", href: "/Webinary" },
 
   
 ];
