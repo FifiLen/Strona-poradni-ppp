@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
@@ -12,6 +13,34 @@ const PoradniaPsychologicznoPedagogiczna = () => {
           </h2>
         </div>
       </div>
+
+      <section className="py-6 md:py-12">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 gap-8 items-center flex-col md:flex-row md:grid-cols-2">
+            {/* Tekst informacyjny */}
+            <div className="text-center md:text-left order-2 md:order-1">
+              <h2 className="text-lg sm:text-xl font-semibold mb-4">
+              Dzienny Ośrodek Terapii Uzależnień
+              </h2>
+              <p className="text-gray-700 text-base">
+              Zapewniamy kompleksową opiekę dla dzieci i młodzieży borykających się <br className=' md:block hidden'/>z e-uzależnieniami. Indywidualne oraz holistyczne podejście do młodych pacjentów stanowią fundament naszej pracy.
+               </p>
+              <Link href="/Osrodek">
+                <div className="px-3 py-4 rounded-md bg-[#2c6b4b] text-white mt-6 w-[520px]"><p> Dowiedz się więcej o dziennym ośrodku terapii uzależnień →</p></div>
+              </Link>
+            </div>
+            {/* Obrazek */}
+            <div className="text-center mb-4 md:mb-0 order-1 md:order-2">
+              <img
+                src="/assets/uzaleznienie5.jpg"
+                className="rounded-md max-w-full h-auto"
+                alt="terapia uzależnień"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-6 md:py-12">
         <div className="container mx-auto">

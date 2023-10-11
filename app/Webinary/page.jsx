@@ -97,11 +97,19 @@ const Page = () => {
 */}
        <div className="md:w-1/2 space-y-8">
         <h2 className="text-3xl text-gray-900 mb-5 border-b-2 pb-2">Zapisz się na webinar</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <Link href="https://app.livewebinar.com/579-366-824"><div className='p-6 py-12 border-2 border-gray-600 rounded md flex justify-start items-center'>
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-2">
+          <Link href="https://app.livewebinar.com/579-366-824"><div className=' p-6 border-2 border-gray-600 rounded md flex justify-start items-center'>
             Zapisz się na webinar →
           </div></Link>
           
+        </div>
+      </div>
+      <div className="md:w-1/2 space-y-8">
+        <h2 className="text-3xl text-gray-900 mb-5 border-b-2 pb-2">PDF do pobrania</h2>
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-2">
+        <div className=' p-6 border-2 border-gray-600 rounded md flex justify-start items-center'>
+        <a href="/assets/zabawy-z-dziecmi.pdf" download target="_blank" rel="noopener noreferrer">Pobierz plik pdf →</a>
+        </div>
         </div>
       </div>
 
