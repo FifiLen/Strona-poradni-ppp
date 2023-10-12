@@ -7,12 +7,7 @@ import React, { useState } from 'react';
 const Page = () => {
   const meetings = [
     
-    {
-      date: "11.10.2023",
-      duration: "Godzina: 20:00 - 21:00",
-      topic: "Webinar E-Uzależnienia",
-      host: "dr Maciej Dębski",
-    },
+    
     {
       date: "18.10.2023",
       duration: "Godzina: 20:00 - 21:00",
@@ -36,6 +31,13 @@ const Page = () => {
     },
     {
       date: "04.10.2023 (Te spotkanie już się odbyło)",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      host: "dr Maciej Dębski",
+      expired: true,
+    },
+    {
+      date: "11.10.2023 (Te spotkanie już się odbyło)",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
       host: "dr Maciej Dębski",
