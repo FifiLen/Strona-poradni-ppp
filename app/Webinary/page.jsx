@@ -108,7 +108,7 @@ const Page = () => {
         <h2 className="text-3xl text-gray-900 mb-5 border-b-2 pb-2">PDF do pobrania</h2>
         <div className="grid grid-cols-1 md:grid-cols-1 gap-2">
         <div className=' p-6 border-2 border-gray-600 rounded md flex justify-start items-center'>
-        <a href="/assets/zabawy-z-dziecmi.pdf" download target="_blank" rel="noopener noreferrer">Pobierz plik pdf →</a>
+        <a href="/assets/zabawy.pdf" download target="_blank" rel="noopener noreferrer">Pobierz plik pdf →</a>
         </div>
         </div>
       </div>
