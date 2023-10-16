@@ -21,13 +21,13 @@ const page = () => {
         </ul>
         
         <h2 className=' font-semibold mb-3 mt-4'>2. Wizyta w poradni publicznej</h2>
-        <p>Następnie udaj się do Publicznej Poradni Psychologiczno-Pedagogicznej, która obsługuje Twój rejon,<span className=' text-[#921d7f]'>(rejonizacja – sprawdź pod opieką, której poradni Publicznej znajduje się przedszkole Twojego dziecka)</span> </p>
+        <p>Następnie udaj się do publicznej Poradni Psychologiczno-Pedagogicznej, która obsługuje Twój rejon,<span className=' text-[#921d7f]'>(rejonizacja – sprawdź pod opieką, której poradni Publicznej znajduje się przedszkole Twojego dziecka)</span> </p>
 
         <h2 className=' font-semibold mt-4 mb-3 text-[#921d7f]'>3. Zgłoś się z dzieckiem na diagnozę i wypełnij wniosek o wydanie opinii o potrzebie wczesnego wspomagania rozwoju.</h2>
         <p>Do wniosku dołącz dokumenty, takie jak zaświadczenie lekarskie, wcześniejsze opinie psychologiczne lub pedagogiczne oraz dokumenty medyczne. Poradnia ma obowiązek wydać opinię w ciągu 30 dni od złożenia wniosku.</p>
 
         <h2 className=' font-semibold mt-4 mb-3'>4. Odbierz opinię:</h2>
-        <p>Po otrzymaniu opinii o potrzebie wczesnego wspomagania rozwoju z Publicznej Poradni Psychologiczno-Pedagogicznej, przyjdź z nią do Poradni Psychologiczno-Pedagogicznej MAGNOLIA.</p>
+        <p>Po otrzymaniu opinii o potrzebie wczesnego wspomagania rozwoju z publicznej Poradni Psychologiczno-Pedagogicznej, przyjdź z nią do poradni Psychologiczno-Pedagogicznej MAGNOLIA.</p>
 
         <h4 className=' font-semibold mt-5 mb-4 text-[#921d7f]'>Poradnia Psychologiczno-Pedagogiczna MAGNOLIA:</h4>
         <ul>
