@@ -4,7 +4,7 @@ const page = () => {
   return (
     <div className=' max-w-6xl md:mx-auto my-20 mx-10'>
         
-        <h1 className=' text-base font-semibold mb-10 text-[#921d7f]'>Bezpłatna Terapia Wczesnego Wspomagania Rozwoju Dziecka (WWRD) w Poradni PSYCHOLOGICZNO PEDAGOGICZNEJ MAGNOLIA:</h1>
+        <h1 className=' text-base font-semibold mb-10 text-[#921d7f]'>Bezpłatna Terapia Wczesnego Wspomagania Rozwoju Dziecka (WWRD) w Poradni Psychologiczno-Pedagogicznej MAGNOLIA:</h1>
         <p>W celu skorzystania z bezpłatnej Terapii Wczesnego Wspomagania Rozwoju Dziecka (WWRD) w Poradni Psychologiczno-Pedagogicznej MAGNOLIA, należy postępować zgodnie z poniższymi krokami:</p>
         
         <h2 className=' font-semibold mt-5 mb-3'>1. Wizyta u lekarza:</h2>
@@ -16,14 +16,14 @@ const page = () => {
             <li>niepełnosprawność ruchowa w tym z afazją,</li>
             <li>niepełnosprawność intelektualną,</li>
             <li>niepełnosprawność sprzęgającą (kilka niepełnosprawności równocześnie)</li>
-            <li>Autyzm i Zespół Aspergera,</li>
+            <li>autyzm i Zespół Aspergera,</li>
             <li>zaburzenia wzroku, słuchu, mowy.</li>
         </ul>
         
-        <h2 className=' font-semibold mb-3 mt-4'>2. Wizyta w poradni Publicznej</h2>
+        <h2 className=' font-semibold mb-3 mt-4'>2. Wizyta w poradni publicznej</h2>
         <p>Następnie udaj się do Publicznej Poradni Psychologiczno-Pedagogicznej, która obsługuje Twój rejon,<span className=' text-[#921d7f]'>(rejonizacja – sprawdź pod opieką, której poradni Publicznej znajduje się przedszkole Twojego dziecka)</span> </p>
 
-        <h2 className=' font-semibold mt-4 mb-3 text-[#921d7f]'>3. Zgłoś swoje dziecko na diagnozę i wypełnij wniosek o wydanie opinii o potrzebie wczesnego wspomagania rozwoju.</h2>
+        <h2 className=' font-semibold mt-4 mb-3 text-[#921d7f]'>3. Zgłoś się z dzieckiem na diagnozę i wypełnij wniosek o wydanie opinii o potrzebie wczesnego wspomagania rozwoju.</h2>
         <p>Do wniosku dołącz dokumenty, takie jak zaświadczenie lekarskie, wcześniejsze opinie psychologiczne lub pedagogiczne oraz dokumenty medyczne. Poradnia ma obowiązek wydać opinię w ciągu 30 dni od złożenia wniosku.</p>
 
         <h2 className=' font-semibold mt-4 mb-3'>4. Odbierz opinię:</h2>
