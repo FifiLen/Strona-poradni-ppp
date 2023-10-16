@@ -14,6 +14,8 @@ const MENU_LIST = [
   { text: "Nasi specjaliści", href: "/Kadra" },
   { text: "Cennik", href: "/Cennik" },
   { text: "Webinary", href: "/Webinary" },
+  { text: "Blog", href: "https://magnolia-blog-eta.vercel.app" },
+
 
   
 ];
