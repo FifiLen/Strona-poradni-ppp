@@ -9,16 +9,6 @@ const Page = () => {
     
     
     {
-      date: "18.10.2023",
-      duration: "Godzina: 20:00 - 21:00",
-      topic: "Webinar E-Uzależnienia",
-      
-    },{
-      date: "25.10.2023",
-      duration: "Godzina: 20:00 - 21:00",
-      topic: "Webinar E-Uzależnienia",
-      
-    },{
       date: "01.11.2023",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
@@ -43,7 +33,18 @@ const Page = () => {
       host: "dr Maciej Dębski",
       expired: true,
     },
-    
+    {
+      date: "18.10.2023",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      expired: true,
+    },
+    {
+      date: "25.10.2023",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      expired: true
+    },
     
   ];
   

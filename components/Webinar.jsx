@@ -19,12 +19,12 @@ const WebinarButton = () => {
 
   const meetings = [
     {
-      date: "18.10.2023",
+      date: "01.11.2023",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
       
     },{
-      date: "25.10.2023",
+      date: "08.11.2023",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
       
