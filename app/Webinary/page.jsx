@@ -9,12 +9,12 @@ const Page = () => {
     
     
     {
-      date: "01.11.2023",
+      date: "08.11.2023",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
       
     },{
-      date: "08.11.2023",
+      date: "15.11.2023",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
       
@@ -34,13 +34,13 @@ const Page = () => {
       expired: true,
     },
     {
-      date: "18.10.2023",
+      date: "18.10.2023 (Te spotkanie już się odbyło)",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
       expired: true,
     },
     {
-      date: "25.10.2023",
+      date: "25.10.2023 (Te spotkanie już się odbyło)",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
       expired: true
