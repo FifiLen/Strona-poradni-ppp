@@ -29,7 +29,7 @@ const WebinarButton = () => {
       topic: "Webinar E-Uzależnienia",
       
     },
-    // Add other meetings here...
+    
   ];
   const Tile = styled.li`
 display: flex;
