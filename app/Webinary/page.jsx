@@ -20,6 +20,17 @@ const Page = () => {
       
     },
     {
+      date: "22.11.2023",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      
+    },{
+      date: "29.11.2023",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      
+    },
+    {
       date: "04.10.2023 (Te spotkanie już się odbyło)",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
