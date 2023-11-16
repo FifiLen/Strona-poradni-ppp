@@ -8,12 +8,7 @@ const Page = () => {
   const meetings = [
     
     
-    {
-      date: "15.11.2023",
-      duration: "Godzina: 20:00 - 21:00",
-      topic: "Webinar E-Uzależnienia",
-      
-    },
+    
     {
       date: "22.11.2023",
       duration: "Godzina: 20:00 - 21:00",
@@ -53,6 +48,12 @@ const Page = () => {
     },
     {
       date: "08.11.2023",
+      duration: "Godzina: 20:00 - 21:00",
+      topic: "Webinar E-Uzależnienia",
+      expired: true
+    },
+    {
+      date: "15.11.2023",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
       expired: true
