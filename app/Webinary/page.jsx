@@ -47,13 +47,13 @@ const Page = () => {
       expired: true
     },
     {
-      date: "08.11.2023",
+      date: "08.11.2023 (Te spotkanie już się odbyło)",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
       expired: true
     },
     {
-      date: "15.11.2023",
+      date: "15.11.2023 (Te spotkanie już się odbyło)",
       duration: "Godzina: 20:00 - 21:00",
       topic: "Webinar E-Uzależnienia",
       expired: true
@@ -121,10 +121,10 @@ const Page = () => {
         </div>
       </div>
       <div className="md:w-1/2 space-y-8">
-        <h2 className="text-3xl text-gray-900 mb-5 border-b-2 pb-2">PDF do pobrania</h2>
+        <h2 className="text-3xl text-gray-900 mb-5 border-b-2 pb-2">Przegapiłeś spotkanie?</h2>
         <div className="grid grid-cols-1 md:grid-cols-1 gap-2">
         <div className=' p-6 border-2 border-gray-600 rounded md flex justify-start items-center'>
-        <a href="/assets/zabawy.pdf" download target="_blank" rel="noopener noreferrer">Pobierz plik pdf →</a>
+        <a href="https://sklep.rybnikonline.eu/?product_cat=szkolenia-online-offline" target="_blank" rel="noopener noreferrer">Zajrzyj tutaj →</a>
         </div>
         </div>
       </div>
