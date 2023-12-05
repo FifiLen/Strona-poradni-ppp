@@ -55,7 +55,7 @@ const Home = () => {
           {/* Upewniono się, że tekst jest dobrze umieszczony i widoczny na tle */}
           <div className="text-[#921d7f] text-center pb-16 bg-white rounded-lg">
           <img src="/assets/circle1.png" alt="circle" loading="lazy" className="w-32 h-28 mx-auto -mt-14 z-10" />
-            <h2 className="text-xl">Wyciągniemy Cię z tego</h2>
+            <h2 className="text-xl mt-3">Wyciągniemy Cię z tego</h2>
           </div>
         </div>
 
@@ -63,11 +63,7 @@ const Home = () => {
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-[#921d7f] rounded-b-lg"></div>
         
         {/* Przeniesiono overlay bezpośrednio nad resztą zawartości, aby zapewnić, że nie koliduje z innymi elementami */}
-        <div className="overlay absolute bottom-4 left-4 right-4">
-          <div className='p-4 bg-slate-100 rounded-lg border-2'>
-            <p>Kliknij w banerek by dowiedzieć się więcej</p>
-          </div>
-        </div>
+       
       </div>
     </Link>
         
@@ -95,11 +91,7 @@ const Home = () => {
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-[#921d7f] rounded-b-lg"></div>
         
         {/* Przeniesiono overlay bezpośrednio nad resztą zawartości, aby zapewnić, że nie koliduje z innymi elementami */}
-        <div className="overlay absolute bottom-4 left-4 right-4">
-          <div className='p-4 bg-slate-100 rounded-lg border-2'>
-            <p>Kliknij w banerek by dowiedzieć się więcej</p>
-          </div>
-        </div>
+        
       </div>
     </Link>
 
@@ -116,9 +108,9 @@ const Home = () => {
           
           {/* Upewniono się, że tekst jest dobrze umieszczony i widoczny na tle */}
           <div className="text-[#921d7f] text-center pb-16 bg-white rounded-lg">
-          <img src="/assets/circle2.png" alt="circle" loading="lazy" className="w-44 h-38 mx-auto -mt-14 z-10 relative" />
+          <img src="/assets/circle2.png" alt="circle" loading="lazy" className="w-44 h-34 mx-auto -mt-14 z-10 relative" />
 
-            <h2 className="text-xl">Pozwól sobie pomóc</h2>
+            <h2 className="text-xl mt-2">Pozwól sobie pomóc</h2>
           </div>
         </div>
 
@@ -126,11 +118,7 @@ const Home = () => {
         <div className="absolute bottom-0 left-0 right-0 h-2 bg-[#921d7f] rounded-b-lg"></div>
         
         {/* Przeniesiono overlay bezpośrednio nad resztą zawartości, aby zapewnić, że nie koliduje z innymi elementami */}
-        <div className="overlay absolute bottom-4 left-4 right-4">
-          <div className='p-4 bg-slate-100 rounded-lg border-2'>
-            <p>Kliknij w banerek by dowiedzieć się więcej</p>
-          </div>
-        </div>
+       
       </div>
     </Link>
       </div>

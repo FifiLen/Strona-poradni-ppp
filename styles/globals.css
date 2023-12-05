@@ -681,3 +681,53 @@ iframe {
 
 
 
+.info-container {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(239, 239, 239, 0.98);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 2;
+  border-radius: 8px;
+  width: 500px;
+height: 250px;
+  max-width: 80vw;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.info-container::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Wyrównanie dla przeglądarek nie obsługujących flexboxa */
+}
+
+.info-container p {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left; /* Opcjonalne, w zależności od preferencji */
+}
+
+
+.img-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.img-container:hover .info-container {
+  display: block;
+  opacity: 1;
+}
+
+.img-container.left .info-container {
+  transform: translateX(-100%) translateX(-10%);
+}
+
+.img-container.right .info-container {
+  transform: translateX(0%) translateX(10%);
+}
