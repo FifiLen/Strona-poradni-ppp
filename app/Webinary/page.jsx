@@ -96,7 +96,7 @@ const Page = () => {
     <div className='w-full'>
       <div className='max-w-6xl pb-20 m-auto flex-col justify-center items-start pt-10'>
         <div className='flex-col mb-10 pb-6 border-b'>
-          <h2 className='font-display text-2xl md:text-xl text-gray-700 text-center'>Przegapiłeś spotkanie z cyklu o E-uzaleznieniach?</h2>
+          <h2 className='font-display text-2xl md:text-xl text-gray-700 text-center'>Przegapiłeś spotkanie z cyklu o E-uzależnieniach?</h2>
   
           <div className='flex gap-8 mt-3 justify-center items-center'>
             <Link href={"https://sklep.rybnikonline.eu/?product_cat=szkolenia-online-offline"} target='_blank'>
@@ -135,7 +135,7 @@ const Page = () => {
               infoText={
                 <>
                   <p className='font-semibold'>Wioletta Ginter</p>
-                  <p>Magister pedagogiki specjalizujący się w  poradnictwie <br /> i pomocy psychopedagogicznej. Jako aktywny pedagog specjalny, terapeuta ręki, specjalista w  edukacji włączającej i wykładowca, posiada bogate doświadczenie, przekazując swoją wiedzę zarówno uczniom, jak i nauczycielom w  różnych instytucjach edukacyjnych.</p>
+                  <p>Magister pedagogiki specjalizujący się w poradnictwie <br /> i pomocy psychopedagogicznej. Jako aktywny pedagog specjalny, terapeuta ręki, specjalista w  edukacji włączającej i wykładowca, posiada bogate doświadczenie, przekazując swoją wiedzę zarówno uczniom, jak i nauczycielom w  różnych instytucjach edukacyjnych.</p>
                 </>
               }
               alignLeft={true}
