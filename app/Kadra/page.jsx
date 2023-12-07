@@ -155,7 +155,19 @@ Magister pedagogiki, specjalizuje się w&nbsp;pracy socjalnej oraz opiekuńczo-w
     imageUrl: '/assets/woman.png',
   },
   
-  
+  {
+    id: 16,
+    name: 'Michalina Dzumek',
+    specialty: 'Pedagog',
+    description: (<p>
+      Magister pedagogiki specjalizujący się budowaniu zasobów ochronnych oraz&nbsp;redukowaniu czynników zagrażających prawidłowemu rozwojowi rodziny, dzieci i&nbsp;młodzieży &nbsp; (w sytuacji rozwodu, choroby, niepełnosprawności, kryzysu, uzależnienia lub śmierci).&nbsp;
+      Na co dzień pedagog szkolny pracujący&nbsp;z uczniem doświadczającym trudności w&nbsp;czytaniu, pisaniu, ortografii i&nbsp;operacjach matematycznych oraz&nbsp; trudnością w&nbsp; zakresie regulacji emocji. 
+
+      Superwizor rodzinny, terapeuta pedagogiczny, trener umiejętności społecznych. 
+      Praktyk podejścia skoncentrowanego na&nbsp; rozwiązaniu (Solution-Focused Approach – SFA)
+    </p>) ,
+    imageUrl: '/assets/woman.png',
+  },
   
   
 ];
