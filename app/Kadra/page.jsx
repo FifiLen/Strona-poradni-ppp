@@ -51,15 +51,6 @@ Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Tow
   },
   
   {
-    id: 2,
-    name: 'Klaudia Rogalska',
-    specialty: 'Trener',
-    description: (
-      <p>Magister filologii angielskiej. Wykładowca na&nbsp;kierunku język angielski oraz&nbsp;PR. Metodykiem i&nbsp;trener nauczycieli języków obcych. Trener TIK w&nbsp;tym wykorzystania nowych technologii w&nbsp;pracy z&nbsp;uczniami ze&nbsp;SPE. Terapeuta w&nbsp;obszarze wykorzystania Wirtualnej Rzeczywistości w&nbsp;Terapii Przyszłości. Specjalista ORE w&nbsp;zakresie edukacji włączającej. Specjalista i&nbsp;trener regionalny woj. śląskiego TIK. Autor kursów online i&nbsp;autorskich materiałów dydaktycznych. </p>
-    ),
-    imageUrl: '/assets/T10.png',
-  },
-  {
     id: 3,
     name: 'Sylwia Cuber',
     specialty: 'Pedagog',
