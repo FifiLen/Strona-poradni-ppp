@@ -194,17 +194,16 @@ const DoctorCards = () => {
 
   return (
     <section className="mx-6 sm:mx-16 lg:mx-[200px] mb-[100px] mt-20">
-      <h3 className="text-4xl font-semibold text-gray-800 pb-8 text-center sm:text-5xl">Poznaj naszych Specjalistów</h3> 
+      <h3 className="text-6xl font-display font-semibold text-gray-800 text-center">Poznaj naszych Specjalistów</h3> 
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-36">
         {staffData.map((person, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-xl p-6 flex flex-col items-center space-y-4">
+          <div key={index} className="bg-white border border-gray-400 rounded-xl p-6 flex flex-col items-center space-y-4">
             <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 overflow-hidden rounded-full">
               <img src={person.imageUrl} alt={person.name} className="w-full h-full object-cover" />
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-semibold">{person.name}</h3>
-              <p className="text-gray-600">{person.specialization}</p>
+              <h3 className="text-xl font-semibold font-display mb-2">{person.name}</h3>
               <p className="text-gray-600">{person.description}</p>
             </div>
           </div>

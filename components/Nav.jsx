@@ -12,7 +12,7 @@ const MENU_LIST = [
   { text: "Wsparcie dla dzieci", href: "/Dzieci" },
   { text: "Wsparcie dla dorosłych", href: "/Dorosli" },
   { text: "Nasi specjaliści", href: "/Kadra" },
-  { text: "Cennik", href: "/Cennik" },
+  { text: "Oferta", href: "/assets/oferta-PPP-Magnolia.pdf" },
   { text: "Webinary", href: "/Webinary" },
   { text: "Blog", href: "https://magnolia-blog-eta.vercel.app" },
 
@@ -33,8 +33,8 @@ const Navbar = () => {
       <nav className="nav sticky top-0 flex justify-between items-center bg-white z-20">
         <Link href="/">
           <div className="flex items-center space-x-2 cursor-pointer">
-            <Image src="/assets/magnolia.png" alt="Magnolia Logo" width={50} height={50} className="object-contain" />
-            <h1 className="logo font-semibold hidden md:block whitespace-nowrap pr-20 sm:pr-4 md:pr-16 lg:pr-0">MAGNOLIA</h1>
+            <Image src="/assets/magnolia.png" alt="Magnolia Logo" width={45} height={45} className="object-contain" />
+            <h1 className=" font-medium text-2xl hidden md:block whitespace-nowrap text-[#921d7f] pr-20 sm:pr-4 md:pr-16 lg:pr-0">Magnolia</h1>
           </div>
         </Link>
         <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
@@ -115,7 +115,7 @@ const Navbar = () => {
         </div>
         <div className="nav__buttons hidden md:flex">
           <Link href="/Kontakt" passHref>
-            <div className="button2 text-[12px] font-light cursor-pointer px-8 py-2 whitespace-nowrap rounded-lg">
+            <div className="button2 text-[12px] font-light cursor-pointer px-8 py-2 whitespace-nowrap rounded-lg hover:border">
               Kontakt
             </div>
           </Link>

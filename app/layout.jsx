@@ -2,7 +2,10 @@ import '@styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import Nav from '@components/Nav';
 import Footer from '@components/Footer';
+
+import { Suspense } from 'react';
 import WebinarButton from '@components/Webinar';
+import Loading from './loading';
 
 
 export const metadata = {
@@ -20,8 +23,10 @@ const Rootlayout = ({children}) => {
 
             <main className='app'>
               <Nav />
-              <WebinarButton />
+              <Suspense fallback={<Loading />}>
+             {/* <WebinarButton /> */} 
             {children}
+            </Suspense>
             <Analytics />
             
               <Footer />

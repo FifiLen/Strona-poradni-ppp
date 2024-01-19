@@ -40,7 +40,7 @@ const page = () => {
           <li>Poniedziałek - Piątek 7:00 - 21:00</li>
         </ul>
         
-        <div className=' p-4 border-2 rounded-md mt-4 w-full'><a href="/assets/WWRD.pdf" download={true} className=' text-black'>Pobierz pdf z instrukcją darmowych zajęć WWRD →</a></div>
+        <div className=' p-4 border-2 rounded-md mt-4 w-full'><a href="/assets/WWRD.pdf" target='_blank' className=' text-black'>Pobierz pdf z instrukcją darmowych zajęć WWRD →</a></div>
         
     </div>
   )

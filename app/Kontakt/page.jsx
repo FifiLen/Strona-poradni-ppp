@@ -1,160 +1,73 @@
 'use client'
-import React, { useState } from 'react';
-import { FaMapMarkerAlt, FaAngleRight, FaEnvelope, FaClock } from 'react-icons/fa';
-import InfoReservation from '@components/InfoReservation';
+import React from 'react'
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa6";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import Formularz from '@components/Formularz';
+
+
+
+
 
 const Kontakt = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Obsługa przesłania formularza
-  };
-
-  return (
-    <section className="py-16 bg-[#F5F5F5] border-t-4">
-      <div className="container mx-auto px-4 md:px-0 text-gray-800">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Kolumna 1: Tekst kontaktowy */}
-          <div className="footer-section">
-            <h2 className="font-semibold text-4xl mb-4">Kontakt</h2>
-            <div className="mb-4 space-y-2">
-              <div className="flex items-center">
-                <FaAngleRight className="mr-2" />
-                <p className="font-semibold text-gray-600">+48 797 173 501</p>
-              </div>
-              <div className="flex items-center">
-                <FaAngleRight className="mr-2" />
-                <p className="font-semibold text-gray-600">+48 502 162 365</p>
-              </div>
-              <div className="flex items-center">
-                <FaAngleRight className="mr-2" />
-                <p className="font-semibold text-gray-600">+48 690 515 224</p>
-              </div>
-              <div className="flex items-center">
-                <FaAngleRight className="mr-2" />
-                <p className="font-semibold text-gray-600">+48 503 192 950</p>
-              </div>
-            </div>
-            <div className="mb-4">
-              <p className="font-semibold text-gray-600">poradniamagnolia@gmail.com</p>
-            </div>
-            <div className="mb-4">
-              <p className="font-semibold text-gray-800">Magnolii 25, 44-207 Rybnik</p>
-            </div>
-            <div className="mb-4">
-              <h4 className="font-semibold text-gray-800">Godziny otwarcia</h4>
-              <p className="font-semibold text-gray-600">Poniedziałek - Piątek: 7:00 - 21:00</p>
-            </div>
-          </div>
+return(
 
 
-          {/* Kolumna 3: Formularz kontaktowy 
-          <div className="footer-section">
-            <div className="w-full p-4">
-              <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                  <label htmlFor="name" className="block font-semibold text-sm">
-                    Imię/Pseudonim
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border rounded"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="phone" className="block font-semibold text-sm">
-                    Numer telefonu
-                  </label>
-                  <input
-                    type="text"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border rounded"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className="block font-semibold text-sm">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border rounded"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="subject" className="block font-semibold text-sm">
-                    Temat
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border rounded"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="message" className="block font-semibold text-sm">
-                    Wiadomość
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-2 border rounded"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-[#921d7f] text-white px-4 py-2 rounded hover:bg-blue-600 text-sm"
-                >
-                  Wyślij
-                </button>
-              </form>
-            </div>
-          </div>
-          */}
+<div className="bg-gray-100/20 font-sans overflow-x-hidden ">
+{/* Nagłówek */}
+<div className="border-b border-gray-300 py-4 md:py-6">
+  <div className="flex justify-center items-center">
+    <h2 className="text-3xl font-display text-slate-800 md:text-5xl pb-2 font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left">
+    Kontakt
+    </h2>
+  </div>
+</div>
 
-          {/* Kolumna 2: Zdjęcie mapki */}
-          <div className="footer-section">
-            <img
-              src="/assets/map.png"
-              alt="Mapa"
-              className="h-[450px] rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
+
+
+
+<section className="py-6 md:py-24">
+  <div className="container mx-auto flex justify-center">
+    <div className="grid grid-cols-1 gap-8 items-center flex-col md:flex-row md:grid-cols-2">
+      {/* Obrazek */}
+      
+
+      {/* Tekst informacyjny */}
+      <div className="mx-5 flex-col justify-center items-center">
+        <h2 className="text-5xl text-left font-semibold mb-6 font-display text-slate-800">
+        Poradnia Magnolia
+        </h2>
+        
+        <ul className=' space-y-1 font-medium'>
+          <li className=' flex justify-start items-center gap-2'><FaPhoneAlt />+48 797 173 501</li>
+          <li className=' flex justify-start items-center gap-2'><FaPhoneAlt />+48 502 162 365</li>
+          <li className=' flex justify-start items-center gap-2'><FaEnvelope />poradniamagnolia@gmail.com</li>
+          <li className=' flex justify-start items-center gap-2'><FaMapMarkerAlt />Magnolii 25, 44-207 Rybnik</li>
+        </ul>
+
+        <p className=' text-md font-medium mt-3'>Godziny otwarcia:</p>
+        <p className=' mb-4'>Poniedziałek - Piątek: 7:00 - 21:00</p>
+        <hr className=' mb-4'/>
+        <Formularz />
       </div>
-    </section>
-  );
-};
+      <div className="text-center mb-4 md:mb-0 mx-5">
+      <div className="image-container">
+        <img src="/assets/map.png" alt="dziecko ubierające maskę" />
+      </div>
+
+
+</div>
+    </div>
+  </div>
+</section>
+
+
+
+</div>
+)};
 
 export default Kontakt;
+
+
+

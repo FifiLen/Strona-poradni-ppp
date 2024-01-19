@@ -2,18 +2,7 @@ import React from 'react';
 
 const ClassicLayout = () => {
   return (
-    <><div className="relative h-[620px] overflow-hidden">
-      <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay muted loop>
-        <source src="/assets/movie13.mp4" type="video/mp4" />
-        Twoja przeglądarka nie obsługuje tagu video.
-      </video>
-
-      <div className="absolute top-0 left-0 w-full h-[620px] bg-black opacity-40 z-5"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white font-bold">Logopeda</h1>
-        <p className="text-sm sm:text-base md:text-lg text-white">Terapia logopedyczna/neurologopedyczna</p>
-      </div>
-    </div>
+    <>
     <div className="min-h-screen px-4 sm:px-6 lg:px-8 xl:px-44 py-2 lg:py-4 flex flex-col justify-center sm:py-12 lg:mb-20">
         <h2 className='mt-20 font-bold text-4xl text-slate-800'>Logopedia</h2>
         <p className='mt-2 font-normal text-xl text-slate-500'>Terapia logopedyczna/neurologopedyczna</p>

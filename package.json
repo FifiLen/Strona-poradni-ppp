@@ -10,6 +10,7 @@
     "deploy": "next build && next export && node -r dotenv/config ./scripts/deploy.js"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
@@ -24,6 +25,7 @@
     "google-map-react": "^2.2.1",
     "iframe-resizer": "^4.3.6",
     "leaflet": "^1.9.4",
+    "lottie-web": "^5.12.2",
     "mongoose": "^7.3.1",
     "mysql2": "^3.5.1",
     "next": "13.4.7",
@@ -35,6 +37,7 @@
     "react-loader-spinner": "^5.4.5",
     "react-responsive": "^9.0.2",
     "react-responsive-carousel": "^3.2.23",
+    "react-router": "^6.21.2",
     "react-scroll": "^1.8.9",
     "react-transition-group": "^4.4.5",
     "slick-carousel": "^1.8.1",
