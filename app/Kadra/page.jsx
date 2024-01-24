@@ -194,9 +194,9 @@ const DoctorCards = () => {
 
   return (
     <section className="mx-6 sm:mx-16 lg:mx-[200px] mb-[100px] mt-20">
-      <h3 className="text-6xl font-display font-semibold text-gray-800 text-center">Poznaj naszych Specjalistów</h3> 
+      <h3 className="text-4xl font-display font-semibold text-gray-800 text-center">Poznaj naszych Specjalistów</h3> 
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-36">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
         {staffData.map((person, index) => (
           <div key={index} className="bg-white border border-gray-400 rounded-xl p-6 flex flex-col items-center space-y-4">
             <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 overflow-hidden rounded-full">

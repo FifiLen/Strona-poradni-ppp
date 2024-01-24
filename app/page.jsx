@@ -44,10 +44,10 @@ const Home = () => {
 
 <div className='absolute top-0 h-screen bg-white md:bg-white/40 backdrop-blur-lg w-screen z-50 '>
   <div className='flex justify-center items-center h-screen'>
-    <div className=' block md:flex w-full max-w-4xl mx-auto'>
+    <div className=' block md:flex w-full max-w-4xl mx-auto items-center'>
       {/* Lewa sekcja dla tekstu */}
       <div className='flex-1 p-4'>
-        <h2 className='text-center md:text-left font-display text-8xl'>Poradnia Magnolia</h2>
+        <h2 className='text-center md:text-left text-slate-800 font-semibold text-7xl'>Poradnia Magnolia</h2>
         <p className=' mt-6 text-center md:text-left'>Dobrze Cię widzieć, jak możemy Ci dzisiaj pomóc?</p>
       </div>
 
