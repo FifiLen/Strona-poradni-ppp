@@ -26,7 +26,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
             {/* Obrazek */}
             <div className="mb-4 md:mb-0">
             <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-              <img src="/assets/psycholog1.jpg" alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
+              <img src="/assets/psycholog1.jpg" loading='lazy' alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
             </div>
         </div>
 
@@ -58,7 +58,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
             {/* Obrazek */}
             <div className="mb-4 md:mb-0">
             <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-              <img src="/assets/psycholog2.jpg" alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
+              <img src="/assets/psycholog2.jpg" loading='lazy' alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
             </div>
         </div>
 
@@ -89,7 +89,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
             {/* Obrazek */}
             <div className="mb-4 md:mb-0">
             <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-              <img src="/assets/psycholog3.jpg" alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
+              <img src="/assets/psycholog3.jpg" loading='lazy' alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
             </div>
         </div>
 

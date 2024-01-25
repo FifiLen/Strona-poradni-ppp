@@ -33,7 +33,7 @@ const Dzieci = () => {
             {/* Obrazek */}
             <div className="mb-4 md:mb-0">
             <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-              <img src="/assets/subhero.jpg" alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
+              <img src="/assets/subhero.jpg" loading='lazy' alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
             </div>
         </div>
 
@@ -106,7 +106,7 @@ const Dzieci = () => {
          {/* Obrazek */}
          <div className="mb-4 md:mb-0">
          <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-           <img src="/assets/logopeda2.jpg" alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
+           <img src="/assets/logopeda2.jpg" loading='lazy' alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
          </div>
      </div>
 
@@ -205,7 +205,7 @@ const Dzieci = () => {
          {/* Obrazek */}
          <div className="mb-4 md:mb-0">
          <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-           <img src="/assets/subhero3.jpg" alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
+           <img src="/assets/subhero3.jpg" loading='lazy' alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
          </div>
      </div>
 
