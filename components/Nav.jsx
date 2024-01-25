@@ -1,142 +1,8 @@
-// 'use client'
-// import React, { useState } from 'react';
-// import Image from 'next/image';
-// import Link from 'next/link';
-// import { MdNavigateNext } from 'react-icons/md'; 
-// import { FaTimes } from 'react-icons/fa';
-
-
-// const MENU_LIST = [
-//   { text: "Strona Główna", href: "/" },
-//   { text: "Centrum uzależnień", href: "/Centrum_uzaleznien" },
-//   { text: "Wsparcie dla dzieci", href: "/Dzieci" },
-//   { text: "Wsparcie dla dorosłych", href: "/Dorosli" },
-//   { text: "Nasi specjaliści", href: "/Kadra" },
-//   { text: "Oferta", href: "/assets/oferta-PPP-Magnolia.pdf" },
-//   { text: "Webinary", href: "/Webinary" },
-//   { text: "Blog", href: "https://magnolia-blog-eta.vercel.app" },
-
-
-  
-// ];
-
-// const Navbar = () => {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//   const [submenuOpen, setSubmenuOpen] = useState(false);
-
-//   const toggleMenu = () => {
-//     setIsMenuOpen(prevState => !prevState);
-//   };
-
-//   return (
-//     <header>
-//       <nav className="nav sticky top-0 flex justify-between items-center bg-white z-20">
-//         <Link href="/">
-//           <div className="flex items-center space-x-2 cursor-pointer">
-//             <Image src="/assets/magnolia.png" alt="Magnolia Logo" width={45} height={45} className="object-contain" />
-//             <h1 className=" font-medium text-2xl hidden md:block whitespace-nowrap text-[#921d7f] pr-20 sm:pr-4 md:pr-16 lg:pr-0">Magnolia</h1>
-//           </div>
-//         </Link>
-//         <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
-//           {isMenuOpen ? 
-//             <div className="text-base"><FaTimes/></div>
-//             : 
-//             <>
-//               <div className="mb-1 w-5 h-0.5 bg-black"></div>
-//               <div className="mb-1 w-5 h-0.5 bg-black"></div>
-//               <div className="w-5 h-0.5 bg-black"></div>
-//             </>
-//           }
-//         </div>
-//         <div className={`absolute top-full right-0 w-80 bg-white z-10 overflow-hidden text-right ${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-//           {MENU_LIST.map((menu) => {
-//             const commonClass = "flex items-center justify-between nav-item cursor-pointer whitespace-nowrap text-black py-2 px-4";
-            
-//             if (menu.submenu) {
-//               return (
-//                 <div key={menu.text}>
-//                   <div 
-//                     className={commonClass} 
-//                     onClick={() => setSubmenuOpen(!submenuOpen)}
-//                   >
-//                     {menu.text} <MdNavigateNext />
-//                   </div>
-//                   {submenuOpen && (
-//                     <div className="submenu">
-//                       {menu.submenu.map((subitem) => (
-//                         <Link href={subitem.href} key={subitem.text} passHref>
-//                           <div className={commonClass}>
-//                             {subitem.text} <MdNavigateNext />
-//                           </div>
-//                         </Link>
-//                       ))}
-//                     </div>
-//                   )}
-//                 </div>
-//               );
-//             } else {
-//               if (menu.href.startsWith('http')) {
-//                 return (
-//                   <a key={menu.text} href={menu.href} target="_blank" rel="noopener noreferrer" className={commonClass}>
-//                     {menu.text} <MdNavigateNext />
-//                   </a>
-//                 );
-//               } else {
-//                 return (
-//                   <Link href={menu.href} key={menu.text} passHref>
-//                     <div className={commonClass}>
-//                       {menu.text} <MdNavigateNext />
-//                     </div>
-//                   </Link>
-//                 );
-//               }
-//             }
-//           })}
-//         </div>
-
-//         <div className={`overflow-x-auto md:flex gap-8 hidden text-[13px] font-light`}>
-//           {MENU_LIST.map((menu) => {
-//             if (menu.href.startsWith('http')) {
-//               return (
-//                 <a key={menu.text} href={menu.href} target="_blank" rel="noopener noreferrer" className="nav-item cursor-pointer whitespace-nowrap">
-//                   {menu.text}
-//                 </a>
-//               );
-//             } else {
-//               return (
-//                 <Link href={menu.href} key={menu.text} passHref>
-//                   <div className="nav-item cursor-pointer whitespace-nowrap">
-//                     {menu.text}
-//                   </div>
-//                 </Link>
-//               );
-//             }
-//           })}
-//         </div>
-//         <div className="nav__buttons hidden md:flex">
-//           <Link href="/Kontakt" passHref>
-//             <div className="button2 text-[12px] font-light cursor-pointer px-8 py-2 whitespace-nowrap rounded-lg hover:border">
-//               Kontakt
-//             </div>
-//           </Link>
-//         </div>
-//       </nav>
-//     </header>
-//   );
-// };
-
-// export default Navbar; 
-
 'use client'
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
   UserGroupIcon,
   BookOpenIcon,
@@ -144,7 +10,9 @@ import {
   GlobeAltIcon,
   PlayIcon
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import Link from 'next/link'
+
 
 const products = [
   { name: 'Nasi Specjaliści', description: 'Dowiedz się więcej o zespole Magnolii', href: '/Kadra', icon: UserGroupIcon },
@@ -169,12 +37,12 @@ export default function Nav() {
     <header className="bg-white/90 border-b border-gray-300">
       <nav className="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5 flex justify-start items-center gap-3">
+          <Link href="/" className="-m-1.5 p-1.5 flex justify-start items-center gap-3">
           <img className="h-10 w-auto" src="/assets/magnolia.png" alt="" />
             <span className=' font-semibold text-gray-900 hover:text-[#921d7f] transition-all duration-300'>Magnolia</span>
             <span className="sr-only">Magnolia</span>
             
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -189,25 +57,25 @@ export default function Nav() {
         
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
          
-          <a href="/" className="text-sm  leading-6 text-gray-600">
+          <Link href="/" className="text-sm  leading-6 text-gray-600">
             Strona główna
-          </a>
+          </Link>
 
-          <a href="/Centrum_uzaleznien" className="text-sm  leading-6 text-gray-600">
+          <Link href="/Centrum_uzaleznien" className="text-sm  leading-6 text-gray-600">
             Centrum uzależnień
-          </a>
+          </Link>
 
-          <a href="/Dzieci" className="text-sm  leading-6 text-gray-600">
+          <Link href="/Dzieci" className="text-sm  leading-6 text-gray-600">
             Wsparcie dla dzieci
-          </a>
+          </Link>
 
-          <a href="/Dorosli" className="text-sm  leading-6 text-gray-600">
+          <Link href="/Dorosli" className="text-sm  leading-6 text-gray-600">
             Wsparcie dla dorosłych
-          </a>
+          </Link>
 
-          <a href="/assets/oferta-PPP-Magnolia.pdf" className="text-sm  leading-6 text-gray-600">
+          <Link href="/assets/oferta-PPP-Magnolia.pdf" className="text-sm  leading-6 text-gray-600">
             Oferta
-          </a>
+          </Link>
         
 
 
@@ -237,10 +105,10 @@ export default function Nav() {
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-[#921d7f]" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <a href={item.href} className="block font-semibold text-gray-900">
+                        <Link href={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Link>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
@@ -248,14 +116,14 @@ export default function Nav() {
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                   {callsToAction.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                     >
                       <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </Popover.Panel>
@@ -264,9 +132,9 @@ export default function Nav() {
 
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/Kontakt" className="text-sm bg-white font-semibold py-2 px-5 border rounded-md  leading-6 text-gray-900">
+          <Link href="/Kontakt" className="text-sm bg-white font-semibold py-2 px-5 border rounded-md  leading-6 text-gray-900">
             Kontakt
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -275,14 +143,14 @@ export default function Nav() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Magnolia</span>
               <img
                 className="h-8 w-auto"
                 src="/assets/magnolia.png"
                 alt=""
               />
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -296,36 +164,36 @@ export default function Nav() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 
-                <a
+                <Link
                   href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 mt-5"
                 >
                   Strona główna
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/Centrum_uzaleznien"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Centrum uzależnień
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/Dzieci"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Wsparcie dla dzieci
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/Dorosli"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Wsparcie dla dorosłych
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/assets/oferta-PPP-Magnolia.pdf"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Oferta
-                </a>
+                </Link>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
@@ -353,12 +221,12 @@ export default function Nav() {
                 </Disclosure>
               </div>
               <div className="py-6">
-                <a
+                <Link
                   href="/Kontakt"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Kontakt
-                </a>
+                </Link>
               </div>
             </div>
           </div>
