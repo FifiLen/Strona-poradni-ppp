@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaArrowRight, FaRegArrowAltCircleRight } from 'react-icons/fa';
@@ -24,9 +25,9 @@ const PoradniaPsychologicznoPedagogiczna = () => {
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row md:grid-cols-2">
             {/* Obrazek */}
-            <div className="mb-4 md:mb-0">
-            <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-              <img src="/assets/psycholog1.jpg" loading='lazy' alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
+            <div className="relative mb-4 md:mb-0">
+            <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
+              <Image src="/assets/psycholog1.jpg" fill style={{objectFit: "cover"}} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw" priority={true} alt="dziecko ubierające maskę"/>
             </div>
         </div>
 
@@ -59,6 +60,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
             <div className="mb-4 md:mb-0">
             <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
               <img src="/assets/psycholog2.jpg" loading='lazy' alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
+              
             </div>
         </div>
 

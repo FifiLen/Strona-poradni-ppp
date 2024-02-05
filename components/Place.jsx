@@ -5,6 +5,9 @@ const Place = () => {
   const images = [
     { src: '/assets/room.jpg', alt: 'Image 1' },
     { src: '/assets/room2.jpg', alt: 'Image 2' },
+    { src: '/assets/room12.jpg', alt: 'Image 12' },
+    { src: '/assets/room14.jpg', alt: 'Image 14' },
+
     { src: '/assets/room3.jpg', alt: 'Image 3' },
     { src: '/assets/room10.jpg', alt: 'Image 4' },
     { src: '/assets/room11.jpg', alt: 'Image 5' },
@@ -12,6 +15,10 @@ const Place = () => {
     { src: '/assets/room8.jpg', alt: 'Image 7' },
     { src: '/assets/room9.jpg', alt: 'Image 8' },
     { src: '/assets/room4.jpg', alt: 'Image 9' },
+    
+    { src: '/assets/room13.jpg', alt: 'Image 13' },
+    
+
 
   ];
 
