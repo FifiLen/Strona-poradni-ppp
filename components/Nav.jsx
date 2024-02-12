@@ -8,7 +8,8 @@ import {
   BookOpenIcon,
   ChatBubbleBottomCenterIcon,
   GlobeAltIcon,
-  PlayIcon
+  PlayIcon,
+  BuildingOfficeIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
@@ -16,7 +17,7 @@ import Link from 'next/link'
 
 const products = [
   { name: 'Nasi Specjaliści', description: 'Dowiedz się więcej o zespole Magnolii', href: '/Kadra', icon: UserGroupIcon },
-  { name: 'Nasze gabinety', description: '', href: '/O_nas', icon: UserGroupIcon },
+  { name: 'Nasze gabinety', description: '', href: '/O_nas', icon: BuildingOfficeIcon },
   { name: 'Webinary', description: 'Zapisz się na nasze webinaria', href: '/Webinary', icon: BookOpenIcon },
   { name: 'Blog', description: 'Zajrzyj na nasz blog o E-uzależnieniach', href: 'https://magnolia-blog-eta.vercel.app', icon: ChatBubbleBottomCenterIcon },
   { name: 'Facebook', description: 'Zajrzyj na naszego Facebooka', href: 'https://www.facebook.com/poradnia.magnolia', icon: GlobeAltIcon },
@@ -72,6 +73,10 @@ export default function Nav() {
 
           <Link href="/Dorosli" className="text-sm  leading-6 text-gray-600">
             Wsparcie dla dorosłych
+          </Link>
+
+          <Link href="/terapia_vr" className="text-sm  leading-6 text-gray-600">
+            Terapia VR
           </Link>
 
           <Link href="/assets/oferta-PPP-Magnolia.pdf" className="text-sm  leading-6 text-gray-600">
@@ -189,6 +194,13 @@ export default function Nav() {
                 >
                   Wsparcie dla dorosłych
                 </Link>
+                <Link
+                  href="/terapia_vr"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Terapia VR
+                </Link>
+                
                 <Link
                   href="/assets/oferta-PPP-Magnolia.pdf"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
