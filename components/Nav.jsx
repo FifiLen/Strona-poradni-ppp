@@ -9,7 +9,8 @@ import {
   ChatBubbleBottomCenterIcon,
   GlobeAltIcon,
   PlayIcon,
-  BuildingOfficeIcon
+  BuildingOfficeIcon,
+  ShieldCheckIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
@@ -18,6 +19,7 @@ import Link from 'next/link'
 const products = [
   { name: 'Nasi Specjaliści', description: 'Dowiedz się więcej o zespole Magnolii', href: '/Kadra', icon: UserGroupIcon },
   { name: 'Nasze gabinety', description: '', href: '/O_nas', icon: BuildingOfficeIcon },
+  { name: 'Regulamin', description: '', href: '/regulamin', icon: ShieldCheckIcon },
   { name: 'Webinary', description: 'Zapisz się na nasze webinaria', href: '/Webinary', icon: BookOpenIcon },
   { name: 'Blog', description: 'Zajrzyj na nasz blog o E-uzależnieniach', href: 'https://magnolia-blog-eta.vercel.app', icon: ChatBubbleBottomCenterIcon },
   { name: 'Facebook', description: 'Zajrzyj na naszego Facebooka', href: 'https://www.facebook.com/poradnia.magnolia', icon: GlobeAltIcon },
