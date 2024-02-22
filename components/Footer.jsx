@@ -5,8 +5,8 @@ import { FaAngleRight, FaFacebookF, FaInstagram, FaPhone, FaMailBulk } from 'rea
 const Footer = () => {
   return (
     <footer className="py-16 bg-white border-t">
-      <div className="container mx-auto px-4 md:px-0 text-gray-800">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+      <div className="container mx-auto px-4 xl:px-0 text-gray-800">
+        <div className="grid grid-cols-1 xl:grid-cols-5 gap-10">
           <div className="footer-section text-center">
             <img src="/assets/magnolia.png" alt="Logo" className="w-32 h-32" />
           </div>

@@ -1,3 +1,4 @@
+import { AlertDemo } from '@components/Alert';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -23,10 +24,10 @@ const PoradniaPsychologicznoPedagogiczna = () => {
      
 
         <div className="mx-auto">
-          <div className="grid grid-cols-1 items-center flex-col md:flex-row md:grid-cols-2">
+          <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Obrazek */}
             <div className="relative mb-4 md:mb-0">
-            <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
+            <div className="relative w-[670px] h-[670px] overflow-hidden hidden lg:flex justify-center items-center rounded-r-2xl">
               <Image src="/assets/psycholog1.jpg" fill style={{objectFit: "cover"}} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw" priority={true} alt="dziecko ubierające maskę"/>
             </div>
         </div>
@@ -55,12 +56,11 @@ const PoradniaPsychologicznoPedagogiczna = () => {
      
 
         <div className="mx-auto">
-          <div className="grid grid-cols-1 items-center flex-col md:flex-row md:grid-cols-2">
+          <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Obrazek */}
             <div className="mb-4 md:mb-0">
-            <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-              <img src="/assets/psycholog2.jpg" loading='lazy' alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
-              
+            <div className="relative w-[670px] h-[670px] overflow-hidden hidden lg:flex justify-center items-center rounded-r-2xl">
+              <Image src="/assets/psycholog2.jpg" fill style={{objectFit: "cover"}} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw" priority={false} alt="dziecko ubierające maskę"/>
             </div>
         </div>
 
@@ -87,11 +87,11 @@ const PoradniaPsychologicznoPedagogiczna = () => {
      
 
         <div className="mx-auto">
-          <div className="grid grid-cols-1 items-center flex-col md:flex-row md:grid-cols-2">
+          <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Obrazek */}
             <div className="mb-4 md:mb-0">
-            <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-              <img src="/assets/psycholog3.jpg" loading='lazy' alt="dziecko ubierające maskę" className='w-full h-full object-cover'/>
+            <div className="relative w-[670px] h-[670px] overflow-hidden hidden lg:flex justify-center items-center rounded-r-2xl">
+              <Image src="/assets/psycholog3.jpg" fill style={{objectFit: "cover"}} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw" priority={false} alt="dziecko ubierające maskę"/>
             </div>
         </div>
 
@@ -113,7 +113,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
 
 </section>
 
-
+<AlertDemo />
 
 </div>
 );

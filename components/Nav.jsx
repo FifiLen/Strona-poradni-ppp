@@ -18,7 +18,7 @@ import Link from 'next/link'
 
 const products = [
   { name: 'Nasi Specjaliści', description: 'Dowiedz się więcej o zespole Magnolii', href: '/Kadra', icon: UserGroupIcon },
-  { name: 'Nasze gabinety', description: '', href: '/O_nas', icon: BuildingOfficeIcon },
+  { name: 'Nasze miejsce', description: '', href: '/O_nas', icon: BuildingOfficeIcon },
   { name: 'Regulamin', description: '', href: '/regulamin', icon: ShieldCheckIcon },
   { name: 'Webinary', description: 'Zapisz się na nasze webinaria', href: '/Webinary', icon: BookOpenIcon },
   { name: 'Blog', description: 'Zajrzyj na nasz blog o E-uzależnieniach', href: 'https://magnolia-blog-eta.vercel.app', icon: ChatBubbleBottomCenterIcon },
@@ -40,7 +40,7 @@ export default function Nav() {
   return (
     <header className="bg-white/90 border-b border-gray-300">
       <nav className="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
+        <div className="flex xl:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex justify-start items-center gap-3">
           <img className="h-10 w-auto" src="/assets/magnolia.png" alt="" />
             <span className=' font-semibold text-gray-900 hover:text-[#921d7f] transition-all duration-300'>Magnolia</span>

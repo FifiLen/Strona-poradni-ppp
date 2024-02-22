@@ -4,8 +4,8 @@ import Nav from '@components/Nav';
 import Footer from '@components/Footer';
 
 import { Suspense } from 'react';
-import WebinarButton from '@components/Webinar';
 import Loading from './loading';
+import { GoogleTagManager } from '@next/third-parties/google'
 
 
 export const metadata = {
@@ -18,14 +18,10 @@ const Rootlayout = ({children}) => {
   return (
     <html lang='en'>
         <body className='bg-white overflow-x-hidden'>
-            <div className='main'>
-
-            </div>
 
             <main className='app'>
               <Nav />
               <Suspense fallback={<Loading />}>
-             {/* <WebinarButton /> */} 
             {children}
             </Suspense>
             <Analytics />
@@ -34,6 +30,7 @@ const Rootlayout = ({children}) => {
             </main>
             
         </body>
+        <GoogleTagManager gtmId="G-0QW3ZG23F5" />
         
     </html>
   )
