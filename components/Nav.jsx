@@ -39,9 +39,9 @@ export default function Nav() {
 
   return (
     <header className="bg-white/90 border-b border-gray-300">
-      <nav className="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex xl:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex justify-start items-center gap-3">
+      <nav className="mx-auto flex w-full items-center justify-between p-6 lg:px-5" aria-label="Global">
+        <div className="flex">
+          <Link href="/" className="-m-1.5 p-1.5 flex justify-start items-center gap-2">
           <img className="h-10 w-auto" src="/assets/magnolia.png" alt="" />
             <span className=' font-semibold text-gray-900 hover:text-[#921d7f] transition-all duration-300'>Magnolia</span>
             <span className="sr-only">Magnolia</span>
@@ -139,11 +139,14 @@ export default function Nav() {
           </Popover>
 
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex gap-2 lg:justify-end">
+          
           <Link href="/Kontakt" className="text-sm bg-white font-semibold py-2 px-5 border rounded-md  leading-6 text-gray-900">
             Kontakt
           </Link>
+          
         </div>
+        
       </nav>
 
 
@@ -243,6 +246,7 @@ export default function Nav() {
                   Kontakt
                 </Link>
               </div>
+              
             </div>
           </div>
         </Dialog.Panel>
