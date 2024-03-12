@@ -12,7 +12,7 @@ export default function Page({ params }) {
   }
 
   return (
-    <div className=" my-10 mx-auto max-w-6xl px-4 py-8">
+    <div className=" my-10 mx-auto max-w-7xl px-4 py-8">
       <Link href={"/Jak_pracujemy"}>
       <div className=" p-2 border border-black w-32 text-black flex justify-center items-center rounded-md font-semibold mb-4">Powrót →</div>
       </Link>

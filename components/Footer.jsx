@@ -5,7 +5,7 @@ import { FaAngleRight, FaFacebookF, FaInstagram, FaPhone, FaMailBulk } from 'rea
 const Footer = () => {
   return (
     <><footer className="py-16 bg-white border-t">
-      <div className="container mx-auto px-4 xl:px-0 text-gray-800">
+      <div className="max-w-7xl mx-auto px-4 xl:px-0 text-gray-800">
         <div className="grid grid-cols-1 xl:grid-cols-5 gap-10">
           <div className="footer-section text-center">
             <img src="/assets/magnolia.png" alt="Logo" className="w-32 h-32" />
@@ -98,6 +98,13 @@ const Footer = () => {
           <span className="underline text-yellow-600">Centrum Wsparcia dla Osób Dorosłych w Kryzysie Psychicznym: 800 702 222</span>
         </span>
       </li>
+      <li className='mb-2 p-4 border rounded-lg w-fit bg-yellow-100/30'>
+        <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <FaPhone className="text-yellow-600" />
+          <span className="underline text-yellow-600">Niebieska Linia: 800120002</span>
+        </span>
+      </li>
+      
       <li className='mb-2 p-4 border rounded-lg w-fit bg-green-100/30'>
        <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
           <FaPhone className="text-green-600" />
@@ -108,24 +115,6 @@ const Footer = () => {
         <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
           <FaPhone className="text-yellow-600" />
           <span className="underline text-yellow-600">Telefon zaufania dla dzieci i młodzieży: 116 111</span>
-        </span>
-      </li>
-      <li className='mb-2 p-4 border rounded-lg w-fit bg-green-100/30'>
-        <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
-          <FaPhone className="text-green-600" />
-          <span className="underline text-green-600">Telefon dla rodziców i nauczycieli w sprawie bezpieczeństwa dzieci: 8001001</span>
-        </span>
-      </li>
-      <li className='mb-2 p-4 border rounded-lg w-fit bg-yellow-100/30'>
-        <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
-          <FaPhone className="text-yellow-600" />
-          <span className="underline text-yellow-600">Niebieska Linia: 800120002</span>
-        </span>
-      </li>
-      <li className='mb-2 p-4 border rounded-lg w-fit bg-green-100/30'>
-        <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
-          <FaPhone className="text-green-600" />
-          <span className="underline text-green-600">Policyjny telefon zaufania ds. przeciwdziałania przemocy w rodzinie: 800 120 226</span>
         </span>
       </li>
       <li className='mb-2 p-4 border rounded-lg w-fit bg-yellow-100/30'>
@@ -140,6 +129,20 @@ const Footer = () => {
           <span className="underline text-green-600">Numer alarmowy w sytuacji zagrożenia życia i zdrowia: 112</span>
         </span>
       </li>
+      <li className='mb-2 p-4 border rounded-lg w-fit bg-green-100/30'>
+        <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <FaPhone className="text-green-600" />
+          <span className="underline text-green-600">Telefon dla rodziców i nauczycieli w sprawie bezpieczeństwa dzieci: 8001001</span>
+        </span>
+      </li>
+      
+      <li className='mb-2 p-4 border rounded-lg w-fit bg-green-100/30'>
+        <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <FaPhone className="text-green-600" />
+          <span className="underline text-green-600">Policyjny telefon zaufania ds. przeciwdziałania przemocy w rodzinie: 800 120 226</span>
+        </span>
+      </li>
+      
     </ul>
   </div>
   
