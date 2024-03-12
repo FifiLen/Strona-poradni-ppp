@@ -81,7 +81,7 @@ export default function Nav() {
             Terapia VR
           </Link>
 
-          <Link href="/assets/oferta-PPP-Magnoliaa.pdf" className="text-sm  leading-6 text-gray-600">
+          <Link href="/assets/oferta-PPP-Magnolia.pdf" className="text-sm  leading-6 text-gray-600">
             Oferta
           </Link>
         
