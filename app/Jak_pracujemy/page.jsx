@@ -25,7 +25,7 @@ const Program = () => {
               {/* Obrazek */}
               <div className="relative mb-4 md:mb-0">
                 <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-                  <Image src="/assets/image1.png" fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw" priority={true} alt="dziecko ubierające maskę" />
+                  <Image src={`${project.gridImages[0]}`} fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw" priority={true} alt="dziecko ubierające maskę" />
                 </div>
               </div>
 

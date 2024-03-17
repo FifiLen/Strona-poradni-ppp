@@ -52,7 +52,7 @@ const projects = [
 
     gridImages: [
       "/assets/image1.png",
-      "/assets/image1.png",
+      "/assets/image2.png",
       "/assets/image1.png"
     ],
 
@@ -153,7 +153,7 @@ Jeśli szukasz zabawki stymulującej zmysły i wspierającej prawidłowy rozwój
     ],
 
     gridImages: [
-      "/assets/image1.png",
+      "/assets/dyski1.png",
       "/assets/image1.png",
       "/assets/image1.png"
     ],
@@ -164,6 +164,210 @@ Jeśli szukasz zabawki stymulującej zmysły i wspierającej prawidłowy rozwój
       "/assets/image1.png"
     ]
   },
+
+
+
+  {
+    id: 3,
+    name: "Sensoryczne Piłeczki",
+    descriptionAkapit: [
+      {
+        content: 'Piłeczki sensoryczne to niezwykle wszechstronny i kreatywny sposób na rozwój dziecka. Dzięki nim maluchy mogą rozwijać wiele zmysłów jednocześnie, co ma ogromny wpływ na ich rozwój emocjonalny, społeczny i poznawczy. Zabawki te są doskonałym narzędziem wspierającym terapię sensoryczną oraz integrującym dzieci z różnymi potrzebami. Dzięki nim dzieci uczą się eksplorować, odkrywać nowe tekstury, kolory i kształty, co rozwija ich zdolności poznawcze i motoryczne.',
+      },
+      {
+        content: 'Piłeczki sensoryczne to nie tylko świetna zabawa, ale także narzędzie wspomagające rozwój dziecka we wszystkich obszarach jego życia.'
+      }
+    ],
+    description: `
+      Piłeczki sensoryczne to niezwykle wszechstronny i kreatywny sposób na rozwój dziecka. Dzięki nim maluchy mogą rozwijać wiele zmysłów jednocześnie, co ma ogromny wpływ na ich rozwój emocjonalny, społeczny i poznawczy. Zabawki te są doskonałym narzędziem wspierającym terapię sensoryczną oraz integrującym dzieci z różnymi potrzebami. Dzięki nim dzieci uczą się eksplorować, odkrywać nowe tekstury, kolory i kształty, co rozwija ich zdolności poznawcze i motoryczne.
+    `,
+    age: "+6 miesięcy",
+    components: [
+      "Piłeczki o różnych kształtach, kolorach i fakturach"
+    ],
+    features: [
+      "Wspomaganie rozwoju sensorycznego: dzieci uczą się rozpoznawać różne tekstury, kolory i kształty, co stymuluje ich zmysły dotyku, wzroku i węchu.",
+      "Rozwój motoryki małej: dziecko może chwytać, rzucać i bawić się piłeczkami, co wzmacnia precyzję ruchów rąk.",
+      "Integracja sensoryczna: piłeczki są doskonałym narzędziem wspierającym terapię sensoryczną, pomagają integrować dzieci z różnymi potrzebami."
+    ],
+    additionalDescription: [
+      {
+        title: "Stymulacja poznawcza",
+        content: "Poprzez manipulację różnymi piłeczkami dzieci rozwijają umiejętności poznawcze, takie jak rozróżnianie kształtów, rozwiązywanie problemów i rozwijanie zdolności logicznego myślenia."
+      },
+      {
+        title: "Rozwój językowy",
+        content: "Zabawy z piłeczkami sensorycznymi mogą być świetną okazją do budowania słownictwa i komunikacji. Dzieci mogą opisywać tekstury, kolory i kształty, co wspomaga rozwój mowy."
+      },
+      {
+        title: "Kreatywność i wyobraźnia",
+        content: "Dzięki różnorodności kształtów i faktur piłeczek dzieci mają możliwość eksperymentowania i tworzenia własnych zabaw. To doskonała stymulacja dla kreatywności i wyobraźni."
+      },
+      {
+        title: "Rozwój społeczny",
+        content: "Zabawa z piłeczkami sensorycznymi może być również świetną okazją do interakcji społecznej. Dzieci mogą wspólnie odkrywać i dzielić się z innymi swoimi doświadczeniami sensorycznymi."
+    },
+    {
+        title: "Zabawy grupowe",
+        content: "Organizowanie zabaw z piłeczkami sensorycznymi w grupie może rozwijać umiejętności współpracy, dzielenia się i rozwiązywania konfliktów między dziećmi, co jest istotne dla budowania zdrowych relacji społecznych."
+    },
+    {
+        title: "Zachęta do eksploracji",
+        content: "Piłeczki sensoryczne mogą być zachętą dla dzieci do eksploracji świata wokół nich. Dzięki nim maluchy uczą się być ciekawskie i dociekliwe, co wspomaga rozwój ich aktywności poznawczej."
+      }
+    ],
+
+    gridImages: [
+      "/assets/piłki1.png",
+      "/assets/sensory_ball_2.png",
+      "/assets/sensory_ball_3.png"
+    ],
+
+    gridImages2: [
+      "/assets/sensory_ball_1.png",
+      "/assets/sensory_ball_1.png",
+      "/assets/sensory_ball_1.png"
+    ]
+  },
+
+
+
+  {
+    id: 4,
+    name: "Wieża Edukacyjna Montessori",
+    descriptionAkapit: [
+      {
+        content: 'Wieża edukacyjna Montessori to niezwykle użyteczne narzędzie wspierające rozwój motoryczny i poznawczy dziecka. Inspirując się metodą Montessori, wieża ta umożliwia małym dzieciom samodzielne wykonywanie codziennych czynności, takich jak mycie rąk, mycie zębów czy gotowanie pod nadzorem dorosłych. Dzięki niej maluchy uczą się niezależności, samodzielności oraz rozwijają swoje umiejętności praktyczne.'
+      },
+      {
+        content: 'Wieża Montessori jest wykonana z solidnego drewna, co gwarantuje jej stabilność i bezpieczeństwo użytkowania. Dzięki regulowanej wysokości, może być dopasowana do wzrostu dziecka, co pozwala mu na bezpieczne korzystanie z niej przez wiele lat.'
+      },
+      {
+        content: 'To nie tylko mebel, ale także narzędzie edukacyjne, które wspiera rozwój dziecka na wielu płaszczyznach. Wieża Montessori to doskonały wybór dla rodziców poszukujących praktycznych rozwiązań wspierających samodzielność i rozwój swojego dziecka.'
+      }
+    ],
+    description: `
+      Wieża edukacyjna Montessori to niezwykle użyteczne narzędzie wspierające rozwój motoryczny i poznawczy dziecka. Inspirując się metodą Montessori, wieża ta umożliwia małym dzieciom samodzielne wykonywanie codziennych czynności, takich jak mycie rąk, mycie zębów czy gotowanie pod nadzorem dorosłych. Dzięki niej maluchy uczą się niezależności, samodzielności oraz rozwijają swoje umiejętności praktyczne.
+    `,
+    age: "Od około 18 miesięcy",
+    components: [
+      "Solidne drewno",
+      "Regulowana wysokość"
+    ],
+    features: [
+      "Rozwój motoryki małej: dzieci uczą się wspinać i zstępować z wieży, co wzmacnia ich mięśnie i rozwija umiejętności równowagi.",
+      "Samodzielność i niezależność: dzieci mogą wykonywać codzienne czynności, takie jak mycie rąk czy zębów, samodzielnie, podczas gdy są na odpowiedniej wysokości.",
+      "Bezpieczeństwo i stabilność: solidna konstrukcja z drewna zapewnia bezpieczeństwo użytkowania, a regulowana wysokość pozwala dopasować wieżę do wzrostu dziecka."
+    ],
+    additionalDescription: [
+      
+      {
+        title: "Rozwój umiejętności życiowych",
+        content: "Dzięki Wieży Montessori dzieci uczą się wykonywać codzienne czynności życiowe w sposób samodzielny i odpowiedzialny, co ma istotny wpływ na ich rozwój jako jednostki społecznej."
+      },
+      {
+        title: "Kształtowanie samodyscypliny",
+        content: "Korzystanie z Wieży Montessori wymaga pewnej dyscypliny i koncentracji, co pomaga kształtować u dziecka umiejętność samokontroli i samodyscypliny."
+      },
+      {
+        title: "Rozwój społeczny",
+        content: "Wspólne wykonywanie czynności codziennych z pomocą Wieży Montessori może być świetną okazją do budowania relacji między dzieckiem a opiekunem oraz do nauki współpracy i dzielenia się zadaniami."
+      },
+      {
+        title: "Rozwijanie koncentracji",
+        content: "Wykonywanie czynności na Wieży Montessori wymaga skupienia i koncentracji, co jest doskonałym treningiem dla umiejętności skupiania uwagi i wytrwałości u dziecka."
+      },
+      {
+        title: "Kreatywne eksplorowanie świata",
+        content: "Dzieci mogą wykorzystywać Wieżę Montessori nie tylko do codziennych czynności, ale także do eksplorowania świata wokół nich w kreatywny sposób, co wspomaga ich rozwój poznawczy i kreatywność."
+      },
+      {
+        title: "Rozwijanie poczucia odpowiedzialności",
+        content: "Samodzielne wykonywanie czynności za pomocą Wieży Montessori uczy dzieci odpowiedzialności za swoje działania oraz za opiekę nad swoim otoczeniem."
+      }
+    ],
+
+    gridImages: [
+      "/assets/subhero3.jpg",
+      "/assets/montessori_tower_2.png",
+      "/assets/montessori_tower_3.png"
+    ],
+
+    gridImages2: [
+      "/assets/montessori_tower_1.png",
+      "/assets/montessori_tower_1.png",
+      "/assets/montessori_tower_1.png"
+    ]
+  },
+
+
+
+  {
+    id: 5,
+    name: "Chusta Klanza Animacyjna",
+    descriptionAkapit: [
+      {
+        content: 'Chusta Klanza Animacyjna to innowacyjne narzędzie edukacyjne, które inspiruje do twórczej zabawy i ruchu. Ta wielobarwna, dynamiczna chusta staje się magiczną przestrzenią, w której dzieci mogą eksplorować ruch, kolory i tekstury.'
+      },
+      {
+        content: 'Wykonana z najwyższej jakości materiałów, chusta Klanza Animacyjna jest nie tylko trwała, ale także bezpieczna dla dzieci. Jej różnorodność kształtów i kolorów pobudza wyobraźnię i zachęca do odkrywania nowych możliwości ruchowych.'
+      },
+      {
+        content: 'Chusta Klanza Animacyjna to nie tylko zabawka, ale interaktywne narzędzie wspierające rozwój motoryczny, poznawczy i emocjonalny dziecka. To idealny sposób na rozwijanie kreatywności i wyobraźni poprzez ruch.'
+      }
+    ],
+    description: `
+      Chusta Klanza Animacyjna to innowacyjne narzędzie edukacyjne, które inspiruje do twórczej zabawy i ruchu. Ta wielobarwna, dynamiczna chusta staje się magiczną przestrzenią, w której dzieci mogą eksplorować ruch, kolory i tekstury.
+    `,
+    age: "Dla dzieci w wieku przedszkolnym i szkolnym",
+    components: [
+      "Wysokiej jakości materiały",
+      "Wielobarwne i dynamiczne wzory"
+    ],
+    features: [
+      "Rozwój motoryki i koordynacji: różnorodność kształtów i kolorów zachęca dzieci do aktywności ruchowej, wspierając rozwój motoryczny i koordynację.",
+      "Stymulacja sensoryczna: chusta pobudza zmysły dziecka poprzez interakcję z różnorodnymi teksturami i wzorami, co sprzyja rozwojowi poznawczemu i emocjonalnemu.",
+      "Kreatywna zabawa: dziecko może eksperymentować z różnymi sposobami korzystania z chusty, co rozwija jego kreatywność i wyobraźnię."
+    ],
+    additionalDescription: [
+      {
+        title: "Wspieranie kreatywności",
+        content: "Chusta Klanza Animacyjna inspiruje dzieci do twórczej zabawy i eksploracji, rozwijając ich kreatywność i wyobraźnię poprzez interakcję z różnorodnymi wzorami i kolorami."
+      },
+      {
+        title: "Stymulacja sensoryczna",
+        content: "Dzięki różnorodnym teksturom i wzorom, chusta Klanza Animacyjna stymuluje zmysły dziecka, wspierając rozwój poznawczy i emocjonalny poprzez interakcję z różnymi bodźcami sensorycznymi."
+      },
+      {
+        title: "Edukacyjna zabawa",
+        content: "Chusta Klanza Animacyjna to nie tylko zabawka, ale również interaktywne narzędzie edukacyjne, które wspiera rozwój motoryczny, poznawczy i emocjonalny dziecka poprzez kreatywną zabawę i eksplorację."
+      },
+      {
+        title: "Bezpieczeństwo i trwałość",
+        content: "Wykonana z wysokiej jakości materiałów, chusta Klanza Animacyjna jest trwała i bezpieczna dla dzieci, zapewniając długotrwałą i satysfakcjonującą zabawę."
+      },
+      {
+        title: "Interaktywna zabawa",
+        content: "Dzięki swojej dynamicznej naturze, chusta Klanza Animacyjna zachęca dzieci do interakcji i wspólnego eksplorowania możliwości ruchowych i sensorycznych, sprzyjając integracji społecznej i budowaniu relacji."
+      },
+      {
+        title: "Rozwój umiejętności społecznych",
+        content: "Zabawa z chustą Klanza Encourage jest również doskonałą okazją do nauki współpracy, dzielenia się i komunikacji między dziećmi, co sprzyja rozwojowi umiejętności społecznych i budowaniu relacji z rówieśnikami."
+      }
+    ],
+
+    gridImages: [
+      "/assets/chusta1.png",
+      "/assets/klanza_scarf_2.png",
+      "/assets/klanza_scarf_3.png"
+    ],
+
+    gridImages2: [
+      "/assets/klanza_scarf_1.png",
+      "/assets/klanza_scarf_1.png",
+      "/assets/klanza_scarf_1.png"
+    ]
+  }
   // Dodaj kolejne projekty według potrzeb
 ];
 export default projects;

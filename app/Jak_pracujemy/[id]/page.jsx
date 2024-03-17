@@ -24,11 +24,11 @@ export default function Page({ params }) {
           </div>
         ))}
       <p className="text-pink-700 text-xl font-semibold mb-12">Wiek: {project.age}</p>
-      <div className="grid grid-cols-3 gap-6">
+      {/* <div className="grid grid-cols-3 gap-6">
         {project.gridImages.map((image, index) => (
           <img key={index} src={image} alt={`Image ${index + 1}`} className="w-full h-auto rounded-md" />
         ))}
-      </div>
+      </div> */}
       <div className="mb-8 mt-20">
       <h3 className=" text-3xl text-pink-700 font-semibold mb-4">Dla czego warto?</h3>
 
@@ -53,11 +53,11 @@ export default function Page({ params }) {
         
       </div>
 
-      <div className="grid grid-cols-3 gap-6">
+      {/* <div className="grid grid-cols-3 gap-6">
         {project.gridImages.map((image, index) => (
           <img key={index} src={image} alt={`Image ${index + 1}`} className="w-full h-auto rounded-md" />
         ))}
-      </div>
+      </div> */}
 
     </div>
   );
