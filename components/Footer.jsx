@@ -95,7 +95,7 @@ const Footer = () => {
       <li className='mb-2 p-4 border rounded-lg w-fit bg-yellow-100/30'>
         <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
           <FaPhone className="text-yellow-600" />
-          <span className="underline text-yellow-600">Centrum Wsparcia dla Osób Dorosłych w Kryzysie Psychicznym: 800 702 222</span>
+          <span className="underline text-yellow-600">Centrum wsparcia dla osób dorosłych w kryzysie psychicznym: 800 702 222</span>
         </span>
       </li>
       <li className='mb-2 p-4 border rounded-lg w-fit bg-yellow-100/30'>

@@ -11,7 +11,7 @@ const staffData = [
     specialty: 'Pedagog',
     description: (
      <p>Magister pedagogiki specjalizujący się w&nbsp; poradnictwie i&nbsp;pomocy psychopedagogicznej. Jako aktywny pedagog specjalny, terapeuta ręki, specjalista w&nbsp; edukacji włączającej i&nbsp;wykładowca, posiada bogate doświadczenie, przekazując swoją wiedzę zarówno uczniom, jak i&nbsp;nauczycielom w&nbsp; różnych instytucjach edukacyjnych. Specjalista ORE w&nbsp; zakresie edukacji włączającej.</p> ),
-    imageUrl: '/assets/Test.png',
+    imageUrl: '/assets/magnolia.png',
   },
   {
     id: 5,
@@ -20,7 +20,7 @@ const staffData = [
     description: (<p>
     Magister psychologii, specjalizujący się w&nbsp;seksuologii klinicznej i&nbsp;psychologii kryminologicznej. Wykładowca studiów podyplomowych z&nbsp;obszaru pedagogiki specjalnej, seksuologii, seksuologii klinicznej. Terapeuta dzieci, par, rodzin. Aktywnie angażuje się w&nbsp;pracę na&nbsp;rzecz dzieci w&nbsp;szkołach i&nbsp;przedszkolach. Specjalista ORE w&nbsp;zakresie edukacji włączającej.
     </p>),
-    imageUrl: '/assets/T5.png',
+    imageUrl: '/assets/magnolia.png',
   },
   {
     id: 10,
@@ -29,7 +29,7 @@ const staffData = [
     description: (<p>
 Magister psychologii z&nbsp;zakresu neuropsychologii i&nbsp;psychologii klinicznej. Specjalista w&nbsp;zintegrowanej edukacji wczesnoszkolnej, edukacji informatycznej oraz edukacji i&nbsp;rehabilitacji osób z&nbsp;niepełnosprawnością intelektualną. Terapeuta WWRD i&nbsp;hipoterapii. Specjalista w&nbsp;zakresie komunikacji alternatywnej i&nbsp;wspomagającej oraz diagnozy alternatywnych i&nbsp;wspomagających metod porozumiewania się.
     </p>),
-    imageUrl: '/assets/T11.png',
+    imageUrl: '/assets/magnolia.png',
   },
   {
     id: 12,
@@ -38,7 +38,7 @@ Magister psychologii z&nbsp;zakresu neuropsychologii i&nbsp;psychologii kliniczn
     description: (<p>
 Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i&nbsp;rodzin. Specjalista psychoterapii w&nbsp;Ośrodku Interwencji Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic i&nbsp;na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony na&nbsp;pracy z&nbsp;całymi rodzinami i&nbsp;osobami pełnoletnimi.
     </p>),
-    imageUrl: '/assets/T13.png',
+    imageUrl: '/assets/magnolia.png',
   },
   {
     id: 13,
@@ -47,7 +47,7 @@ Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par i&nbsp;rodzin. 
     description: (<p>
 Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej i&nbsp;Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener nowoczesnego doradztwa zawodowego i&nbsp;edukacyjnego. Teraputa z&nbsp;zakresu psychoterapii par, EFT - terapii skoncentrowanej na&nbsp;emocjach, pracy z&nbsp;dziećmi i&nbsp;młodzieżą. Specjalista edukacji włączającej. Wykładowca studiów podyplomowych z&nbsp;zakresu swoich specjalizacji.
     </p>),
-    imageUrl: '/assets/T15.png',
+    imageUrl: '/assets/magnolia.png',
   },
   
   {
@@ -57,7 +57,7 @@ Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Tow
     description: (<p>
       Magister pedagogiki specjalność: edukacja przedszkolna i&nbsp;wczesnoszkolna, oligofrenopedagogika, edukacja elementarna z&nbsp;dodatkowym językiem angielskim, czynny pedagog specjalny w&nbsp;szkole podstawowej, specjalista ORE w&nbsp;zakresie edukacji włączającej, trener treningu umiejętności społecznych (TUS) dzieci ze&nbsp;spektrum autyzmu, edukacja i&nbsp;terapia osób ze&nbsp;spektrum autyzmu. Wykładowca studiów podyplomowych z&nbsp;zakresu pedagogiki specjalnej.
     </p>),
-    imageUrl: '/assets/T2.png',
+    imageUrl: '/assets/magnolia.png',
   },
   
   {
@@ -67,7 +67,7 @@ Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Tow
     description:(<p>
       Magister pedagogiki – specjalność: opiekuńczo – wychowawczej, oligofrenopedagog, specjalista ORE w&nbsp;zakresie edukacji włączającej, czynny pedagog specjalny. Wykładowca na&nbsp;kierunkach pedagogiki specjalnej na&nbsp;studiach podyplomowych.
     </p>),
-    imageUrl: '/assets/T9.png',
+    imageUrl: '/assets/magnolia.png',
   },
   
   {
@@ -77,7 +77,7 @@ Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Tow
     description: (<p>
       Magister języka polskiego, specjalista z&nbsp;zakresu terapii pedagogicznej, diagnozy i&nbsp;profilaktyki społecznej. Terapeuta z&nbsp;obszaru diagnozy dysleksji rozwojowej, egzaminator OKE, nauczyciel języka polskiego jako obcego,  prezes Oddziału Towarzystwo Dysleksji w&nbsp;Rybniku. Doradca i&nbsp;autor publikacji dla IBE- Instytut Badań Edukacyjnych. Pracuje z&nbsp;uczniami uzdolnionymi (przygotowanie do&nbsp;egzaminów/olimpiad).
         </p>),
-    imageUrl: '/assets/T3.png'    
+    imageUrl: '/assets/magnolia.png',  
   },
   {
     id: 7,
@@ -86,7 +86,7 @@ Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Tow
     description: (<p>
       Doktor filozofii. Wykładowca na&nbsp;kierunkach: etyka oraz filozofia. Czynny nauczyciel etyki i&nbsp;filozofii w&nbsp;szkole podstawowej i&nbsp;ponadpodstawowej. Trener pracujący z&nbsp;ucznem uzdolnionym - przygotowanie do&nbsp;certyfikatów z&nbsp;języka niemieckiego. Specjalista z&nbsp;zakresu  wiedzy o&nbsp;młodym człowieku. Autor scenariuszy zajęć do&nbsp;etyki na&nbsp;wszystkich poziomach kształcenia. Specjalista ORE w&nbsp;zakresie edukacji włączającej.
     </p>),
-    imageUrl: '/assets/T4.png',
+    imageUrl: '/assets/magnolia.png',
   },
   {
     id: 8,
@@ -95,7 +95,7 @@ Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta Polskiego Tow
     description: (<p>
 Magister języka angielskiego, magister historii, trener i&nbsp;moderator TIK, MIEE Educator, trener dla zagranicznych narodowych agencji Erasmus, prelegent konferencji i&nbsp;szkoleń międzynarodowych oraz ogólnopolskich. Specjalista ORE w&nbsp;zakresie edukacji włączającej. Trener TIK w&nbsp;tym wykorzystania nowych technologii w&nbsp;pracy z&nbsp;uczniami ze&nbsp;SPE. Wykładowca studiów podyplomowych z&nbsp;zakresu zarządzania oświatą, historii oraz języka angielskiego.
     </p>),
-    imageUrl: '/assets/T6.png',
+    imageUrl: '/assets/magnolia.png',
   },
   {
     id: 9,
@@ -104,7 +104,7 @@ Magister języka angielskiego, magister historii, trener i&nbsp;moderator TIK, M
     description: (<p>
 Doktor nauk społecznych z&nbsp;dziedziny pedagogiki i&nbsp;socjologii.  Doradca zawodowy oraz specjalista z&nbsp;zakresu prawa ochrony środowiska i&nbsp;edukacji ekologicznej. Specjalista ORE z&nbsp;zakresu edukacji włączającej. Trener TIK. Specjalista programów do&nbsp;interaktywnej&nbsp;edukacji. Wykładowca akademicki na&nbsp;uczelniach o&nbsp;profilu przyrodniczym, autorka wielu publikacji naukowych i&nbsp;po-konferencyjnych. Ekspert edukacji ekologicznej.
       </p>),
-    imageUrl: '/assets/T8.png',
+    imageUrl: '/assets/magnolia.png',
   },
   
   
@@ -115,7 +115,7 @@ Doktor nauk społecznych z&nbsp;dziedziny pedagogiki i&nbsp;socjologii.  Doradca
     description: (<p>
 Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, trener języka polskiego jako obcego, czynny nauczyciel w&nbsp;szkole podstawowej i&nbsp;ponadpodstawowej, terapeuta sesji logopedycznych. Trener z&nbsp;obszaru edukacji włączającej. Wykładowca na&nbsp;studiach podyplomowych.
     </p>) ,
-    imageUrl: '/assets/T12.png',
+    imageUrl: '/assets/magnolia.png',
   },
   
   
@@ -133,7 +133,7 @@ Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, 
         potrzebujących pomocy w rozumieniu zawiłości świata matematycznego.
       </p>
     ),
-    imageUrl: '/assets/T16.png',
+    imageUrl: '/assets/magnolia.png',
   },
   
   {
@@ -143,22 +143,9 @@ Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, 
     description: (<p>
 Magister pedagogiki, specjalizuje się w&nbsp;pracy socjalnej oraz opiekuńczo-wychowawczej. Wieloletni terapeuta uzależnień, biegła sądowa w&nbsp;sprawach alkoholizmu, pracowała w&nbsp;czołowych placówkach zdrowia psychicznego. Specjalizuje się we&nbsp;wszystkich formach uzależnień. Wykładowca studiów podyplomowych oraz licencjackich od&nbsp;2008r. Specjalista ORE w&nbsp;zakresie edukacji włączającej.
     </p>) ,
-    imageUrl: '/assets/woman.png',
+    imageUrl: '/assets/magnolia.png',
   },
   
-  {
-    id: 16,
-    name: 'Michalina Dzumek',
-    specialty: 'Pedagog',
-    description: (<p>
-      Magister pedagogiki specjalizujący się budowaniu zasobów ochronnych oraz&nbsp;redukowaniu czynników zagrażających prawidłowemu rozwojowi rodziny, dzieci i&nbsp;młodzieży &nbsp; (w sytuacji rozwodu, choroby, niepełnosprawności, kryzysu, uzależnienia lub śmierci).&nbsp;
-      Na co dzień pedagog szkolny pracujący&nbsp;z uczniem doświadczającym trudności w&nbsp;czytaniu, pisaniu, ortografii i&nbsp;operacjach matematycznych oraz&nbsp; trudnością w&nbsp; zakresie regulacji emocji. 
-
-      Superwizor rodzinny, terapeuta pedagogiczny, trener umiejętności społecznych. 
-      Praktyk podejścia skoncentrowanego na&nbsp; rozwiązaniu (Solution-Focused Approach – SFA)
-    </p>) ,
-    imageUrl: '/assets/woman.png',
-  },
   
   
 ];
@@ -198,7 +185,7 @@ const DoctorCards = () => {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
         {staffData.map((person, index) => (
-          <div key={index} className="bg-white border border-gray-400 rounded-xl p-6 flex flex-col items-center space-y-4">
+          <div key={index} className="bg-white border-gray-400 border-[0.5px] rounded-xl p-6 flex flex-col items-center space-y-4">
             <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 overflow-hidden rounded-full">
               <img src={person.imageUrl} alt={person.name} className="w-full h-full object-cover" />
             </div>

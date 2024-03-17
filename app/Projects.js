@@ -304,20 +304,15 @@ Jeśli szukasz zabawki stymulującej zmysły i wspierającej prawidłowy rozwój
 
   {
     id: 5,
-    name: "Chusta Klanza Animacyjna",
+    name: "Chusta animacyjna",
     descriptionAkapit: [
       {
-        content: 'Chusta Klanza Animacyjna to innowacyjne narzędzie edukacyjne, które inspiruje do twórczej zabawy i ruchu. Ta wielobarwna, dynamiczna chusta staje się magiczną przestrzenią, w której dzieci mogą eksplorować ruch, kolory i tekstury.'
+        content: 'Chusta animacyjna, to narzędzie edukacyjne, które inspiruje do twórczej zabawy oraz ruchu.  Umożliwia bezpieczną zabawę w każdych warunkach, integrację grupy bez względu na wiek uczestników, pobudzanie wyobraźni, możliwość ćwiczenia refleksu, zwinności i spostrzegawczości.  Idealnie sprawdza się w zabawach dynamicznych i statycznych, czerpanie radości płynącej z ruchu i przebywania w grupie. Nie ma znaczenia czy jesteś wewnątrz pomieszczenia, czy na łące, plaży, leśnej polanie - zabawa gwarantowana i co ważne, możesz nie tylko integrować się ale również przekazywać w zabawny sposób treści edukacyjne.'
       },
-      {
-        content: 'Wykonana z najwyższej jakości materiałów, chusta Klanza Animacyjna jest nie tylko trwała, ale także bezpieczna dla dzieci. Jej różnorodność kształtów i kolorów pobudza wyobraźnię i zachęca do odkrywania nowych możliwości ruchowych.'
-      },
-      {
-        content: 'Chusta Klanza Animacyjna to nie tylko zabawka, ale interaktywne narzędzie wspierające rozwój motoryczny, poznawczy i emocjonalny dziecka. To idealny sposób na rozwijanie kreatywności i wyobraźni poprzez ruch.'
-      }
+      
     ],
     description: `
-      Chusta Klanza Animacyjna to innowacyjne narzędzie edukacyjne, które inspiruje do twórczej zabawy i ruchu. Ta wielobarwna, dynamiczna chusta staje się magiczną przestrzenią, w której dzieci mogą eksplorować ruch, kolory i tekstury.
+    Chusta animacyjna, to narzędzie edukacyjne, które inspiruje do twórczej zabawy oraz ruchu.  Umożliwia bezpieczną zabawę w każdych warunkach, integrację grupy bez względu na wiek uczestników, pobudzanie wyobraźni, możliwość ćwiczenia refleksu, zwinności i spostrzegawczości.  Idealnie sprawdza się w zabawach dynamicznych i statycznych, czerpanie radości płynącej z ruchu i przebywania w grupie. Nie ma znaczenia czy jesteś wewnątrz pomieszczenia, czy na łące, plaży, leśnej polanie - zabawa gwarantowana i co ważne, możesz nie tylko integrować się ale również przekazywać w zabawny sposób treści edukacyjne.
     `,
     age: "Dla dzieci w wieku przedszkolnym i szkolnym",
     components: [
@@ -331,29 +326,112 @@ Jeśli szukasz zabawki stymulującej zmysły i wspierającej prawidłowy rozwój
     ],
     additionalDescription: [
       {
-        title: "Wspieranie kreatywności",
-        content: "Chusta Klanza Animacyjna inspiruje dzieci do twórczej zabawy i eksploracji, rozwijając ich kreatywność i wyobraźnię poprzez interakcję z różnorodnymi wzorami i kolorami."
+        title: "Chustowy wulkan",
+        content: "Rozwój fizyczny, nauka o siłach natury, zabawa ruchowa. Uczestnicy zabawy tworzą „wulkan”, szybko poruszając chustą w górę, a następnie nagle zatrzymując ruch, tworząc „erupcję”. Na środku chusty można umieścić lekkie piłeczki lub kawałki czerwonego papieru, które podczas „erupcji” wystrzeliwują w powietrze. To doskonała zabawa na zrozumienie podstawowych zasad fizyki i sił natury, a także na rozwój szybkości i zręczności. Podczas zabawy podajemy ciekawostki na temat wulkanów, np.:"
       },
       {
-        title: "Stymulacja sensoryczna",
-        content: "Dzięki różnorodnym teksturom i wzorom, chusta Klanza Animacyjna stymuluje zmysły dziecka, wspierając rozwój poznawczy i emocjonalny poprzez interakcję z różnymi bodźcami sensorycznymi."
+        title: "",
+        content: "Istnieją trzy główne typy wulkanów: wulkany lawowe (tarczowe), gdy podczas erupcji z krateru wydobywa się głównie lawa; wulkany eksplozywne (piroklastyczne) wyrzucające głównie materiał piroklastyczny; wulkany mieszane (stratowulkany), które wyrzucają lawę i materiał piroklastyczny. Materiały piroklastyczne powstają w wyniku wyrzucenia lawy z krateru wulkanu. Są to także rozdrobnione fragmenty skał wyrwanych z podłoża, kanału lub stożka wulkanu. Do utworów piroklastycznych zaliczamy: bomby, szlaki, scoria, lapille, piaski, popioły, pumeks. "
       },
       {
-        title: "Edukacyjna zabawa",
-        content: "Chusta Klanza Animacyjna to nie tylko zabawka, ale również interaktywne narzędzie edukacyjne, które wspiera rozwój motoryczny, poznawczy i emocjonalny dziecka poprzez kreatywną zabawę i eksplorację."
+        title: "",
+        content: "Typy wulkanów charakteryzują się różnym kształtem i sposobem erupcji."
       },
       {
-        title: "Bezpieczeństwo i trwałość",
-        content: "Wykonana z wysokiej jakości materiałów, chusta Klanza Animacyjna jest trwała i bezpieczna dla dzieci, zapewniając długotrwałą i satysfakcjonującą zabawę."
+        title: "",
+        content: "Największym wulkanem w Układzie Słonecznym jest Olympus Mons na Marsie. Ma około 22 km wysokości i 600 km szerokości."
       },
       {
-        title: "Interaktywna zabawa",
-        content: "Dzięki swojej dynamicznej naturze, chusta Klanza Animacyjna zachęca dzieci do interakcji i wspólnego eksplorowania możliwości ruchowych i sensorycznych, sprzyjając integracji społecznej i budowaniu relacji."
+        title: "",
+        content: "Najaktywniejszym wulkanem jest Kīlauea na Hawajach, który  jest uważany za jeden z najaktywniejszych wulkanów na Ziemi. Jego ostatnia faza aktywności trwała od 1983 do 2018 roku."
       },
       {
-        title: "Rozwój umiejętności społecznych",
-        content: "Zabawa z chustą Klanza Encourage jest również doskonałą okazją do nauki współpracy, dzielenia się i komunikacji między dziećmi, co sprzyja rozwojowi umiejętności społecznych i budowaniu relacji z rówieśnikami."
-      }
+        title: "",
+        content: "Supewulkany to wulkany, które mają potencjał do produkcji erupcji o magnitudzie 8, co oznacza, że mogą wyrzucić ponad 1 000 km³ materiału wulkanicznego. Przykładem jest Yellowstone w USA."
+      },
+      {
+        title: "",
+        content: "Większość wulkanów na Ziemi znajduje się w tzw. Pierścieniu Ognia, obszarze wzdłuż granic płyt tektonicznych Pacyfiku, gdzie dochodzi do najwięcej erupcji i trzęsień ziemi."
+      },
+      {
+        title: "",
+        content: "Lawa vs magma: Magma to stopiona skała pod powierzchnią Ziemi, natomiast lawa to magma, która wypłynęła na powierzchnię."
+      },
+      {
+        title: "",
+        content: "Czarna lawa, znana jako bazalt, jest najczęstszym typem lawy wypływającej z wulkanów. Jest ciemna z powodu wysokiej zawartości żelaza i magnezu."
+      },
+      {
+        title: "",
+        content: "Podczas erupcji wulkanu może dojść do zjawiska znanego jako „wulkaniczne błyskawice”, które są wynikiem oddziaływania cząsteczek w erupcyjnej chmurze popiołu."
+      },
+      {
+        title: "",
+        content: "Pewne rodzaje wulkanów mogą wyrzucać diamenty powstałe pod wysokim ciśnieniem w głębi Ziemi. Są one jednak zazwyczaj bardzo maleńkie ale diament, to zawsze diament 😉"
+      },
+      {
+        title: "",
+        content: 'Potężne erupcje wulkaniczne mogą wprowadzać do atmosfery ogromne ilości pyłu i gazów, prowadząc do tzw. wulkanicznych zim. Chłodzenie klimatu po erupcji Tambory w 1815 roku spowodowało "Rok bez lata" w 1816 roku.'
+      },
+      {
+        title: "",
+        content: 'Ciekawostki można dostosować do wieku uczestników zabawy, do zajęć udostępnić materiały w postaci zdjęć materiałów wyrzucanych przez wulkany, ciekawostek, o których opowiadaliśmy uczestnikom zabawy – dobrym pomysłem jest grupa na FB, zamknięta, gdzie pojawiać się będą materiały z zajęć aby uczestnicy mogli do zabawy wrócić do domu ze swoim rodzeństwem, rodzicami, dziadkami, nianiami, itp.'
+      },
+      {
+        title: "",
+        content: '',
+      },
+
+      {
+        title: "Tęczowy deszcz",
+        content: 'Rozwój sensoryczny, nauka kolorów, zabawa ruchowa. Dzieci trzymają chustę animacyjną nisko nad ziemią, na której rozłożone są kolorowe piłeczki lub inne lekkie przedmioty: nawet powycinane z grubego kolorowego papieru lub – jeżeli nie boimy się bałaganu – skrawki papierów z niszczarki 😊'
+      },
+      {
+        title: "",
+        content: 'Na sygnał, wszystkie dzieci jednocześnie energicznie podnoszą chustę do góry, tworząc „deszcz” z kolorowych przedmiotów. Zabawa może być połączona z nauką kolorów – również w języku angielskim, gdzie zadaniem dzieci jest złapanie przedmiotów w wyznaczonym kolorze.'
+      },
+      {
+        title: "",
+        content: 'Każda z tych zabaw może być dostosowana do wieku uczestników, miejsca, w którym się odbywa (ogród, park, plaża) oraz dostępnych materiałów. Ważne jest, aby podczas zabawy zachować bezpieczeństwo i dostosować aktywność do możliwości fizycznych dzieci. Jeżeli naszym zamiarem jest nauczyć nazw kolorów w języku polskim i od razu angielskim, możemy po zajęciach udostępnić karty pracy z nazwami kolorów, mapy myśli związane z kolorami i zapamiętywaniem nazw kolorów, tekstem piosenek o kolorach, linkiem do piosenek na YouTube, gdzie znajdziemy ich całe mnóstwo.'
+      },
+      {
+        title: "",
+        content: '',
+      },
+      {
+        title: "Podróż przez morze",
+        content: 'Rozwój wyobraźni, współpraca, koordynacja ruchowa. Uczestnicy zabawy trzymają chustę animacyjną, tworząc „morze” poprzez falowanie chusty góra-dół. Jeden z uczestników staje na chustę, udając, że jest na statku i musi dotrzeć do „bezpiecznej wyspy” (wyznaczone miejsce na ziemi), nie wpadając do „wody”. Inni uczestnicy zabawy współpracują razem, aby poruszać „statkiem” za pomocą chusty w taki sposób aby pasażer „statku” nie wpadł do morza i nie utopił się. '
+      },
+      {
+        title: "",
+        content: 'Koordynator zabawy, narrator, może opowiadać o tym, z jakim morzem mamy do czynienia: spokojnym wzburzonym, z małymi falami, z dużymi falami, ze sztormem, z silną wichurą, ze spokojną  jak stół taflą morza, z zachodem słońca kiedy pasażer statku stoi i patrzy na zachodnią stronę świata i odwrotnie, wschód słońca, kiedy pasażer statku zwraca twarz na wschodnią stronę miejsce, gdzie się bawimy.'
+      },
+      {
+        title: "",
+        content: 'Można przy tej okazji pokazać działanie kompasu, jeżeli nie mamy kompasu w formie fizycznej, można pokazać działanie przy pomocy komórki. Jeżeli uczestnicy zabawy wykażą zainteresowanie, można kontynuować opowiadanie o kompasie, w jakich sytuacjach będzie nam pomocny, na przykład w wędrówce po lesie, podczas wędrówki rowerowej czy podczas płynięciem kajakami/rowerami wodnymi, itp.'
+      },
+      {
+        title: "",
+        content: '',
+      },
+      {
+        title: "Deszcz kolorowych liści",
+        content: 'Nauka kolorów, rozwijanie zmysłu wzroku i dotyku, zabawa sensoryczna. Na chustę animacyjną rozsypuje się kolorowe liście, piórka lub lekkie kolorowe kulki. Dzieci trzymają chustę za brzegi i przez energiczne falowanie próbują wyrzucić wszystkie elementy w powietrze. Zabawa polega na tym, aby „deszcz” kolorów był jak najdłużej utrzymywany w powietrzu, żeby nad chustą unosiła się kolorowa mgła/kolorowy deszcz. Można wprowadzić element edukacyjny, prosząc dzieci o wskazywanie rodzajów drzew z jakich są liście, a następnie skupić się na ciekawostkach o danym gatunku drzewa, np.'
+      },
+      {
+        title: "",
+        content: 'liść orzecha laskowego: ludzie jedzą orzechy laskowe od tysięcy lat. Archeolodzy znaleźli dowody, że orzechy te były zbierane i jedzone już w epoce kamiennej! Orzechy laskowe są jednym z ulubionych przysmaków wiewiórek, które magazynują je w okresie letnio-jesiennym aby mieć pożywienie w zimie, kiedy wszystkie rośliny są przykryte śniegiem, na drzewach nie ma liści ani owoców; Jedzenie orzechów laskowych pomaga w utrzymaniu zdrowego serca. Zawierają kwas oleinowy, rodzaj zdrowego tłuszczu; Dzięki wysokiej zawartości zdrowych tłuszczów i białka, orzechy laskowe są przekąską dla sportowców - pomagają utrzymać energię podczas długich treningów lub zawodów, są więc idealną przekąską zamiast czekolady czy cukierków, których nie lubią nasze zęby'
+      },
+      {
+        title: "",
+        content: 'liść brzozy: soki, ekstrakty i kora brzozy są używane w medycynie ze względu na swoje lecznicze właściwości. Sok z brzozy, zbierany na wiosnę, jest bogaty w minerały i witaminy, a także działa oczyszczająco i wzmacniająco na człowieka. Brzozy mają zdolność do filtracji i oczyszczania wody, dzięki czemu mogą przyczyniać się do poprawy jakości wód. Istnieje ponad 100 różnych gatunków brzóz, które różnią się wyglądem, rozmiarem i preferowanymi warunkami środowiskowymi. Od niewielkich krzewów po majestatyczne drzewa, brzozy można znaleźć niemal w każdym klimacie umiarkowanym.'
+      },
+      {
+        title: "",
+        content: 'W dalszej części można przygotować wiele ciekawostek dotyczących różnego rodzaju drzew lub krzewów, choćby: maliny, borówki, jabłka – to owoce, które dzieci lubią, znają i łatwo jest im zapamiętać ciekawostki o roślinach.'
+      },
+      
+      
     ],
 
     gridImages: [

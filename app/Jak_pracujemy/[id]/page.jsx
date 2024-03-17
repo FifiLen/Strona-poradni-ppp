@@ -17,7 +17,7 @@ export default function Page({ params }) {
       <div className=" p-2 border border-black w-32 text-black flex justify-center items-center rounded-md font-semibold mb-4">Powrót →</div>
       </Link>
       <h1 className="text-5xl font-semibold mt-10 mb-8">{project.name}</h1>
-      <h3 className=" text-3xl text-pink-700 font-semibold mb-2">Dla kogo?</h3>
+      <h3 className=" text-4xl text-pink-700 font-semibold mb-4">Dla kogo?</h3>
       {project.descriptionAkapit.map((item, index) => (
           <div key={index} className="mb-6">
             <p className="text-lg">{item.content}</p>
@@ -30,7 +30,7 @@ export default function Page({ params }) {
         ))}
       </div> */}
       <div className="mb-8 mt-20">
-      <h3 className=" text-3xl text-pink-700 font-semibold mb-4">Dla czego warto?</h3>
+      <h3 className=" text-4xl text-pink-700 font-semibold mb-10">Dla czego warto?</h3>
 
 
       <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -38,7 +38,7 @@ export default function Page({ params }) {
       {project.additionalDescription.map((item, index) => (
   <div key={index} className="mb-6">
     <div>
-      <h4 className="text-2xl font-semibold mb-2">{item.title}</h4>
+      <h4 className="text-3xl font-semibold mb-2">{item.title}</h4>
       <p className="text-lg">{item.content}</p>
     </div>
     {/* Powtórz ten blok dla drugiej kolumny */}
