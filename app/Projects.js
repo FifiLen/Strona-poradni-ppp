@@ -430,6 +430,36 @@ Jeśli szukasz zabawki stymulującej zmysły i wspierającej prawidłowy rozwój
         title: "",
         content: 'W dalszej części można przygotować wiele ciekawostek dotyczących różnego rodzaju drzew lub krzewów, choćby: maliny, borówki, jabłka – to owoce, które dzieci lubią, znają i łatwo jest im zapamiętać ciekawostki o roślinach.'
       },
+      {
+        title: "Poszukiwacze skarbów",
+        content: 'Nie tylko świetną formą aktywności fizycznej, ale również okazją do nauki i rozwijania kluczowych umiejętności społecznych i poznawczych.'
+      },
+      {
+        title: "",
+        content: 'Na środku chusty kładziemy serię „skarbów” - wybierz małe, bezpieczne przedmioty, które posłużą jako "skarby". Mogą to być kolorowe piłeczki, małe zabawki, klocki, itp. Ważne, by były wystarczająco lekkie, aby mogły być poruszane przez falowanie chusty. Oznaczenie portów, do których powinny „dopłynąć” nasze skarby: na brzegach chusty wyznacz "porty" – miejsca, do których dzieci będą próbowały przetransportować skarby, można użyć kolorowych taśm lub znaczników, aby porty odróżniały się od siebie i łatwiej było nawigować dotarcie skarbów do odpowiedniego portu.'
+      },
+      {
+        title: "",
+        content: 'Kiedy już mamy wyznaczone porty oraz wybrane skarby, uczestnicy zabawy ustawiają się wokół chusty, trzymając ją za brzegi. Każdy powinien mieć równy dostęp do chusty i wystarczająco dużo miejsca. Na środku chusty kładziemy wszystkie "skarby". Uczestnicy zabawy obserwują ich położenie, przygotowując się do rozpoczęcia „podróży”.'
+      },
+      {
+        title: "",
+        content: 'Na sygnał rozpoczynają falowanie chustą. Cel to stworzenie odpowiednich fal, które przesuną skarby w kierunku wyznaczonego portu. To wymaga koncentracji, koordynacji i współpracy – trzeba pracować razem aby osiągnąć cel. Uczestnicy zabawy mogą rozmawiać i planować swoje działania, co wzmacnia ich umiejętności komunikacyjne i współpracę. Ważne jest, aby zachęcać do strategii i podpowiadania sobie nawzajem, jak najlepiej poruszać chustą. Gdy wszystkie skarby dotrą do wyznaczonego portu, zabawa się kończy.'
+      },
+      {
+        title: "",
+        content: 'Można wymyślić opcję małej celebracji zwycięstwa, mogą to być przysmaki owocowe lub witaminowe cukierki lub inne zdrowe przekąski, np. rodzynki, orzechy, suszone morele, suszone śliwki, itp.'
+      },
+      {
+        title: "",
+        content: 'Można zwiększać trudność, dodając więcej skarbów, zmieniając ich rozmiar lub wprowadzając różne porty docelowe dla różnych skarbów.'
+      },
+      {
+        title: "",
+        content: 'Można dodać element rywalizacji, ustawiając limit czasu, w jakim skarby muszą dotrzeć do portu.Możesz wprowadzić zmienne warunki pogodowe, np. "złe pogody" (np. silniejsze falowanie chusty) lub "piratów" (ktoś próbuje zakłócić falowanie), aby dodać więcej dynamiki do zabawy.'
+      },
+      
+      
       
       
     ],

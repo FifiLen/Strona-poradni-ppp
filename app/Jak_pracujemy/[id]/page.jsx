@@ -30,7 +30,7 @@ export default function Page({ params }) {
         ))}
       </div> */}
       <div className="mb-8 mt-20">
-      <h3 className=" text-4xl text-pink-700 font-semibold mb-10">Dla czego warto?</h3>
+      <h3 className=" text-4xl text-pink-700 font-semibold mb-10">Dlaczego warto?</h3>
 
 
       <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-12">
