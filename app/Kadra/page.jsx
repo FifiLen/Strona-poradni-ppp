@@ -117,6 +117,15 @@ Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako obcego, 
     </p>) ,
     imageUrl: '/assets/magnolia.png',
   },
+
+  {
+    id: 16,
+    name: 'Piotr Tolsdorf',
+    specialty: 'Logopeda',
+    description: (<p>
+Logopeda, muzyk, nauczyciel rytmiki, pasjonat powiązań muzyki z mową, autor zabaw dla dzieci, które maksymalnie wspierają rozwój mowy. Pochłonięty logopedią z logorytmiką, które porównuje do układania wieży z klocków. Jego – jako specjalisty - zadaniem jest stworzenie takiej wieży, aby dziecko chciało się przy niej bawić czerpiąc wartości terapeutyczne w rozwoju mowy.    </p>) ,
+    imageUrl: '/assets/magnolia.png',
+  },
   
   
   {

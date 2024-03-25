@@ -475,7 +475,137 @@ Jeśli szukasz zabawki stymulującej zmysły i wspierającej prawidłowy rozwój
       "/assets/klanza_scarf_1.png",
       "/assets/klanza_scarf_1.png"
     ]
+  },
+
+    {
+      "id": 6,
+      "name": "Tablica sensoryczna",
+      "descriptionAkapit": [
+        {
+          "content": "Tablica sensoryczna edukacyjna Rozpoznawanie Materiałów zaprasza najmłodszych do świata odkrywania przez dotyk. Wykonana z wysokiej jakości drewna, stymuluje zmysł dotyku dzieci, pomagając im rozpoznawać i porównywać różnorodne faktury. Jest to narzędzie nie tylko edukacyjne, ale i terapeutyczne, wspierające rozwój motoryki małej oraz koordynację ręka-oko."
+        },
+        {
+          "content": "Zestaw składa się z 9 mniejszych płytek sensorycznych umieszczonych w górnej części tablicy, które zachęcają do aktywnego poznawania świata poprzez zmysły. Dzieci, poprzez zabawę, uczą się rozpoznawania i dopasowywania identycznych wzorów, co stanowi cenne ćwiczenie wspierające rozwój ich zdolności sensorycznych, wyobraźni oraz kreatywności."
+        },
+        {
+          "content": "Produkt ten znajduje szerokie zastosowanie nie tylko w domach, ale również w placówkach edukacyjnych oraz gabinetach terapeutycznych, gdzie wspomaga integrację sensoryczną oraz pracę nad motoryką. Dzięki dołączonemu darmowemu e-bookowi 'Tablice manipulacyjne w terapii', rodzice i terapeuci otrzymują cenny przewodnik po ćwiczeniach wspierających rozwój dzieci."
+        },
+      ],
+      "description": "Tablica sensoryczna edukacyjna Rozpoznawanie Materiałów jest narzędziem, które w przemyślany sposób łączy zabawę z nauką, stymulując zmysł dotyku dzieci i zachęcając je do aktywnego poznawania świata poprzez zmysły. Wykonana z ekologicznego drewna, jest bezpieczna i trwała, a jej zastosowanie jest szerokie - od domu, przez przedszkola, po gabinety terapeutyczne.",
+      "age": "2 lata+",
+      "components": [
+        "1 tablica sensoryczna wykonana z drewna",
+        "9 mniejszych płytek sensorycznych",
+        "Darmowy e-book 'Tablice manipulacyjne w terapii'"
+      ],
+      "features": [
+        "Rozwój sensoryczny: stymulacja dotyku, wzroku, integracja sensoryczna.",
+        "Rozwój poznawczy: poznawanie faktur, kolorów, rozpoznawanie i dopasowywanie wzorów.",
+        "Rozwój osobisty: emocje, skupienie, koncentracja uwagi, relaksacja.",
+        "Edukacyjne i terapeutyczne zastosowanie: idealne do użytku domowego, w przedszkolach, żłobkach oraz gabinetach specjalistów."
+      ],
+      "additionalDescription": [
+        {
+          "title": "Rozwój sensoryczny i poznawczy",
+          "content": "Tablica sensoryczna Rozpoznawanie Materiałów skutecznie stymuluje zmysł dotyku oraz wzrok, wspierając integrację sensoryczną. Dzieci uczą się rozpoznawania i dopasowywania różnorodnych faktur i kolorów, co pozytywnie wpływa na ich rozwój poznawczy."
+        },
+        {
+          "title": "Rozwój osobisty: emocje, skupienie, koncentracja",
+          "content": "Zabawa z tablicą sensoryczną wspomaga rozwój osobisty dzieci, wyciszając i relaksując. Poprzez skupienie na zadaniu dopasowywania wzorów, dzieci rozwijają umiejętności koncentracji oraz uczą się zarządzania emocjami."
+        },
+        {
+          "title": "Wsparcie terapeutyczne",
+          "content": "Tablica jest nieocenionym narzędziem wspierającym terapię sensoryczną oraz pracę z dziećmi z różnorodnymi potrzebami rozwojowymi. Pomaga w harmonizacji zmysłów, co jest kluczowe dla dzieci wymagających wsparcia w integracji sensorycznej."
+        },
+        {
+          "title": "Edukacja przedszkolna i wczesnoszkolna",
+          "content": "Idealne narzędzie do wykorzystania w edukacji przedszkolnej i wczesnoszkolnej, stymulujące rozwój poznawczy i motoryczny poprzez zabawę. Tablica oferuje angażujące zadania dopasowane do młodszych wiekowo dzieci, wspierając ich rozwój w kluczowych obszarach."
+        },
+        {
+          "title": "Interakcja społeczna i praca zespołowa",
+          "content": "Zabawa tablicą sensoryczną może odbywać się również w grupach, co stymuluje rozwój umiejętności społecznych i pracy zespołowej. Dzieci uczą się współpracy, dzielenia się oraz negocjacji podczas wspólnego rozwiązywania zadań."
+        },
+        {
+          "title": "Rozwój językowy i komunikacyjny",
+          "content": "Podczas zabawy dziecko rozwija również umiejętności językowe i komunikacyjne, opisując doświadczenia, emocje i obserwacje związane z różnymi fakturami i kolorami. To cenne ćwiczenie wzbogaca słownictwo i zdolności wyrażania myśli."
+        },
+        {
+          "title": "Bezpieczna i trwała konstrukcja",
+          "content": "Wykonana z wysokiej jakości, trwałych materiałów, tablica jest bezpieczna nawet dla najmłodszych dzieci. Jej solidna konstrukcja zapewnia długotrwałe użytkowanie w różnorodnych środowiskach edukacyjnych i terapeutycznych."
+        }
+      ],
+
+      gridImages: [
+        "/assets/tablica_sensoryczna.png",
+        "/assets/klanza_scarf_2.png",
+        "/assets/klanza_scarf_3.png"
+      ],
+  
+      gridImages2: [
+        "/assets/klanza_scarf_1.png",
+        "/assets/klanza_scarf_1.png",
+        "/assets/klanza_scarf_1.png"
+      ]
+         
+    
+  },
+
+
+  {
+    "id": 7,
+    "name": "Step-a-Logs - ścieżka sensoryczna",
+    "descriptionAkapit": [
+      {
+        "content": "Step-a-Logs to innowacyjna zabawka edukacyjna zaprojektowana z myślą o rozwijaniu koordynacji i równowagi u dzieci od 2 roku życia. Składająca się z kolorowych, drewnianych belek, umożliwia tworzenie rozmaitych ścieżek do balansowania, rozwijając przy tym zmysł równowagi oraz zdolności motoryczne maluchów."
+      },
+      {
+        "content": "Zabawka promuje aktywność fizyczną i zabawę na świeżym powietrzu, zachęcając dzieci do kreatywnego myślenia poprzez budowanie własnych konfiguracji ścieżek. Jest to doskonały sposób na wspieranie rozwijania się motoryki grubo- i drobnozręcznej oraz zdolności planowania i rozwiązywania problemów."
+      },
+      {
+        "content": "Step-a-Logs świetnie sprawdzi się w różnych środowiskach - zarówno w domu, jak i w placówkach edukacyjnych, a także jako atrakcja w przestrzeniach publicznych przeznaczonych dla dzieci. Dzięki modułowej budowie, ścieżkę sensoryczną można łatwo dostosować do indywidualnych potrzeb i umiejętności dzieci, zapewniając bezpieczną i kreatywną zabawę."
+      }
+    ],
+    "description": "Step-a-Logs to ścieżka sensoryczna, która poprzez zabawę wspomaga rozwój równowagi, koordynacji i zdolności motorycznych dzieci. Kolorowe, drewniane belki mogą być układane w różnorodne konfiguracje, tworząc wyjątkowe ścieżki dla małych balanserów. Idealne do użytku domowego, w przedszkolach, szkołach oraz placach zabaw, promują zdrową aktywność fizyczną i kreatywność.",
+    "age": "2 lata+",
+    "components": [
+      "Kolorowe drewniane belki w różnych rozmiarach",
+      "Modułowa konstrukcja dla łatwej adaptacji i rozbudowy"
+    ],
+    "features": [
+      "Rozwój motoryczny: wspiera koordynację ruchową i równowagę.",
+      "Kreatywność i rozwiązywanie problemów: zachęca do tworzenia własnych konfiguracji ścieżek.",
+      "Wszechstronne zastosowanie: idealne do użytku domowego, w placówkach edukacyjnych i przestrzeniach publicznych.",
+      "Bezpieczeństwo: wykonane z wysokiej jakości, trwałego drewna, spełniające normy bezpieczeństwa EN 71."
+    ],
+    "additionalDescription": [
+      {
+        "title": "Wsparcie rozwoju fizycznego",
+        "content": "Dzięki możliwościom balansowania na belekach Step-a-Logs wspomaga rozwój fizyczny dzieci, zwiększając ich siłę mięśniową, elastyczność i ogólną sprawność."
+      },
+      {
+        "title": "Interakcja społeczna i zabawa grupowa",
+        "content": "Step-a-Logs oferuje doskonałą okazję do zabawy grupowej, promując umiejętności społeczne takie jak współpraca, dzielenie się i komunikacja między dziećmi."
+      },
+      {
+        "title": "Edukacja i terapia przez zabawę",
+        "content": "Zabawka może być również wykorzystana w terapii ruchowej, sensorycznej oraz w edukacji wczesnoszkolnej, jako narzędzie wspomagające naukę",
+      },
+    ],
+    gridImages: [
+      "/assets/stepy.png",
+      "/assets/klanza_scarf_2.png",
+      "/assets/klanza_scarf_3.png"
+    ],
+
+    gridImages2: [
+      "/assets/klanza_scarf_1.png",
+      "/assets/klanza_scarf_1.png",
+      "/assets/klanza_scarf_1.png"
+    ]
   }
+
+
+  
   // Dodaj kolejne projekty według potrzeb
 ];
 export default projects;
