@@ -187,6 +187,35 @@ const Dzieci = () => {
                       </ul>
   </AccordionContent>
 </AccordionItem>
+
+<AccordionItem value="item-3">
+  <AccordionTrigger>Dietetyk dziecięcy w leczeniu logopedycznym u dzieci</AccordionTrigger>
+  <AccordionContent>
+  <ul className=' space-y-3'>
+                        <li>Każdy rodzic pragnie, aby jego dziecko rozwijało się zdrowo i harmonijnie. Czasami jednak pojawiają się wyzwania, takie jak problemy z prawidłową artykulacją czy inne trudności w zakresie mowy, które wymagają wsparcia logopedycznego. Co ciekawe, coraz częściej podkreśla się znaczenie holistycznego podejścia do leczenia, w ramach którego istotną rolę odgrywa współpraca logopedy z dietetykiem dziecięcym. Dlaczego jest to tak ważne?</li>
+                        <li><b>Rozwój narządów artykulacyjnych:</b> Jak podkreśla wielu ekspertów, w tym logopedzi, sposób odżywiania i rodzaj spożywanych pokarmów mają bezpośredni wpływ na rozwój narządów artykulacyjnych, takich jak język, wargi, szczęka czy żuchwa. Twarde, wymagające gryzienia i żucia pokarmy, wspomagają trening mięśni niezbędnych do artykulacji. Dietetyk dziecięcy może pomóc dobrać dietę, która będzie wspierać rozwój tych struktur.</li>
+                        <li><b>Poprawa nawyków żywieniowych:</b> Nieprawidłowe nawyki żywieniowe, takie jak ciągłe korzystanie z butelek zamiast nauka picia z kubka, mogą negatywnie wpłynąć na rozwój mowy u dzieci. Dietetyk dziecięcy może doradzić, jak stopniowo wprowadzać zmiany w sposobie odżywiania, aby wspomagały one leczenie logopedyczne.</li>
+                        <li><b>Wsparcie sensoryczne:</b> Niektóre dzieci z trudnościami w zakresie mowy mogą również doświadczać problemów sensorycznych, w tym oporu przed nowymi teksturami czy smakami pokarmów. Dietetyk dziecięcy może współpracować z logopedą i rodzicami, aby pomóc dziecku stopniowo przyzwyczajać się do różnorodnych pokarmów, co może mieć pozytywny wpływ nie tylko na rozwój mowy, ale również na ogólny rozwój sensoryczny.</li>
+                        <li><b>Indywidualne potrzeby żywieniowe:</b> Każde dziecko jest inne i może mieć indywidualne potrzeby żywieniowe, wynikające na przykład z alergii pokarmowych, nietolerancji czy innych stanów zdrowotnych. Dietetyk dziecięcy może pomóc dostosować dietę dziecka w taki sposób, aby nie tylko wspierała ona jego rozwój mowy, ale również ogólny stan zdrowia.</li>
+                        <li>Włączenie dietetyka dziecięcego do procesu leczenia logopedycznego pozwala na całościowe podejście do zdrowia i rozwoju dziecka. Poprzez skoordynowaną współpracę specjalistów, rodzice mogą uzyskać wsparcie nie tylko w zakresie mowy, ale także w kwestiach żywieniowych, co ma kluczowe znaczenie dla zdrowia i dobrego samopoczucia każdego dziecka.</li>
+
+                      </ul>
+  </AccordionContent>
+</AccordionItem>
+
+
+<AccordionItem value="item-4">
+  <AccordionTrigger>Ortodonta dziecięcy w leczeniu logopedycznym u dzieci</AccordionTrigger>
+  <AccordionContent>
+  <ul className=' space-y-3'>
+                        <li>Kiedy myślimy o pracy logopedy, skupiamy się przede wszystkim na rozwoju i korygowaniu mowy oraz funkcji artykulacyjnych. Jednak w wielu przypadkach, dla pełnej skuteczności terapii logopedycznej, niezbędna jest współpraca z innymi specjalistami, w tym z ortodontą. Jakie są powody tej multidyscyplinarnej współpracy?</li>
+                        <li><b>Strukturalne podstawy prawidłowej artykulacji:</b> Logopeda pracujący nad korekcją mowy i funkcji artykulacyjnych często napotyka na bariery, które mają podłoże strukturalne. Wady zgryzu czy nieprawidłowości w budowie szczęk mogą znacząco utrudniać lub nawet uniemożliwiać osiągnięcie celów terapii logopedycznej. W takich przypadkach interwencja ortodontyczna może być kluczowa dla umożliwienia prawidłowej pracy narządów artykulacyjnych.</li>
+                        <li><b>Nieprawidłowe funkcje a struktura szczęk:</b> Logopeda identyfikuje nieprawidłowości takie jak nieprawidłowy typ połykania, nieszczelność warg, czy oddychanie przez usta, które nie tylko wpływają na mowę, ale również mogą przyczyniać się do powstawania wad zgryzu. Współpraca z ortodontą umożliwia nie tylko leczenie istniejących wad, ale także zapobieganie dalszym nieprawidłowościom.</li>
+                        <li><b>Współpraca w diagnozie i planowaniu terapii:</b> Zrozumienie zależności między strukturą a funkcją jest kluczowe dla skutecznego leczenia. Logopeda, współpracując z ortodontą, może lepiej zrozumieć indywidualne przypadki pacjentów, co pozwala na precyzyjniejsze planowanie terapii logopedycznej oraz dostosowanie jej do możliwości strukturalnych pacjenta po interwencji ortodontycznej.</li>
+                        
+                      </ul>
+  </AccordionContent>
+</AccordionItem>
 </Accordion>
               <Link href={"/Kontakt"} className=' text-slate-800 flex justify-start'><div className='mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3'>Umów wizytę u Logopedy<FaRegArrowAltCircleRight /></div></Link>
          </div>

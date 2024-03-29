@@ -556,14 +556,9 @@ Jeśli szukasz zabawki stymulującej zmysły i wspierającej prawidłowy rozwój
     "name": "Step-a-Logs - ścieżka sensoryczna",
     "descriptionAkapit": [
       {
-        "content": "Step-a-Logs to innowacyjna zabawka edukacyjna zaprojektowana z myślą o rozwijaniu koordynacji i równowagi u dzieci od 2 roku życia. Składająca się z kolorowych, drewnianych belek, umożliwia tworzenie rozmaitych ścieżek do balansowania, rozwijając przy tym zmysł równowagi oraz zdolności motoryczne maluchów."
+        "content": "Step-a-logs to sensoryczna ścieżka wspomagająca rozwój motoryki dużej i małej, przeznaczona dla dzieci od 3 roku życia. Ścieżka składa się z 6 elementów połączonych ze sobą linką, dzięki czemu można dopasować odległość pomiędzy częściami, co pozwala dostosować poziom trudności zabawy do umiejętności dziecka. Dodatkowym atutem wspomagającym sprawny przebieg ćwiczeń jest kolorowa antypoślizgowa powierzchnia oraz możliwość tworzenia torów o różnych kształtach. Zabawka promuje aktywność fizyczną i zabawę na świeżym powietrzu, zachęcając dzieci do kreatywnego myślenia poprzez budowanie własnych konfiguracji ścieżek. Jest to doskonały sposób do kształcenia umiejętności równowagi, korygowania zaburzeń posturalnych oraz wzmacniania stabilizacji centralnej( czyli kontrolowanie mięśni w ten sposób aby utrzymywały prawidłową postawę ciała)."
       },
-      {
-        "content": "Zabawka promuje aktywność fizyczną i zabawę na świeżym powietrzu, zachęcając dzieci do kreatywnego myślenia poprzez budowanie własnych konfiguracji ścieżek. Jest to doskonały sposób na wspieranie rozwijania się motoryki grubo- i drobnozręcznej oraz zdolności planowania i rozwiązywania problemów."
-      },
-      {
-        "content": "Step-a-Logs świetnie sprawdzi się w różnych środowiskach - zarówno w domu, jak i w placówkach edukacyjnych, a także jako atrakcja w przestrzeniach publicznych przeznaczonych dla dzieci. Dzięki modułowej budowie, ścieżkę sensoryczną można łatwo dostosować do indywidualnych potrzeb i umiejętności dzieci, zapewniając bezpieczną i kreatywną zabawę."
-      }
+     
     ],
     "description": "Step-a-Logs to ścieżka sensoryczna, która poprzez zabawę wspomaga rozwój równowagi, koordynacji i zdolności motorycznych dzieci. Kolorowe, drewniane belki mogą być układane w różnorodne konfiguracje, tworząc wyjątkowe ścieżki dla małych balanserów. Idealne do użytku domowego, w przedszkolach, szkołach oraz placach zabaw, promują zdrową aktywność fizyczną i kreatywność.",
     "age": "2 lata+",
