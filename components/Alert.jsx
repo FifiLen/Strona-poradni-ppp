@@ -4,7 +4,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/components/ui/alert"
+} from "/components/ui/alert"
 import Link from "next/link"
 
 

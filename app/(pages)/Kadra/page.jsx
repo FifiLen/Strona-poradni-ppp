@@ -1,0 +1,287 @@
+"use client";
+import React, { useEffect } from "react";
+
+useEffect;
+
+const staffData = [
+  {
+    id: 11,
+    name: "Paulina Rosa",
+    specialty: "Logopeda",
+    description: (
+      <p>
+        Magister polonistyki, logopeda, egzaminator TELC języka polskiego jako
+        obcego, trener języka polskiego jako obcego, czynny nauczyciel
+        w&nbsp;szkole podstawowej i&nbsp;ponadpodstawowej, terapeuta sesji
+        logopedycznych. Trener z&nbsp;obszaru edukacji włączającej. Wykładowca
+        na&nbsp;studiach podyplomowych.
+      </p>
+    ),
+    imageUrl: "/assets/avatar2.svg",
+  },
+  {
+    id: 2,
+    name: "Samanta Marszałek-Czaban",
+    specialty: "Neurologopeda",
+    description: (
+      <p>
+        Magister neurologopedii i&nbsp;pedagogiki, z&nbsp;dodatkową
+        specjalizacją w&nbsp;oligofrenopedagogice i&nbsp;edukacji
+        wczesnoszkolnej. Doświadczona w&nbsp;pracy logopedycznej zarówno
+        w&nbsp;szkołach, jak i&nbsp;specjalistycznych ośrodkach interwencji.
+        Wykładowca akademicki oraz trener edukacji włączającej.
+      </p>
+    ),
+    imageUrl: "/assets/avatar.svg",
+  },
+  {
+    id: 13,
+    name: "Paulina Dąbrowska",
+    specialty: "Edukacja wczesnoszkolna i surdopedagogika",
+    description: (
+      <p>
+        Magister pedagogiki specjalnej z&nbsp;zakresu edukacji
+        i&nbsp;rehabilitacji osób z&nbsp;niepełnosprawnością intelektualną oraz
+        studentka logopedii z&nbsp;neurologopedią. Doświadczona w pracy
+        dydaktycznej i&nbsp;pedagogicznej, zarówno w szkołach integracyjnych,
+        jak i&nbsp;w ośrodkach dla dzieci słabosłyszących. Ekspertka w obszarze
+        edukacji włączającej, z&nbsp;kompetencjami praktycznymi w&nbsp;zakresie
+        organizacji i&nbsp;prowadzenia zajęć dydaktyczno-wychowawczych.
+      </p>
+    ),
+    imageUrl: "/assets/avatar2.svg",
+  },
+  {
+    id: 1,
+    name: "Wioletta Ginter",
+    specialty: "Pedagog",
+    description: (
+      <p>
+        Magister pedagogiki specjalizujący się w&nbsp; poradnictwie
+        i&nbsp;pomocy psychopedagogicznej. Jako aktywny pedagog specjalny,
+        terapeuta ręki, specjalista w&nbsp; edukacji włączającej
+        i&nbsp;wykładowca, posiada bogate doświadczenie, przekazując swoją
+        wiedzę zarówno uczniom, jak i&nbsp;nauczycielom w&nbsp; różnych
+        instytucjach edukacyjnych. Specjalista ORE w&nbsp; zakresie edukacji
+        włączającej.
+      </p>
+    ),
+    imageUrl: "/assets/avatar.svg",
+  },
+  {
+    id: 5,
+    name: "Anna Ławniczak",
+    specialty: "Psycholog",
+    description: (
+      <p>
+        Magister psychologii, specjalizujący się w&nbsp;seksuologii klinicznej
+        i&nbsp;psychologii kryminologicznej. Wykładowca studiów podyplomowych
+        z&nbsp;obszaru pedagogiki specjalnej, seksuologii, seksuologii
+        klinicznej. Terapeuta dzieci, par, rodzin. Aktywnie angażuje się
+        w&nbsp;pracę na&nbsp;rzecz dzieci w&nbsp;szkołach i&nbsp;przedszkolach.
+        Specjalista ORE w&nbsp;zakresie edukacji włączającej.
+      </p>
+    ),
+    imageUrl: "/assets/avatar2.svg",
+  },
+  {
+    id: 10,
+    name: "Monika Kromolan",
+    specialty: "Psycholog",
+    description: (
+      <p>
+        Magister psychologii z&nbsp;zakresu neuropsychologii i&nbsp;psychologii
+        klinicznej. Specjalista w&nbsp;zintegrowanej edukacji wczesnoszkolnej,
+        edukacji informatycznej oraz edukacji i&nbsp;rehabilitacji osób
+        z&nbsp;niepełnosprawnością intelektualną. Terapeuta WWRD
+        i&nbsp;hipoterapii. Specjalista w&nbsp;zakresie komunikacji
+        alternatywnej i&nbsp;wspomagającej oraz diagnozy alternatywnych
+        i&nbsp;wspomagających metod porozumiewania się.
+      </p>
+    ),
+    imageUrl: "/assets/avatar2.svg",
+  },
+  {
+    id: 12,
+    name: "Gabriela Marcisz",
+    specialty: "Psychoterapeuta",
+    description: (
+      <p>
+        Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par
+        i&nbsp;rodzin. Specjalista psychoterapii w&nbsp;Ośrodku Interwencji
+        Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic
+        i&nbsp;na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony
+        na&nbsp;pracy z&nbsp;całymi rodzinami i&nbsp;osobami pełnoletnimi.
+      </p>
+    ),
+    imageUrl: "/assets/avatar.svg",
+  },
+  {
+    id: 13,
+    name: "Anna Kowalska",
+    specialty: "Psycholog",
+    description: (
+      <p>
+        Magister psychologii, psychoonkolog, certyfikowany psychoterapeuta
+        Polskiego Towarzystwa Integracyjnej Psychoterapii Doświadczeniowej
+        i&nbsp;Edukacji Społecznej, muzykoterapeuta. Psychodietetyk, trener
+        nowoczesnego doradztwa zawodowego i&nbsp;edukacyjnego. Teraputa
+        z&nbsp;zakresu psychoterapii par, EFT - terapii skoncentrowanej
+        na&nbsp;emocjach, pracy z&nbsp;dziećmi i&nbsp;młodzieżą. Specjalista
+        edukacji włączającej. Wykładowca studiów podyplomowych z&nbsp;zakresu
+        swoich specjalizacji.
+      </p>
+    ),
+    imageUrl: "/assets/avatar.svg",
+  },
+
+  {
+    id: 3,
+    name: "Sylwia Cuber",
+    specialty: "Pedagog",
+    description: (
+      <p>
+        Magister pedagogiki specjalność: edukacja przedszkolna
+        i&nbsp;wczesnoszkolna, oligofrenopedagogika, edukacja elementarna
+        z&nbsp;dodatkowym językiem angielskim, czynny pedagog specjalny
+        w&nbsp;szkole podstawowej, specjalista ORE w&nbsp;zakresie edukacji
+        włączającej, trener treningu umiejętności społecznych (TUS) dzieci
+        ze&nbsp;spektrum autyzmu, edukacja i&nbsp;terapia osób ze&nbsp;spektrum
+        autyzmu. Wykładowca studiów podyplomowych z&nbsp;zakresu pedagogiki
+        specjalnej.
+      </p>
+    ),
+    imageUrl: "/assets/avatar2.svg",
+  },
+
+  {
+    id: 4,
+    name: "Aleksandra Wowra",
+    specialty: "Pedagog",
+    description: (
+      <p>
+        Magister pedagogiki – specjalność: opiekuńczo – wychowawczej,
+        oligofrenopedagog, specjalista ORE w&nbsp;zakresie edukacji włączającej,
+        czynny pedagog specjalny. Wykładowca na&nbsp;kierunkach pedagogiki
+        specjalnej na&nbsp;studiach podyplomowych.
+      </p>
+    ),
+    imageUrl: "/assets/avatar.svg",
+  },
+
+  {
+    id: 6,
+    name: "Joanna Zawadzka",
+    specialty: "Psycholog",
+    description: (
+      <p>
+        Magister języka polskiego, specjalista z&nbsp;zakresu terapii
+        pedagogicznej, diagnozy i&nbsp;profilaktyki społecznej. Terapeuta
+        z&nbsp;obszaru diagnozy dysleksji rozwojowej, egzaminator OKE,
+        nauczyciel języka polskiego jako obcego, prezes Oddziału Towarzystwo
+        Dysleksji w&nbsp;Rybniku. Doradca i&nbsp;autor publikacji dla IBE-
+        Instytut Badań Edukacyjnych. Pracuje z&nbsp;uczniami uzdolnionymi
+        (przygotowanie do&nbsp;egzaminów/olimpiad).
+      </p>
+    ),
+    imageUrl: "/assets/avatar2.svg",
+  },
+  {
+    id: 8,
+    name: "Małgorzata Solowska",
+    specialty: "Trener",
+    description: (
+      <p>
+        Magister języka angielskiego, magister historii, trener i&nbsp;moderator
+        TIK, MIEE Educator, trener dla zagranicznych narodowych agencji Erasmus,
+        prelegent konferencji i&nbsp;szkoleń międzynarodowych oraz
+        ogólnopolskich. Specjalista ORE w&nbsp;zakresie edukacji włączającej.
+        Trener TIK w&nbsp;tym wykorzystania nowych technologii w&nbsp;pracy
+        z&nbsp;uczniami ze&nbsp;SPE. Wykładowca studiów podyplomowych
+        z&nbsp;zakresu zarządzania oświatą, historii oraz języka angielskiego.
+      </p>
+    ),
+    imageUrl: "/assets/avatar.svg",
+  },
+  {
+    id: 9,
+    name: "Anna Falkowska",
+    specialty: "Pedagog, Socjolog",
+    description: (
+      <p>
+        Doktor nauk społecznych z&nbsp;dziedziny pedagogiki i&nbsp;socjologii.
+        Doradca zawodowy oraz specjalista z&nbsp;zakresu prawa ochrony
+        środowiska i&nbsp;edukacji ekologicznej. Specjalista ORE z&nbsp;zakresu
+        edukacji włączającej. Trener TIK. Specjalista programów
+        do&nbsp;interaktywnej&nbsp;edukacji. Wykładowca akademicki
+        na&nbsp;uczelniach o&nbsp;profilu przyrodniczym, autorka wielu
+        publikacji naukowych i&nbsp;po-konferencyjnych. Ekspert edukacji
+        ekologicznej.
+      </p>
+    ),
+    imageUrl: "/assets/avatar2.svg",
+  },
+];
+
+const DoctorCards = () => {
+  useEffect(() => {
+    // Utwórz skrypt dla gtag.js
+    const gtagScript = document.createElement("script");
+    gtagScript.async = true;
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0QW3ZG23F5";
+
+    // Dodaj skrypt do głowy dokumentu
+    document.head.appendChild(gtagScript);
+
+    // Utwórz dodatkowy skrypt dla konfiguracji Google Tag Managera
+    const gtmInlineScript = document.createElement("script");
+    gtmInlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0QW3ZG23F5');
+    `;
+
+    // Dodaj dodatkowy skrypt do głowy dokumentu
+    document.head.appendChild(gtmInlineScript);
+
+    // Opcjonalnie: Możesz usunąć skrypty, gdy komponent zostanie odmontowany
+    return () => {
+      document.head.removeChild(gtagScript);
+      document.head.removeChild(gtmInlineScript);
+    };
+  }, []);
+
+  return (
+    <section className="mx-6 sm:mx-16 lg:mx-[200px] mb-[100px] mt-20">
+      <h3 className="text-4xl font-display font-semibold text-gray-800 text-center">
+        Poznaj naszych Specjalistów
+      </h3>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
+        {staffData.map((person, index) => (
+          <div
+            key={index}
+            className="bg-white border-gray-400 border-[0.5px] rounded-xl p-6 flex flex-col items-center space-y-4"
+          >
+            <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 overflow-hidden rounded-full">
+              <img
+                src={person.imageUrl}
+                alt={person.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-semibold font-display mb-2">
+                {person.name}
+              </h3>
+              <div className="text-gray-600">{person.description}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default DoctorCards;

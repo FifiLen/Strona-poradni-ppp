@@ -26,7 +26,7 @@ function ContactForm() {
                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 
                focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
 
-        <label htmlFor="message" className="block mt-3 text-sm font-medium text-gray-700">Wiadomość</label>
+        <label htmlFor="message" className="block mt-3 text-sm font-semibold text-gray-700">Wiadomość</label>
         <textarea rows="5" name="message" id="message" placeholder="Twoja wiadomość..." required 
                   className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 
                   focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>

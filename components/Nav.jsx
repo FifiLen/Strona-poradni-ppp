@@ -1,5 +1,5 @@
 'use client'
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
@@ -12,18 +12,24 @@ import {
   BuildingOfficeIcon,
   ShieldCheckIcon,
 } from '@heroicons/react/24/outline'
+
+
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import { FaTiktok, FaFacebook, FaYoutube } from 'react-icons/fa6'
+
+
 
 
 const products = [
   { name: 'Nasi Specjaliści', description: 'Dowiedz się więcej o zespole Magnolii', href: '/Kadra', icon: UserGroupIcon },
   { name: 'Nasze miejsce', description: '', href: '/O_nas', icon: BuildingOfficeIcon },
   { name: 'Regulamin', description: '', href: '/regulamin', icon: ShieldCheckIcon },
-  { name: 'Webinary', description: 'Zapisz się na nasze webinaria', href: '/Webinary', icon: BookOpenIcon },
-  { name: 'Blog', description: 'Zajrzyj na nasz blog o E-uzależnieniach', href: 'https://magnolia-blog-eta.vercel.app', icon: ChatBubbleBottomCenterIcon },
-  { name: 'Facebook', description: 'Zajrzyj na naszego Facebooka', href: 'https://www.facebook.com/poradnia.magnolia', icon: GlobeAltIcon },
-  { name: 'YouTube', description: 'Zobacz nasze materiały na YouTubie', href: 'https://www.youtube.com/@PPP-MAGNOLIA', icon: PlayIcon },
+  // { name: 'Webinary', description: 'Zapisz się na nasze webinaria', href: '/Webinary', icon: BookOpenIcon },
+  // { name: 'Blog', description: 'Zajrzyj na nasz blog o E-uzależnieniach', href: 'https://magnolia-blog-eta.vercel.app', icon: ChatBubbleBottomCenterIcon },
+  { name: 'TikTok', description: 'Zajrzyj na naszego TikToka', href: 'https://www.tiktok.com/@poradnia_magnolia_rybnik', icon: FaTiktok },
+  { name: 'Facebook', description: 'Zajrzyj na naszego Facebooka', href: 'https://www.facebook.com/poradnia.magnolia', icon: FaFacebook },
+  { name: 'YouTube', description: 'Zobacz nasze materiały na YouTubie', href: 'https://www.youtube.com/@PPP-MAGNOLIA', icon: FaYoutube },
 ]
 
 const callsToAction = [
@@ -34,20 +40,35 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Nav() {
+export default function MainPageNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+
+ // Dodajemy efekt, który nasłuchuje na przewijanie strony
+ useEffect(() => {
+  const handleScroll = () => {
+    // Ustawiamy stan "scrolled" na true/false w zależności od tego, czy strona została przewinięta
+    setScrolled(window.scrollY > 60);
+  };
+
+  // Dodajemy nasłuchiwacz zdarzenia przewijania
+  window.addEventListener('scroll', handleScroll);
+
+  // Usuwamy nasłuchiwacz, gdy komponent jest odmontowywany, aby uniknąć wycieków pamięci
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
 
   return (
-    <header className="bg-white/90 border-b border-gray-300">
-      <nav className="mx-auto flex w-full items-center justify-between p-6 lg:px-5" aria-label="Global">
-        <div className="flex">
-          <Link href="/" className="-m-1.5 p-1.5 flex justify-start items-center gap-2">
-          <img className="h-10 w-auto" src="/assets/magnolia.png" alt="" />
-            <span className=' font-semibold text-gray-900 hover:text-[#921d7f] transition-all duration-300'>Magnolia</span>
+    <header className={` border-b border-gray-300 `}>
+      <nav className="mx-auto flex w-full items-center justify-between p-3 lg:px-5" aria-label="Global">
+        <div className={`flex`}>
+          <Link href="/" className=" flex justify-start items-center">
+            <img src="/assets/LogoMainPage.svg" width={170} alt="" />
             <span className="sr-only">Magnolia</span>
             
           </Link>
         </div>
+        
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -59,36 +80,36 @@ export default function Nav() {
           </button>
         </div>
         
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Popover.Group className={`hidden md:flex-wrap md:mx-5 md:gap-x-6 lg:flex font-[450] lg:gap-x-10  py-2 px-4`}>
          
-          <Link href="/" className="text-sm  leading-6 text-gray-600">
+          <Link href="/" className="text-sm  leading-6 ">
             Strona główna
           </Link>
 
-          <Link href="/Centrum_uzaleznien" className="text-sm  leading-6 text-gray-600">
+          <Link href="/Centrum_uzaleznien" className="text-sm  leading-6 ">
             Centrum uzależnień
           </Link>
 
-          <Link href="/Dzieci" className="text-sm  leading-6 text-gray-600">
+          <Link href="/Dzieci" className="text-sm  leading-6 ">
             Wsparcie dla dzieci
           </Link>
 
-          <Link href="/Dorosli" className="text-sm  leading-6 text-gray-600">
+          <Link href="/Dorosli" className="text-sm  leading-6 ">
             Wsparcie dla dorosłych
           </Link>
 
-          <Link href="/terapia_vr" className="text-sm  leading-6 text-gray-600">
+          <Link href="/terapia_vr" className="text-sm  leading-6 ">
             Terapia VR
           </Link>
 
-          <Link href="/assets/oferta-PPP-Magnolia.pdf" className="text-sm  leading-6 text-gray-600">
+          <Link href="/assets/oferta-PPP-Magnolia.pdf" className="text-sm  leading-6 ">
             Oferta
           </Link>
         
 
 
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm leading-6 text-gray-600">
+            <Popover.Button className="flex items-center gap-x-1 text-sm leading-6 ">
               O nas
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
             </Popover.Button>
@@ -102,7 +123,7 @@ export default function Nav() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-32 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              <Popover.Panel className="absolute -left-60 top-full z-50 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
@@ -141,7 +162,7 @@ export default function Nav() {
         </Popover.Group>
         <div className="hidden lg:flex gap-2 lg:justify-end">
           
-          <Link href="/Kontakt" className="text-sm bg-white font-semibold py-2 px-5 border rounded-md  leading-6 text-gray-900">
+          <Link href="/Kontakt" className={`text-sm bg-gray-200/70 font-semibold py-2 px-5 rounded-md  leading-6 text-gray-900`}>
             Kontakt
           </Link>
           
@@ -151,8 +172,8 @@ export default function Nav() {
 
 
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-50" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Magnolia</span>

@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@600&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 222.2 84% 4.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 222.2 84% 4.9%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 84% 4.9%;
+		--primary: 222.2 47.4% 11.2%;
+		--primary-foreground: 210 40% 98%;
+		--secondary: 210 40% 96.1%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+		--accent: 210 40% 96.1%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+		--ring: 222.2 84% 4.9%;
+		--radius: 0.5rem;
+	}
+	.dark {
+		--background: 222.2 84% 4.9%;
+		--foreground: 210 40% 98%;
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
+		--primary: 210 40% 98%;
+		--primary-foreground: 222.2 47.4% 11.2%;
+		--secondary: 217.2 32.6% 17.5%;
+		--secondary-foreground: 210 40% 98%;
+		--muted: 217.2 32.6% 17.5%;
+		--muted-foreground: 215 20.2% 65.1%;
+		--accent: 217.2 32.6% 17.5%;
+		--accent-foreground: 210 40% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 217.2 32.6% 17.5%;
+		--input: 217.2 32.6% 17.5%;
+		--ring: 212.7 26.8% 83.9%;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+header{
+	position: sticky;
+	z-index: 30;
+	top: 0;
+}
+
+
+nav a:hover {
+	transition: 0.5s;
+	color: #921d7f;
+}
+
+iframe {
+	overflow: hidden;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255, 255, 255);
+	/* Tło z przezroczystością */
+	color: #cc007a92;
+	opacity: 0;
+	/* Ukrywamy początkowo */
+	display: flex;
+	justify-content: center;
+	/* Wyśrodkowanie poziome */
+	align-items: center;
+	/* Wyśrodkowanie pionowe */
+	text-align: center;
+	border-radius: 3.5px;
+	transition: opacity 1s;
+	/* Animacja zmiany opacity trwa 1 sekundę */
+}
+/* Pokazujemy overlay po najechaniu na kafelek */
+.w-96:hover .overlay {
+	opacity: 1;
+	/* Pokazujemy overlay przez zmianę opacity na 1 */
+}
+/* Add this to your CSS stylesheet */
+.active-tile .overlay {
+	opacity: 1;
+	/* Show the overlay when this class is present */
+	/* Add your animation styles here */
+	/* For example, you can use a transition for a smooth fade-in effect */
+	transition: opacity 1s ease-in-out;
+	/* Adjust the duration and easing as needed */
+}
+
+
+.custom-shadow {
+	cursor: pointer;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border: 1px solid slategray;
+	background-color: rgba(248, 250, 252, 0.8);
+	/* bg-slate-50/80 */
+	border-radius: 15px;
+	/* rounded-xl */
+	box-shadow: 5px 5px 0px rgba(0, 0, 0, 1), 10px 10px 0px rgba(255, 209, 209, 0.766);
+	transition: box-shadow 0.3s ease-in-out, gap 0.3s ease-in-out;
+}
+.custom-shadow:hover {
+	gap: 14px;
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 1), 5px 5px 0px rgba(255, 209, 209, 0.766);
+}
+.custom-shadow2 {
+	cursor: pointer;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border: 1px solid slategray;
+	background-color: rgba(248, 250, 252, 0.8);
+	/* bg-slate-50/80 */
+	border-radius: 15px;
+	/* rounded-xl */
+	box-shadow: 5px 5px 0px rgba(0, 0, 0, 1), 10px 10px 0px rgba(0, 201, 108, 0.305);
+	transition: box-shadow 0.3s ease-in-out, gap 0.3s ease-in-out;
+}
+.custom-shadow2:hover {
+	gap: 14px;
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 1), 5px 5px 0px rgba(0, 201, 108, 0.305);
+}
+.custom-shadow3 {
+	cursor: pointer;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border: 1px solid slategray;
+	background-color: rgba(248, 250, 252, 0.8);
+	/* bg-slate-50/80 */
+	border-radius: 15px;
+	/* rounded-xl */
+	box-shadow: 5px 5px 0px rgba(0, 0, 0, 1), 10px 10px 0px rgba(38, 121, 237, 0.513);
+	transition: box-shadow 0.3s ease-in-out, gap 0.3s ease-in-out;
+}
+.custom-shadow3:hover {
+	gap: 14px;
+	box-shadow: 8px 8px 0px rgba(0, 0, 0, 1), 5px 5px 0px rgba(38, 121, 237, 0.513);
+}
+.custom-shadow4 {
+	cursor: pointer;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	justify-content: center;
+	padding: 14px;
+	border: 1px solid slategray;
+	background-color: rgba(248, 250, 252, 0.8);
+	/* bg-slate-50/80 */
+	border-radius: 15px;
+	/* rounded-xl */
+	box-shadow: 3px 3px 0px rgba(0, 0, 0, 1), 6px 6px 0px rgba(38, 121, 237, 0.513);
+	transition: box-shadow 0.3s ease-in-out, gap 0.3s ease-in-out;
+}
+.custom-shadow4:hover {
+	gap: 14px;
+	box-shadow: 6px 6px 0px rgba(0, 0, 0, 1), 3px 3px 0px rgba(38, 121, 237, 0.513);
+}
+
+
+/* Styl dla paska nawigacyjnego i pseudo-elementu */
+.header {
+	position: fixed;
+	width: 100%;
+	transition: all 0.3s ease;
+	/* Płynna zmiana wszystkich właściwości */
+}
+
+.header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	/* Startujemy od środka */
+	width: 0%;
+	/* Początkowa szerokość */
+	height: 100%;
+	/* Wysokość równa kontenerowi */
+	background-color: white;
+	/* Kolor tła, który chcesz "rozlać" */
+	transition: 0.3s ease;
+	/* Płynne rozciąganie tła */
+	z-index: -1;
+	/* Upewnij się, że pseudo-element jest pod tekstami i innymi elementami */
+}
+/* Styl dla paska nawigacyjnego po przewinięciu */
+.scrolled .header::before {
+	width: 100%;
+	/* Pełna szerokość po przewinięciu */
+	left: 0;
+	/* Rozpoczynamy od lewej krawędzi */
+}
+.menu-item {
+	transition: background-color 0.3s ease;
+	/* Płynna zmiana tła */
+	/* Dodatkowe style dla elementów menu */
+}
+/* Styl elementów menu po przewinięciu */
+.scrolled .menu-item {
+	background-color: rgba(255, 255, 255, 0.5);
+	/* Przeźroczyste białe tło */
+}
+@keyframes fade-in-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	10% {
+		opacity: 0;
+		transform: translateY(-40px);
+	}
+	30% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.animate-fade-in-down {
+	animation: fade-in-down 1.5s ease-out forwards;
+}
+.oNas {
+	background-image: url('/assets/rec.svg');
+	background-position: center;
+	background-size: cover;
+}
+.oNas2 {
+	background-image: url('/assets/oNasPupile.png');
+	background-position: center;
+	background-size: cover;
+}
+.oNas3 {
+	background-image: url('/assets/Union.png');
+	background-position: center;
+	background-size: cover;
+}
+.oNas4 {
+	background-image: url('/assets/oNasPupile.png');
+	background-position: center;
+	background-size: cover;
+
+}
+.oNas5 {
+	background-image: url('/assets/oNasVr.png');
+	background-position: center;
+	background-size: cover;
+}
+.oNas6 {
+	background-image: url('/assets/Kontakt.png');
+	background-position: bottom;
+	background-size: cover;
+}
+
+.text-gradient {
+	background: linear-gradient(90deg, #fecf3e 0%, #d400d0 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+@media (max-width: 767px) {
+	.oNas {
+		background-image: none;
+	}
+	.oNas2 {
+		background-image: none;
+	}
+	.oNas3 {
+		background-image: none;
+	}
+	.oNas4 {
+		background-image: none;
+	}
+	.oNas5 {
+		background-image: none;
+	}
+	.oNas6 {
+		background-image: none;
+	}
+}
+@media (max-width: 1400px) {
+	.oNas {
+		background-image: none;
+		background-color: #fef9c3;
+	}
+	.oNas2 {
+		background-image: none;
+		background-color: #820180;
+	}
+	.oNas3 {
+		background-image: none;
+		background-color: #fef9c3;
+	}
+	.oNas4 {
+		background-image: none;
+		background-color: #820180;
+  }
+	.oNas5 {
+		background-image: none;
+		background: linear-gradient( #000000, #670067);
+	}
+}
+
+
+.card-special-zsk {
+	background-image: url("/assets/cardInfo.svg");
+	background-repeat: no-repeat;
+	
+  
+	/* Ustawia rozmiar tła, aby był mniejszy niż cała karta */
+	background-size: 30% auto; /* Możesz dostosować ten rozmiar według potrzeb */
+  
+	/* Pozycjonuje tło w prawym górnym rogu karty */
+	background-position: top right -70px;
+	position: relative;
+	overflow: hidden;
+  }
+
+
+  .bg-cards-therapy {
+	background-image: url("/assets/bg-pary.png");
+	background-repeat: no-repeat;
+  }
