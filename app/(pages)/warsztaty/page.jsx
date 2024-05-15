@@ -24,6 +24,7 @@ const Warsztaty = () => {
         </div>
       </div>
 
+      {/* Section 1 */}
       <section className="mt-10 py-6 md:py-24">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
@@ -49,10 +50,10 @@ const Warsztaty = () => {
 
               <p className="text-gray-700 text-base text-left mb-6">
                 Nasze zajęcia warsztatowe to doskonała okazja do rozwoju
-                umiejętności w różnych dziedzinach. Są przeznaczone dla dzieci i
-                dorosłych, oferując ciekawe i angażujące aktywności. Chociaż
-                promujemy je jako ofertę wakacyjną, warsztaty będą dostępne
-                przez cały rok.
+                umiejętności psychospołecznych i pedagogicznych. Są przeznaczone
+                dla dzieci, młodzieży i dorosłych, oferując ciekawe i angażujące
+                aktywności. Chociaż promujemy je jako ofertę wakacyjną,
+                warsztaty będą dostępne przez cały rok.
               </p>
 
               <Accordion type="single" collapsible>
@@ -60,19 +61,32 @@ const Warsztaty = () => {
                   <AccordionTrigger>Warsztaty dla dzieci</AccordionTrigger>
                   <AccordionContent>
                     Oferujemy różnorodne warsztaty dla dzieci, które rozwijają
-                    ich kreatywność, umiejętności społeczne i techniczne. Mogą
-                    to być zajęcia plastyczne, muzyczne, sportowe, a także z
-                    programowania i robotyki.
+                    ich umiejętności społeczne, emocjonalne i poznawcze. Mogą to
+                    być zajęcia z zakresu radzenia sobie z emocjami,
+                    komunikacji, a także rozwijające kreatywność i umiejętności
+                    techniczne.
                   </AccordionContent>
                 </AccordionItem>
 
                 <AccordionItem value="item-2">
+                  <AccordionTrigger>Warsztaty dla młodzieży</AccordionTrigger>
+                  <AccordionContent>
+                    Nasze warsztaty dla młodzieży pomagają rozwijać umiejętności
+                    społeczne, zarządzanie stresem, samoświadomość oraz
+                    przygotowanie do życia zawodowego. Oferujemy zajęcia z
+                    komunikacji, pracy zespołowej, asertywności oraz technik
+                    relaksacyjnych.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3">
                   <AccordionTrigger>Warsztaty dla dorosłych</AccordionTrigger>
                   <AccordionContent>
                     Dorośli mogą skorzystać z naszych warsztatów, aby rozwijać
-                    swoje pasje i zdobywać nowe umiejętności. Oferujemy kursy
-                    gotowania, warsztaty z rękodzieła, zajęcia sportowe oraz
-                    szkolenia z programowania i nowych technologii.
+                    swoje umiejętności interpersonalne, radzenia sobie ze
+                    stresem oraz technik relaksacyjnych. Oferujemy także
+                    szkolenia z zakresu rodzicielstwa, komunikacji małżeńskiej
+                    oraz rozwoju osobistego.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -81,102 +95,12 @@ const Warsztaty = () => {
         </div>
       </section>
 
-      <section className="">
-        <div className="max-w-7xl mx-auto flex gap-6 justify-center items-center">
-          <div className="grid grid-cols-2 gap-10">
-            <div className="grid gap-10">
-              <Card className="border-blue-500 bg-blue-100">
-                <CardHeader>
-                  <CardTitle>Warsztaty plastyczne</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Nasze warsztaty plastyczne dla dzieci i dorosłych rozwijają
-                    kreatywność i zdolności manualne. Uczestnicy mogą
-                    eksperymentować z różnymi technikami i materiałami, tworząc
-                    unikalne dzieła sztuki.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-green-800 bg-green-100">
-                <CardHeader>
-                  <CardTitle>Zajęcia sportowe</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Zajęcia sportowe to świetny sposób na aktywne spędzanie
-                    czasu. Oferujemy różnorodne formy aktywności fizycznej,
-                    takie jak joga, pilates, taniec czy gry zespołowe,
-                    dostosowane do różnych grup wiekowych.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-blue-500 bg-blue-100">
-                <CardHeader>
-                  <CardTitle>Kursy gotowania</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Kursy gotowania pozwalają uczestnikom odkrywać nowe smaki i
-                    techniki kulinarne. Nasi doświadczeni instruktorzy prowadzą
-                    zajęcia, które inspirują do eksperymentowania w kuchni i
-                    rozwijania kulinarnych umiejętności.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            <div className="grid gap-10">
-              <Card className="border-green-800 bg-green-100">
-                <CardHeader>
-                  <CardTitle>Warsztaty z programowania</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Oferujemy warsztaty z programowania dla dzieci i dorosłych
-                    na różnych poziomach zaawansowania. Uczestnicy uczą się
-                    podstaw kodowania, tworzenia aplikacji i gier, co rozwija
-                    ich umiejętności logicznego myślenia i rozwiązywania
-                    problemów.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-blue-500 bg-blue-100">
-                <CardHeader>
-                  <CardTitle>Rękodzieło</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Warsztaty rękodzieła to okazja do tworzenia pięknych i
-                    praktycznych przedmiotów. Uczestnicy uczą się różnych
-                    technik, takich jak szydełkowanie, haftowanie, decoupage czy
-                    tworzenie biżuterii, rozwijając swoje zdolności manualne i
-                    kreatywność.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border-green-800 bg-green-100">
-                <CardHeader>
-                  <CardTitle>Zajęcia muzyczne</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Zajęcia muzyczne dla dzieci i dorosłych to świetna okazja do
-                    rozwijania talentów muzycznych. Oferujemy lekcje gry na
-                    różnych instrumentach, naukę śpiewu oraz zajęcia z teorii
-                    muzyki.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mt-10 py-6 md:py-24 mb-10 max-w-7xl mx-auto">
+      {/* Section 2 */}
+      <section className="mt-10 py-6 md:py-24">
         <div className="mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-20">
+          <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Informational Text */}
-            <div className="flex-col justify-start items-center">
+            <div className="mx-6 md:ml-16 flex-col justify-center items-center">
               <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
                 Jak wyglądają nasze zajęcia warsztatowe?
               </h2>
@@ -184,10 +108,11 @@ const Warsztaty = () => {
                 <span className="font-semibold text-xl">
                   Nasze zajęcia warsztatowe
                 </span>{" "}
-                są prowadzone przez doświadczonych instruktorów, którzy dbają o
-                przyjazną i wspierającą atmosferę. Każde zajęcia są dostosowane
-                do poziomu zaawansowania uczestników, zapewniając rozwój
-                umiejętności w wybranej dziedzinie.
+                są prowadzone przez doświadczonych psychologów, pedagogów oraz
+                terapeutów, którzy dbają o przyjazną i wspierającą atmosferę.
+                Każde zajęcia są dostosowane do poziomu zaawansowania
+                uczestników, zapewniając rozwój umiejętności w wybranej
+                dziedzinie.
               </p>
               <p className="text-gray-700 text-base text-left mb-6">
                 Zajęcia odbywają się w małych grupach, co umożliwia indywidualne
@@ -195,27 +120,27 @@ const Warsztaty = () => {
                 materiały i narzędzia, a także wygodne i bezpieczne warunki do
                 nauki i twórczej pracy.
               </p>
-              {/* Accordion and Link components here */}
             </div>
 
-            {/* Image */}
+            {/* Video Embed */}
             <div className="relative mb-4 md:mb-0">
-              <div className="relative w-[38rem] h-[35rem] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
-                <Image
-                  src="/assets/testtlo.jpg"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw"
-                  priority={true}
-                  alt="workshop session"
-                />
+              <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                  title="Workshop Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mt-10 py-6">
+      {/* Section 3 */}
+      <section className="mt-10 py-6 md:py-24">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Image */}
@@ -235,13 +160,16 @@ const Warsztaty = () => {
             {/* Informational Text */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
               <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
-                Zajęcia warsztatowe dla dzieci i dorosłych:
+                Zajęcia warsztatowe dla dzieci, młodzieży i dorosłych:
               </h2>
               <div className="mt-3 text-blue-800">
-                <p>wspierają rozwój kreatywności i umiejętności manualnych,</p>
+                <p>
+                  wspierają rozwój umiejętności psychospołecznych i
+                  emocjonalnych,
+                </p>
               </div>
               <div className="mt-3 text-blue-600">
-                <p>pomagają w nauce nowych umiejętności i rozwijaniu pasji,</p>
+                <p>pomagają w nauce zarządzania stresem i emocjami,</p>
               </div>
               <div className="mt-3 text-blue-800">
                 <p>
@@ -262,6 +190,184 @@ const Warsztaty = () => {
         </div>
       </section>
 
+      {/* Section 4 */}
+      <section className="mt-10 py-6 md:py-24">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-4xl text-center font-semibold mb-10 font-display">
+            Specjalne warsztaty letnie
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="border-blue-500 bg-blue-100">
+              <CardHeader>
+                <CardTitle>Warsztaty kreatywne</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Nasze warsztaty kreatywne to idealna okazja dla dzieci i
+                  młodzieży do rozwijania swoich umiejętności artystycznych.
+                  Oferujemy zajęcia z malarstwa, rzeźby, teatru i wielu innych.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="border-green-800 bg-green-100">
+              <CardHeader>
+                <CardTitle>Zajęcia sportowe</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Zajęcia sportowe pomagają dzieciom i młodzieży rozwijać
+                  kondycję fizyczną i umiejętności zespołowe. Oferujemy
+                  różnorodne aktywności, takie jak piłka nożna, siatkówka, biegi
+                  i gimnastyka.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="border-orange-500 bg-orange-100">
+              <CardHeader>
+                <CardTitle>Warsztaty technologiczne</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Warsztaty technologiczne to zajęcia, podczas których
+                  uczestnicy uczą się podstaw programowania, robotyki i
+                  inżynierii. To doskonała okazja, aby rozwinąć zainteresowania
+                  związane z nowoczesnymi technologiami.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5 */}
+      <section className="mt-10 py-6 md:py-24">
+        <div className="mx-auto">
+          <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
+            {/* Informational Text */}
+            <div className="mx-6 md:ml-16 flex-col justify-center items-center">
+              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+                Specjalne warsztaty letnie
+              </h2>
+              <p className="text-gray-700 text-base text-left mb-6">
+                Nasze letnie warsztaty są dostosowane do potrzeb uczestników w
+                każdym wieku. To wyjątkowa okazja do nauki i zabawy w przyjaznym
+                i wspierającym środowisku. Oferujemy zajęcia z różnych dziedzin,
+                które pomogą w rozwijaniu umiejętności i pasji.
+              </p>
+              <p className="text-gray-700 text-base text-left mb-6">
+                Podczas warsztatów letnich uczestnicy będą mogli brać udział w
+                kreatywnych projektach, aktywnościach na świeżym powietrzu oraz
+                specjalnych wydarzeniach, które sprawią, że czas spędzony z nami
+                będzie niezapomniany.
+              </p>
+            </div>
+
+            {/* Video Embed */}
+            <div className="relative mb-4 md:mb-0">
+              <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/YOUR_SECOND_VIDEO_ID"
+                  title="Summer Workshop Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6 */}
+      <section className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center">
+            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+              Nowość
+            </h2>
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              Programy mentoringowe
+            </p>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+              Oferujemy indywidualne programy mentoringowe, które pomagają
+              dzieciom i młodzieży rozwijać swoje talenty i umiejętności. Każdy
+              uczestnik otrzymuje indywidualne wsparcie od doświadczonego
+              mentora.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+              <div className="relative">
+                <dt>
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                    <FaCircleArrowRight className="rotate-[-45deg]" />
+                  </div>
+                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                    Indywidualne podejście
+                  </p>
+                </dt>
+                <dd className="mt-2 ml-16 text-base text-gray-500">
+                  Każdy uczestnik programu mentoringowego otrzymuje indywidualne
+                  wsparcie od mentora, który pomaga rozwijać jego talenty i
+                  umiejętności.
+                </dd>
+              </div>
+
+              <div className="relative">
+                <dt>
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                    <FaCircleArrowRight className="rotate-[-45deg]" />
+                  </div>
+                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                    Specjalistyczne zajęcia
+                  </p>
+                </dt>
+                <dd className="mt-2 ml-16 text-base text-gray-500">
+                  Programy obejmują specjalistyczne zajęcia z różnych dziedzin,
+                  takich jak matematyka, nauki przyrodnicze, języki obce, sztuka
+                  i technologia.
+                </dd>
+              </div>
+
+              <div className="relative">
+                <dt>
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                    <FaCircleArrowRight className="rotate-[-45deg]" />
+                  </div>
+                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                    Rozwój osobisty
+                  </p>
+                </dt>
+                <dd className="mt-2 ml-16 text-base text-gray-500">
+                  Uczestnicy uczą się technik zarządzania czasem, radzenia sobie
+                  ze stresem oraz rozwijania umiejętności komunikacyjnych i
+                  przywódczych.
+                </dd>
+              </div>
+
+              <div className="relative">
+                <dt>
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                    <FaCircleArrowRight className="rotate-[-45deg]" />
+                  </div>
+                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                    Projektowanie kariery
+                  </p>
+                </dt>
+                <dd className="mt-2 ml-16 text-base text-gray-500">
+                  Mentorzy pomagają uczestnikom w planowaniu ścieżki edukacyjnej
+                  i zawodowej, umożliwiając im osiągnięcie sukcesu w
+                  przyszłości.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 7 */}
       <section className="max-w-7xl mx-auto my-20">
         <Card className="border-blue-800 bg-blue-100">
           <CardHeader>
@@ -270,10 +376,10 @@ const Warsztaty = () => {
           <CardContent>
             <p>
               Nasze zajęcia warsztatowe to doskonała okazja do rozwijania
-              umiejętności, poznawania nowych pasji i spędzania czasu w twórczy
-              sposób. Zapraszamy do zapoznania się z naszą ofertą i dołączenia
-              do zajęć, które są dostępne przez cały rok, z ofertą specjalną na
-              wakacje.
+              umiejętności psychospołecznych, poznawania nowych pasji i
+              spędzania czasu w twórczy sposób. Zapraszamy do zapoznania się z
+              naszą ofertą i dołączenia do zajęć, które są dostępne przez cały
+              rok, z ofertą specjalną na wakacje.
             </p>
           </CardContent>
           <CardFooter>
