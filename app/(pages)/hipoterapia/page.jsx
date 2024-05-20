@@ -59,20 +59,21 @@ const Hipoterapia = () => {
                 nieoceniona przy leczeniu osób z&nbsp;dysfunkcjami fizycznymi,
                 emocjonalnymi oraz&nbsp;rozwojowymi. W&nbsp;świecie koni możesz
                 przełamać lęki i&nbsp;pokonać własne słabości dzięki przebywaniu
-                w&nbsp;towarzystwie koni, obcowanie z&nbsp;nimi, dotykanie,
-                a&nbsp;także poruszanie się na&nbsp;końskim grzebiecie. <br />
+                w&nbsp;towarzystwie tych pięknych zwierząt, obcowanie
+                z&nbsp;nimi, dotykanie, a&nbsp;także poruszanie się na&nbsp;ich
+                grzebiecie. <br />
                 <br />
-                Hipoterapia opiera się na&nbsp;wykorzystaniu ruchu konia jako
-                „przedmiotu” terapeutycznego. Koń, poprzez swój rytmiczny
-                i&nbsp;powtarzalny ruch, imituje ludzki chód, co&nbsp;stymuluje
-                odpowiedzi na&nbsp;ów ruch w&nbsp;ciele jeźdźca. Osoba biorąca
-                udział w&nbsp;terapii siedzi na&nbsp;koniu, a&nbsp;to wymaga
-                od&nbsp;niej stabilizacji tułowia oraz&nbsp;zachowania
-                równowagi, to&nbsp;z&nbsp;kolei aktywuje wiele grup mięśniowych.
-                Terapia odbywa się pod&nbsp;nadzorem wykwalifikowanego terapeuty
-                hipoterapii, który dostosowuje zajęcia do&nbsp;indywidualnych
-                potrzeb pacjenta, nadzorując zarówno bezpieczeństwo, jak
-                i&nbsp;skuteczność terapii.
+                Hipoterapia opiera się na&nbsp;wykorzystaniu ruchu tego
+                majestatycznego zwierzęcia jako „przedmiotu” terapeutycznego.
+                Koń, poprzez swój rytmiczny i&nbsp;powtarzalny ruch, imituje
+                ludzki chód, co&nbsp;stymuluje odpowiedzi na&nbsp;ów ruch
+                w&nbsp;ciele jeźdźca. Osoba biorąca udział w&nbsp;terapii siedzi
+                na&nbsp;koniu, co&nbsp;wymaga od&nbsp;niej stabilizacji tułowia
+                oraz&nbsp;zachowania równowagi, to&nbsp;z&nbsp;kolei aktywuje
+                wiele grup mięśniowych. Terapia odbywa się pod&nbsp;nadzorem
+                wykwalifikowanego terapeuty hipoterapii, który dostosowuje
+                zajęcia do&nbsp;indywidualnych potrzeb pacjenta, nadzorując
+                zarówno bezpieczeństwo, jak i&nbsp;skuteczność terapii.
               </p>
             </div>
           </div>
@@ -86,21 +87,39 @@ const Hipoterapia = () => {
             {/* Informational Text */}
             <div className="flex flex-col justify-center items-start mx-6">
               <h2 className="text-4xl text-left font-semibold mb-6 font-display">
-                Potężne zwierze może być „stanowiskiem” terapeutycznym
+                Potężne zwierzę może być „stanowiskiem” terapeutycznym
               </h2>
+
+              <p className="flex items-center gap-3 text-left mb-6">
+                <GiCheckMark className="text-xl font-semibold text-green-500" />
+                Koń może zastępować materac (szeroki zad)
+              </p>
+              <p className="flex items-center gap-3 text-left mb-6">
+                <GiCheckMark className="text-xl font-semibold text-green-500" />
+                Terapeutyczną piłkę, lub&nbsp;wałek (kłoda)
+              </p>
+              <p className="flex items-center gap-3 text-left mb-6">
+                <GiCheckMark className="text-xl font-semibold text-green-500" />
+                Klin (szyja)
+              </p>
+              <p className="flex items-center gap-3 text-left mb-6">
+                <GiCheckMark className="text-xl font-semibold text-green-500" />
+                Drabinkę do&nbsp;podciągania (grzywa)
+              </p>
+              <p className="flex items-center gap-3 text-left mb-6">
+                <GiCheckMark className="text-xl font-semibold text-green-500" />
+                Drabinkę do&nbsp;podciągania (grzywa)
+              </p>
               <p className="text-gray-700 text-base text-left mb-6">
-                Koń może zastępować materac (szeroki zad), terapeutyczną piłkę,
-                lub&nbsp;wałek (kłoda), klin (szyja), bądź&nbsp;drabinkę
-                do&nbsp;podciągania (grzywa). Idąc stępem wprowadza pacjenta
-                leżącego na&nbsp;nim na&nbsp;brzuchu – w&nbsp;ruchy zbliżone
-                do&nbsp;pełzania, pacjenta opartego na&nbsp;łokciach
-                i&nbsp;kolanach – w&nbsp;ruchy zbliżone do&nbsp;czworakowania,
-                pacjenta siedzącego – w&nbsp;ruchy zbliżone do&nbsp;chodzenia.
-                Nie&nbsp;ma innego “przyrządu”, który byłby
-                tak&nbsp;uniwersalny. Siedząc na&nbsp;koniu łatwiej opanować
-                pojęcia przestrzenne, schemat własnego ciała, nauczyć się liczyć
-                do&nbsp;czterech (patrz nogi konia), wymawiać trudne głoski
-                i&nbsp;wyrazy.
+                Idąc stępem wprowadza pacjenta leżącego na&nbsp;nim
+                na&nbsp;brzuchu – w&nbsp;ruchy zbliżone do&nbsp;pełzania.
+                Pacjenta opartego na&nbsp;łokciach i&nbsp;kolanach –
+                w&nbsp;ruchy zbliżone do&nbsp;czworakowania, pacjenta siedzącego
+                – w&nbsp;ruchy zbliżone do&nbsp;chodzenia. Nie&nbsp;ma innego
+                “przyrządu”, który byłby tak&nbsp;uniwersalny. Siedząc
+                na&nbsp;koniu łatwiej opanować pojęcia przestrzenne, schemat
+                własnego ciała, nauczyć się liczyć do&nbsp;czterech (patrz nogi
+                konia), wymawiać trudne głoski oraz&nbsp;wyrazy.
               </p>
             </div>
             {/* Video Embed */}
@@ -156,7 +175,7 @@ const Hipoterapia = () => {
                 od&nbsp;temperatury ciała ludzkiego),
               </p>
               <p className="flex items-center gap-3 text-left mb-6">
-                <GiCheckMark className="text-3xl font-semibold text-green-500" />
+                <GiCheckMark className="text-2xl font-semibold text-green-500" />
                 rytmicznemu kołysaniu w&nbsp;stępie,
               </p>
               <p className="flex items-center gap-3 text-left mb-6">
@@ -184,15 +203,17 @@ const Hipoterapia = () => {
                 Sesja terapeutyczna
               </h2>
               <p className="text-gray-700 text-base text-left mb-6">
-                W&nbsp;trakcie sesji terapeuta instruuje jak reagować
+                W&nbsp;trakcie sesji hipoterapeuta instruuje jak reagować
                 na&nbsp;ruchy konia. Terapia może obejmować pozycje
                 na&nbsp;koniu - siedzenie przodem, tyłem czy&nbsp;nawet leżenie
                 aby&nbsp;stymulować grupy mięśniowe. Terapeuta stosuje ćwiczenia
-                integracji sensorycznej oraz&nbsp;motorycznej, takie jak łapanie
-                piłki czy&nbsp;wykonywanie określonych zadań rąk podczas jazdy.
+                integracji sensorycznej oraz&nbsp;motorycznej, takie jak:
+                łapanie piłki czy&nbsp;wykonywanie określonych zadań rąk podczas
+                jazdy.
               </p>
+
               <p className="text-gray-700 text-base text-left mb-6">
-                Sesje terapeutyczne mogą również odbywać się „przy koniu” zanim
+                Sesje terapeutyczne mogą odbywać się również „przy koniu” zanim
                 pacjent nabierze pewności siebie i&nbsp;swobody w&nbsp;relacji
                 z&nbsp;tym łagodnym ale&nbsp;dużym zwierzęciem.
               </p>
@@ -461,7 +482,7 @@ const Hipoterapia = () => {
                 <CardContent>
                   <p>
                     Ruch konia przekazuje uczestnikowi zajęć bodźce sensoryczne,
-                    które pomagają w&nbsp;procesie integracji sensorycznej.
+                    które&nbsp;pomagają w&nbsp;procesie integracji sensorycznej.
                   </p>
                 </CardContent>
               </Card>
@@ -575,9 +596,9 @@ const Hipoterapia = () => {
                     Trójwymiarowy ruch grzbietu końskiego w&nbsp;stępie
                     przekazywany miednicy jeźdźca jest identyczny z&nbsp;ruchami
                     miednicy prawidłowo kroczącego człowieka. W&nbsp;tym samym
-                    czasie barki i&nbsp;luźno zwisające kończyny dolne również
-                    zachowują się tak, jak u&nbsp;idącego człowieka. Daje
-                    to&nbsp;możliwość nauki chodzenia “bez chodzenia”.
+                    czasie barki oraz&nbsp;luźno zwisające kończyny dolne
+                    również zachowują się tak, jak u&nbsp;idącego człowieka.
+                    Daje to&nbsp;możliwość nauki chodzenia “bez chodzenia”.
                     Hipoterapia może stanowić pierwszy etap tej nauki,
                     bądź&nbsp;stać się jej przełomowym momentem.
                   </p>
@@ -593,7 +614,7 @@ const Hipoterapia = () => {
                     postaciom mózgowego porażenia dziecięcego utrudniają
                     usprawnianie. Hipoterapia stwarza możliwość stopniowego
                     eliminowania tych automatyzmów dzięki:
-                    <ul>
+                    <ul className=" list-disc ml-5 space-y-2">
                       <li>łagodnym, kołyszącym ruchom w&nbsp;stępie,</li>
                       <li>
                         dysocjacji biodra – barki oraz&nbsp;trójzgięciu
@@ -914,7 +935,59 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      {/* Section 7 */}
+      <section className="mt-10 py-6 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <h2 className="text-4xl text-left font-semibold mb-8 font-display">
+            Cennik
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <Card className="border-blue-500 bg-blue-100">
+              <CardHeader>
+                <CardTitle>Hipoterapia w ramach WWR</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg mb-4">
+                  Hipoterapia w ramach zajęć WWR jest darmowa. Zapraszamy do
+                  szkorzystania z naszej oferty darmowych zajęć WWR dla twojego
+                  dziecka.
+                </p>
+              </CardContent>
+              <CardFooter>
+                <Link
+                  href={"/WWRD"}
+                  className="p-2 rounded-md border border-blue-800 bg-blue-300 flex items-center justify-center gap-2"
+                >
+                  Jak zapisać dziecko na darmowe zajęcia WWR?
+                  <FaCircleArrowRight className="rotate-[-45deg]" />
+                </Link>
+              </CardFooter>
+            </Card>
+            <Card className="border-green-500 bg-green-100">
+              <CardHeader>
+                <CardTitle>Usługa komercyjna</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg mb-4">
+                  Cena za komercyjną hipoterapię wynosi 100zł za 30 minut.
+                  Skontaktuj się z nami, aby umówić się na sesję.
+                </p>
+                <p className="text-2xl font-semibold">100zł / 30 minut</p>
+              </CardContent>
+              <CardFooter>
+                <Link
+                  href={"/WWRD"}
+                  className="p-2 rounded-md border border-green-800 bg-green-300 flex items-center justify-center gap-2"
+                >
+                  Kontakt
+                  <FaCircleArrowRight className="rotate-[-45deg]" />
+                </Link>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 7
       <section className="max-w-7xl mx-auto my-20">
         <Card className="border-blue-800 bg-blue-100">
           <CardHeader>
@@ -940,7 +1013,7 @@ const Hipoterapia = () => {
             </Link>
           </CardFooter>
         </Card>
-      </section>
+      </section> */}
 
       <AlertDemo />
     </div>

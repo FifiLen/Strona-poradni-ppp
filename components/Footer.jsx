@@ -152,6 +152,18 @@ const Footer = () => {
                 </li>
                 <li className="mb-2">
                   <a
+                    href="https://www.facebook.com/groups/1071990153582830"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+                      <FaFacebookF />
+                      <span>Facebook (EW)</span>
+                    </span>
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a
                     href="https://www.youtube.com/@PPP-MAGNOLIA"
                     target="_blank"
                     rel="noopener noreferrer"
