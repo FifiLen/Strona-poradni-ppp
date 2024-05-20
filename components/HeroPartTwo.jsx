@@ -100,6 +100,14 @@ const HeroPartTwo = () => {
                   <LuArrowUpRight className="font-medium" />
                 </p>
               </Link>
+              <Link
+                href="/hipoterapia"
+                className="py-3 px-4 bg-white hover:bg-[#d55bc1] rounded-lg transition duration-300"
+              >
+                <p className="text-sm font-medium flex items-center justify-center gap-2 text-black">
+                  Hipoterapia <LuArrowUpRight className="font-medium" />
+                </p>
+              </Link>
             </div>
           </div>
         </div>
