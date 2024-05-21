@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
@@ -369,6 +370,7 @@ const TerapieVR = () => {
                 muted
                 autoPlay
                 playsInline
+                onContextMenu={(e) => e.preventDefault()}
               />
             </div>
             <div className="relative w-full h-64">
@@ -379,6 +381,7 @@ const TerapieVR = () => {
                 muted
                 autoPlay
                 playsInline
+                onContextMenu={(e) => e.preventDefault()}
               />
             </div>
           </div>
