@@ -25,7 +25,7 @@ const TerapieVR = () => {
       <section className="mt-10 py-6 md:py-24">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row md:grid-cols-2">
-            {/* Obrazek */}
+            {/* Video */}
             <div className="relative mb-4 md:mb-0">
               <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
                 <video
@@ -130,9 +130,9 @@ const TerapieVR = () => {
       <section className="mt-10 py-6 md:py-24 mb-10">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row md:grid-cols-2">
-            {/* Obrazek */}
+            {/* Video */}
             <div className="relative mb-4 md:mb-0">
-              <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
+              <div className="relative w-96 h-96 md:w-[670px] md:h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
                 <video
                   src="/assets/vr2.mp4"
                   loop
@@ -252,7 +252,7 @@ const TerapieVR = () => {
       <section className="mt-10 py-6 md:py-24 mb-10">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row md:grid-cols-2">
-            {/* Obrazek */}
+            {/* Video */}
             <div className="relative mb-4 md:mb-0">
               <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
                 <video
@@ -336,11 +336,60 @@ const TerapieVR = () => {
         </div>
       </section>
 
+      {/* Galeria */}
+      <section className="max-w-7xl md:px-0 px-4 mx-auto mt-10 py-6 md:py-24 mb-10">
+        <div className="mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tighter">
+            Nasza terapia to nie tylko okulary VR - to cała platforma.
+          </h2>
+          <div className="grid grid-cols-1 row-span-2 md:grid-cols-3 gap-4 mx-auto">
+            <div className="relative w-full h-128 md:row-span-2">
+              <Image
+                src="/assets/vr.jpeg"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+                alt="Galeria obraz 1"
+              />
+            </div>
+            <div className="relative w-full h-128 md:row-span-2">
+              <Image
+                src="/assets/vr2.jpeg"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+                alt="Galeria obraz 2"
+              />
+            </div>
+            <div className="relative w-full h-64">
+              <video
+                src="/assets/vrGrid.mp4"
+                className="rounded-lg object-cover w-full h-full"
+                loop
+                muted
+                autoPlay
+                playsInline
+              />
+            </div>
+            <div className="relative w-full h-64">
+              <video
+                src="/assets/vrGrid2.mp4"
+                className="rounded-lg object-cover w-full h-full"
+                loop
+                muted
+                autoPlay
+                playsInline
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Cennik */}
       <section className="mt-10 py-6 md:py-24 mb-10">
         <div className="mx-auto text-center">
           <Card className="mx-auto w-96 shadow-md">
-            <CardHeader className="bg-[#921d7f] text-white rounded-t-xl">
+            <CardHeader className="bg-[#225da5] text-white rounded-t-xl">
               <CardTitle className="text-2xl font-semibold">Cennik</CardTitle>
             </CardHeader>
             <CardContent className="text-gray-700 text-base p-6">
