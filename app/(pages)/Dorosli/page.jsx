@@ -62,7 +62,7 @@ const PoradniaPsychologicznoPedagogiczna = () => {
                 className=" text-slate-800 flex justify-start"
               >
                 <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow">
-                  Kiedy rozwarzać terapię dla par? <FaRegArrowAltCircleRight />
+                  Kiedy rozważać terapię dla par? <FaRegArrowAltCircleRight />
                 </div>
               </Link>
             </div>

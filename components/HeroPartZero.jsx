@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { LiaHandsHelpingSolid } from "react-icons/lia";
+import { FaHandsHelping } from "react-icons/fa";
 import { FaPersonCircleExclamation } from "react-icons/fa6";
 import { PiVirtualReality } from "react-icons/pi";
 import dynamic from "next/dynamic";
@@ -30,20 +30,19 @@ const HeroPartZero = () => {
           href={"/Dzieci"}
           className=" hover:scale-105  transition-all duration-500"
         >
-          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#df4ac6] via-pink-300 to-[#df4ac6] w-full h-[8rem] rounded-xl relative">
+          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#921d7f] via-[#5a004b] to-[#921d7f] w-full h-[8rem] rounded-xl relative">
             <div className="absolute top-0 left-0 p-4">
-              <FaChild className=" text-2xl" />
+              <FaChild className=" text-2xl text-white" />
             </div>
             <div className="flex justify-between items-center w-full">
               <div>
-                <h2 className="text-xl font-semibold tracking-tighter text-zinc-800">
+                <h2 className="text-xl font-semibold tracking-tighter text-white">
                   Wsparcie dla dzieci
                 </h2>
-                <p className="text-sm">Zajęcia WWR, TUS, Logopeda i więcej..</p>
+                <p className="text-sm text-gray-300">
+                  Zajęcia WWR, TUS, Logopeda i więcej..
+                </p>
               </div>
-              <p className="font-semibold px-2 py-1 border-[1.5px] border-black rounded-full">
-                ↗
-              </p>
             </div>
           </div>
         </Link>
@@ -52,20 +51,19 @@ const HeroPartZero = () => {
           href={"/Dorosli"}
           className=" hover:scale-105 transition-all duration-500"
         >
-          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-yellow-200 via-yellow-400 to-yellow-200 w-full h-[8rem] rounded-xl relative">
+          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#274871] via-[#225da5] to-[#274871] w-full h-[8rem] rounded-xl relative">
             <div className="absolute top-0 left-0 p-4">
-              <LiaHandsHelpingSolid className=" text-3xl" />
+              <FaHandsHelping className=" text-3xl text-white" />
             </div>
             <div className="flex justify-between items-center w-full">
               <div>
-                <h2 className="text-xl font-semibold tracking-tighter text-zinc-800">
+                <h2 className="text-xl font-semibold tracking-tighter text-white">
                   Wsparcie dla dorosłych
                 </h2>
-                <p className="text-sm">Psycholog, psychoterapia, terapie par</p>
+                <p className="text-sm text-gray-300">
+                  Psycholog, psychoterapia, terapie par
+                </p>
               </div>
-              <p className="font-semibold px-2 py-1 border-[1.5px] border-black rounded-full">
-                ↗
-              </p>
             </div>
           </div>
         </Link>
@@ -74,22 +72,19 @@ const HeroPartZero = () => {
           href={"/Centrum_uzaleznien"}
           className=" hover:scale-105 transition-all duration-500"
         >
-          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#df4ac6] via-pink-300 to-[#df4ac6] w-full h-[8rem] rounded-xl relative">
+          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#921d7f] via-[#5a004b] to-[#921d7f] w-full h-[8rem] rounded-xl relative">
             <div className="absolute top-0 left-0 p-4">
-              <FaPersonCircleExclamation className=" text-3xl" />
+              <FaPersonCircleExclamation className=" text-3xl text-white" />
             </div>
             <div className="flex justify-between items-center w-full">
               <div>
-                <h2 className="text-xl font-semibold tracking-tighter text-zinc-800">
+                <h2 className="text-xl font-semibold tracking-tighter text-white">
                   Centrum uzależnień
                 </h2>
-                <p className="text-sm">
+                <p className="text-sm text-gray-300">
                   E-uzależnienia, uzależnienia, diagnoza
                 </p>
               </div>
-              <p className="font-semibold px-2 py-1 border-[1.5px] border-black rounded-full">
-                ↗
-              </p>
             </div>
           </div>
         </Link>
@@ -98,22 +93,19 @@ const HeroPartZero = () => {
           href={"/terapia_vr"}
           className=" hover:scale-105 transition-all duration-500"
         >
-          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-yellow-200 via-yellow-400 to-yellow-200 w-full h-[8rem] rounded-xl relative">
+          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#274871] via-[#225da5] to-[#274871] w-full h-[8rem] rounded-xl relative">
             <div className="absolute top-0 left-0 p-4">
-              <PiVirtualReality className=" text-3xl" />
+              <PiVirtualReality className=" text-3xl text-white" />
             </div>
             <div className="flex justify-between items-center w-full">
               <div>
-                <h2 className="text-xl font-semibold tracking-tighter text-zinc-800">
+                <h2 className="text-xl font-semibold tracking-tighter text-white">
                   Terapia VR
                 </h2>
-                <p className="text-sm">
+                <p className="text-sm text-gray-300">
                   Terapia VR, Zajęcia dla dzieci i więcej..
                 </p>
               </div>
-              <p className="font-semibold px-2 py-1 border-[1.5px] border-black rounded-full">
-                ↗
-              </p>
             </div>
           </div>
         </Link>
