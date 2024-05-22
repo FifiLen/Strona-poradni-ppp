@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "/components/ui/card";
 import {
@@ -412,6 +413,57 @@ const TerapiaSI = () => {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Galeria */}
+      <section className="max-w-6xl md:px-0 px-4 mx-auto mt-10 py-6 md:py-24 mb-10">
+        <div className="mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tighter">
+            Zobacz jak wygląda u nas Terapia SI
+          </h2>
+          <div className="grid grid-cols-1 row-span-2 md:grid-cols-3 gap-4 mx-auto">
+            <div className="relative w-full h-128 md:row-span-2">
+              <Image
+                src="/assets/vr.jpeg"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+                alt="Galeria obraz 1"
+              />
+            </div>
+            <div className="relative w-full h-128 md:row-span-2">
+              <Image
+                src="/assets/vr2.jpeg"
+                fill
+                style={{ objectFit: "cover" }}
+                className="rounded-lg"
+                alt="Galeria obraz 2"
+              />
+            </div>
+            <div className="relative w-full h-64">
+              <video
+                src="/assets/vrGrid.mp4"
+                className="rounded-lg object-cover w-full h-full"
+                loop
+                muted
+                autoPlay
+                playsInline
+                onContextMenu={(e) => e.preventDefault()}
+              />
+            </div>
+            <div className="relative w-full h-64">
+              <video
+                src="/assets/vrGrid2.mp4"
+                className="rounded-lg object-cover w-full h-full"
+                loop
+                muted
+                autoPlay
+                playsInline
+                onContextMenu={(e) => e.preventDefault()}
+              />
+            </div>
           </div>
         </div>
       </section>
