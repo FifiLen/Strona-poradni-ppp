@@ -308,7 +308,7 @@ const TerapiaSI = () => {
         </div>
       </section>
 
-      <section className="mt-10 py-6 md:py-24">
+      <section className="mt-5 py-6 md:py-10">
         <div className="max-w-6xl mx-auto">
           <div className=" items-center flex-col md:flex-row">
             {/* Informational Text */}
