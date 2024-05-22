@@ -2,7 +2,11 @@ import { AlertDemo } from "/components/Alert";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaArrowRight, FaRegArrowAltCircleRight } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaRegArrowAltCircleRight,
+  FaCheck,
+} from "react-icons/fa";
 
 const PoradniaPsychologicznoPedagogiczna = () => {
   return (
@@ -19,15 +23,15 @@ const PoradniaPsychologicznoPedagogiczna = () => {
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Obrazek */}
-            <div className="mb-4 md:mb-0">
-              <div className="relative w-[670px] h-[670px] overflow-hidden hidden lg:flex justify-center items-center rounded-r-2xl">
-                <Image
-                  src="/assets/psycholog3.jpg"
-                  fill
+            <div className="relative mb-4 md:mb-0">
+              <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
+                <video
+                  src="/assets/terapiadlapar.mp4"
+                  loop
+                  muted
+                  autoPlay
                   style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw"
-                  priority={false}
-                  alt="dziecko ubierające maskę"
+                  className="w-full h-full"
                 />
               </div>
             </div>
@@ -93,24 +97,54 @@ const PoradniaPsychologicznoPedagogiczna = () => {
                 Wsparcie psychologiczne
               </h2>
 
-              <p className="text-gray-700 text-base text-left">
+              <p className="text-gray-700 text-base text-left mb-4">
                 Wsparcie psychologiczne dla dorosłych ma na celu pomóc osobom w
-                radzeniu sobie z trudnościami życiowymi, stresem, problemami
-                emocjonalnymi czy zaburzeniami psychicznymi. Indywidualne sesje
-                z doświadczonym psychologiem umożliwiają zidentyfikowanie i
-                zrozumienie źródeł problemów, a następnie opracowanie
-                skutecznych strategii radzenia sobie. Wsparcie psychologiczne
-                może obejmować różnorodne techniki terapeutyczne, dostosowane do
-                indywidualnych potrzeb klienta, umożliwiając osiągnięcie
-                większej równowagi emocjonalnej i poprawę jakości życia.
+                radzeniu sobie z różnorodnymi problemami. Może obejmować:
               </p>
+
+              <ul className="text-gray-700 text-base text-left list-none pl-0">
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Radzenie sobie z trudnościami życiowymi
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Radzenie sobie ze stresem
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Radzenie sobie z problemami emocjonalnymi
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Radzenie sobie z zaburzeniami psychicznymi
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Zidentyfikowanie i zrozumienie źródeł problemów
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Opracowanie skutecznych strategii radzenia sobie
+                </li>
+
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Osiągnięcie większej równowagi emocjonalnej
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Poprawę jakości życia
+                </li>
+              </ul>
 
               <Link
                 href={"/Kontakt"}
                 className=" text-slate-800 flex justify-start"
               >
                 <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow">
-                  Umów wizytę u Psychologa <FaRegArrowAltCircleRight />
+                  Umów wizytę u Psychologa{" "}
+                  <FaRegArrowAltCircleRight className="ml-2" />
                 </div>
               </Link>
             </div>
@@ -141,24 +175,54 @@ const PoradniaPsychologicznoPedagogiczna = () => {
                 Psychoterapia
               </h2>
 
-              <p className="text-gray-700 text-base text-left">
+              <p className="text-gray-700 text-base text-left mb-4">
                 Psychoterapia dla dorosłych to proces terapeutyczny, mający na
-                celu wsparcie osób w radzeniu sobie z trudnościami
-                emocjonalnymi, psychologicznymi i behawioralnymi. W bezpiecznym
-                i poufnym otoczeniu, doświadczony terapeuta pomaga klientom
-                zgłębić i zrozumieć źródła ich problemów, rozwijać nowe
-                strategie radzenia sobie i wprowadzać pozytywne zmiany w życiu.
-                Psychoterapia jest dostosowana do indywidualnych potrzeb każdej
-                osoby, umożliwiając pracę nad różnorodnymi kwestiami, takimi jak
-                lęk, depresja, stres, problemy w relacjach czy kryzysy życiowe
+                celu wsparcie osób w radzeniu sobie z różnorodnymi trudnościami.
+                Może obejmować:
               </p>
+
+              <ul className="text-gray-700 text-base text-left list-none pl-0">
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Radzenie sobie z trudnościami emocjonalnymi
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Radzenie sobie z trudnościami psychologicznymi
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Radzenie sobie z trudnościami behawioralnymi
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Rozwijanie nowych strategii radzenia sobie
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Wprowadzanie pozytywnych zmian w życiu
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Praca nad lękiem, depresją i stresem
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Rozwiązywanie problemów w relacjach
+                </li>
+                <li className="flex items-center mb-2">
+                  <FaCheck className="text-green-500 mr-2" />
+                  Radzenie sobie z kryzysami życiowymi
+                </li>
+              </ul>
 
               <Link
                 href={"/Kontakt"}
                 className=" text-slate-800 flex justify-start"
               >
                 <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow">
-                  Umów wizytę u Psychoterapeuty <FaRegArrowAltCircleRight />
+                  Umów wizytę u Psychoterapeuty{" "}
+                  <FaRegArrowAltCircleRight className="ml-2" />
                 </div>
               </Link>
             </div>

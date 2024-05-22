@@ -156,6 +156,139 @@ const Dzieci = () => {
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Obrazek */}
+            <div className="mb-4 md:mb-0">
+              <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
+                <img
+                  src="/assets/psychiatraDzieciecy.png"
+                  loading="lazy"
+                  alt="dziecko ubierające maskę"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Tekst informacyjny */}
+            <div className="mx-6 md:mr-16 flex-col justify-center items-center">
+              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+                Pomoc dla dzieci i młodzieży
+              </h2>
+              <p className="text-gray-700 text-base text-left mb-6">
+                Psychiatra dziecięcy to lekarz specjalizujący się w
+                diagnozowaniu i leczeniu zaburzeń psychicznych u dzieci i
+                młodzieży. Oto kilka kluczowych obszarów, w&nbsp;których
+                psychiatra dziecięcy może pomóc:{" "}
+              </p>
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Diagnoza i ocena</AccordionTrigger>
+                  <AccordionContent>
+                    <p>
+                      Psychiatra dziecięcy może przeprowadzić kompleksową ocenę
+                      stanu psychicznego dziecka, w tym przeprowadzić wywiady z
+                      rodzicami i dzieckiem, zastosować narzędzia diagnostyczne
+                      i w razie potrzeby skonsultować się z innymi
+                      specjalistami.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>
+                    Leczenie zaburzeń emocjonalnych i behawioralnych
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p>
+                      Psychiatra dziecięcy jest uprawniony do przepisywania
+                      leków, które mogą być pomocne w regulacji nastroju,
+                      zmniejszaniu lęku, poprawie koncentracji lub w innych
+                      celach związanych z konkretnymi zaburzeniami psychicznymi.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Farmakoterapia</AccordionTrigger>
+                  <AccordionContent>
+                    <p>
+                      Mogą leczyć szeroki zakres problemów, takich jak
+                      zaburzenia lękowe, depresja, ADHD (zaburzenie
+                      nadpobudliwości ruchowej z deficytem uwagi), zaburzenia
+                      zachowania, zaburzenia nastroju, zaburzenia odżywiania,
+                      PTSD (zespół stresu pourazowego) i inne.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>Terapia</AccordionTrigger>
+                  <AccordionContent>
+                    <p>
+                      Mogą prowadzić lub zalecać różne formy terapii, takie jak
+                      terapia poznawczo-behawioralna (CBT), terapia rodzinna,
+                      terapia indywidualna czy grupowa, w zależności od potrzeb
+                      dziecka i rodziny.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>
+                    Wsparcie i edukacja dla rodzin
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p>
+                      Pomagają rodzicom i opiekunom zrozumieć zaburzenie
+                      dziecka, uczyć strategii radzenia sobie oraz zapewniają
+                      wskazówki, jak najlepiej wspierać rozwój dziecka i jego
+                      dobrostan.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>Zarządzanie kryzysowe</AccordionTrigger>
+                  <AccordionContent>
+                    <p>
+                      Psychiatra dziecięcy może interweniować w sytuacjach
+                      kryzysowych, takich jak myśli samobójcze, ciężkie epizody
+                      depresyjne, agresywne zachowania lub inne ostre stany,
+                      które wymagają natychmiastowej uwagi.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-7">
+                  <AccordionTrigger>
+                    Pomoc w trudnych okolicznościach
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p>
+                      Mogą oferować wsparcie i interwencje w trudnych sytuacjach
+                      życiowych, takich jak rozwód, śmierć w rodzinie, traumy,
+                      przemoc w rodzinie czy inne stresujące wydarzenia
+                      wpływające na dziecko
+                    </p>{" "}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <Link
+                href={"/Kontakt"}
+                className=" text-slate-800 flex justify-start"
+              >
+                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                  Umów wizytę u psychiatry dziecięcego
+                  <FaRegArrowAltCircleRight />
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-10 py-6 md:py-24 mb-10">
+        <div className="mx-auto">
+          <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
+            {/* Obrazek */}
             <div className="relative mb-4 md:mb-0">
               <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
                 <Image
@@ -533,141 +666,6 @@ const Dzieci = () => {
             <div className="mb-4 md:mb-0">
               <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
                 <img
-                  src="/assets/psychiatraDzieciecy.png"
-                  loading="lazy"
-                  alt="dziecko ubierające maskę"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Tekst informacyjny */}
-            <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
-                Pomoc psychiatryczna
-                <br />
-                dla dzieci i młodzieży
-              </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
-                Psychiatra dziecięcy to lekarz specjalizujący się w
-                diagnozowaniu i leczeniu zaburzeń psychicznych u dzieci i
-                młodzieży. Oto kilka kluczowych obszarów, w&nbsp;których
-                psychiatra dziecięcy może pomóc:{" "}
-              </p>
-              <Accordion type="single" collapsible>
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>Diagnoza i ocena</AccordionTrigger>
-                  <AccordionContent>
-                    <p>
-                      Psychiatra dziecięcy może przeprowadzić kompleksową ocenę
-                      stanu psychicznego dziecka, w tym przeprowadzić wywiady z
-                      rodzicami i dzieckiem, zastosować narzędzia diagnostyczne
-                      i w razie potrzeby skonsultować się z innymi
-                      specjalistami.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-2">
-                  <AccordionTrigger>
-                    Leczenie zaburzeń emocjonalnych i behawioralnych
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p>
-                      Psychiatra dziecięcy jest uprawniony do przepisywania
-                      leków, które mogą być pomocne w regulacji nastroju,
-                      zmniejszaniu lęku, poprawie koncentracji lub w innych
-                      celach związanych z konkretnymi zaburzeniami psychicznymi.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-3">
-                  <AccordionTrigger>Farmakoterapia</AccordionTrigger>
-                  <AccordionContent>
-                    <p>
-                      Mogą leczyć szeroki zakres problemów, takich jak
-                      zaburzenia lękowe, depresja, ADHD (zaburzenie
-                      nadpobudliwości ruchowej z deficytem uwagi), zaburzenia
-                      zachowania, zaburzenia nastroju, zaburzenia odżywiania,
-                      PTSD (zespół stresu pourazowego) i inne.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-4">
-                  <AccordionTrigger>Terapia</AccordionTrigger>
-                  <AccordionContent>
-                    <p>
-                      Mogą prowadzić lub zalecać różne formy terapii, takie jak
-                      terapia poznawczo-behawioralna (CBT), terapia rodzinna,
-                      terapia indywidualna czy grupowa, w zależności od potrzeb
-                      dziecka i rodziny.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-5">
-                  <AccordionTrigger>
-                    Wsparcie i edukacja dla rodzin
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p>
-                      Pomagają rodzicom i opiekunom zrozumieć zaburzenie
-                      dziecka, uczyć strategii radzenia sobie oraz zapewniają
-                      wskazówki, jak najlepiej wspierać rozwój dziecka i jego
-                      dobrostan.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-6">
-                  <AccordionTrigger>Zarządzanie kryzysowe</AccordionTrigger>
-                  <AccordionContent>
-                    <p>
-                      Psychiatra dziecięcy może interweniować w sytuacjach
-                      kryzysowych, takich jak myśli samobójcze, ciężkie epizody
-                      depresyjne, agresywne zachowania lub inne ostre stany,
-                      które wymagają natychmiastowej uwagi.
-                    </p>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-7">
-                  <AccordionTrigger>
-                    Pomoc w trudnych okolicznościach
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <p>
-                      Mogą oferować wsparcie i interwencje w trudnych sytuacjach
-                      życiowych, takich jak rozwód, śmierć w rodzinie, traumy,
-                      przemoc w rodzinie czy inne stresujące wydarzenia
-                      wpływające na dziecko
-                    </p>{" "}
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-              <Link
-                href={"/Kontakt"}
-                className=" text-slate-800 flex justify-start"
-              >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
-                  Umów wizytę u psychiatry dziecięcego
-                  <FaRegArrowAltCircleRight />
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mt-10 py-6 md:py-24 mb-10">
-        <div className="mx-auto">
-          <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
-            {/* Obrazek */}
-            <div className="mb-4 md:mb-0">
-              <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-                <img
                   src="/assets/dietetykDziecięcy.png"
                   loading="lazy"
                   alt="dziecko ubierające maskę"
@@ -893,7 +891,7 @@ const Dzieci = () => {
                 className=" text-slate-800 flex justify-start"
               >
                 <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
-                  Umów wizytę u dietetyka dziecięcego
+                  Umów wizytę u ortodonty dziecięcego
                   <FaRegArrowAltCircleRight />
                 </div>
               </Link>
