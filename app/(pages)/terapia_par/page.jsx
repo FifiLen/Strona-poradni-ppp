@@ -14,6 +14,7 @@ import { FaCircleArrowRight } from "react-icons/fa6";
 import { AlertDemo } from "/components/Alert";
 import { CardFooter } from "../../../components/ui/card";
 import Link from "next/link";
+import { FaCheck } from "react-icons/fa";
 
 const TerapiaPar = () => {
   return (
@@ -33,13 +34,13 @@ const TerapiaPar = () => {
             {/* Obrazek */}
             <div className="relative mb-4 md:mb-0">
               <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-                <Image
-                  src="/assets/para.png"
-                  fill
+                <video
+                  src="/assets/terapiadlapar2.mp4"
+                  loop
+                  muted
+                  autoPlay
                   style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw"
-                  priority={true}
-                  alt="dziecko ubierające maskę"
+                  className="w-full h-full"
                 />
               </div>
             </div>
@@ -248,15 +249,16 @@ const TerapiaPar = () => {
 
             {/* Obrazek */}
             <div className="relative mb-4 md:mb-0">
-              <div className="relative w-[38rem] h-[35rem] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
-                <Image
-                  src="/assets/terapia_par.jpg"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw"
-                  priority={true}
-                  alt="dziecko ubierające maskę"
-                />
+              <div className="relative w-full max-w-3xl h-0 pb-[56.25%] md:pb-[75%] overflow-hidden rounded-2xl">
+                <video
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  src="/assets/terapiadlapar3.mp4"
+                  title="terapia dla par"
+                  loop
+                  muted
+                  autoPlay
+                  controls={false}
+                ></video>
               </div>
             </div>
           </div>
@@ -285,34 +287,43 @@ const TerapiaPar = () => {
               <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
                 Terapia dla osób tworzących związek daje możliwość:
               </h2>
-              <div className="mt-3 text-green-800">
+              <div className="mt-3 flex items-center gap-3 text-green-800">
+                <FaCheck />
                 <p>
                   spotkania z partnerem na bezpiecznym gruncie,
                   w&nbsp;atmosferze równości i&nbsp;bezstronności,
                 </p>
               </div>
-              <div className="mt-3 text-green-600">
+              <div className="mt-3 flex items-center gap-3 text-green-600">
+                <FaCheck />
                 <p>spojrzenia na swój związek z innej perspektywy,</p>
               </div>
-              <div className="mt-3 text-green-800">
-                <p>
-                  poprawy komunikacji w relacji bez tak zwanej przemocy słownej,
-                  która nie jest tylko:
-                </p>
-                <ul className="mt-2 text-green-600">
-                  <li>- krzykiem,</li>
-                  <li>- używaniem wulgaryzmów,</li>
-                  <li>- obrażaniem się,</li>
-                  <li>- reagowanie milczeniem,</li>
-                  <li>- atakami słownymi,</li>
-                </ul>
+              <div className="mt-3  text-green-800">
+                <div className=" flex items-center gap-3">
+                  <FaCheck />
+                  <p>
+                    poprawy komunikacji w relacji bez tak zwanej przemocy
+                    słownej, która nie jest tylko:
+                  </p>
+                </div>
+                <div>
+                  <ul className="mt-2 ml-6 text-green-600">
+                    <li>- krzykiem,</li>
+                    <li>- używaniem wulgaryzmów,</li>
+                    <li>- obrażaniem się,</li>
+                    <li>- reagowanie milczeniem,</li>
+                    <li>- atakami słownymi,</li>
+                  </ul>
+                </div>
               </div>
-              <div className="mt-3 text-green-800">
+              <div className="mt-3 flex items-center gap-3 text-green-800">
+                <FaCheck />
                 <p>
                   wyrażania własnych uczuć, potrzeb, oczekiwań, obaw, rozterek,
                 </p>
               </div>
-              <div className="mt-3 text-green-600">
+              <div className="mt-3 flex items-center gap-3 text-green-600">
+                <FaCheck />
                 <p>zrozumienia uczuć oraz potrzeb partnera.</p>
               </div>
             </div>

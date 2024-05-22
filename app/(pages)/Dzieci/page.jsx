@@ -276,7 +276,13 @@ const Dzieci = () => {
                 className=" text-slate-800 flex justify-start"
               >
                 <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
-                  Umów wizytę u psychiatry dziecięcego
+                  <div>
+                    {" "}
+                    <p>Umów wizytę u psychiatry dziecięcego</p>
+                    <p className=" text-[11px] text-gray-700">
+                      (Wizyty co dwa tygodnie)
+                    </p>
+                  </div>
                   <FaRegArrowAltCircleRight />
                 </div>
               </Link>
