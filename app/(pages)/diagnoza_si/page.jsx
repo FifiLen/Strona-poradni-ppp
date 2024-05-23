@@ -291,11 +291,11 @@ const TerapiaSI = () => {
             </div>
 
             {/* Video Embed */}
-            <div className="relative mb-4 md:mb-0 flex justify-center items-center">
-              <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
+            <div className="relative mb-4 md:mb-0 flex justify-start items-start">
+              <div className="relative w-[770px] h-[770px] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
                 <video
                   className="absolute top-0 left-0 w-full h-full object-cover"
-                  src="/assets/diagnozasi.mp4"
+                  src="/assets/4.mp4"
                   title="Terapia SI Video"
                   loop
                   muted
@@ -418,7 +418,7 @@ const TerapiaSI = () => {
       </section>
 
       {/* Galeria */}
-      <section className="max-w-6xl md:px-0 px-4 mx-auto mt-10 py-6 md:py-24 mb-10">
+      <section className="max-w-6xl hidden md:px-0 px-4 mx-auto mt-10 py-6 md:py-24 mb-10">
         <div className="mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tighter">
             Zobacz jak wygląda u nas Terapia SI
