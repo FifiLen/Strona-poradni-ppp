@@ -37,7 +37,7 @@ const TerapiaSI = () => {
               <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
                 <video
                   className="absolute top-0 left-0 w-full h-full object-cover"
-                  src="/assets/diagnozasi.mp4"
+                  src="/assets/1.mp4"
                   title="Terapia SI Video"
                   loop
                   muted
@@ -111,7 +111,7 @@ const TerapiaSI = () => {
               <div className="relative w-full max-w-3xl h-0 pb-[56.25%] md:pb-[75%] overflow-hidden rounded-2xl">
                 <video
                   className="absolute top-0 left-0 w-full h-full object-cover"
-                  src="/assets/diagnozasi.mp4"
+                  src="/assets/2.mp4"
                   title="Terapia SI Video"
                   loop
                   muted
@@ -162,11 +162,11 @@ const TerapiaSI = () => {
             </div>
 
             {/* Video Embed */}
-            <div className="relative flex justify-center items-center">
-              <div className="relative w-full max-w-3xl h-0 pb-[56.25%] md:pb-[75%] overflow-hidden rounded-2xl">
+            <div className="relative mb-4 md:mb-0 flex justify-center items-center">
+              <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
                 <video
                   className="absolute top-0 left-0 w-full h-full object-cover"
-                  src="/assets/diagnozasi.mp4"
+                  src="/assets/3.mp4"
                   title="Terapia SI Video"
                   loop
                   muted
@@ -187,7 +187,7 @@ const TerapiaSI = () => {
               <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
                 <video
                   className="absolute top-0 left-0 w-full h-full object-cover"
-                  src="/assets/diagnozasi.mp4"
+                  src="/assets/3.mp4"
                   title="Terapia SI Video"
                   loop
                   muted
