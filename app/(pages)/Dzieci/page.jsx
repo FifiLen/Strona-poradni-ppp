@@ -654,7 +654,10 @@ const Dzieci = () => {
                 szczególnie korzystna dla dzieci z zaburzeniami rozwojowymi,
                 takimi jak autyzm czy ADHD.
               </p>
-              <Link href={"/SI"} className=" text-slate-800 flex justify-start">
+              <Link
+                href={"/diagnoza_si"}
+                className=" text-slate-800 flex justify-start"
+              >
                 <div className=" w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
                   Dowiedz się więcej o Integracji Sensorycznej{" "}
                   <FaRegArrowAltCircleRight />
