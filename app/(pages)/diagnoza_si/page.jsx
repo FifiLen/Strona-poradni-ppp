@@ -489,7 +489,7 @@ const TerapiaSI = () => {
               </CardContent>
               <CardFooter>
                 <Link
-                  href={"/WWRD"}
+                  href={"/Kontakt"}
                   className="p-2 rounded-md border border-blue-800 bg-blue-300 flex items-center justify-center gap-2"
                 >
                   Jak zapisać dziecko na&nbsp;darmowe zajęcia WWR?

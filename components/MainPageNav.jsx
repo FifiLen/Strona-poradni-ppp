@@ -137,6 +137,10 @@ export default function MainPageNav() {
             Wsparcie dla dorosłych
           </Link>
 
+          <Link href="/hipoterapia" className="text-sm  leading-6 ">
+            Hipoterapia
+          </Link>
+
           <Link href="/terapia_vr" className="text-sm  leading-6 ">
             Terapia VR
           </Link>
@@ -271,6 +275,12 @@ export default function MainPageNav() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Wsparcie dla dorosłych
+                </Link>
+                <Link
+                  href="/hipoterapia"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Hipoterapia
                 </Link>
                 <Link
                   href="/terapia_vr"
