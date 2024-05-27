@@ -33,10 +33,10 @@ const Hipoterapia = () => {
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Video Embed */}
             <div className="relative mb-4 md:mb-0 flex justify-center items-center">
-              <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
+              <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-3xl">
                 <video
                   className="absolute top-0 left-0 w-full h-full object-cover"
-                  src="/assets/hipoterapia5.mp4"
+                  src="/assets/hipoterapia1.mp4"
                   title="Hipoterapia Video"
                   loop
                   muted
@@ -127,7 +127,7 @@ const Hipoterapia = () => {
               <div className="relative w-full max-w-3xl h-0 pb-[56.25%] md:pb-[75%] overflow-hidden rounded-2xl">
                 <video
                   className="absolute top-0 left-0 w-full h-full object-cover"
-                  src="/assets/hipoterapia3.mp4"
+                  src="/assets/hipoterapiaFilm2.mp4"
                   title="Hipoterapia Video"
                   loop
                   muted
@@ -223,7 +223,7 @@ const Hipoterapia = () => {
               <div className="relative w-full max-w-3xl h-0 pb-[56.25%] md:pb-[75%] overflow-hidden rounded-2xl">
                 <video
                   className="absolute top-0 left-0 w-full h-full object-cover"
-                  src="/assets/hipoterapia.mp4"
+                  src="/assets/HipoterapiaSesja.mp4"
                   title="Hipoterapia Video"
                   loop
                   muted
@@ -922,7 +922,7 @@ const Hipoterapia = () => {
               <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-2xl">
                 <video
                   className="w-full h-full object-cover"
-                  src="/assets/hipoterapia2.mp4"
+                  src="/assets/hipoterapia6.mp4"
                   title="Hipoterapia Video"
                   loop
                   muted
