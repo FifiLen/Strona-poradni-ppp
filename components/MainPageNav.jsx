@@ -84,9 +84,7 @@ export default function MainPageNav() {
 
   return (
     <header
-      className={`header ${
-        scrolled ? "bg-white shadow-lg p-4" : "bg-white/25"
-      }`}
+      className={`header ${scrolled ? "bg-white shadow-lg" : "bg-white/25"}`}
     >
       <nav
         className="mx-auto flex w-full items-center justify-between p-3 lg:px-5"
@@ -130,19 +128,23 @@ export default function MainPageNav() {
           </Link>
 
           <Link href="/Dzieci" className="text-sm  leading-6 ">
-            Wsparcie dla dzieci
+            Dzieci
           </Link>
 
           <Link href="/Dorosli" className="text-sm  leading-6 ">
-            Wsparcie dla dorosłych
+            Dorośli
           </Link>
 
-          <Link href="/hipoterapia" className="text-sm  leading-6 ">
-            Hipoterapia
+          <Link href="/diagnoza_si" className="text-sm  leading-6 ">
+            SI
           </Link>
 
           <Link href="/terapia_vr" className="text-sm  leading-6 ">
             Terapia VR
+          </Link>
+
+          <Link href="/hipoterapia" className="text-sm  leading-6 ">
+            Hipoterapia
           </Link>
 
           <Link
@@ -268,25 +270,31 @@ export default function MainPageNav() {
                   href="/Dzieci"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Wsparcie dla dzieci
+                  Dzieci
                 </Link>
                 <Link
                   href="/Dorosli"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Wsparcie dla dorosłych
+                  Dorośli
                 </Link>
-                <Link
-                  href="/hipoterapia"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Hipoterapia
+
+                <Link href="/diagnoza_si" className="text-sm  leading-6 ">
+                  SI
                 </Link>
+
                 <Link
                   href="/terapia_vr"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Terapia VR
+                </Link>
+
+                <Link
+                  href="/hipoterapia"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Hipoterapia
                 </Link>
 
                 <Link

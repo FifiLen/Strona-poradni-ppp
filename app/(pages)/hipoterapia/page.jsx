@@ -28,7 +28,7 @@ const Hipoterapia = () => {
       </div>
 
       {/* Section 1 */}
-      <section className="mt-10 py-6 md:py-24">
+      <section className=" py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Video Embed */}
@@ -81,7 +81,7 @@ const Hipoterapia = () => {
       </section>
 
       {/* Section 2 */}
-      <section className="mt-10 py-6 md:py-24">
+      <section className="py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Informational Text */}
@@ -140,7 +140,7 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      <section className="mt-10 py-6 md:py-24">
+      <section className="py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Video Embed */}
@@ -194,7 +194,7 @@ const Hipoterapia = () => {
       </section>
 
       {/* Section 2 */}
-      <section className="mt-10 py-6 md:py-24">
+      <section className="py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Informational Text */}
@@ -236,7 +236,7 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      <section className="mt-10 py-6 md:py-24">
+      <section className="py-6 md:py-12">
         <div className="max-w-7xl mx-auto">
           <div className=" items-center flex-col md:flex-row">
             {/* Informational Text */}
@@ -421,7 +421,7 @@ const Hipoterapia = () => {
       </section>
 
       {/* Section 3 */}
-      <section className="mt-10 py-6 md:py-24">
+      <section className="py-6 md:py-12">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Image */}
@@ -578,7 +578,7 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      <section className="mt-10 py-6 md:py-24">
+      <section className="py-6 md:py-12">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-4xl text-left font-semibold mb-8 font-display">
             Dlaczego konie?
@@ -816,7 +816,7 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      <section className="mt-10 py-6 md:py-24">
+      <section className="py-6 md:py-12">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Image */}
@@ -883,7 +883,7 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      <section className="mt-10 py-6 md:py-24">
+      <section className="py-6 md:py-12">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Informational Text */}
@@ -935,7 +935,7 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      <section className="mt-10 py-6 md:py-24">
+      <section className="py-6 md:py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="text-4xl text-left font-semibold mb-8 font-display">
             Cennik

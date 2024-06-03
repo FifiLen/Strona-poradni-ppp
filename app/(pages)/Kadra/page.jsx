@@ -35,7 +35,7 @@ const staffData = [
     imageUrl: "/assets/avatar.svg",
   },
   {
-    id: 13,
+    id: 12,
     name: "Paulina Dąbrowska",
     specialty: "Edukacja wczesnoszkolna i surdopedagogika",
     description: (
@@ -91,31 +91,19 @@ const staffData = [
     description: (
       <p>
         Magister psychologii z&nbsp;zakresu neuropsychologii i&nbsp;psychologii
-        klinicznej. Specjalista w&nbsp;zintegrowanej edukacji wczesnoszkolnej,
-        edukacji informatycznej oraz edukacji i&nbsp;rehabilitacji osób
-        z&nbsp;niepełnosprawnością intelektualną. Terapeuta WWRD
-        i&nbsp;hipoterapii. Specjalista w&nbsp;zakresie komunikacji
-        alternatywnej i&nbsp;wspomagającej oraz diagnozy alternatywnych
-        i&nbsp;wspomagających metod porozumiewania się.
+        klinicznej i osobowości. Specjalista w&nbsp;zintegrowanej edukacji
+        wczesnoszkolnej, edukacji informatycznej oraz edukacji
+        i&nbsp;rehabilitacji osób z&nbsp;niepełnosprawnością intelektualną.
+        Terapeuta WWRD i&nbsp;hipoterapii. Specjalista w&nbsp;zakresie
+        komunikacji alternatywnej i&nbsp;wspomagającej oraz diagnozy
+        alternatywnych i&nbsp;wspomagających metod porozumiewania się,
+        oligofrenopedagog. Instruktor masażu shantala. Szkolenia superwizyjne,
+        opracowania strategii AAC.
       </p>
     ),
     imageUrl: "/assets/avatar2.svg",
   },
-  {
-    id: 12,
-    name: "Gabriela Marcisz",
-    specialty: "Psychoterapeuta",
-    description: (
-      <p>
-        Magister psychologii, psychoterapeuta. Terapeuta dorosłych, par
-        i&nbsp;rodzin. Specjalista psychoterapii w&nbsp;Ośrodku Interwencji
-        Kryzysowej, Poradni Zdrowia Psychicznego, Poradni Leczenia Nerwic
-        i&nbsp;na Dziennym Oddziale Leczenia Nerwic. Specjalista skupiony
-        na&nbsp;pracy z&nbsp;całymi rodzinami i&nbsp;osobami pełnoletnimi.
-      </p>
-    ),
-    imageUrl: "/assets/avatar.svg",
-  },
+
   {
     id: 13,
     name: "Anna Kowalska",
@@ -217,6 +205,59 @@ const staffData = [
         na&nbsp;uczelniach o&nbsp;profilu przyrodniczym, autorka wielu
         publikacji naukowych i&nbsp;po-konferencyjnych. Ekspert edukacji
         ekologicznej.
+      </p>
+    ),
+    imageUrl: "/assets/avatar2.svg",
+  },
+
+  {
+    id: 14,
+    name: "Natalia Chruściel-Janas",
+    specialty: "Logopeda, Neurologopeda",
+    description: (
+      <p>
+        Uniwersytet Medyczny we&nbsp;Wrocławiu: neurologopedia z&nbsp;wczesną
+        interwencją logopedyczną, Uniwersytet Wrocławski: logopedia ogólna,
+        Uniwersytet Wrocławski: filologia polska, polonista jako lider
+        społeczności lokalnej. Certyfikowany Terapeuta Ortodoncji Funkcjonalnej
+        MFS, Terapia Integracji Sensorycznej I&nbsp;stopnia (mgr&nbsp;Aleksandra
+        Owczarz&nbsp;Jankowska); Innowacyjne metody elektrostymulacji
+        zewnętrznej i&nbsp;wewnętrznej w&nbsp;logopedii – podejście praktyczne
+        (mgr&nbsp;Ewa Wojewoda, mgr&nbsp;Aleksandra Kaczyńska); Afazja&nbsp;-
+        diagnoza i&nbsp;terapia (prof.&nbsp;zw.&nbsp;dr&nbsp;hab.&nbsp;Maria
+        Pąchalska); Terapia sensomotoryczna i&nbsp;korekta dysfunkcji
+        ustno&nbsp;- twarzowych (dr&nbsp;A&nbsp;Regner) • Trening Umiejętności
+        Społecznych (TUS) (mgr&nbsp;E.&nbsp;Łukowska); AAC Wprowadzenie do
+        komunikacji alternatywnej i&nbsp;wspomagającej
+        (mgr&nbsp;P.&nbsp;Gałczyńska); Terapia logopedyczna dziecka
+        z&nbsp;nieprawidłowościami funkcjonowania aparatu ustno&nbsp;-
+        twarzowego (Ilona Brzozowska&nbsp;- Misiewicz); O&nbsp;laktacji
+        interdyscyplinarnie&nbsp;- warsztat laktacyjny
+        (lek&nbsp;med.&nbsp;S.&nbsp;Jeż, dr&nbsp;A.&nbsp;Ptak); Elementy metody
+        werbo&nbsp;- tonalnej. Wspomaganie rozwoju mowy i&nbsp;komunikacji
+        (mgr&nbsp;A.&nbsp;Dziedzic); Masaż logopedyczny od&nbsp;podstaw –
+        podejście praktyczne, (mgr&nbsp;Aleksandra Kaczyńska); ORM kreatywne
+        postępowanie logopedyczne (mgr&nbsp;A.&nbsp;Gładowicz&nbsp;- Bojarska);
+        Werbogesty (mgr&nbsp;A.&nbsp;Gładowicz&nbsp;- Bojarska); Opóźniony
+        rozwój mowy&nbsp;- diagnoza i&nbsp;terapia (mgr&nbsp;Dagmara
+        Kalczyńska); Terapia ręki i&nbsp;zaburzeń motoryki małej
+        I&nbsp;i&nbsp;II&nbsp;stopnia tytuł: Terapeuta ręki (ProCentrum,
+        mgr&nbsp;Katarzyna Gromelska); Logorytmika&nbsp;- ruch, słuch, słowo
+        (ProCentrum, mgr&nbsp;Ewa Bombol); Terapia sygmatyzmu międzyzebowego
+        (mgr&nbsp;Anna Balewska); Terapia sygmatyzmu bocznego (mgr&nbsp;Anna
+        Balewska); Kurs metody „Dyna Lingua MS”; „W&nbsp;świecie elfów”. Afazja
+        dziecięca i&nbsp;inne zaburzenia komunikacji. Objawy, diagnoza, terapia.
+        Diagnoza i&nbsp;terapia ankyloglosji; Uprawnienia pedagogiczne; stopień
+        zawodowy nauczyciela kontraktowego; Terapie logopedyczne dzieci
+        z&nbsp;zaburzeniami ze&nbsp;spektrum autyzmu, afazją, dyslalią,
+        opóźnionym rozwojem mowy; Zespołem Downa; Dziecięcym Porażeniem
+        Mózgowym; terapie miofunkcjonalne, elektrostymulacja; ocena
+        i&nbsp;terapia funkcji prymarnych; prowadzenie diagnoz logopedycznych;
+        terapie logopedyczne młodzieży z&nbsp;zaburzeniami
+        z&nbsp;niepełnosprawnością głęboką i&nbsp;sprzężoną. Prowadzenie zajęć
+        z&nbsp;terapii ręki, logorytmiki, warsztatów logopedycznych dla dzieci
+        i&nbsp;rodziców. Tworzenie indywidualnych programów terapii (IPET,
+        Arkusz wyspecjalizowanej oceny ucznia).
       </p>
     ),
     imageUrl: "/assets/avatar2.svg",

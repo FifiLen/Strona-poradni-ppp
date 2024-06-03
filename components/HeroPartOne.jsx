@@ -39,7 +39,7 @@ const HeroPartOne = () => {
 
   return (
     <div className="w-full oNas flex flex-col items-center justify-center py-12 md:py-56 text-black">
-      <div className="max-w-7xl w-full px-4">
+      <div className=" px-5 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
           <div>
             <p
