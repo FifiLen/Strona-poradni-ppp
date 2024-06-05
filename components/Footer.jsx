@@ -104,7 +104,7 @@ const Footer = () => {
             <div className="footer-section">
               <h4 className="font-semibold mb-4 text-lg">Kontakt</h4>
               <ul className="list-none p-0">
-                {["/", "/", "/", "/", "/", "/", "/"].map((href, idx) => (
+                {["/", "/", "/", "/", "/", "/", "/", "/"].map((href, idx) => (
                   <li key={idx} className="mb-2">
                     <Link href={href}>
                       <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
@@ -112,6 +112,7 @@ const Footer = () => {
                         <span>
                           {
                             [
+                              "+48 789 790 860",
                               "+48 690 515 224",
                               "+48 797 173 501",
                               "+48 502 162 365",

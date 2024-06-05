@@ -35,6 +35,10 @@ const HeroKontakt = () => {
               <ul className=" space-y-1 font-medium">
                 <li className=" flex justify-start items-center gap-2">
                   <FaPhoneAlt />
+                  +48 789 790 860
+                </li>
+                <li className=" flex justify-start items-center gap-2">
+                  <FaPhoneAlt />
                   +48 690 515 224
                 </li>
                 <li className=" flex justify-start items-center gap-2">
@@ -56,11 +60,16 @@ const HeroKontakt = () => {
               <hr className=" mb-4" />
               <Formularz />
             </div>
-            <div className="text-center mb-4 md:mb-0 mx-5">
-              <div className="image-container">
-                <img src="/assets/map.png" alt="dziecko ubierające maskę" />
-              </div>
-            </div>
+            <iframe
+              width="600"
+              height="740"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              className=" rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2577.024484924247!2d18.53624251590285!3d50.0821749794281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114203b67f308d%3A0xf5c3dfe09b098aef!2sMagnolii%2025%2C%2044-207%20Rybnik%2C%20Poland!5e0!3m2!1sen!2sus!4v1686053256452!5m2!1sen!2sus"
+            ></iframe>
           </div>
         </div>
       </section>
