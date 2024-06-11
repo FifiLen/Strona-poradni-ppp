@@ -1,4 +1,4 @@
-import { AlertDemo } from "/components/Alert";
+import { AlertDemo } from "../../../components/Alert";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

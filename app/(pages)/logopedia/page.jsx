@@ -1,18 +1,23 @@
 "use client";
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../../../components/ui/card";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "/components/ui/accordion";
+} from "../../../components/ui/accordion";
 import Image from "next/image";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { GiCheckMark } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
-import { AlertDemo } from "/components/Alert";
+import { AlertDemo } from "../../../components/Alert";
 import { CardFooter } from "../../../components/ui/card";
 import Link from "next/link";
 

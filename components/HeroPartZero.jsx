@@ -11,9 +11,9 @@ const FaChild = dynamic(() =>
 
 const HeroPartZero = () => {
   return (
-    <div>
+    <div className=" hidden md:block">
       <video
-        className=" h-[50vh] md:h-[82vh] w-full object-cover"
+        className=" h-[50vh] md:h-[75vh] w-full object-cover"
         preload="auto"
         src="/assets/hero.mp4"
         autoPlay
@@ -23,14 +23,14 @@ const HeroPartZero = () => {
 
       {/* Kontener dla bloków pod filmikiem */}
       <div
-        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 pt-3 pb-20 gap-3 px-3`}
+        className={`grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4`}
         style={{ maxWidth: "95rem", margin: "0 auto" }}
       >
         <Link
           href={"/Dzieci"}
           className=" hover:scale-105  transition-all duration-500"
         >
-          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#921d7f] via-[#5a004b] to-[#921d7f] w-full h-[8rem] rounded-xl relative">
+          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#921d7f] via-[#5a004b] to-[#921d7f] w-full h-[8rem] relative">
             <div className="absolute top-0 left-0 p-4">
               <FaChild className=" text-2xl text-white" />
             </div>
@@ -51,7 +51,7 @@ const HeroPartZero = () => {
           href={"/Dorosli"}
           className=" hover:scale-105 transition-all duration-500"
         >
-          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#274871] via-[#225da5] to-[#274871] w-full h-[8rem] rounded-xl relative">
+          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#274871] via-[#225da5] to-[#274871] w-full h-[8rem] relative">
             <div className="absolute top-0 left-0 p-4">
               <FaHandsHelping className=" text-3xl text-white" />
             </div>
@@ -72,7 +72,7 @@ const HeroPartZero = () => {
           href={"/Centrum_uzaleznien"}
           className=" hover:scale-105 transition-all duration-500"
         >
-          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#921d7f] via-[#5a004b] to-[#921d7f] w-full h-[8rem] rounded-xl relative">
+          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#921d7f] via-[#5a004b] to-[#921d7f] w-full h-[8rem] relative">
             <div className="absolute top-0 left-0 p-4">
               <FaPersonCircleExclamation className=" text-3xl text-white" />
             </div>
@@ -93,7 +93,7 @@ const HeroPartZero = () => {
           href={"/terapia_vr"}
           className=" hover:scale-105 transition-all duration-500"
         >
-          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#274871] via-[#225da5] to-[#274871] w-full h-[8rem] rounded-xl relative">
+          <div className="bg-gradient-to-bl flex justify-start items-end p-4 from-[#274871] via-[#225da5] to-[#274871] w-full h-[8rem] relative">
             <div className="absolute top-0 left-0 p-4">
               <PiVirtualReality className=" text-3xl text-white" />
             </div>

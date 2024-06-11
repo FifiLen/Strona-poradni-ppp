@@ -1,4 +1,4 @@
-import HeroKontakt from "/components/HeroKontakt";
+import HeroKontakt from "../components/HeroKontakt";
 
 const ContactSection = () => {
   return (

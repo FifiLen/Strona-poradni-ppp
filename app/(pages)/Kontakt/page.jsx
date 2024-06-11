@@ -3,7 +3,7 @@ import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import Formularz from "/components/Formularz";
+import Formularz from "../../../components/Formularz";
 
 const Kontakt = () => {
   return (

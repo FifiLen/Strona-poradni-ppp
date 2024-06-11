@@ -1,10 +1,9 @@
-'use client'
-import React from 'react';
-import Link from 'next/link';
-import projects from '/app/Projects';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import Link from "next/link";
+import projects from "../../../utils/Projects";
+import Image from "next/image";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-
 
 const Program = () => {
   return (
@@ -17,13 +16,20 @@ const Program = () => {
         </div>
       </div>
       <section className="mt-10 py-6 md:py-24">
-        {projects.map(project => (
+        {projects.map((project) => (
           <div className="mx-auto mb-40" key={project.id}>
             <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
               {/* Obrazek */}
               <div className="relative mb-4 md:mb-0">
                 <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-                  <Image src={`${project.gridImages[0]}`} fill style={{ objectFit: "cover" }} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw" priority={true} alt="dziecko ubierające maskę" />
+                  <Image
+                    src={`${project.gridImages[0]}`}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw"
+                    priority={true}
+                    alt="dziecko ubierające maskę"
+                  />
                 </div>
               </div>
 
@@ -37,9 +43,13 @@ const Program = () => {
                   {project.description}
                 </p>
 
-                <Link href={`/Jak_pracujemy/${project.id}`} className=' text-slate-800 flex justify-start'>
-                  <div className='mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3'>
-                    {`Dowiedz się więcej o ${project.name}`}<FaRegArrowAltCircleRight />
+                <Link
+                  href={`/Jak_pracujemy/${project.id}`}
+                  className=" text-slate-800 flex justify-start"
+                >
+                  <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                    {`Dowiedz się więcej o ${project.name}`}
+                    <FaRegArrowAltCircleRight />
                   </div>
                 </Link>
               </div>

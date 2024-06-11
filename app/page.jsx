@@ -1,14 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import HeroPartZero from "/components/HeroPartZero";
-import HeroPartOne from "/components/HeroPartOne";
-import HeroPartTwo from "/components/HeroPartTwo";
-import HeroPartThree from "/components/HeroPartThree";
-import HeroPartFour from "/components/HeroPartFour";
-import HeroPartFive from "/components/HeroPartFive";
-import HeroSocial from "/components/HeroSocial";
-import HeroContact from "/components/HeroContact";
-import Modal from "/components/Modal";
+import HeroPartZero from "../components/HeroPartZero";
+import FirstMainPageSection from "../components/FirstMainPageSection";
+import SecondMainPageSection from "../components/SecondMainPageSection";
+import HeroPartTwo from "../components/HeroPartTwo";
+import ThirdMainPageSection from "../components/ThirdMainPageSection";
+import HeroContact from "../components/HeroContact";
+import InfoPoradnia from "../components/InfoPoradnia";
+
+import Modal from "../components/Modal";
+import MainSocial from "../components/MainSocial";
 
 const Home = () => {
   const [isFirstVisit, setIsFirstVisit] = useState(false);
@@ -29,12 +30,14 @@ const Home = () => {
   return (
     <main>
       <HeroPartZero />
-      <HeroPartOne />
-      <HeroPartFour />
+      <FirstMainPageSection />
+      {/* <InfoPoradnia /> */}
+      <SecondMainPageSection />
+      <MainSocial />
 
-      <HeroPartThree />
+      <ThirdMainPageSection />
       <HeroPartTwo />
-      <HeroSocial />
+
       {/* <HeroPartFive /> */}
       <HeroContact />
       {isFirstVisit && <Modal />}

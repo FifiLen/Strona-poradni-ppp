@@ -5,15 +5,10 @@ import {
   Bars3Icon,
   XMarkIcon,
   UserGroupIcon,
-  BookOpenIcon,
-  ChatBubbleBottomCenterIcon,
-  GlobeAltIcon,
-  PlayIcon,
   BuildingOfficeIcon,
   ShieldCheckIcon,
+  ChevronDownIcon,
 } from "@heroicons/react/24/outline";
-
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { FaTiktok, FaFacebook, FaYoutube } from "react-icons/fa6";
 
@@ -36,8 +31,6 @@ const products = [
     href: "/regulamin",
     icon: ShieldCheckIcon,
   },
-  // { name: 'Webinary', description: 'Zapisz się na nasze webinaria', href: '/Webinary', icon: BookOpenIcon },
-  // { name: 'Blog', description: 'Zajrzyj na nasz blog o E-uzależnieniach', href: 'https://magnolia-blog-eta.vercel.app', icon: ChatBubbleBottomCenterIcon },
   {
     name: "TikTok",
     description: "Zajrzyj na naszego TikToka",
@@ -66,30 +59,15 @@ function classNames(...classes) {
 
 export default function MainPageNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  // Dodajemy efekt, który nasłuchuje na przewijanie strony
-  useEffect(() => {
-    const handleScroll = () => {
-      // Ustawiamy stan "scrolled" na true/false w zależności od tego, czy strona została przewinięta
-      setScrolled(window.scrollY > 60);
-    };
-
-    // Dodajemy nasłuchiwacz zdarzenia przewijania
-    window.addEventListener("scroll", handleScroll);
-
-    // Usuwamy nasłuchiwacz, gdy komponent jest odmontowywany, aby uniknąć wycieków pamięci
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
-    <header className={` border-b border-gray-300 `}>
+    <header className="sticky top-0 z-50 bg-white">
       <nav
         className="mx-auto flex w-full items-center justify-between p-3 lg:px-5"
         aria-label="Global"
       >
-        <div className={`flex`}>
-          <Link href="/" className=" flex justify-start items-center">
+        <div className="flex">
+          <Link href="/" className="flex justify-start items-center">
             <img src="/assets/LogoMainPage.svg" width={170} alt="" />
             <span className="sr-only">Magnolia</span>
           </Link>
@@ -106,46 +84,44 @@ export default function MainPageNav() {
           </button>
         </div>
 
-        <Popover.Group
-          className={`hidden md:flex-wrap md:mx-5 md:gap-x-6 lg:flex font-[450] lg:gap-x-10  py-2 px-4`}
-        >
-          <Link href="/" className="text-sm  leading-6 ">
+        <Popover.Group className="hidden md:flex-wrap md:mx-5 md:gap-x-6 lg:flex font-[450] lg:gap-x-10 py-2 px-4">
+          <Link href="/" className="text-sm leading-6">
             Strona główna
           </Link>
 
-          <Link href="/Centrum_uzaleznien" className="text-sm  leading-6 ">
+          <Link href="/Centrum_uzaleznien" className="text-sm leading-6">
             Centrum uzależnień
           </Link>
 
-          <Link href="/Dzieci" className="text-sm  leading-6 ">
+          <Link href="/Dzieci" className="text-sm leading-6">
             Dzieci
           </Link>
 
-          <Link href="/Dorosli" className="text-sm  leading-6 ">
+          <Link href="/Dorosli" className="text-sm leading-6">
             Dorośli
           </Link>
 
-          <Link href="/diagnoza_si" className="text-sm  leading-6 ">
+          <Link href="/diagnoza_si" className="text-sm leading-6">
             SI
           </Link>
 
-          <Link href="/terapia_vr" className="text-sm  leading-6 ">
+          <Link href="/terapia_vr" className="text-sm leading-6">
             Terapia VR
           </Link>
 
-          <Link href="/hipoterapia" className="text-sm  leading-6 ">
+          <Link href="/hipoterapia" className="text-sm leading-6">
             Hipoterapia
           </Link>
 
           <Link
             href="/assets/oferta-PPP-Magnolia.pdf"
-            className="text-sm  leading-6 "
+            className="text-sm leading-6"
           >
             Oferta
           </Link>
 
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm leading-6 ">
+            <Popover.Button className="flex items-center gap-x-1 text-sm leading-6">
               O nas
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-gray-400"
@@ -210,7 +186,7 @@ export default function MainPageNav() {
         <div className="hidden lg:flex gap-2 lg:justify-end">
           <Link
             href="/Kontakt"
-            className={`text-sm bg-gray-200/70 font-semibold py-2 px-5 rounded-md  leading-6 text-gray-900`}
+            className="text-sm bg-[#921d7f] font-semibold py-2 px-5 rounded-md leading-6 text-white"
           >
             Kontakt
           </Link>
@@ -266,22 +242,24 @@ export default function MainPageNav() {
                 >
                   Dorośli
                 </Link>
-
-                <Link href="/diagnoza_si" className="text-sm  leading-6 ">
+                <Link
+                  href="/diagnoza_si"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
                   SI
                 </Link>
-
                 <Link
                   href="/terapia_vr"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Terapia VR
                 </Link>
-
-                <Link href="/hipoterapia" className="text-sm  leading-6 ">
+                <Link
+                  href="/hipoterapia"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
                   Hipoterapia
                 </Link>
-
                 <Link
                   href="/assets/oferta-PPP-Magnolia.pdf"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"

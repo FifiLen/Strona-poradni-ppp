@@ -7,9 +7,14 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "/components/ui/accordion";
+} from "../../../components/ui/accordion";
 import Image from "next/image";
-import { Card, CardHeader, CardTitle, CardContent } from "/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "../../../components/ui/card";
 
 const TerapieVR = () => {
   return (

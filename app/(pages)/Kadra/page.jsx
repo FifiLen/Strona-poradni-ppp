@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
 
-useEffect;
-
 const staffData = [
   {
     id: 11,
@@ -50,6 +48,19 @@ const staffData = [
       </p>
     ),
     imageUrl: "/assets/avatar2.svg",
+  },
+  {
+    id: 15,
+    name: "Justyna Bugdoł",
+    specialty: "Edukacja wczesnoszkolna i surdopedagogika",
+    description: (
+      <p>
+        Magister pedagogiki specjalnej, nauczyciel dyplomowany, terapeuta
+        edukacji i&nbsp;rewalidacji osób ze&nbsp;spektrum autyzmu, trener TUS,
+        pedagog w&nbsp;Zespole Szkół Specjalnych
+      </p>
+    ),
+    imageUrl: "/assets/avatar.svg",
   },
   {
     id: 1,
