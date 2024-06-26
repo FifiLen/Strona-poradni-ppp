@@ -675,6 +675,48 @@ const Dzieci = () => {
             <div className="mb-4 md:mb-0">
               <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
                 <img
+                  src="/assets/diagnozaP.jpg"
+                  loading="lazy"
+                  alt="dziecko ubierające maskę"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Tekst informacyjny */}
+            <div className="mx-6 md:mr-16 flex-col justify-center items-center">
+              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+                Diagnoza przedszkolaka
+              </h2>
+              <p className="text-gray-700 text-base text-left mb-6">
+                Etap przedszkolny jest momentem, w&nbsp;którym rodzice
+                i&nbsp;nauczyciele zaczynają dostrzegać potencjalne trudności
+                rozwojowe u&nbsp;dzieci. Dlaczego właśnie wtedy? Przedszkolak,
+                nawet jeśli wcześniej uczęszczał do&nbsp;żłobka, teraz trafia
+                pod opiekę wykwalifikowanych nauczycieli, którzy mogą dokładniej
+                ocenić jego możliwości i&nbsp;ewentualne problemy.
+              </p>
+              <Link
+                href={"/diagnoza_przedszkolaka"}
+                className=" text-slate-800 flex justify-start"
+              >
+                <div className=" w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                  Dowiedz się więcej o diagnozie przedszkolaka{" "}
+                  <FaRegArrowAltCircleRight />
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-10 py-6 md:py-24 mb-10">
+        <div className="mx-auto">
+          <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
+            {/* Obrazek */}
+            <div className="mb-4 md:mb-0">
+              <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
+                <img
                   src="/assets/dietetykDziecięcy.png"
                   loading="lazy"
                   alt="dziecko ubierające maskę"
