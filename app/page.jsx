@@ -7,6 +7,7 @@ import HeroPartTwo from "../components/HeroPartTwo";
 import ThirdMainPageSection from "../components/ThirdMainPageSection";
 import HeroContact from "../components/HeroContact";
 import InfoPoradnia from "../components/InfoPoradnia";
+import Zabawy from "../components/Zabawy";
 
 import Modal from "../components/Modal";
 import MainSocial from "../components/MainSocial";
@@ -37,6 +38,7 @@ const Home = () => {
 
       <ThirdMainPageSection />
       <HeroPartTwo />
+      <Zabawy />
 
       {/* <HeroPartFive /> */}
       <HeroContact />
