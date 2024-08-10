@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import {
@@ -14,20 +15,74 @@ import {
   AccordionTrigger,
 } from "../../../components/ui/accordion";
 import Image from "next/image";
-import { FaCircleArrowRight } from "react-icons/fa6";
+import { FaCircleArrowRight, FaCheck } from "react-icons/fa6";
 
 import { AlertDemo } from "../../../components/Alert";
 import { CardFooter } from "../../../components/ui/card";
 import Link from "next/link";
-import { FaCheck } from "react-icons/fa";
+import { useAccessibility } from "../../../components/AccessibilityContext"; // Import the context
+
+// Utility function to get Tailwind font size class for paragraphs
+const getFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-sm"; // Smaller than default
+    case 1:
+      return "text-base"; // Default size
+    case 2:
+      return "text-lg"; // Slightly larger
+    case 3:
+      return "text-xl"; // Even larger
+    case 4:
+      return "text-2xl"; // Largest
+    default:
+      return "text-base";
+  }
+};
+
+// Utility function to get Tailwind font size class for headers
+const getHeaderFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-2xl"; // Smaller than default
+    case 1:
+      return "text-3xl"; // Default size
+    case 2:
+      return "text-4xl"; // Slightly larger
+    case 3:
+      return "text-5xl"; // Even larger
+    case 4:
+      return "text-6xl"; // Largest
+    default:
+      return "text-3xl";
+  }
+};
 
 const TerapiaPar = () => {
+  const { fontSizeLevel, highContrast } = useAccessibility(); // Use context
+
+  // Determine the font size classes based on the current level
+  const fontSizeClass = getFontSizeClass(fontSizeLevel);
+  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
+
   return (
-    <div className="font-sans overflow-x-hidden">
+    <div
+      className={`font-sans overflow-x-hidden ${
+        highContrast ? "bg-black text-yellow-400" : "bg-white"
+      }`}
+    >
       {/* Nagłówek */}
-      <div className="border-b border-gray-300 py-4 md:py-6 ">
+      <div
+        className={`border-b py-4 md:py-6 ${
+          highContrast
+            ? "bg-gray-800 border-gray-600 text-yellow-400"
+            : "bg-gradient-to-br from-blue-100 via-blue-300 to-blue-600 border-gray-300 text-slate-800"
+        }`}
+      >
         <div className="flex justify-center items-center">
-          <h2 className="text-3xl font-display text-slate-800 md:text-3xl font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left">
+          <h2
+            className={`font-display font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left ${headerFontSizeClass}`}
+          >
             Terapia par
           </h2>
         </div>
@@ -52,12 +107,18 @@ const TerapiaPar = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`text-left font-semibold mb-6 font-display ${headerFontSizeClass}`}
+              >
                 Kiedy warto rozważyć udział w&nbsp;terapii dla osób będących
                 w&nbsp;związku?
               </h2>
 
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Udział w terapii dla osób będących w związku warto rozważyć w
                 kilku sytuacjach:
               </p>
@@ -103,7 +164,7 @@ const TerapiaPar = () => {
                     Gdy odczuwacie, że wasza emocjonalna lub fizyczna bliskość
                     osłabła, a próby jej przywrócenia na własną rękę nie
                     przynoszą rezultatów, terapia może pomóc w odbudowaniu tej
-                    intymności. sensorycznych.
+                    intymności.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -123,7 +184,7 @@ const TerapiaPar = () => {
                   <AccordionContent className="">
                     Dla par planujących ślub, terapia przedmałżeńska może być
                     cennym narzędziem do zrozumienia oczekiwań, ustalenia celów
-                    życiowychi wzmocnienia relacji przed zawarciem związku
+                    życiowych i wzmocnienia relacji przed zawarciem związku
                     małżeńskiego.
                   </AccordionContent>
                 </AccordionItem>
@@ -191,8 +252,9 @@ const TerapiaPar = () => {
                     trudności z funkcjonowaniem seksualnym lub różnice w
                     preferencjach, mogą być trudne do omówienia bez wsparcia.
                     Terapia par może zapewnić bezpieczne środowisko do dyskusji
-                    o tych sprawach i szukania rozwiązań aby Wasze życie intymne
-                    sprawiały przyjemność i dawały satysfakcję Wam obojgu.
+                    o tych sprawach i szukania rozwiązań, aby Wasze życie
+                    intymne sprawiało przyjemność i dawało satysfakcję Wam
+                    obojgu.
                   </p>
                 </CardContent>
               </Card>
@@ -232,10 +294,16 @@ const TerapiaPar = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-20">
             {/* Tekst informacyjny */}
             <div className="flex-col justify-start items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`text-left font-semibold mb-6 font-display ${headerFontSizeClass}`}
+              >
                 Dlaczego terapia dla par?
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 <span className=" font-semibold text-xl">
                   Terapia par to proces
                 </span>
@@ -244,12 +312,15 @@ const TerapiaPar = () => {
                 rozwiązywania konfliktów oraz komunikowania własnych uczuć
                 i&nbsp;potrzeb oraz zrozumienie partnera.
               </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Terapia skierowana jest zarówno do osób znajdujących się w
                 związkach formalnych i nieformalnych, do osób znajdujących się w
                 związkach partnerskich lub jednopłciowych.
               </p>
-              {/* Accordion and Link components here */}
             </div>
 
             {/* Obrazek */}
@@ -289,30 +360,62 @@ const TerapiaPar = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`text-left font-semibold mb-6 font-display ${headerFontSizeClass}`}
+              >
                 Terapia dla osób tworzących związek daje możliwość:
               </h2>
-              <div className="mt-3 flex items-center gap-3 text-green-800">
+              <div
+                className={`mt-3 flex items-center gap-3 ${
+                  highContrast ? "text-yellow-400" : "text-green-800"
+                }`}
+              >
                 <FaCheck />
-                <p>
+                <p
+                  className={`${
+                    highContrast ? "text-yellow-400" : "text-gray-700"
+                  } ${fontSizeClass} text-left mb-6`}
+                >
                   spotkania z partnerem na bezpiecznym gruncie,
                   w&nbsp;atmosferze równości i&nbsp;bezstronności,
                 </p>
               </div>
-              <div className="mt-3 flex items-center gap-3 text-green-600">
+              <div
+                className={`mt-3 flex items-center gap-3 ${
+                  highContrast ? "text-yellow-400" : "text-green-600"
+                }`}
+              >
                 <FaCheck />
-                <p>spojrzenia na swój związek z innej perspektywy,</p>
+                <p
+                  className={`${
+                    highContrast ? "text-yellow-400" : "text-gray-700"
+                  } ${fontSizeClass} text-left mb-6`}
+                >
+                  spojrzenia na swój związek z innej perspektywy,
+                </p>
               </div>
-              <div className="mt-3  text-green-800">
+              <div
+                className={`mt-3 ${
+                  highContrast ? "text-yellow-400" : "text-green-800"
+                }`}
+              >
                 <div className=" flex items-center gap-3">
                   <FaCheck />
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     poprawy komunikacji w relacji bez tak zwanej przemocy
                     słownej, która nie jest tylko:
                   </p>
                 </div>
                 <div>
-                  <ul className="mt-2 ml-6 text-green-600">
+                  <ul
+                    className={`mt-2 ml-6 ${
+                      highContrast ? "text-yellow-400" : "text-green-600"
+                    }`}
+                  >
                     <li>- krzykiem,</li>
                     <li>- używaniem wulgaryzmów,</li>
                     <li>- obrażaniem się,</li>
@@ -321,15 +424,33 @@ const TerapiaPar = () => {
                   </ul>
                 </div>
               </div>
-              <div className="mt-3 flex items-center gap-3 text-green-800">
+              <div
+                className={`mt-3 flex items-center gap-3 ${
+                  highContrast ? "text-yellow-400" : "text-green-800"
+                }`}
+              >
                 <FaCheck />
-                <p>
+                <p
+                  className={`${
+                    highContrast ? "text-yellow-400" : "text-gray-700"
+                  } ${fontSizeClass} text-left mb-6`}
+                >
                   wyrażania własnych uczuć, potrzeb, oczekiwań, obaw, rozterek,
                 </p>
               </div>
-              <div className="mt-3 flex items-center gap-3 text-green-600">
+              <div
+                className={`mt-3 flex items-center gap-3 ${
+                  highContrast ? "text-yellow-400" : "text-green-600"
+                }`}
+              >
                 <FaCheck />
-                <p>zrozumienia uczuć oraz potrzeb partnera.</p>
+                <p
+                  className={`${
+                    highContrast ? "text-yellow-400" : "text-gray-700"
+                  } ${fontSizeClass} text-left mb-6`}
+                >
+                  zrozumienia uczuć oraz potrzeb partnera.
+                </p>
               </div>
             </div>
           </div>
@@ -337,7 +458,11 @@ const TerapiaPar = () => {
       </section>
 
       <section className=" max-w-7xl mx-auto my-20">
-        <Card className="border-blue-800 bg-blue-100">
+        <Card
+          className={`${
+            highContrast ? "bg-gray-800" : "bg-blue-100"
+          } border-blue-800`}
+        >
           <CardHeader>
             <CardTitle>Spróbuj terapii dla par</CardTitle>
           </CardHeader>
@@ -352,7 +477,11 @@ const TerapiaPar = () => {
           <CardFooter>
             <Link
               href={"/Kontakt"}
-              className="p-2 rounded-md border border-blue-800 bg-blue-300 flex items-center justify-center gap-2"
+              className={`p-2 rounded-md border flex items-center justify-center gap-2 ${
+                highContrast
+                  ? "bg-gray-600 border-gray-400"
+                  : "bg-blue-300 border-blue-800"
+              }`}
             >
               Umów wizytę
               <FaCircleArrowRight className=" rotate-[-45deg]" />

@@ -1,9 +1,12 @@
+"use client"; // Enable client-side rendering
+
 import React from "react";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
+  CardFooter,
 } from "../../../components/ui/card";
 import {
   Accordion,
@@ -15,25 +18,78 @@ import Image from "next/image";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { GiCheckMark } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
-
 import { AlertDemo } from "../../../components/Alert";
-import { CardFooter } from "../../../components/ui/card";
 import Link from "next/link";
+import { useAccessibility } from "../../../components/AccessibilityContext"; // Import the context
+
+// Utility function to get Tailwind font size class for paragraphs
+const getFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-sm"; // Smaller than default
+    case 1:
+      return "text-base"; // Default size
+    case 2:
+      return "text-lg"; // Slightly larger
+    case 3:
+      return "text-xl"; // Even larger
+    case 4:
+      return "text-2xl"; // Largest
+    default:
+      return "text-base";
+  }
+};
+
+// Utility function to get Tailwind font size class for headers
+const getHeaderFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-2xl"; // Smaller than default
+    case 1:
+      return "text-3xl"; // Default size
+    case 2:
+      return "text-4xl"; // Slightly larger
+    case 3:
+      return "text-5xl"; // Even larger
+    case 4:
+      return "text-6xl"; // Largest
+    default:
+      return "text-3xl";
+  }
+};
 
 const Hipoterapia = () => {
+  const { fontSizeLevel, highContrast } = useAccessibility(); // Use context
+
+  // Determine the font size classes based on the current level
+  const fontSizeClass = getFontSizeClass(fontSizeLevel);
+  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
+
   return (
-    <div className="font-sans overflow-x-hidden">
+    <div
+      className={`font-sans overflow-x-hidden ${
+        highContrast ? "bg-black text-yellow-400" : "bg-white"
+      }`}
+    >
       {/* Header */}
-      <div className="border-b border-gray-300 py-4 md:py-6">
+      <div
+        className={`border-b py-4 md:py-6 ${
+          highContrast
+            ? "bg-gray-800 border-gray-600 text-yellow-400"
+            : "bg-gradient-to-br from-blue-100 via-blue-300 to-blue-600 border-gray-300 text-white"
+        }`}
+      >
         <div className="flex justify-center items-center">
-          <h2 className="text-3xl font-display text-slate-800 md:text-3xl font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left">
+          <h2
+            className={`font-display font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left ${headerFontSizeClass}`}
+          >
             Hipoterapia&nbsp;- Terapia z&nbsp;udziałem koni
           </h2>
         </div>
       </div>
 
       {/* Section 1 */}
-      <section className=" py-6 md:py-12">
+      <section className="py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Video Embed */}
@@ -53,10 +109,16 @@ const Hipoterapia = () => {
 
             {/* Informational Text */}
             <div className="mx-6 md:mr-16 ml-14 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Hipoterapia
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Hipoterapia, nazywana również terapią wspomaganą udziałem koni,
                 jest formą terapii wykorzystującą interakcję z&nbsp;tymi
                 pięknymi i&nbsp;łagodnymi zwierzętami do&nbsp;celów
@@ -91,31 +153,33 @@ const Hipoterapia = () => {
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Informational Text */}
             <div className="flex flex-col justify-center items-start mx-6">
-              <h2 className="text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Potężne zwierzę może być „stanowiskiem” terapeutycznym
               </h2>
 
-              <p className="flex items-center gap-3 text-left mb-6">
+              <p className={`flex items-center gap-3 text-left mb-6`}>
                 <GiCheckMark className="text-xl font-semibold text-green-500" />
                 Koń może zastępować materac (szeroki zad)
               </p>
-              <p className="flex items-center gap-3 text-left mb-6">
+              <p className={`flex items-center gap-3 text-left mb-6`}>
                 <GiCheckMark className="text-xl font-semibold text-green-500" />
                 Terapeutyczną piłkę, lub&nbsp;wałek (kłoda)
               </p>
-              <p className="flex items-center gap-3 text-left mb-6">
+              <p className={`flex items-center gap-3 text-left mb-6`}>
                 <GiCheckMark className="text-xl font-semibold text-green-500" />
                 Klin (szyja)
               </p>
-              <p className="flex items-center gap-3 text-left mb-6">
+              <p className={`flex items-center gap-3 text-left mb-6`}>
                 <GiCheckMark className="text-xl font-semibold text-green-500" />
                 Drabinkę do&nbsp;podciągania (grzywa)
               </p>
-              <p className="flex items-center gap-3 text-left mb-6">
-                <GiCheckMark className="text-xl font-semibold text-green-500" />
-                Drabinkę do&nbsp;podciągania (grzywa)
-              </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Idąc stępem wprowadza pacjenta leżącego na&nbsp;nim
                 na&nbsp;brzuchu – w&nbsp;ruchy zbliżone do&nbsp;pełzania.
                 Pacjenta opartego na&nbsp;łokciach i&nbsp;kolanach –
@@ -164,31 +228,37 @@ const Hipoterapia = () => {
             </div>
             {/* Informational Text */}
             <div className="flex flex-col justify-center items-start mx-6 md:ml-16">
-              <h2 className="text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Koń zmniejsza spastyczność mięśni
               </h2>
-              <p className="text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Uszkodzenie ośrodkowego układu nerwowego może spowodować
                 wzmożone napięcie mięśni (spastyczność), szczególnie kończyn
                 górnych i&nbsp;dolnych. Podstawowym warunkiem usprawniania jest
                 obniżenie spastyczności. Podczas hipoterapii dzieje się to
                 automatycznie i&nbsp;jest możliwe dzięki:
               </p>
-              <p className="flex items-center gap-3 text-left mb-6">
+              <p className={`flex items-center gap-3 text-left mb-6`}>
                 <GiCheckMark className="text-3xl font-semibold text-green-500" />
                 rozgrzaniu mięśni (temperatura ciała konia jest wyższa
                 od&nbsp;temperatury ciała ludzkiego),
               </p>
-              <p className="flex items-center gap-3 text-left mb-6">
+              <p className={`flex items-center gap-3 text-left mb-6`}>
                 <GiCheckMark className="text-2xl font-semibold text-green-500" />
                 rytmicznemu kołysaniu w&nbsp;stępie,
               </p>
-              <p className="flex items-center gap-3 text-left mb-6">
+              <p className={`flex items-center gap-3 text-left mb-6`}>
                 <GiCheckMark className="text-3xl font-semibold text-green-500" />
                 przeciwstawnym skrętom biodra-barki (dysocjacji) spowodowanym
                 ruchem konia,
               </p>
-              <p className="flex items-center gap-3 text-left mb-6">
+              <p className={`flex items-center gap-3 text-left mb-6`}>
                 <GiCheckMark className="text-3xl font-semibold text-green-500" />
                 ułożeniu kończyn dolnych w&nbsp;trójzgięciu i&nbsp;odwiedzeniu
                 podczas dosiadania konia.
@@ -198,16 +268,22 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      {/* Section 2 */}
+      {/* Section 3 */}
       <section className="py-6 md:py-12">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Informational Text */}
             <div className="flex flex-col justify-center items-start mx-6">
-              <h2 className="text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Sesja terapeutyczna
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 W&nbsp;trakcie sesji hipoterapeuta instruuje jak reagować
                 na&nbsp;ruchy konia. Terapia może obejmować pozycje
                 na&nbsp;koniu - siedzenie przodem, tyłem czy&nbsp;nawet leżenie
@@ -217,7 +293,11 @@ const Hipoterapia = () => {
                 jazdy.
               </p>
 
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Sesje terapeutyczne mogą odbywać się również „przy koniu” zanim
                 pacjent nabierze pewności siebie i&nbsp;swobody w&nbsp;relacji
                 z&nbsp;tym łagodnym ale&nbsp;dużym zwierzęciem.
@@ -243,42 +323,46 @@ const Hipoterapia = () => {
 
       <section className="py-6 md:py-12">
         <div className="max-w-7xl mx-auto">
-          <div className=" items-center flex-col md:flex-row">
+          <div className="items-center flex-col md:flex-row">
             {/* Informational Text */}
-            <div className=" flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-5xl text-left font-semibold mb-8 font-display text-green-900">
+            <div className="flex-col justify-center items-center">
+              <h2
+                className={`font-display mb-8 font-semibold text-left ${headerFontSizeClass} text-green-900`}
+              >
                 Wskazania do&nbsp;hipoterapii
               </h2>
-              <h4 className="text-2xl md:text-2xl text-left font-semibold font-display">
+              <h4
+                className={`font-display mb-6 font-semibold text-left ${fontSizeClass}`}
+              >
                 Dzieci
               </h4>
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                   <AccordionTrigger>Zespoły neurologiczne</AccordionTrigger>
                   <AccordionContent>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Mózgowe porażenie dziecięce: kontrola głowy i&nbsp;czynna
                       pozycja siedząca.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Stany po&nbsp;urazach czaszkowo-mózgowych.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Minimalne uszkodzenia mózgu (ADHD).
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Choroby mięśni min.&nbsp;3 w&nbsp;skali Lovetta.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Dzieci niedowidzące i&nbsp;niewidome.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Choroby psychiczne.
                     </p>
                   </AccordionContent>
@@ -286,16 +370,16 @@ const Hipoterapia = () => {
                 <AccordionItem value="item-2">
                   <AccordionTrigger>Zespoły ortopedyczne</AccordionTrigger>
                   <AccordionContent>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Wady postawy.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Skoliozy I&nbsp;stopnia wg&nbsp;Coba.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Stany po&nbsp;amputacji i&nbsp;wady rozwojowe kończyn.
                     </p>
                   </AccordionContent>
@@ -303,20 +387,20 @@ const Hipoterapia = () => {
                 <AccordionItem value="item-3">
                   <AccordionTrigger>Inne</AccordionTrigger>
                   <AccordionContent>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Zespoły genetyczne, np.&nbsp;Zespół Down`a
                       (z&nbsp;obowiązkowym zdjęciem rtg – bocznym
                       i&nbsp;czynnościowym odcinka szyjnego kręgosłupa).
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Przepukliny oponowo-rdzeniowe, w&nbsp;zależności
                       od&nbsp;wysokości uszkodzenia, obrazu klinicznego,
                       współwystępowania wodogłowia.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Zespoły psychologiczne: zaburzenia emocjonalne,
                       upośledzenia umysłowe, niedostosowanie społeczne.
                     </p>
@@ -327,29 +411,31 @@ const Hipoterapia = () => {
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                   <AccordionTrigger>
-                    <h4 className="text-2xl md:text-2xl text-left font-semibold font-display">
+                    <h4
+                      className={`font-display mb-6 font-semibold text-left ${fontSizeClass}`}
+                    >
                       Dorośli
                     </h4>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Stwardnienie rozsiane.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Stany po&nbsp;udarze.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Stany po&nbsp;urazach czaszkowo-mózgowych.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Uzależnienia.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <GiCheckMark className=" text-2xl font-semibold text-green-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <GiCheckMark className="text-2xl font-semibold text-green-500" />
                       Patologie społeczne.
                     </p>
                   </AccordionContent>
@@ -359,60 +445,62 @@ const Hipoterapia = () => {
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                   <AccordionTrigger>
-                    <h4 className="text-2xl md:text-2xl text-left text-red-700 font-semibold font-display">
+                    <h4
+                      className={`font-display mb-6 text-left text-red-700 font-semibold ${fontSizeClass}`}
+                    >
                       Przeciwwskazania do&nbsp;hipoterapii
                     </h4>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       uczulenie na&nbsp;sierść, pot lub&nbsp;zapach konia,
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       niewygojone rany,
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       nietolerancja formy leczenia przez pacjenta,
                       np.&nbsp;niepohamowany lęk,
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       schorzenia okulistyczne – wymagana konsultacja,
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       pogorszenie stanu w&nbsp;zespołach neurologicznych,
                       stanach po&nbsp;urazach czaszkowo-mózgowych, ADHD,
                       chorobach mięśni,
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       brak kontroli głowy w&nbsp;rozwoju motorycznym,
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       podwyższona temperatura,
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       ostre choroby infekcyjne.
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       padaczka,
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       upośledzenia umysłowe w&nbsp;stopniu głębokim,
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       zaburzenia mineralizacji kości (osteoporoza),
                     </p>
-                    <p className="flex items-center gap-3  text-left mb-6">
-                      <IoMdClose className=" text-2xl font-semibold text-red-500" />
+                    <p className="flex items-center gap-3 text-left mb-6">
+                      <IoMdClose className="text-2xl font-semibold text-red-500" />
                       utrwalone deformacje i&nbsp;zniekształcenia, przykurcze,
                       ograniczenia zakresu ruchu kostno-stawowego,
                       np.&nbsp;zwichnięcia w&nbsp;stawach biodrowych.
@@ -425,7 +513,7 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      {/* Section 3 */}
+      {/* Section 4 */}
       <section className="py-6 md:py-12">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
@@ -445,10 +533,16 @@ const Hipoterapia = () => {
 
             {/* Informational Text */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Koń pobudza zmysły
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Dotyk końskiej sierści, łaskotanie grzywy, rozmaitość kształtów,
                 odgłos kroków, przyjazne parskanie i&nbsp;mile kojarzony zapach
                 stymulują zmysły dotyku, słuchu, wzroku i&nbsp;węchu. Towarzyszy
@@ -467,10 +561,11 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      <section className=" mt-10">
+      <section className="mt-10">
         <div className="max-w-7xl mx-auto">
-          {" "}
-          <h2 className="text-4xl md:text-4xl text-left font-semibold mb-8 font-display">
+          <h2
+            className={`font-display mb-8 font-semibold text-left ${headerFontSizeClass}`}
+          >
             Korzyści z&nbsp;Hipoterapii
           </h2>
         </div>
@@ -478,49 +573,81 @@ const Hipoterapia = () => {
         <div className="max-w-7xl mx-auto flex gap-6 justify-center items-center">
           <div className="grid grid-cols-2 gap-10">
             <div className="grid gap-10">
-              <Card className="border-blue-500 bg-blue-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-blue-100"
+                } border-blue-500`}
+              >
                 <CardHeader>
                   <CardTitle>
                     Stymulacja sensoryczna i&nbsp;motoryczna
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Ruch konia przekazuje uczestnikowi zajęć bodźce sensoryczne,
                     które&nbsp;pomagają w&nbsp;procesie integracji sensorycznej.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-green-800 bg-green-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-green-100"
+                } border-green-800`}
+              >
                 <CardHeader>
                   <CardTitle>Poprawa propriocepcji</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Jazda na&nbsp;koniu pomaga poprawić świadomość położenia
                     własnego ciała, co&nbsp;jest kluczowe w&nbsp;rehabilitacji
                     wielu schorzeń neurologicznych.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-blue-500 bg-blue-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-blue-100"
+                } border-blue-500`}
+              >
                 <CardHeader>
                   <CardTitle>Zwiększenie zakresu ruchu</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Osoby z&nbsp;ograniczeniami w&nbsp;poruszaniu się mogą
                     doświadczać poprawy w&nbsp;zakresie ruchu stawów
                     o&nbsp;elastyczności mięśni.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-green-800 bg-green-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-green-100"
+                } border-green-800`}
+              >
                 <CardHeader>
                   <CardTitle>Kompleksowe podejście terapeutyczne</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Hipoterapia jest kompleksowym podejściem terapeutycznym,
                     które może przynieść znaczące korzyści dla osób
                     z&nbsp;różnymi potrzebami i&nbsp;ograniczeniami, stając się
@@ -531,47 +658,79 @@ const Hipoterapia = () => {
               </Card>
             </div>
             <div className="grid gap-10">
-              <Card className="border-green-800 bg-green-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-green-100"
+                } border-green-800`}
+              >
                 <CardHeader>
                   <CardTitle>Psychologiczne</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Zwiększenie poczucia własnej wartości i&nbsp;niezależności:
                     sukcesy w&nbsp;terapii mogą znacząco wpłynąć
                     na&nbsp;samoocenę uczestnika zajęć.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-blue-500 bg-blue-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-blue-100"
+                } border-blue-500`}
+              >
                 <CardHeader>
                   <CardTitle>Redukcja lęku i&nbsp;depresji</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Interakcje z&nbsp;koniem oraz&nbsp;terapeutycznym
                     środowiskiem przynoszą ulgę w&nbsp;objawach lęku
                     i&nbsp;depresji.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-green-800 bg-green-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-green-100"
+                } border-green-800`}
+              >
                 <CardHeader>
                   <CardTitle>Rozwój umiejętności komunikacyjnych</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Praca z&nbsp;koniem i&nbsp;terapeutami wymaga i&nbsp;wspiera
                     rozwijanie umiejętności werbalnych i&nbsp;niewerbalnych.
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-blue-500 bg-blue-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-blue-100"
+                } border-blue-500`}
+              >
                 <CardHeader>
                   <CardTitle>Budowanie relacji</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Pacjent rozwija specjalną więź z&nbsp;koniem, co&nbsp;może
                     poprawić jego zdolność do&nbsp;budowania relacji
                     z&nbsp;innymi ludźmi.
@@ -585,19 +744,29 @@ const Hipoterapia = () => {
 
       <section className="py-6 md:py-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-4xl text-left font-semibold mb-8 font-display">
+          <h2
+            className={`font-display mb-8 font-semibold text-left ${headerFontSizeClass}`}
+          >
             Dlaczego konie?
           </h2>
         </div>
         <div className="max-w-7xl mx-auto flex gap-6 justify-center items-center">
           <div className="grid grid-cols-2 gap-10">
             <div className="grid gap-10">
-              <Card className="border-yellow-500 bg-yellow-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-yellow-100"
+                } border-yellow-500`}
+              >
                 <CardHeader>
                   <CardTitle>Dają wrażenie chodu ludzkiego</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Trójwymiarowy ruch grzbietu końskiego w&nbsp;stępie
                     przekazywany miednicy jeźdźca jest identyczny z&nbsp;ruchami
                     miednicy prawidłowo kroczącego człowieka. W&nbsp;tym samym
@@ -609,17 +778,25 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-lime-500 bg-lime-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-lime-100"
+                } border-lime-500`}
+              >
                 <CardHeader>
                   <CardTitle>Hamują rozwój wad postawy</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Nieprawidłowe, mimowolne odruchy towarzyszące niektórym
                     postaciom mózgowego porażenia dziecięcego utrudniają
                     usprawnianie. Hipoterapia stwarza możliwość stopniowego
                     eliminowania tych automatyzmów dzięki:
-                    <ul className=" list-disc ml-5 space-y-2">
+                    <ul className="list-disc ml-5 space-y-2">
                       <li>łagodnym, kołyszącym ruchom w&nbsp;stępie,</li>
                       <li>
                         dysocjacji biodra – barki oraz&nbsp;trójzgięciu
@@ -636,14 +813,22 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-yellow-500 bg-yellow-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-yellow-100"
+                } border-yellow-500`}
+              >
                 <CardHeader>
                   <CardTitle>
                     Przywracają zaburzone w symetrii mięśnie tułowia
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Łagodne, rytmiczne, równomierne kołysanie w&nbsp;stępie, na
                     przemian napina i&nbsp;rozluźnia mięśnie posturalne prawej
                     i&nbsp;lewej strony ciała. Mięśnie napięte
@@ -655,12 +840,20 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-lime-500 bg-lime-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-lime-100"
+                } border-lime-500`}
+              >
                 <CardHeader>
                   <CardTitle>Korygują postawę ciała</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Konieczność utrzymania prawidłowego dosiadu zmusza do
                     aktywnego prostowania się. Wzmocnieniu ulegają mięśnie
                     grzbietu, brzucha i&nbsp;obręczy biodrowej. Prowadzi
@@ -670,7 +863,11 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-yellow-500 bg-yellow-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-yellow-100"
+                } border-yellow-500`}
+              >
                 <CardHeader>
                   <CardTitle>
                     Zapobiegają przykurczom i&nbsp;ograniczeniom ruchomości
@@ -678,7 +875,11 @@ const Hipoterapia = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Wspomniany łańcuch ruchów “grzbiet konia – miednica –
                     kręgosłup – barki, kończyny jeźdźca” uruchamia rytmicznie
                     i&nbsp;łagodnie kolejno wszystkie mięśnie i&nbsp;stawy.
@@ -688,12 +889,20 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-lime-500 bg-lime-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-lime-100"
+                } border-lime-500`}
+              >
                 <CardHeader>
                   <CardTitle>Zwiększają możliwości lokomocyjne</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Osoby niepełnosprawne cierpią na&nbsp;ogół z&nbsp;powodu
                     ograniczonych możliwości ruchowych. Siedząc na&nbsp;koniu,
                     popędzając go&nbsp;pracą bioder, kręgosłupa – odbierają
@@ -708,12 +917,20 @@ const Hipoterapia = () => {
               </Card>
             </div>
             <div className="grid gap-10">
-              <Card className="border-yellow-500 bg-yellow-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-yellow-100"
+                } border-yellow-500`}
+              >
                 <CardHeader>
                   <CardTitle>Łagodnie usprawniają ruchy człowieka</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Jest to&nbsp;możliwe dzięki jego specyficznej budowie
                     i&nbsp;łagodnemu oddziaływaniu ruchu konia w&nbsp;stępie.
                     W&nbsp;hipoterapii istnieje cały szereg odpowiednich ułożeń,
@@ -724,12 +941,20 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-lime-500 bg-lime-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-lime-100"
+                } border-lime-500`}
+              >
                 <CardHeader>
                   <CardTitle>Są źródłem bodźców równoważnych</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Hipoterapia daje nieograniczone możliwości stopniowania
                     i&nbsp;różnicowania bodźców równoważnych. Dzięki
                     przyspieszeniom poziomym i&nbsp;pionowym: kołysaniu, zmianom
@@ -740,12 +965,20 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-yellow-500 bg-yellow-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-yellow-100"
+                } border-yellow-500`}
+              >
                 <CardHeader>
                   <CardTitle>Uaktywniają</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Rytmiczne pobudzające ruchy towarzyszące jeździe konnej
                     wzmagają wydzielanie hormonów, (szczególnie adrenaliny)
                     stymulujących układ wegetatywny. Następuje wyraźny wzrost
@@ -755,12 +988,20 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-lime-500 bg-lime-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-lime-100"
+                } border-lime-500`}
+              >
                 <CardHeader>
                   <CardTitle>Usprawniają pracę organów wewnętrznych</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Dzięki stymulacji układu hormonalnego i&nbsp;wegetatywnego,
                     jazda konna poprawia krążenie, oddychanie, pracę jelit
                     a&nbsp;nawet pracę układu odpornościowego. Działanie
@@ -768,12 +1009,20 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-yellow-500 bg-yellow-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-yellow-100"
+                } border-yellow-500`}
+              >
                 <CardHeader>
                   <CardTitle>Mobilizują</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Kontakt z&nbsp;koniem, poddanie się jego łagodnym,
                     kołyszącym ruchom sprzyja relaksowi i&nbsp;odprężeniu. Świat
                     widziany z&nbsp;końskiego grzbietu jest większy
@@ -783,12 +1032,20 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-lime-500 bg-lime-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-lime-100"
+                } border-lime-500`}
+              >
                 <CardHeader>
                   <CardTitle>Angażują w terapię</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Podczas zajęć z&nbsp;hipoterapii pacjent dzięki aktywizacji
                     i&nbsp;pozytywnemu nastawieniu do&nbsp;współpracy
                     z&nbsp;terapeutą może opanować szereg umiejętności
@@ -801,12 +1058,20 @@ const Hipoterapia = () => {
                   </p>
                 </CardContent>
               </Card>
-              <Card className="border-yellow-500 bg-yellow-100">
+              <Card
+                className={`${
+                  highContrast ? "bg-gray-800" : "bg-yellow-100"
+                } border-yellow-500`}
+              >
                 <CardHeader>
                   <CardTitle>Relaksują</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p>
+                  <p
+                    className={`${
+                      highContrast ? "text-yellow-400" : "text-gray-700"
+                    } ${fontSizeClass} text-left mb-6`}
+                  >
                     Kontakt z&nbsp;koniem, poddanie się jego łagodnym,
                     kołyszącym ruchom sprzyja relaksowi i&nbsp;odprężeniu. Świat
                     widziany z&nbsp;końskiego grzbietu jest większy
@@ -821,6 +1086,7 @@ const Hipoterapia = () => {
         </div>
       </section>
 
+      {/* Section 5 */}
       <section className="py-6 md:py-12">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
@@ -840,11 +1106,17 @@ const Hipoterapia = () => {
 
             {/* Informational Text */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Na&nbsp;co wpływa hipoterapia?
               </h2>
 
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Kodowanie w&nbsp;mózgu prawidłowego wzorca chodu. Podczas ruchu
                 konia w&nbsp;stępie na&nbsp;miednicę siedzącego prawidłowo
                 pacjenta, przenoszony jest wzorzec ruchowy, odpowiadający
@@ -853,7 +1125,11 @@ const Hipoterapia = () => {
                 z&nbsp;grzbietu końskiego, waha się od&nbsp;90 do&nbsp;110
                 na&nbsp;minutę.
               </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Normalizację napięcia mięśniowego, niezbędną do&nbsp;nauki
                 prawidłowego, czynnego ruchu. Sprzyja temu prawidłowa pozycja
                 przyjmowana przez jeźdźca podczas jazdy, rytmiczny ruch jego
@@ -861,7 +1137,11 @@ const Hipoterapia = () => {
                 oraz&nbsp;temperatura konia, która jest o&nbsp;około
                 1&nbsp;stopień wyższa od&nbsp;temperatury człowieka.
               </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Doskonalenie równowagi, koordynacji, orientacji
                 w&nbsp;przestrzeni oraz&nbsp;poczucia rytmu. Dla dziecka
                 nie&nbsp;poruszającego się samodzielnie, jazda na&nbsp;koniu
@@ -870,7 +1150,11 @@ const Hipoterapia = () => {
                 własnego ciała, a&nbsp;tym samym zdobywanie doświadczenia ruchu
                 w&nbsp;przestrzeni.
               </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Poprawę stanu psychicznego pacjenta. Poprzez kontakt
                 z&nbsp;żywym zwierzęciem dziecko zyskuje nowego przyjaciela;
                 poznaje jego imię, uczy się współżycia z&nbsp;inną żywą istotą.
@@ -888,15 +1172,22 @@ const Hipoterapia = () => {
         </div>
       </section>
 
+      {/* Section 6 */}
       <section className="py-6 md:py-12">
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Informational Text */}
             <div className="mx-6 md:ml-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Zamiast materaca czy&nbsp;piłki
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Koń może zastąpić materac (szeroki zad), piłkę, wałek, drabinę
                 do&nbsp;podciągania (grzywa). Dla dziecka ciekawsze jest
                 schylanie się do&nbsp;ucha konia, klepanie
@@ -907,7 +1198,11 @@ const Hipoterapia = () => {
                 a&nbsp;później tak zakochują się w&nbsp;koniach,
                 że&nbsp;zaczynają jeździć indywidualnie.
               </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Kontakt z&nbsp;koniem, ze&nbsp;zwierzęciem pięknym, dużym,
                 imponującym, tajemniczym, a&nbsp;jednocześnie przyjaznym
                 i&nbsp;chętnie współpracującym pozwala na&nbsp;poprawę poczucia
@@ -942,16 +1237,26 @@ const Hipoterapia = () => {
 
       <section className="py-6 md:py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="text-4xl text-left font-semibold mb-8 font-display">
+          <h2
+            className={`font-display mb-8 font-semibold text-left ${headerFontSizeClass}`}
+          >
             Cennik
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <Card className="border-blue-500 bg-blue-100">
+            <Card
+              className={`${
+                highContrast ? "bg-gray-800" : "bg-blue-100"
+              } border-blue-500`}
+            >
               <CardHeader>
                 <CardTitle>Hipoterapia w ramach WWR</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg mb-4">
+                <p
+                  className={`${
+                    highContrast ? "text-yellow-400" : "text-gray-700"
+                  } ${fontSizeClass} text-left mb-6`}
+                >
                   Hipoterapia w ramach zajęć WWR jest darmowa. Zapraszamy do
                   szkorzystania z naszej oferty darmowych zajęć WWR dla twojego
                   dziecka.
@@ -967,12 +1272,20 @@ const Hipoterapia = () => {
                 </Link>
               </CardFooter>
             </Card>
-            <Card className="border-green-500 bg-green-100">
+            <Card
+              className={`${
+                highContrast ? "bg-gray-800" : "bg-green-100"
+              } border-green-500`}
+            >
               <CardHeader>
                 <CardTitle>Usługa komercyjna</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg mb-4">
+                <p
+                  className={`${
+                    highContrast ? "text-yellow-400" : "text-gray-700"
+                  } ${fontSizeClass} text-left mb-6`}
+                >
                   Cena za komercyjną hipoterapię wynosi 100zł za 30 minut.
                   Skontaktuj się z nami, aby umówić się na sesję.
                 </p>
@@ -992,7 +1305,8 @@ const Hipoterapia = () => {
         </div>
       </section>
 
-      {/* Section 7
+      {/* Section 7 */}
+      {/* 
       <section className="max-w-7xl mx-auto my-20">
         <Card className="border-blue-800 bg-blue-100">
           <CardHeader>
@@ -1018,7 +1332,8 @@ const Hipoterapia = () => {
             </Link>
           </CardFooter>
         </Card>
-      </section> */}
+      </section> 
+      */}
 
       <AlertDemo />
     </div>

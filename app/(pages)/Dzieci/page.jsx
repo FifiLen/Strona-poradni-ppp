@@ -1,8 +1,7 @@
+"use client";
 import Link from "next/link";
-
 import React from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-
 import {
   Accordion,
   AccordionContent,
@@ -10,16 +9,70 @@ import {
   AccordionTrigger,
 } from "../../../components/ui/accordion";
 import Image from "next/image";
-
 import { AlertDemo } from "../../../components/Alert";
+import { useAccessibility } from "../../../components/AccessibilityContext"; // Import the context
+
+// Utility function to get Tailwind font size class for paragraphs
+const getFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-sm"; // Smaller than default
+    case 1:
+      return "text-base"; // Default size
+    case 2:
+      return "text-lg"; // Slightly larger
+    case 3:
+      return "text-xl"; // Even larger
+    case 4:
+      return "text-2xl"; // Largest
+    default:
+      return "text-base";
+  }
+};
+
+// Utility function to get Tailwind font size class for headers
+const getHeaderFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-2xl"; // Smaller than default
+    case 1:
+      return "text-3xl"; // Default size
+    case 2:
+      return "text-4xl"; // Slightly larger
+    case 3:
+      return "text-5xl"; // Even larger
+    case 4:
+      return "text-6xl"; // Largest
+    default:
+      return "text-3xl";
+  }
+};
 
 const Dzieci = () => {
+  const { fontSizeLevel, highContrast } = useAccessibility(); // Use context
+
+  // Determine the font size classes based on the current level
+  const fontSizeClass = getFontSizeClass(fontSizeLevel);
+  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
+
   return (
-    <div className="font-sans overflow-x-hidden">
+    <div
+      className={`font-sans overflow-x-hidden ${
+        highContrast ? "bg-black text-yellow-400" : "bg-gray-100/20"
+      }`}
+    >
       {/* Nagłówek */}
-      <div className="border-b border-gray-300 py-4 md:py-6 bg-gradient-to-br from-green-100 via-green-300 to-green-600">
+      <div
+        className={`border-b py-4 md:py-6 ${
+          highContrast
+            ? "bg-gray-800 border-gray-600 text-yellow-400"
+            : "bg-gradient-to-br from-green-100 via-green-300 to-green-600 border-gray-300 text-white"
+        }`}
+      >
         <div className="flex justify-center items-center">
-          <h2 className="text-3xl font-display text-slate-800 md:text-3xl font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left">
+          <h2
+            className={`font-display md:text-3xl font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left text-slate-800 ${headerFontSizeClass}`}
+          >
             Wsparcie i rozwój dla Twojego dziecka
           </h2>
         </div>
@@ -44,14 +97,20 @@ const Dzieci = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Zajęcia WWRD dla dzieci <br />{" "}
                 <span className=" text-sm text-gray-600">
                   (do czasu rozpoczęcia nauki w szkole)
                 </span>
               </h2>
 
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Wczesne Wspomaganie Rozwoju Dziecka (WWRD) to program mający na
                 celu wsparcie dzieci w kluczowych aspektach rozwoju.
                 Skoncentrowany jest na wczesnym wykrywaniu i interwencji w
@@ -127,7 +186,7 @@ const Dzieci = () => {
                   <AccordionTrigger>
                     Jaki jest cel Terapii Ręki w WWRD?
                   </AccordionTrigger>
-                  <AccordionContent className="">
+                  <AccordionContent>
                     Terapia Ręki skupia się na zidentyfikowaniu ewentualnych
                     ograniczeń w funkcji rąk, takich jak trudności z chwytem,
                     koordynacją ruchową czy zręcznością palców. Przy użyciu
@@ -142,7 +201,13 @@ const Dzieci = () => {
                 href={"/WWRD"}
                 className=" text-slate-800 flex justify-start"
               >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                <div
+                  className={`mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border rounded-xl custom-shadow3 ${
+                    highContrast
+                      ? "bg-gray-700 border-gray-600 text-yellow-400"
+                      : "bg-slate-50/80 border-slate-700"
+                  }`}
+                >
                   Sprawdź jak uzyskać darmowe zajęcia WWRD{" "}
                   <FaRegArrowAltCircleRight />
                 </div>
@@ -169,10 +234,16 @@ const Dzieci = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Pomoc dla dzieci i młodzieży
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Psychiatra dziecięcy to lekarz specjalizujący się w
                 diagnozowaniu i leczeniu zaburzeń psychicznych u dzieci i
                 młodzieży. Oto kilka kluczowych obszarów, w&nbsp;których
@@ -275,7 +346,13 @@ const Dzieci = () => {
                 href={"/Kontakt"}
                 className=" text-slate-800 flex justify-start"
               >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                <div
+                  className={`mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border rounded-xl custom-shadow3 ${
+                    highContrast
+                      ? "bg-gray-700 border-gray-600 text-yellow-400"
+                      : "bg-slate-50/80 border-slate-700"
+                  }`}
+                >
                   <div>
                     {" "}
                     <p>Umów wizytę u psychiatry dziecięcego</p>
@@ -310,10 +387,16 @@ const Dzieci = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Zajęcia z logopedą dla dzieci i&nbsp;młodzieży
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Zajęcia z logopedą dla dzieci i młodzieży są skoncentrowane na
                 diagnozowaniu i terapii różnorodnych trudności komunikacyjnych.
                 Logopeda pracuje z dziećmi nad poprawą wymowy, rozwojem mowy i
@@ -613,7 +696,13 @@ const Dzieci = () => {
                 href={"/Kontakt"}
                 className=" text-slate-800 flex justify-start"
               >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                <div
+                  className={`mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border rounded-xl custom-shadow3 ${
+                    highContrast
+                      ? "bg-gray-700 border-gray-600 text-yellow-400"
+                      : "bg-slate-50/80 border-slate-700"
+                  }`}
+                >
                   Umów wizytę u Logopedy
                   <FaRegArrowAltCircleRight />
                 </div>
@@ -627,23 +716,31 @@ const Dzieci = () => {
         <div className="mx-auto">
           <div className="grid grid-cols-1 items-center flex-col md:flex-row xl:grid-cols-2">
             {/* Obrazek */}
-            <div className="mb-4 md:mb-0">
-              <div className="w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
-                <img
+            <div className="relative mb-4 md:mb-0">
+              <div className="relative w-[670px] h-[670px] overflow-hidden hidden md:flex justify-center items-center rounded-r-2xl">
+                <Image
                   src="/assets/subhero3.jpg"
-                  loading="lazy"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw"
+                  priority={true}
                   alt="dziecko ubierające maskę"
-                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Zajęcia dla dzieci z&nbsp;Integracji sensorycznej
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Integracja sensoryczna to kluczowy proces, pomagający dzieciom
                 prawidłowo przetwarzać informacje zmysłowe. Zajęcia z terapii
                 sensorycznej skierowane są do dzieci z trudnościami w tej
@@ -658,7 +755,13 @@ const Dzieci = () => {
                 href={"/diagnoza_si"}
                 className=" text-slate-800 flex justify-start"
               >
-                <div className=" w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                <div
+                  className={` w-fit cursor-pointer flex items-center justify-center shadow-md border rounded-xl custom-shadow3 ${
+                    highContrast
+                      ? "bg-gray-700 border-gray-600 text-yellow-400"
+                      : "bg-slate-50/80 border-slate-700"
+                  }`}
+                >
                   Dowiedz się więcej o Integracji Sensorycznej{" "}
                   <FaRegArrowAltCircleRight />
                 </div>
@@ -685,10 +788,16 @@ const Dzieci = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Diagnoza przedszkolaka
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Etap przedszkolny jest momentem, w&nbsp;którym rodzice
                 i&nbsp;nauczyciele zaczynają dostrzegać potencjalne trudności
                 rozwojowe u&nbsp;dzieci. Dlaczego właśnie wtedy? Przedszkolak,
@@ -700,7 +809,13 @@ const Dzieci = () => {
                 href={"/diagnoza_przedszkolaka"}
                 className=" text-slate-800 flex justify-start"
               >
-                <div className=" w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                <div
+                  className={` w-fit cursor-pointer flex items-center justify-center shadow-md border rounded-xl custom-shadow3 ${
+                    highContrast
+                      ? "bg-gray-700 border-gray-600 text-yellow-400"
+                      : "bg-slate-50/80 border-slate-700"
+                  }`}
+                >
                   Dowiedz się więcej o diagnozie przedszkolaka{" "}
                   <FaRegArrowAltCircleRight />
                 </div>
@@ -727,10 +842,16 @@ const Dzieci = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Dietetyk dziecięcy
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Rola dietetyka dziecięcego w życiu naszych pociech jest
                 nieoceniona, szczególnie w obliczu rosnącej liczby przypadków
                 nadwagi i otyłości wśród najmłodszych. Specjalista ten nie tylko
@@ -815,7 +936,13 @@ const Dzieci = () => {
                 href={"/Kontakt"}
                 className=" text-slate-800 flex justify-start"
               >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                <div
+                  className={`mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border rounded-xl custom-shadow3 ${
+                    highContrast
+                      ? "bg-gray-700 border-gray-600 text-yellow-400"
+                      : "bg-slate-50/80 border-slate-700"
+                  }`}
+                >
                   Umów wizytę u dietetyka dziecięcego
                   <FaRegArrowAltCircleRight />
                 </div>
@@ -842,10 +969,16 @@ const Dzieci = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Ortodonta dziecięcy
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Ortodonta dziecięcy pełni kluczową rolę w zapewnieniu
                 prawidłowego rozwoju zębów i szczęki u dzieci, co ma istotny
                 wpływ na ich zdrowie ogólne, wygląd oraz samopoczucie. Oto jak
@@ -941,7 +1074,13 @@ const Dzieci = () => {
                 href={"/Kontakt"}
                 className=" text-slate-800 flex justify-start"
               >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                <div
+                  className={`mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border rounded-xl custom-shadow3 ${
+                    highContrast
+                      ? "bg-gray-700 border-gray-600 text-yellow-400"
+                      : "bg-slate-50/80 border-slate-700"
+                  }`}
+                >
                   Umów wizytę u ortodonty dziecięcego
                   <FaRegArrowAltCircleRight />
                 </div>

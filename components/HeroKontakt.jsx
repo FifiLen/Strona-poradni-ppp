@@ -3,24 +3,77 @@ import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Formularz from "../components/Formularz";
 import { Bebas_Neue } from "next/font/google";
+import { useAccessibility } from "./AccessibilityContext"; // Import the context
 
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 
+// Utility function to get Tailwind font size class for paragraphs
+const getFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-sm"; // Smaller than default
+    case 1:
+      return "text-base"; // Default size
+    case 2:
+      return "text-lg"; // Slightly larger
+    case 3:
+      return "text-xl"; // Even larger
+    case 4:
+      return "text-2xl"; // Largest
+    default:
+      return "text-base";
+  }
+};
+
+// Utility function to get Tailwind font size class for headers
+const getHeaderFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-2xl"; // Smaller than default
+    case 1:
+      return "text-3xl"; // Default size
+    case 2:
+      return "text-4xl"; // Slightly larger
+    case 3:
+      return "text-5xl"; // Even larger
+    case 4:
+      return "text-6xl"; // Largest
+    default:
+      return "text-3xl";
+  }
+};
+
 const HeroKontakt = () => {
+  const { fontSizeLevel, highContrast } = useAccessibility(); // Use context
+
+  // Determine the font size classes based on the current level
+  const fontSizeClass = getFontSizeClass(fontSizeLevel);
+  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
+
   return (
-    <section className="w-full bg-gray-200">
+    <section
+      className={`w-full ${
+        highContrast ? "bg-black text-yellow-400" : "bg-gray-200"
+      }`}
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-full">
         {/* Text Column */}
         <div className="flex justify-center items-start px-8 md:px-20 py-16 md:py-36 flex-col rekrutacja">
           <h2
-            className={` text-4xl md:text-5xl text-zinc-800 font-semibold tracking-tighter mt-3`}
+            className={`font-semibold tracking-tighter mt-3 ${
+              highContrast ? "text-yellow-400" : "text-zinc-800"
+            } ${headerFontSizeClass}`}
           >
             Kontakt
           </h2>
           <div className="mb-5 mt-4">
             <img src="/assets/LogoMainPage.svg" alt="Logo Magnolia" />
           </div>
-          <ul className="space-y-1 font-medium text-zinc-800">
+          <ul
+            className={`space-y-1 font-medium ${
+              highContrast ? "text-yellow-400" : "text-zinc-800"
+            } ${fontSizeClass}`}
+          >
             <li className="flex justify-start items-center gap-2">
               <FaPhoneAlt />
               +48 789 790 860
@@ -42,10 +95,18 @@ const HeroKontakt = () => {
               Magnolii 25, 44-207 Rybnik
             </li>
           </ul>
-          <p className="text-md font-medium text-zinc-800 mt-3">
+          <p
+            className={`font-medium mt-3 ${
+              highContrast ? "text-yellow-400" : "text-zinc-800"
+            } ${fontSizeClass}`}
+          >
             Godziny otwarcia:
           </p>
-          <p className="mb-4 text-zinc-800">
+          <p
+            className={`mb-4 ${
+              highContrast ? "text-yellow-400" : "text-zinc-800"
+            } ${fontSizeClass}`}
+          >
             Poniedziałek - Piątek: 7:00 - 21:00
           </p>
           <hr className="mb-4 border-white" />

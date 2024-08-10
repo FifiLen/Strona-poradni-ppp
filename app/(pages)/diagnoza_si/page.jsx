@@ -1,26 +1,81 @@
-"use client";
+"use client"; // Enable client-side rendering
+
 import React from "react";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
+  CardFooter,
 } from "../../../components/ui/card";
 
 import Image from "next/image";
 import { FaCircleArrowRight } from "react-icons/fa6";
-
 import { AlertDemo } from "../../../components/Alert";
-import { CardFooter } from "../../../components/ui/card";
 import Link from "next/link";
+import { useAccessibility } from "../../../components/AccessibilityContext"; // Import the context
+
+// Utility function to get Tailwind font size class for paragraphs
+const getFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-sm"; // Smaller than default
+    case 1:
+      return "text-base"; // Default size
+    case 2:
+      return "text-lg"; // Slightly larger
+    case 3:
+      return "text-xl"; // Even larger
+    case 4:
+      return "text-2xl"; // Largest
+    default:
+      return "text-base";
+  }
+};
+
+// Utility function to get Tailwind font size class for headers
+const getHeaderFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-2xl"; // Smaller than default
+    case 1:
+      return "text-3xl"; // Default size
+    case 2:
+      return "text-4xl"; // Slightly larger
+    case 3:
+      return "text-5xl"; // Even larger
+    case 4:
+      return "text-6xl"; // Largest
+    default:
+      return "text-3xl";
+  }
+};
 
 const TerapiaSI = () => {
+  const { fontSizeLevel, highContrast } = useAccessibility(); // Use context
+
+  // Determine the font size classes based on the current level
+  const fontSizeClass = getFontSizeClass(fontSizeLevel);
+  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
+
   return (
-    <div className="font-sans overflow-x-hidden">
+    <div
+      className={`font-sans overflow-x-hidden ${
+        highContrast ? "bg-black text-yellow-400" : "bg-white"
+      }`}
+    >
       {/* Header */}
-      <div className="border-b border-gray-300 py-4 md:py-6">
+      <div
+        className={`border-b py-4 md:py-6 ${
+          highContrast
+            ? "bg-gray-800 border-gray-600 text-yellow-400"
+            : "bg-gradient-to-br from-blue-100 via-blue-300 to-blue-600 border-gray-300 text-white"
+        }`}
+      >
         <div className="flex justify-center items-center">
-          <h2 className="text-3xl font-display text-slate-800 md:text-3xl font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left">
+          <h2
+            className={`font-display font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left text-slate-800 ${headerFontSizeClass}`}
+          >
             Terapia SI&nbsp;- Integracja Sensoryczna
           </h2>
         </div>
@@ -47,10 +102,16 @@ const TerapiaSI = () => {
 
             {/* Informational Text */}
             <div className="mx-6 md:mr-16 ml-14 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Terapia SI
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Na co dzień rzadko zastanawiamy się nad olbrzymią pracą naszego
                 umysłu wykonywaną w&nbsp;celu odbioru, przesyłu, uporządkowania
                 i&nbsp;wykorzystania informacji płynących z&nbsp;narządów
@@ -81,11 +142,17 @@ const TerapiaSI = () => {
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Informational Text */}
             <div className="flex flex-col justify-center items-start mx-6">
-              <h2 className="text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Nie tylko 5 zmysłów
               </h2>
 
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Wpływ na&nbsp;efektywną pracę układu nerwowego mają
                 nie&nbsp;tylko informacje pochodzące ze zmysłu wzroku, słuchu,
                 dotyku czy&nbsp;smaku, ale również ze&nbsp;zmysłu
@@ -128,10 +195,16 @@ const TerapiaSI = () => {
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Informational Text */}
             <div className="flex flex-col justify-center items-start mx-6">
-              <h2 className="text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 W labiryncie zmysłów
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Zaburzenie przetwarzania informacji płynących ze&nbsp;zmysłów
                 doprowadza do różnych dysfunkcji - od&nbsp;zmniejszonej
                 sprawności fizycznej po&nbsp;zaburzenia zachowania
@@ -197,10 +270,16 @@ const TerapiaSI = () => {
 
             {/* Informational Text */}
             <div className="mx-6 md:mr-16 ml-14 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Terapia SI <br />☞ terapia inna niż wszystkie
               </h2>
-              <p className="text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Terapia integracji sensorycznej polega na&nbsp;ćwiczeniach,
                 w&nbsp;których dziecko doświadcza zróżnicowanych bodźców
                 sensorycznych podczas ruchu, rozwiązując jednocześnie proste
@@ -220,7 +299,11 @@ const TerapiaSI = () => {
                 musi dziecko w&nbsp;trybie nauki szkolnej.
               </p>
 
-              <p className="text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Terapia jest tym skuteczniejsza, im większe zaangażowanie
                 wzbudzimy w&nbsp;działaniu ćwiczącego. Zajęcia integracji
                 sensorycznej powinny zawsze odpowiadać potrzebom
@@ -243,10 +326,16 @@ const TerapiaSI = () => {
           <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8">
             {/* Informational Text */}
             <div className="flex flex-col justify-center items-start mx-6">
-              <h2 className="text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Magia sali integracji sensorycznej
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Podczas zajęć integracji sensorycznej eksplorujemy otoczenie,
                 dostarczając młodym umysłom odpowiednich bodźców zmysłowych.
                 Tworząc ścieżki i&nbsp;pomoce sensoryczne, bazujemy
@@ -258,7 +347,11 @@ const TerapiaSI = () => {
                 kamieni czy&nbsp;lodu, a&nbsp;także ciepło nagrzanych pestek
                 czereśni.
               </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Ćwiczymy zmysł słuchu, doświadczając dźwięków o&nbsp;różnej
                 głośności, natężeniu, intensywności. Szukamy źródeł dźwięków,
                 przeprowadzamy aktywny trening słuchowy. Stymulujemy zmysł
@@ -270,7 +363,11 @@ const TerapiaSI = () => {
                 deskorolkach, aby poczuć zmiany w&nbsp;ułożeniu ciała
                 w&nbsp;przestrzeni.
               </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Pokonujemy tory przeszkód, aby trenować umiejętność wyboru,
                 planowania i&nbsp;wykonania precyzyjnego ruchu. Ćwiczymy
                 koordynację ręka-oko, rzucając do&nbsp;celu. Uczymy się schematu
@@ -279,7 +376,11 @@ const TerapiaSI = () => {
                 ciężkich przedmiotów, „walki” z&nbsp;workiem treningowym,
                 przeciągania liny.
               </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Wszystkie te zabiegi przyczyniają się do&nbsp;usprawnienia
                 odbioru, przesyłania i&nbsp;opracowania informacji przez układ
                 nerwowy dziecka. W&nbsp;przypadku nadwrażliwości
@@ -311,10 +412,16 @@ const TerapiaSI = () => {
           <div className=" items-center flex-col md:flex-row">
             {/* Informational Text */}
             <div className=" flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-5xl text-left font-semibold mb-8 font-display text-green-900">
+              <h2
+                className={`font-display mb-8 font-semibold text-left ${headerFontSizeClass} text-green-900`}
+              >
                 Kiedy na diagnozę? Kiedy na terapię?
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Zaburzenia integracji sensorycznej mogą przejawiać nawet
                 najmłodsze niemowlęta, jednak ze&nbsp;względu na&nbsp;trudność
                 w&nbsp;jednoznacznej ocenie przyczyn zachowań tak małego
@@ -326,7 +433,11 @@ const TerapiaSI = () => {
                 zapraszamy na&nbsp;krótki instruktaż ukazujący techniki ćwiczeń
                 integracji sensorycznej podczas codziennej aktywności.
               </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Terapia integracji sensorycznej jest najbardziej skuteczna
                 w&nbsp;przypadku dzieci przed ukończeniem 7 roku życia.
                 W&nbsp;tym czasie plastyczność układu nerwowego jest największa,
@@ -337,7 +448,11 @@ const TerapiaSI = () => {
                 działaniem układu nerwowego ze&nbsp;względu na&nbsp;możliwości
                 naprawcze organizmu.
               </p>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Z&nbsp;zaburzeń integracji sensorycznej nie wyrasta się.
                 Trudności w&nbsp;przetwarzaniu sensorycznym nie&nbsp;znikają
                 samoistnie bez właściwej stymulacji układu nerwowego, raczej
@@ -352,11 +467,17 @@ const TerapiaSI = () => {
 
       <section className="mt-10 py-6 md:py-14">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="text-4xl text-left font-semibold mb-8 font-display">
+          <h2
+            className={`font-display mb-8 font-semibold text-left ${headerFontSizeClass}`}
+          >
             Diagnoza SI
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <Card className="border-blue-500 bg-blue-100">
+            <Card
+              className={`${
+                highContrast ? "bg-gray-800" : "bg-blue-100"
+              } border-blue-500`}
+            >
               <CardHeader>
                 <CardTitle>Zebranie wywiadu</CardTitle>
               </CardHeader>
@@ -369,7 +490,11 @@ const TerapiaSI = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-green-500 bg-green-100">
+            <Card
+              className={`${
+                highContrast ? "bg-gray-800" : "bg-green-100"
+              } border-green-500`}
+            >
               <CardHeader>
                 <CardTitle>
                   Kwestionariusz wywiadu sensomotorycznego dziecka
@@ -386,7 +511,11 @@ const TerapiaSI = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-blue-500 bg-blue-100">
+            <Card
+              className={`${
+                highContrast ? "bg-gray-800" : "bg-blue-100"
+              } border-blue-500`}
+            >
               <CardHeader>
                 <CardTitle>Testy i obserwacje</CardTitle>
               </CardHeader>
@@ -398,7 +527,11 @@ const TerapiaSI = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-green-500 bg-green-100">
+            <Card
+              className={`${
+                highContrast ? "bg-gray-800" : "bg-green-100"
+              } border-green-500`}
+            >
               <CardHeader>
                 <CardTitle>Analiza wyników</CardTitle>
               </CardHeader>
@@ -418,7 +551,9 @@ const TerapiaSI = () => {
       {/* Galeria */}
       <section className="max-w-6xl hidden md:px-0 px-4 mx-auto mt-10 py-6 md:py-24 mb-10">
         <div className="mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tighter">
+          <h2
+            className={`font-display mb-8 font-semibold text-left ${headerFontSizeClass}`}
+          >
             Zobacz jak wygląda u nas Terapia SI
           </h2>
           <div className="grid grid-cols-1 row-span-2 md:grid-cols-3 gap-4 mx-auto">
@@ -468,11 +603,17 @@ const TerapiaSI = () => {
 
       <section className="mt-10 py-6 md:py-14">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="text-4xl text-left font-semibold mb-8 font-display">
+          <h2
+            className={`font-display mb-8 font-semibold text-left ${headerFontSizeClass}`}
+          >
             Cennik
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <Card className="border-blue-500 bg-blue-100">
+            <Card
+              className={`${
+                highContrast ? "bg-gray-800" : "bg-blue-100"
+              } border-blue-500`}
+            >
               <CardHeader>
                 <CardTitle>
                   Terapia SI - Integracja Sensoryczna w&nbsp;ramach WWR
@@ -488,14 +629,22 @@ const TerapiaSI = () => {
               <CardFooter>
                 <Link
                   href={"/Kontakt"}
-                  className="p-2 rounded-md border border-blue-800 bg-blue-300 flex items-center justify-center gap-2"
+                  className={`p-2 rounded-md border flex items-center justify-center gap-2 ${
+                    highContrast
+                      ? "bg-gray-600 border-gray-400"
+                      : "bg-blue-300 border-blue-800"
+                  }`}
                 >
                   Jak zapisać dziecko na&nbsp;darmowe zajęcia WWR?
                   <FaCircleArrowRight className="rotate-[-45deg]" />
                 </Link>
               </CardFooter>
             </Card>
-            <Card className="border-green-500 bg-green-100">
+            <Card
+              className={`${
+                highContrast ? "bg-gray-800" : "bg-green-100"
+              } border-green-500`}
+            >
               <CardHeader>
                 <CardTitle>Usługa komercyjna</CardTitle>
               </CardHeader>
@@ -508,13 +657,17 @@ const TerapiaSI = () => {
                 </p>
                 <p className="text-2xl font-semibold mb-2">
                   Terapia SI - 140zł{" "}
-                  <span className=" text-gray-700 text-lg">(50 minut)</span>
+                  <span className="text-gray-700 text-lg">(50 minut)</span>
                 </p>
               </CardContent>
               <CardFooter>
                 <Link
                   href={"/WWRD"}
-                  className="p-2 rounded-md border border-green-800 bg-green-300 flex items-center justify-center gap-2"
+                  className={`p-2 rounded-md border flex items-center justify-center gap-2 ${
+                    highContrast
+                      ? "bg-gray-600 border-gray-400"
+                      : "bg-green-300 border-green-800"
+                  }`}
                 >
                   Kontakt
                   <FaCircleArrowRight className="rotate-[-45deg]" />

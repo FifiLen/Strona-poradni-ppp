@@ -1,20 +1,72 @@
+"use client"; // Enable client-side rendering
+import { useAccessibility } from "../../../components/AccessibilityContext"; // Import the context
 import { AlertDemo } from "../../../components/Alert";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import {
-  FaArrowRight,
-  FaRegArrowAltCircleRight,
-  FaCheck,
-} from "react-icons/fa";
+import { FaRegArrowAltCircleRight, FaCheck } from "react-icons/fa";
+
+// Utility function to get Tailwind font size class for paragraphs
+const getFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-sm"; // Smaller than default
+    case 1:
+      return "text-base"; // Default size
+    case 2:
+      return "text-lg"; // Slightly larger
+    case 3:
+      return "text-xl"; // Even larger
+    case 4:
+      return "text-2xl"; // Largest
+    default:
+      return "text-base";
+  }
+};
+
+// Utility function to get Tailwind font size class for headers
+const getHeaderFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-2xl"; // Smaller than default
+    case 1:
+      return "text-3xl"; // Default size
+    case 2:
+      return "text-4xl"; // Slightly larger
+    case 3:
+      return "text-5xl"; // Even larger
+    case 4:
+      return "text-6xl"; // Largest
+    default:
+      return "text-3xl";
+  }
+};
 
 const PoradniaPsychologicznoPedagogiczna = () => {
+  const { fontSizeLevel, highContrast } = useAccessibility(); // Use context
+
+  // Determine the font size classes based on the current level
+  const fontSizeClass = getFontSizeClass(fontSizeLevel);
+  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
+
   return (
-    <div className="bg-gray-100/20 font-sans overflow-x-hidden">
+    <div
+      className={`font-sans overflow-x-hidden ${
+        highContrast ? "bg-black text-yellow-400" : "bg-gray-100/20"
+      }`}
+    >
       {/* Nagłówek */}
-      <div className=" border-b border-gray-300 text-white py-4 md:py-6 bg-gradient-to-br from-blue-100 via-blue-300 to-blue-600">
+      <div
+        className={`border-b py-4 md:py-6 ${
+          highContrast
+            ? "bg-gray-800 border-gray-600 text-yellow-400"
+            : "bg-gradient-to-br from-blue-100 via-blue-300 to-blue-600 border-gray-300 text-white"
+        }`}
+      >
         <div className="flex justify-center items-center">
-          <h2 className="text-3xl font-display text-slate-800 md:text-3xl pb-2 font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left">
+          <h2
+            className={`font-display pb-2 font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left text-slate-800 ${headerFontSizeClass}`}
+          >
             Wsparcie i rozwój dla osób dorosłych
           </h2>
         </div>
@@ -38,11 +90,17 @@ const PoradniaPsychologicznoPedagogiczna = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Terapia dla Par
               </h2>
 
-              <p className="text-gray-700 text-base text-left">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left`}
+              >
                 Terapia par to proces, w którym dwoje ludzi pracuje nad poprawą
                 jakości swojego związku poprzez rozwój wzorców komunikacji i
                 interakcji, naukę rozwiązywania konfliktów oraz komunikowania
@@ -65,7 +123,13 @@ const PoradniaPsychologicznoPedagogiczna = () => {
                 href={"/terapia_par"}
                 className=" text-slate-800 flex justify-start"
               >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow">
+                <div
+                  className={`mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border rounded-xl custom-shadow ${
+                    highContrast
+                      ? "bg-gray-700 border-gray-600 text-yellow-400"
+                      : "bg-slate-50/80 border-slate-700"
+                  }`}
+                >
                   Kiedy rozważać terapię dla par? <FaRegArrowAltCircleRight />
                 </div>
               </Link>
@@ -93,16 +157,26 @@ const PoradniaPsychologicznoPedagogiczna = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Wsparcie psychologiczne
               </h2>
 
-              <p className="text-gray-700 text-base text-left mb-4">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-4`}
+              >
                 Wsparcie psychologiczne dla dorosłych ma na celu pomóc osobom w
                 radzeniu sobie z różnorodnymi problemami. Może obejmować:
               </p>
 
-              <ul className="text-gray-700 text-base text-left list-none pl-0">
+              <ul
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left list-none pl-0`}
+              >
                 <li className="flex items-center mb-2">
                   <FaCheck className="text-green-500 mr-2" />
                   Radzenie sobie z trudnościami życiowymi
@@ -142,7 +216,13 @@ const PoradniaPsychologicznoPedagogiczna = () => {
                 href={"/Kontakt"}
                 className=" text-slate-800 flex justify-start"
               >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow">
+                <div
+                  className={`mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border rounded-xl custom-shadow ${
+                    highContrast
+                      ? "bg-gray-700 border-gray-600 text-yellow-400"
+                      : "bg-slate-50/80 border-slate-700"
+                  }`}
+                >
                   Umów wizytę u Psychologa{" "}
                   <FaRegArrowAltCircleRight className="ml-2" />
                 </div>
@@ -171,17 +251,27 @@ const PoradniaPsychologicznoPedagogiczna = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Psychoterapia
               </h2>
 
-              <p className="text-gray-700 text-base text-left mb-4">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-4`}
+              >
                 Psychoterapia dla dorosłych to proces terapeutyczny, mający na
                 celu wsparcie osób w radzeniu sobie z różnorodnymi trudnościami.
                 Może obejmować:
               </p>
 
-              <ul className="text-gray-700 text-base text-left list-none pl-0">
+              <ul
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left list-none pl-0`}
+              >
                 <li className="flex items-center mb-2">
                   <FaCheck className="text-green-500 mr-2" />
                   Radzenie sobie z trudnościami emocjonalnymi
@@ -220,7 +310,13 @@ const PoradniaPsychologicznoPedagogiczna = () => {
                 href={"/Kontakt"}
                 className=" text-slate-800 flex justify-start"
               >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow">
+                <div
+                  className={`mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border rounded-xl custom-shadow ${
+                    highContrast
+                      ? "bg-gray-700 border-gray-600 text-yellow-400"
+                      : "bg-slate-50/80 border-slate-700"
+                  }`}
+                >
                   Umów wizytę u Psychoterapeuty{" "}
                   <FaRegArrowAltCircleRight className="ml-2" />
                 </div>

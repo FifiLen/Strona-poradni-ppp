@@ -1,4 +1,5 @@
-import React, { lazy } from "react";
+"use client";
+import React from "react";
 import Link from "next/link";
 import {
   FaAngleRight,
@@ -9,12 +10,59 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import { FaTiktok, FaYoutube } from "react-icons/fa6";
+import { useAccessibility } from "../components/AccessibilityContext"; // Import the context
+
+// Utility function to get Tailwind font size class for paragraphs
+const getFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-sm"; // Smaller than default
+    case 1:
+      return "text-base"; // Default size
+    case 2:
+      return "text-lg"; // Slightly larger
+    case 3:
+      return "text-xl"; // Even larger
+    case 4:
+      return "text-2xl"; // Largest
+    default:
+      return "text-base";
+  }
+};
+
+// Utility function to get Tailwind font size class for headers
+const getHeaderFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-lg"; // Smaller than default
+    case 1:
+      return "text-xl"; // Default size
+    case 2:
+      return "text-2xl"; // Slightly larger
+    case 3:
+      return "text-3xl"; // Even larger
+    case 4:
+      return "text-4xl"; // Largest
+    default:
+      return "text-xl";
+  }
+};
 
 const Footer = () => {
+  const { fontSizeLevel, highContrast } = useAccessibility(); // Use context
+
+  // Determine the font size classes based on the current level
+  const fontSizeClass = getFontSizeClass(fontSizeLevel);
+  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
+
   return (
     <>
-      <footer className="py-16 bg-white border-t">
-        <div className="max-w-7xl mx-auto px-4 xl:px-0 text-gray-800">
+      <footer
+        className={`py-16 ${
+          highContrast ? "bg-black text-yellow-400" : "bg-white text-gray-800"
+        } border-t`}
+      >
+        <div className="max-w-7xl mx-auto px-4 xl:px-0">
           <div className="grid grid-cols-1 xl:grid-cols-5 gap-10">
             <div className="footer-section text-center">
               <Image
@@ -26,7 +74,9 @@ const Footer = () => {
               />
             </div>
             <div className="footer-section">
-              <h2 className="font-semibold mb-4 text-lg">Menu</h2>
+              <h2 className={`font-semibold mb-4 ${headerFontSizeClass}`}>
+                Menu
+              </h2>
               <ul className="list-none p-0">
                 {[
                   "/",
@@ -42,7 +92,9 @@ const Footer = () => {
                 ].map((href, idx) => (
                   <li key={idx} className="mb-2">
                     <Link href={href}>
-                      <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+                      <span
+                        className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+                      >
                         <FaAngleRight />
                         <span>
                           {
@@ -68,7 +120,9 @@ const Footer = () => {
             </div>
 
             <div className="footer-section">
-              <h4 className="font-semibold mb-4 text-lg">Sprawdź</h4>
+              <h4 className={`font-semibold mb-4 ${headerFontSizeClass}`}>
+                Sprawdź
+              </h4>
               <ul className="list-none p-0">
                 {[
                   "/Join",
@@ -77,10 +131,14 @@ const Footer = () => {
                   "/Grafiki",
                   "/assets/oferta-PPP-Magnolia.pdf",
                   "/assets/dokumenty.pdf",
+                  "/standardy-ochrony-maloletnich-w-placowkach-oswiatowych",
+                  "/wazne-dokumenty",
                 ].map((href, idx) => (
                   <li key={idx} className="mb-2">
                     <Link href={href}>
-                      <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+                      <span
+                        className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+                      >
                         <FaAngleRight />
                         <span>
                           {
@@ -91,6 +149,8 @@ const Footer = () => {
                               "Grafiki na stronie",
                               "Oferta poradni",
                               "Dokumenty",
+                              "Standardy ochrony małoletnich w placówkach oświatowych",
+                              "Ważne dokumenty",
                             ][idx]
                           }
                         </span>
@@ -102,12 +162,16 @@ const Footer = () => {
             </div>
 
             <div className="footer-section">
-              <h4 className="font-semibold mb-4 text-lg">Kontakt</h4>
+              <h4 className={`font-semibold mb-4 ${headerFontSizeClass}`}>
+                Kontakt
+              </h4>
               <ul className="list-none p-0">
                 {["/", "/", "/", "/", "/", "/", "/", "/"].map((href, idx) => (
                   <li key={idx} className="mb-2">
                     <Link href={href}>
-                      <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+                      <span
+                        className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+                      >
                         <FaAngleRight />
                         <span>
                           {
@@ -131,7 +195,9 @@ const Footer = () => {
             </div>
 
             <div className="footer-section">
-              <h4 className="font-semibold mb-4 text-lg">Social Media</h4>
+              <h4 className={`font-semibold mb-4 ${headerFontSizeClass}`}>
+                Social Media
+              </h4>
               <ul className="list-none p-0">
                 <li className="mb-2">
                   <a
@@ -139,7 +205,9 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+                    <span
+                      className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+                    >
                       <FaTiktok />
                       <span>TikTok</span>
                     </span>
@@ -151,7 +219,9 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+                    <span
+                      className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+                    >
                       <FaFacebookF />
                       <span>Facebook</span>
                     </span>
@@ -163,7 +233,9 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+                    <span
+                      className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+                    >
                       <FaFacebookF />
                       <span>Facebook (EW)</span>
                     </span>
@@ -175,7 +247,9 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+                    <span
+                      className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+                    >
                       <FaYoutube />
                       <span>YouTube</span>
                     </span>
@@ -187,13 +261,21 @@ const Footer = () => {
         </div>
       </footer>
       <hr />
-      <h4 className="font-semibold mt-7 text-2xl max-w-7xl mx-auto">
+      <h4
+        className={`font-semibold mt-7 max-w-7xl mx-auto ${headerFontSizeClass}`}
+      >
         Otrzymaj pomoc
       </h4>
       <div className="max-w-7xl mx-auto flex my-10">
         <ul className="list-none p-0 flex flex-wrap gap-4">
-          <li className="mb-2 p-4 border rounded-lg w-fit bg-yellow-100/30">
-            <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <li
+            className={`mb-2 p-4 border rounded-lg w-fit ${
+              highContrast ? "bg-black text-yellow-400" : "bg-yellow-100/30"
+            }`}
+          >
+            <span
+              className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+            >
               <FaPhone className="text-yellow-600" />
               <span className="underline text-yellow-600">
                 Centrum wsparcia dla osób dorosłych w kryzysie psychicznym: 800
@@ -201,8 +283,14 @@ const Footer = () => {
               </span>
             </span>
           </li>
-          <li className="mb-2 p-4 border rounded-lg w-fit bg-yellow-100/30">
-            <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <li
+            className={`mb-2 p-4 border rounded-lg w-fit ${
+              highContrast ? "bg-black text-yellow-400" : "bg-yellow-100/30"
+            }`}
+          >
+            <span
+              className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+            >
               <FaPhone className="text-yellow-600" />
               <span className="underline text-yellow-600">
                 Niebieska Linia: 800120002
@@ -210,40 +298,70 @@ const Footer = () => {
             </span>
           </li>
 
-          <li className="mb-2 p-4 border rounded-lg w-fit bg-[#921d7f]/10">
-            <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <li
+            className={`mb-2 p-4 border rounded-lg w-fit ${
+              highContrast ? "bg-black text-yellow-400" : "bg-[#921d7f]/10"
+            }`}
+          >
+            <span
+              className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+            >
               <FaPhone className="text-[#921d7f]" />
               <span className="underline text-[#921d7f]">
                 Telefon dla rodziców i opiekunów dzieci w kryzysie: 800 800 602
               </span>
             </span>
           </li>
-          <li className="mb-2 p-4 border rounded-lg w-fit bg-yellow-100/30">
-            <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <li
+            className={`mb-2 p-4 border rounded-lg w-fit ${
+              highContrast ? "bg-black text-yellow-400" : "bg-yellow-100/30"
+            }`}
+          >
+            <span
+              className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+            >
               <FaPhone className="text-yellow-600" />
               <span className="underline text-yellow-600">
                 Telefon zaufania dla dzieci i młodzieży: 116 111
               </span>
             </span>
           </li>
-          <li className="mb-2 p-4 border rounded-lg w-fit bg-yellow-100/30">
-            <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <li
+            className={`mb-2 p-4 border rounded-lg w-fit ${
+              highContrast ? "bg-black text-yellow-400" : "bg-yellow-100/30"
+            }`}
+          >
+            <span
+              className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+            >
               <FaPhone className="text-yellow-600" />
               <span className="underline text-yellow-600">
                 Dziecięcy telefon zaufania Rzecznika Praw Dziecka: 800121212
               </span>
             </span>
           </li>
-          <li className="mb-2 p-4 border rounded-lg w-fit bg-[#921d7f]/10">
-            <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <li
+            className={`mb-2 p-4 border rounded-lg w-fit ${
+              highContrast ? "bg-black text-yellow-400" : "bg-[#921d7f]/10"
+            }`}
+          >
+            <span
+              className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+            >
               <FaPhone className="text-[#921d7f]" />
               <span className="underline text-[#921d7f]">
                 Numer alarmowy w sytuacji zagrożenia życia i zdrowia: 112
               </span>
             </span>
           </li>
-          <li className="mb-2 p-4 border rounded-lg w-fit bg-[#921d7f]/10">
-            <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <li
+            className={`mb-2 p-4 border rounded-lg w-fit ${
+              highContrast ? "bg-black text-yellow-400" : "bg-[#921d7f]/10"
+            }`}
+          >
+            <span
+              className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+            >
               <FaPhone className="text-[#921d7f]" />
               <span className="underline text-[#921d7f]">
                 Telefon dla rodziców i nauczycieli w sprawie bezpieczeństwa
@@ -252,8 +370,14 @@ const Footer = () => {
             </span>
           </li>
 
-          <li className="mb-2 p-4 border rounded-lg w-fit bg-[#921d7f]/10">
-            <span className="flex items-center space-x-2 text-gray-600 font-medium hover:text-[#921d7f]">
+          <li
+            className={`mb-2 p-4 border rounded-lg w-fit ${
+              highContrast ? "bg-black text-yellow-400" : "bg-[#921d7f]/10"
+            }`}
+          >
+            <span
+              className={`flex items-center space-x-2 font-medium hover:text-[#921d7f] ${fontSizeClass}`}
+            >
               <FaPhone className="text-[#921d7f]" />
               <span className="underline text-[#921d7f]">
                 Policyjny telefon zaufania ds. przeciwdziałania przemocy w

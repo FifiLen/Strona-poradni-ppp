@@ -1,5 +1,5 @@
 "use client";
-import { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -11,6 +11,25 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { FaTiktok, FaFacebook, FaYoutube } from "react-icons/fa6";
+import { useAccessibility } from "./AccessibilityContext";
+
+// Utility function to get Tailwind font size class
+const getFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-sm"; // Smaller than default
+    case 1:
+      return "text-base"; // Default size
+    case 2:
+      return "text-lg"; // Slightly larger
+    case 3:
+      return "text-xl"; // Even larger
+    case 4:
+      return "text-2xl"; // Largest
+    default:
+      return "text-base";
+  }
+};
 
 const products = [
   {
@@ -59,16 +78,30 @@ function classNames(...classes) {
 
 export default function MainPageNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { fontSizeLevel, highContrast } = useAccessibility();
+
+  // Determine the font size class based on the current level
+  const fontSizeClass = getFontSizeClass(fontSizeLevel);
 
   return (
-    <header className="sticky top-0 z-50 bg-white">
+    <div
+      className={classNames(
+        "sticky top-0 z-50",
+        highContrast ? "bg-black text-white" : "bg-white text-black",
+        fontSizeClass // Apply the determined font size class
+      )}
+    >
       <nav
         className="mx-auto flex w-full items-center justify-between p-3 lg:px-5"
         aria-label="Global"
       >
         <div className="flex">
           <Link href="/" className="flex justify-start items-center">
-            <img src="/assets/LogoMainPage.svg" width={170} alt="" />
+            <img
+              src="/assets/LogoMainPage.svg"
+              width={170}
+              alt="Logo Magnolia"
+            />
             <span className="sr-only">Magnolia</span>
           </Link>
         </div>
@@ -76,7 +109,7 @@ export default function MainPageNav() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Otwórz menu</span>
@@ -85,46 +118,63 @@ export default function MainPageNav() {
         </div>
 
         <Popover.Group className="hidden md:flex-wrap md:mx-5 md:gap-x-6 lg:flex font-[450] lg:gap-x-10 py-2 px-4">
-          <Link href="/" className="text-sm leading-6">
+          <Link href="/" className={`text-sm leading-6 ${fontSizeClass}`}>
             Strona główna
           </Link>
 
-          <Link href="/Centrum_uzaleznien" className="text-sm leading-6">
+          <Link
+            href="/Centrum_uzaleznien"
+            className={`text-sm leading-6 ${fontSizeClass}`}
+          >
             Centrum uzależnień
           </Link>
 
-          <Link href="/Dzieci" className="text-sm leading-6">
+          <Link href="/Dzieci" className={`text-sm leading-6 ${fontSizeClass}`}>
             Dzieci
           </Link>
 
-          <Link href="/Dorosli" className="text-sm leading-6">
+          <Link
+            href="/Dorosli"
+            className={`text-sm leading-6 ${fontSizeClass}`}
+          >
             Dorośli
           </Link>
 
-          <Link href="/diagnoza_si" className="text-sm leading-6">
+          <Link
+            href="/diagnoza_si"
+            className={`text-sm leading-6 ${fontSizeClass}`}
+          >
             SI
           </Link>
 
-          <Link href="/terapia_vr" className="text-sm leading-6">
+          <Link
+            href="/terapia_vr"
+            className={`text-sm leading-6 ${fontSizeClass}`}
+          >
             Terapia VR
           </Link>
 
-          <Link href="/hipoterapia" className="text-sm leading-6">
+          <Link
+            href="/hipoterapia"
+            className={`text-sm leading-6 ${fontSizeClass}`}
+          >
             Hipoterapia
           </Link>
 
           <Link
             href="/assets/oferta-PPP-Magnolia.pdf"
-            className="text-sm leading-6"
+            className={`text-sm leading-6 ${fontSizeClass}`}
           >
             Oferta
           </Link>
 
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm leading-6">
+            <Popover.Button
+              className={`flex items-center gap-x-1 text-sm leading-6 ${fontSizeClass}`}
+            >
               O nas
               <ChevronDownIcon
-                className="h-5 w-5 flex-none text-gray-400"
+                className="h-5 w-5 flex-none"
                 aria-hidden="true"
               />
             </Popover.Button>
@@ -143,23 +193,17 @@ export default function MainPageNav() {
                   {products.map((item) => (
                     <div
                       key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                      className={`group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 ${fontSizeClass}`}
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
-                          className="h-6 w-6 text-gray-600 group-hover:text-[#921d7f]"
-                          aria-hidden="true"
-                        />
+                        <item.icon className="h-6 w-6" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <Link
-                          href={item.href}
-                          className="block font-semibold text-gray-900"
-                        >
+                        <Link href={item.href} className="block font-semibold">
                           {item.name}
                           <span className="absolute inset-0" />
                         </Link>
-                        <p className="mt-1 text-gray-600">{item.description}</p>
+                        <p className="mt-1">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -169,10 +213,10 @@ export default function MainPageNav() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 hover:bg-gray-100"
                     >
                       <item.icon
-                        className="h-5 w-5 flex-none text-gray-400"
+                        className="h-5 w-5 flex-none"
                         aria-hidden="true"
                       />
                       {item.name}
@@ -183,10 +227,11 @@ export default function MainPageNav() {
             </Transition>
           </Popover>
         </Popover.Group>
+
         <div className="hidden lg:flex gap-2 lg:justify-end">
           <Link
             href="/Kontakt"
-            className="text-sm bg-[#921d7f] font-semibold py-2 px-5 rounded-md leading-6 text-white"
+            className={`text-sm bg-[#921d7f] font-semibold py-2 px-5 rounded-md leading-6 text-white ${fontSizeClass}`}
           >
             Kontakt
           </Link>
@@ -208,7 +253,7 @@ export default function MainPageNav() {
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Zamknij menu</span>
@@ -220,56 +265,58 @@ export default function MainPageNav() {
               <div className="space-y-2 py-6">
                 <Link
                   href="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 mt-5"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 mt-5 ${fontSizeClass}`}
                 >
                   Strona główna
                 </Link>
                 <Link
                   href="/Centrum_uzaleznien"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${fontSizeClass}`}
                 >
                   Centrum uzależnień
                 </Link>
                 <Link
                   href="/Dzieci"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${fontSizeClass}`}
                 >
                   Dzieci
                 </Link>
                 <Link
                   href="/Dorosli"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${fontSizeClass}`}
                 >
                   Dorośli
                 </Link>
                 <Link
                   href="/diagnoza_si"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${fontSizeClass}`}
                 >
                   SI
                 </Link>
                 <Link
                   href="/terapia_vr"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${fontSizeClass}`}
                 >
                   Terapia VR
                 </Link>
                 <Link
                   href="/hipoterapia"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${fontSizeClass}`}
                 >
                   Hipoterapia
                 </Link>
                 <Link
                   href="/assets/oferta-PPP-Magnolia.pdf"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${fontSizeClass}`}
                 >
                   Oferta
                 </Link>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <Disclosure.Button
+                        className={`flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 ${fontSizeClass}`}
+                      >
                         O nas
                         <ChevronDownIcon
                           className={classNames(
@@ -285,7 +332,7 @@ export default function MainPageNav() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            className={`block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 hover:bg-gray-50 ${fontSizeClass}`}
                           >
                             {item.name}
                           </Disclosure.Button>
@@ -298,7 +345,7 @@ export default function MainPageNav() {
               <div className="py-6">
                 <Link
                   href="/Kontakt"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 hover:bg-gray-50 ${fontSizeClass}`}
                 >
                   Kontakt
                 </Link>
@@ -307,6 +354,6 @@ export default function MainPageNav() {
           </div>
         </Dialog.Panel>
       </Dialog>
-    </header>
+    </div>
   );
 }

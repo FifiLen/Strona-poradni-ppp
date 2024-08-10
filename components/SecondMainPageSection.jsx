@@ -1,12 +1,59 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { LuArrowUpRight } from "react-icons/lu";
 import { CgArrowTopRightO } from "react-icons/cg";
+import { useAccessibility } from "./AccessibilityContext"; // Import the context
+
+// Utility function to get Tailwind font size class for paragraphs
+const getFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-sm"; // Smaller than default
+    case 1:
+      return "text-base"; // Default size
+    case 2:
+      return "text-lg"; // Slightly larger
+    case 3:
+      return "text-xl"; // Even larger
+    case 4:
+      return "text-2xl"; // Largest
+    default:
+      return "text-base";
+  }
+};
+
+// Utility function to get Tailwind font size class for headers
+const getHeaderFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-2xl"; // Smaller than default
+    case 1:
+      return "text-3xl"; // Default size
+    case 2:
+      return "text-4xl"; // Slightly larger
+    case 3:
+      return "text-5xl"; // Even larger
+    case 4:
+      return "text-6xl"; // Largest
+    default:
+      return "text-3xl";
+  }
+};
 
 const SecondMainPageSection = () => {
+  const { fontSizeLevel, highContrast } = useAccessibility(); // Use context
+
+  // Determine the font size classes based on the current level
+  const fontSizeClass = getFontSizeClass(fontSizeLevel);
+  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
+
   return (
-    <section className="w-full bg-gray-200">
+    <section
+      className={`w-full ${
+        highContrast ? "bg-black text-yellow-400" : "bg-gray-200 text-zinc-800"
+      }`}
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 mx-auto max-w-full">
         {/* Image Column */}
         <div className="relative hidden sm:block w-full h-64 md:h-auto">
@@ -21,10 +68,18 @@ const SecondMainPageSection = () => {
         </div>
         {/* Text Column */}
         <div className="flex justify-center items-start px-8 md:px-20 py-16 md:py-36 flex-col rekrutacja">
-          <h2 className="text-4xl md:text-5xl text-zinc-800 font-semibold tracking-tighter mt-3">
+          <h2
+            className={`font-semibold tracking-tighter mt-3 ${
+              highContrast ? "text-yellow-400" : "text-zinc-800"
+            } ${headerFontSizeClass}`}
+          >
             Dla dorosłych
           </h2>
-          <p className="text-base md:text-lg text-zinc-600 mt-4">
+          <p
+            className={`${
+              highContrast ? "text-yellow-400" : "text-zinc-600"
+            } ${fontSizeClass}`}
+          >
             Gdy życie stawia wyzwania, którym trudno sprostać, zapraszamy
             Państwa do Poradni Psychologiczno-Pedagogicznej MAGNOLIA, która
             wspiera osoby dorosłe w rozwiązywaniu trudnych sytuacji rodzinnych
@@ -49,7 +104,11 @@ const SecondMainPageSection = () => {
             <Link href="/Dorosli">
               <button
                 aria-label="poznaj naszą ofertę"
-                className="bg-[#921d7f] text-white font-semibold rounded-lg px-4 py-3 flex gap-3 items-center justify-center mt-8"
+                className={`font-semibold rounded-lg px-4 py-3 flex gap-3 items-center justify-center mt-8 ${
+                  highContrast
+                    ? "bg-yellow-500 text-black"
+                    : "bg-[#921d7f] text-white"
+                }`}
               >
                 Wsparcie dla osób dorosłych
                 <CgArrowTopRightO className="text-2xl" />
@@ -58,7 +117,11 @@ const SecondMainPageSection = () => {
             <Link href="/terapia_par">
               <button
                 aria-label="poznaj naszą ofertę"
-                className="bg-[#225da5] text-white font-semibold rounded-lg px-4 py-3 flex gap-3 items-center justify-center mt-8"
+                className={`font-semibold rounded-lg px-4 py-3 flex gap-3 items-center justify-center mt-8 ${
+                  highContrast
+                    ? "bg-yellow-500 text-black"
+                    : "bg-[#225da5] text-white"
+                }`}
               >
                 Terapia dla par
                 <CgArrowTopRightO className="text-2xl" />

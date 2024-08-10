@@ -1,6 +1,8 @@
-"use client";
-import Link from "next/link";
+"use client"; // Enable client-side rendering
+
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import {
   Accordion,
@@ -8,21 +10,75 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../../../components/ui/accordion";
-import Image from "next/image";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardContent,
 } from "../../../components/ui/card";
+import { useAccessibility } from "../../../components/AccessibilityContext"; // Import the context
+
+// Utility function to get Tailwind font size class for paragraphs
+const getFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-sm"; // Smaller than default
+    case 1:
+      return "text-base"; // Default size
+    case 2:
+      return "text-lg"; // Slightly larger
+    case 3:
+      return "text-xl"; // Even larger
+    case 4:
+      return "text-2xl"; // Largest
+    default:
+      return "text-base";
+  }
+};
+
+// Utility function to get Tailwind font size class for headers
+const getHeaderFontSizeClass = (level) => {
+  switch (level) {
+    case 0:
+      return "text-2xl"; // Smaller than default
+    case 1:
+      return "text-3xl"; // Default size
+    case 2:
+      return "text-4xl"; // Slightly larger
+    case 3:
+      return "text-5xl"; // Even larger
+    case 4:
+      return "text-6xl"; // Largest
+    default:
+      return "text-3xl";
+  }
+};
 
 const TerapieVR = () => {
+  const { fontSizeLevel, highContrast } = useAccessibility(); // Use context
+
+  // Determine the font size classes based on the current level
+  const fontSizeClass = getFontSizeClass(fontSizeLevel);
+  const headerFontSizeClass = getHeaderFontSizeClass(fontSizeLevel);
+
   return (
-    <div className="font-sans overflow-x-hidden">
-      {/* Nagłówek */}
-      <div className="border-b border-gray-300 py-4 md:py-6 bg-gradient-to-br from-white via-[#225da5]/20 to-[#225da5]">
+    <div
+      className={`font-sans overflow-x-hidden ${
+        highContrast ? "bg-black text-yellow-400" : "bg-white"
+      }`}
+    >
+      {/* Header */}
+      <div
+        className={`border-b py-4 md:py-6 ${
+          highContrast
+            ? "bg-gray-800 border-gray-600 text-yellow-400"
+            : "bg-gradient-to-br from-white via-[#225da5]/20 to-[#225da5] border-gray-300 text-black"
+        }`}
+      >
         <div className="flex justify-center items-center">
-          <h2 className="text-3xl font-display text-zinc-800 md:text-3xl font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left">
+          <h2
+            className={`font-display font-semibold mb-2 md:mb-4 pt-3 text-center md:text-left ${headerFontSizeClass}`}
+          >
             Terapie wspomagane wirtualną rzeczywistością
           </h2>
         </div>
@@ -45,13 +101,19 @@ const TerapieVR = () => {
               </div>
             </div>
 
-            {/* Tekst informacyjny */}
+            {/* Informational Text */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Zajęcia dla dzieci z wykorzystaniem wirtualnej rzeczywistości
               </h2>
 
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Zajęcia z wykorzystaniem wirtualnej rzeczywistości w programie
                 WWRD to innowacyjne narzędzie wspierające rozwój dzieci, które
                 łączy naukę z zabawą, dostarczając unikalnych doświadczeń
@@ -108,7 +170,7 @@ const TerapieVR = () => {
                   <AccordionTrigger>
                     Stymulacja sensoryczna i motoryczna
                   </AccordionTrigger>
-                  <AccordionContent className="">
+                  <AccordionContent>
                     Terapia Ręki skupia się na zidentyfikowaniu ewentualnych
                     ograniczeń w funkcji rąk, takich jak trudności z chwytem,
                     koordynacją ruchową czy zręcznością palców. Przy użyciu
@@ -121,9 +183,15 @@ const TerapieVR = () => {
 
               <Link
                 href={"/Kontakt"}
-                className=" text-slate-800 flex justify-start"
+                className={`text-slate-800 flex justify-start ${
+                  highContrast ? "text-yellow-400" : "text-slate-800"
+                }`}
               >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                <div
+                  className={`mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl ${
+                    highContrast ? "bg-gray-600" : "bg-white"
+                  }`}
+                >
                   Zapytaj o zajęcia wspomagane VR dla twojego dziecka{" "}
                   <FaRegArrowAltCircleRight />
                 </div>
@@ -152,12 +220,18 @@ const TerapieVR = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Terapie wspomagane VR
                 <br />
                 dla osób dorosłych
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Zastosowanie wirtualnej rzeczywistości w terapii i rozwoju
                 dorosłych oferuje zaawansowane metody wsparcia zdrowia
                 psychicznego, fizycznego oraz osobistego rozwoju. Wykorzystanie
@@ -243,9 +317,15 @@ const TerapieVR = () => {
 
               <Link
                 href={"/Kontakt"}
-                className=" text-slate-800 flex justify-start"
+                className={`text-slate-800 flex justify-start ${
+                  highContrast ? "text-yellow-400" : "text-slate-800"
+                }`}
               >
-                <div className="mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                <div
+                  className={`mt-6 w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl ${
+                    highContrast ? "bg-gray-600" : "bg-white"
+                  }`}
+                >
                   Zapytaj o terapię wspomaganą VR
                   <FaRegArrowAltCircleRight />
                 </div>
@@ -274,10 +354,16 @@ const TerapieVR = () => {
 
             {/* Tekst informacyjny */}
             <div className="mx-6 md:mr-16 flex-col justify-center items-center">
-              <h2 className="text-4xl md:text-4xl text-left font-semibold mb-6 font-display">
+              <h2
+                className={`font-display mb-6 font-semibold text-left ${headerFontSizeClass}`}
+              >
                 Praca z lękami oraz fobiami wspomagana VR
               </h2>
-              <p className="text-gray-700 text-base text-left mb-6">
+              <p
+                className={`${
+                  highContrast ? "text-yellow-400" : "text-gray-700"
+                } ${fontSizeClass} text-left mb-6`}
+              >
                 Praca z lękami oraz fobiami wspomagana przez wirtualną
                 rzeczywistość to innowacyjne podejście, które umożliwia
                 bezpieczne i kontrolowane stawianie czoła trudnym sytuacjom.
@@ -331,9 +417,15 @@ const TerapieVR = () => {
               </Accordion>
               <Link
                 href={"/Kontakt"}
-                className=" text-slate-800 flex justify-start"
+                className={`text-slate-800 flex justify-start ${
+                  highContrast ? "text-yellow-400" : "text-slate-800"
+                }`}
               >
-                <div className=" w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl custom-shadow3">
+                <div
+                  className={`w-fit cursor-pointer flex items-center justify-center shadow-md border bg-slate-50/80 border-slate-700 rounded-xl ${
+                    highContrast ? "bg-gray-600" : "bg-white"
+                  }`}
+                >
                   Kontakt <FaRegArrowAltCircleRight />
                 </div>
               </Link>
@@ -345,7 +437,9 @@ const TerapieVR = () => {
       {/* Galeria */}
       <section className="max-w-7xl md:px-0 px-4 mx-auto mt-10 py-6 md:py-24 mb-10">
         <div className="mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-6 tracking-tighter">
+          <h2
+            className={`font-display mb-6 font-semibold text-center ${headerFontSizeClass}`}
+          >
             Nasza terapia to nie tylko okulary VR - to cała platforma.
           </h2>
           <div className="grid grid-cols-1 row-span-2 md:grid-cols-3 gap-4 mx-auto">
@@ -396,11 +490,25 @@ const TerapieVR = () => {
       {/* Cennik */}
       <section className="mt-10 py-6 md:py-24 mb-10">
         <div className="mx-auto text-center">
-          <Card className="mx-auto w-96 shadow-md">
-            <CardHeader className="bg-[#225da5] text-white rounded-t-xl">
+          <Card
+            className={`mx-auto w-96 shadow-md ${
+              highContrast ? "bg-gray-800 border-gray-600" : ""
+            }`}
+          >
+            <CardHeader
+              className={`${
+                highContrast
+                  ? "bg-gray-900 text-yellow-400"
+                  : "bg-[#225da5] text-white"
+              } rounded-t-xl`}
+            >
               <CardTitle className="text-2xl font-semibold">Cennik</CardTitle>
             </CardHeader>
-            <CardContent className="text-gray-700 text-base p-6">
+            <CardContent
+              className={`${
+                highContrast ? "text-yellow-400" : "text-gray-700"
+              } text-base p-6`}
+            >
               Terapia VR 50 minut - 180zł
             </CardContent>
           </Card>
