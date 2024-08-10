@@ -200,6 +200,15 @@ const page = () => {
         ⁠Standardy ochrony małoletnich w placówkach oświatowych - podręcznik
         (PDF)
       </a>
+      <br />
+      <br />
+      <a
+        href="/assets/zarzadzenie.pdf"
+        download={"Zarządzenie"}
+        className=" underline-offset-1 underline text-green-900 py-6"
+      >
+        Zarządzenie (PDF)
+      </a>
     </div>
   );
 };
