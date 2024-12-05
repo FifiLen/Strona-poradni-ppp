@@ -1,7 +1,13 @@
 import "../../styles/global.css";
-import { Analytics } from "@vercel/analytics/react";
-
+import Footer from "../../components/Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { DM_Sans } from "next/font/google";
+import Nav from "../../components/Nav";
+import { AccessibilityProvider } from "../../components/AccessibilityContext";
+import AccessibilityControls from "../../components/Dostepnosc";
+import { GoogleTagManager } from "@next/third-parties/google";
+
+const dmSans = DM_Sans({ subsets: ["latin"], weight: ["500"] });
 
 export const metadata = {
   title: "Poradnia Psychologiczno Pedagogiczna Magnolia",
@@ -19,12 +25,20 @@ export const metadata = {
 
 const Rootlayout = ({ children }) => {
   return (
-    <main className="overflow-x-hidden">
-      {children}
-      <Analytics />
+    <html lang="en">
+      <body className={`bg-white overflow-x-hidden ${dmSans.className} `}>
+        <AccessibilityProvider>
+          <main className="overflow-x-hidden">
+            {/* <AccessibilityControls /> */}
+            <Nav />
+            {children}
+          </main>
 
+          <Footer />
+        </AccessibilityProvider>
+      </body>
       <GoogleTagManager gtmId="G-0QW3ZG23F5" />
-    </main>
+    </html>
   );
 };
 

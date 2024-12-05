@@ -7,7 +7,7 @@ const page = () => {
         Standardy ochrony małoletnich
       </h1>
 
-      <p className="pb-6">
+      <p className="p-6">
         Nowelizacja Kodeksu rodzinnego i opiekuńczego (Dz.U. 2023 poz. 1606)
         określiła warunki skutecznej ochrony małoletnich przed różnymi formami
         przemocy. Wprowadzone zmiany wskazują na potrzebę opracowania jasnych i

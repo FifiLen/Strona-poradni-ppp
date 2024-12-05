@@ -8,6 +8,7 @@ import ThirdMainPageSection from "../components/ThirdMainPageSection";
 import HeroContact from "../components/HeroContact";
 import InfoPoradnia from "../components/InfoPoradnia";
 import Zabawy from "../components/Zabawy";
+import Nav from "../components/Nav";
 
 import Modal from "../components/Modal";
 import MainSocial from "../components/MainSocial";
@@ -30,6 +31,7 @@ const Home = () => {
   }, []);
   return (
     <main>
+      <Nav />
       <HeroPartZero />
       <FirstMainPageSection />
       {/* <InfoPoradnia /> */}

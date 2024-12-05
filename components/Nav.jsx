@@ -1,4 +1,5 @@
 "use client";
+
 import React, { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import {
@@ -10,9 +11,9 @@ import {
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { FaTiktok, FaFacebook, FaYoutube } from "react-icons/fa6";
-import { useAccessibility } from "./AccessibilityContext";
-
+import { FaTiktok, FaFacebook, FaYoutube, FaAdjust } from "react-icons/fa";
+import { useAccessibility } from "./AccessibilityContext"; // Ensure this path is correct
+import { Button } from "../@/components/ui/button";
 // Utility function to get Tailwind font size class
 const getFontSizeClass = (level) => {
   switch (level) {
@@ -78,7 +79,14 @@ function classNames(...classes) {
 
 export default function MainPageNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { fontSizeLevel, highContrast } = useAccessibility();
+  const {
+    fontSizeLevel,
+    highContrast,
+    increaseFontSize,
+    decreaseFontSize,
+    resetFontSize,
+    toggleHighContrast,
+  } = useAccessibility();
 
   // Determine the font size class based on the current level
   const fontSizeClass = getFontSizeClass(fontSizeLevel);
@@ -228,7 +236,50 @@ export default function MainPageNav() {
           </Popover>
         </Popover.Group>
 
-        <div className="hidden lg:flex gap-2 lg:justify-end">
+        <div className="hidden lg:flex gap-2 lg:justify-end items-center">
+          <div className="flex items-center space-x-2 bg-secondary rounded-lg p-1">
+            <Button
+              onClick={decreaseFontSize}
+              variant="ghost"
+              size="sm"
+              className="w-8 h-8 p-0"
+              aria-label="Zmniejsz czcionkę"
+            >
+              <span className="text-xs font-semibold">A-</span>
+            </Button>
+            <Button
+              onClick={resetFontSize}
+              variant="ghost"
+              size="sm"
+              className="w-8 h-8 p-0"
+              aria-label="Resetuj do bazowej wielkości"
+            >
+              <span className="text-sm font-semibold">A</span>
+            </Button>
+            <Button
+              onClick={increaseFontSize}
+              variant="ghost"
+              size="sm"
+              className="w-8 h-8 p-0"
+              aria-label="Zwiększ czcionkę"
+            >
+              <span className="text-base font-semibold">A+</span>
+            </Button>
+            <Button
+              onClick={toggleHighContrast}
+              variant="ghost"
+              size="sm"
+              className="w-8 h-8 p-0"
+              aria-label="Zmień kontrast"
+            >
+              <FaAdjust className="h-4 w-4" />
+              <span className="sr-only">
+                {highContrast
+                  ? "Wyłącz wysoki kontrast"
+                  : "Włącz wysoki kontrast"}
+              </span>
+            </Button>
+          </div>
           <Link
             href="/Kontakt"
             className={`text-sm bg-[#921d7f] font-semibold py-2 px-5 rounded-md leading-6 text-white ${fontSizeClass}`}
