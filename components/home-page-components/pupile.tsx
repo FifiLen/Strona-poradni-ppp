@@ -43,7 +43,7 @@ export default function WinterTherapyAnimalsSection() {
           <div className="relative flex-grow rounded-[32px] overflow-hidden aspect-video sm:aspect-square lg:aspect-auto lg:h-full">
             <Image
               src="/assets/o-poradni/zimowa-daisy.png"
-              alt="Pies terapeutyczny Lili"
+              alt="Pies terapeutyczny Daisy"
               fill
               className="object-cover"
             />
@@ -52,7 +52,7 @@ export default function WinterTherapyAnimalsSection() {
                 Dogoterapia
               </h3>
               <p className="text-sm sm:text-base text-white font-semibold">
-                Lili, nasz Golden Retriever, pomaga w terapii
+                Daisy, nasz Golden Retriever, pomaga w terapii
               </p>
             </div>
             <Snowflake className="absolute top-4 right-4 text-white w-8 h-8 animate-spin-slow" />
@@ -66,8 +66,8 @@ export default function WinterTherapyAnimalsSection() {
             <p>
               Poradnia Psychologiczno-Pedagogiczna MAGNOLIA to również dom dla
               szeregu „braci mniejszych". Na co dzień pracujemy w towarzystwie
-              czworonogów: kochanego psiaka o imieniu Lili rasy Golden Retriever
-              oraz króliczków miniaturek Lusi i Trusi.
+              czworonogów: kochanego psiaka o imieniu Daisy rasy Golden
+              Retriever oraz króliczków miniaturek Lusi i Trusi.
             </p>
             <p>
               Utrzymujemy bliski kontakt ze staniną koni, umożliwiającą nam
